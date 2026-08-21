@@ -21,7 +21,6 @@ export const posts0: Post[] = [
       { type: "img", src: "/img/model3.jpg", alt: "Matowy Tesla Model 3", caption: "Model 3 od ok. 37 970 euro. Klasyczny duet na start nowego rynku \u2014 Y do pary." },
       { type: "h2", text: "Szerszy kontekst" },
       { type: "p", text: "\u0141otwa nie jest wielkim rynkiem, ale Tesla konsekwentnie domyka obecno\u015b\u0107 w Europie \u015arodkowo-Wschodniej. Wej\u015bcie na wszystkie trzy kraje ba\u0142tyckie u\u0142atwia logistyk\u0119, serwis i budow\u0119 sieci \u0142adowania w regionie." },
-      { type: "img", src: "/img/modely-trunk.jpg", alt: "Baga\u017cnik Tesla Model Y", caption: "Na razie tylko 3 i Y. Cybertrucka i reszty gamy na \u0141otwie nie zapowiedziano." },
       { type: "p", text: "Na razie oferta ogranicza si\u0119 do Modelu 3 i Modelu Y \u2014 klasyczny, sprawdzony duet na start nowego rynku. Cybertrucka i innych modeli na razie nie zapowiedziano." },
       { type: "p", text: "Dla \u0142otewskich zainteresowanych to konkretna zmiana: lokalny konfigurator, lokalny punkt kontaktowy i perspektywa oficjalnego serwisu." },
     ],
