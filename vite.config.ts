@@ -1,11 +1,48 @@
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import type { Plugin } from "vite";
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { nitro } from "nitro/vite";
-// @ts-expect-error JS plugin alongside the TS vite config
-import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
+
+const GROK_OG_IDENTITY_ID = "virtual:grok-og-identity";
+
+/**
+ * Load the platform PWA plugin at runtime (file://), not via a static import.
+ * Vite 8 / rolldown bundles vite.config.ts and then fails to resolve
+ * `./grok-pwa-shared.mjs` from scripts/grok-pwa-plugin.mjs (looks in the
+ * repo root). Hostinger Node builds hit that UNRESOLVED_IMPORT. A dynamic
+ * import of the absolute file URL is not followed by the config bundler.
+ */
+async function grokPwaPlugin(): Promise<Plugin> {
+  const pluginFile = resolve(process.cwd(), "scripts/grok-pwa-plugin.mjs");
+  const sharedFile = resolve(process.cwd(), "scripts/grok-pwa-shared.mjs");
+  if (existsSync(pluginFile) && existsSync(sharedFile)) {
+    try {
+      const mod = (await import(/* @vite-ignore */ pathToFileURL(pluginFile).href)) as {
+        grokPwaPlugin: () => Plugin;
+      };
+      return mod.grokPwaPlugin();
+    } catch (err) {
+      console.warn("[app-builder] grokPwaPlugin load failed, using fallback:", err);
+    }
+  }
+  return {
+    name: "app-builder:grok-pwa",
+    resolveId(id) {
+      if (id === GROK_OG_IDENTITY_ID) return `\0${GROK_OG_IDENTITY_ID}`;
+    },
+    load(id) {
+      if (id !== `\0${GROK_OG_IDENTITY_ID}`) return;
+      return `export const grokOgIdentity = ${JSON.stringify({
+        site: { title: "muskonomia.pl", color: "E10600" },
+      })};`;
+    },
+  };
+}
 
 function pgliteBootstrapPlugin(): Plugin {
   return {
@@ -102,7 +139,7 @@ function authPopupPlugin(): Plugin {
   };
 }
 
-export default defineConfig(({ command, isPreview }) => ({
+export default defineConfig(async ({ command, isPreview }) => ({
   server: {
     host: "0.0.0.0",
     port: 8080,
@@ -117,7 +154,7 @@ export default defineConfig(({ command, isPreview }) => ({
   plugins: [
     pgliteBootstrapPlugin(),
     authPopupPlugin(),
-    grokPwaPlugin(),
+    await grokPwaPlugin(),
     tailwindcss(),
     tanstackStart(),
     ...(command === "build" || isPreview
