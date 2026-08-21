@@ -2,45 +2,30 @@
 
 Strona Tesla / SpaceX / xAI: landing, blog i tematy.
 
-**GitHub:** https://github.com/muskonomiapl/muskonomia  
-**Pełny zip (kod + zdjęcia + wpisy):** https://drive.google.com/file/d/1yaPh_rHxIHvM5fDJvGJVP7zQGzLFIlgL/view
+Stack: TanStack Start (React + Vite) + Nitro `node-server`.
 
-Stack: TanStack Start, React, Tailwind CSS.
+Repo: https://github.com/muskonomiapl/muskonomia
 
-## Najprostszy start — zip z Drive
+## Hostinger (Node.js, nie FTP / nie „static HTML”)
 
-1. Pobierz [muskonomia-src.zip](https://drive.google.com/file/d/1yaPh_rHxIHvM5fDJvGJVP7zQGzLFIlgL/view)
-2. Rozpakuj
-3. `npm install && npm run dev`
-4. Otwórz http://localhost:8080
+1. Podłącz repo `muskonomiapl/muskonomia`, branch `main`.
+2. Node **20 albo 22**.
+3. Build: `npm run build` (to jest `vite build && npm run db:migrate`).
+4. Start: `npm start` albo `node .output/server/index.mjs`.
+5. Zdjęcia: skopiuj `public/img/` z zipa na Drive (GitHub nie trzyma binariów).
+   https://drive.google.com/file/d/1yaPh_rHxIHvM5fDJvGJVP7zQGzLFIlgL/view
 
-Ten zip ma wszystko: wpisy, `public/img`, skrypty Vite.
+Po deployu serwer Nitro nasłuchuje na `PORT` z Hostingera.
 
-## Albo clone z GitHuba
-
-```bash
-git clone https://github.com/muskonomiapl/muskonomia.git
-cd muskonomia
-```
-
-Rozpakuj zip z Drive **do tego folderu** (uzupełnij `src/lib/posts-data.ts`, `public/img/` i `scripts/`). Potem:
+## Start lokalnie
 
 ```bash
 npm install
 npm run dev
 ```
 
-Żeby wrzucić brakujące pliki na GitHuba z własnego komputera:
+## Struktura
 
-```bash
-git add -A
-git commit -m "Pełny kod i grafiki"
-git push
-```
-
-## Deploy (Hostinger / Node)
-
-1. `npm install`
-2. `npm run build`
-3. wgraj output na hosting **Node.js**, nie samo HTML
-4. ustaw domenę muskonomia.pl
+- `src/routes` — strony (główna, blog, tematy)
+- `src/lib/posts-data.ts` — wpisy bloga (składane z `posts-data-a.ts` + `posts-data-b.ts`)
+- `public/img` — grafiki
