@@ -12,6 +12,7 @@ export const postsCb: Post[] = [
     isoDate: "2026-08-21",
     img: "/img/cb-cursorbench.jpg",
     contain: true,
+    xPostId: "2090857881474093133",
     body: [
       {
         type: "p",

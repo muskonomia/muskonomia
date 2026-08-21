@@ -1,7 +1,42 @@
+import { useEffect, useRef } from "react";
 import { XLogo } from "@/components/x-logo";
 import { absoluteUrl } from "@/lib/site";
 
 const X_HANDLE = "MuskonomiaPL";
+
+function XPostEmbed({ id }: { id: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const w = window as unknown as {
+      twttr?: { widgets: { load: (el?: HTMLElement) => void } };
+    };
+    const load = () => w.twttr?.widgets.load(ref.current ?? undefined);
+    if (w.twttr?.widgets) {
+      load();
+      return;
+    }
+    const existing = document.querySelector<HTMLScriptElement>("script[data-twitter-wjs]");
+    if (existing) {
+      existing.addEventListener("load", load);
+      return () => existing.removeEventListener("load", load);
+    }
+    const s = document.createElement("script");
+    s.src = "https://platform.twitter.com/widgets.js";
+    s.async = true;
+    s.setAttribute("data-twitter-wjs", "1");
+    s.onload = load;
+    document.body.appendChild(s);
+  }, [id]);
+
+  return (
+    <div ref={ref} className="mt-5 overflow-hidden [&_.twitter-tweet]:mx-auto">
+      <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
+        <a href={`https://x.com/${X_HANDLE}/status/${id}`}>Wpis @{X_HANDLE} na X</a>
+      </blockquote>
+    </div>
+  );
+}
 
 export function DiscussOnX({
   title,
@@ -33,7 +68,7 @@ export function DiscussOnX({
         </h2>
       </div>
 
-      {xPostId ? null : (
+      {xPostId ? <XPostEmbed id={xPostId} /> : (
         <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
           Masz zdanie o tym wpisie? Napisz na X i oznacz{" "}
           <a
@@ -47,18 +82,6 @@ export function DiscussOnX({
           .
         </p>
       )}
-
-      {xPostId && tweetUrl ? (
-        <div className="mt-5 overflow-hidden rounded-lg bg-bg">
-          <iframe
-            title={`Wpis @${X_HANDLE} na X`}
-            src={`https://platform.twitter.com/embed/Tweet.html?id=${xPostId}&theme=dark&dnt=true`}
-            className="w-full border-0"
-            height={560}
-            loading="lazy"
-          />
-        </div>
-      ) : null}
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
         <a
