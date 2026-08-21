@@ -11,6 +11,7 @@ export const postsZl: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/zl-wywrotka.jpg",
+    xPostId: "2090825257317810310",
     body: [
       {
         type: "p",
