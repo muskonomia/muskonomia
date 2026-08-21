@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { DiscussOnX } from "@/components/discuss-on-x";
 import { getPost, postJsonLd, postTopic, posts, postsByTopic, TOPICS } from "@/lib/posts";
 import { postHead } from "@/lib/seo";
 
@@ -110,6 +111,10 @@ function BlogPost() {
             </Link>
           </div>
         </article>
+
+        <div className="px-5 pb-16">
+          <DiscussOnX title={post.title} slug={post.slug} />
+        </div>
 
         <script
           type="application/ld+json"
