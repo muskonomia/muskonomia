@@ -165,6 +165,7 @@ export const postsA: Post[] = [
     date: "19 sierpnia 2026",
     isoDate: "2026-08-19",
     img: "/img/grok-bot.jpg",
+    xPostId: "2089973315880316958",
     body: [
       { type: "h2", text: "Bot Directory" },
       { type: "p", text: "17 sierpnia 2026 pojawi\u0142 si\u0119 Bot Directory (botdirectory.ai) \u2014 open-source\u2019owy katalog gotowych prompt\u00f3w do Grok Bot\u00f3w. Zamiast od zera wymy\u015bla\u0107 role, bierzesz sprawdzony setup, wklejasz jednym promptem i masz dzia\u0142aj\u0105cego pracownika w kilka minut." },

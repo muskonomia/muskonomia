@@ -98,6 +98,7 @@ export const postsB: Post[] = [
     date: "17 lutego 2026",
     isoDate: "2026-02-17",
     img: "/img/cover-cybercab.jpg",
+    xPostId: "2090301960414974364",
     body: [
       { type: "p", text: "W lutym 2026 Tesla ujawni\u0142a parametry Semi tu\u017c przed startem seryjnej produkcji w Sparks w Nevadzie. Dwie wersje: Standard Range i Long Range \u2014 ten sam nap\u0119d, inna bateria i masa." },
       { type: "h2", text: "Dwie wersje" },
