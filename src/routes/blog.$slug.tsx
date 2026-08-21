@@ -113,7 +113,7 @@ function BlogPost() {
         </article>
 
         <div className="px-5 pb-16">
-          <DiscussOnX title={post.title} slug={post.slug} />
+          <DiscussOnX title={post.title} slug={post.slug} xPostId={post.xPostId} />
         </div>
 
         <script

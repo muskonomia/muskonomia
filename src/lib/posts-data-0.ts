@@ -10,6 +10,7 @@ export const posts0: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/modely-hero.jpg",
+    xPostId: "2090801498145866096",
     body: [
       { type: "p", text: "Tesla Europa og\u0142osi\u0142a, \u017ce Model 3 i Model Y s\u0105 ju\u017c dost\u0119pne do zam\u00f3wienia na \u0141otwie. Konfigurator uruchomiono pod adresem tesla.com/lv_LV." },
       { type: "img", src: "/img/modely-hero.jpg", alt: "Tesla Model Y przy Superchargerze", caption: "Model Y: drugi z pary, kt\u00f3ra otwiera \u0141otw\u0119. Dostawy od pocz\u0105tku 2027." },

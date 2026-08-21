@@ -20,6 +20,7 @@ export type Post = {
   object?: string;
   contain?: boolean;
   topic?: TopicId;
+  xPostId?: string;
   body: Block[];
 };
 

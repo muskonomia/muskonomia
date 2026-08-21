@@ -10,6 +10,7 @@ export const postsA: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/falcon-sunset.jpg",
+    xPostId: "2090793080991388115",
     body: [
       { type: "p", text: "Na X pojawi\u0142 si\u0119 ciekawy argument dotycz\u0105cy wyceny SpaceX. Autor zwraca uwag\u0119 na co\u015b, co coraz trudniej bagatelizowa\u0107: firm\u0119, kt\u00f3r\u0105 wi\u0119kszo\u015b\u0107 ludzi wci\u0105\u017c kojarzy g\u0142\u00f3wnie z rakietami, buduje dzi\u015b znacznie szerszy i bardziej zintegrowany stack." },
       { type: "img", src: "/img/falcon-sunset.jpg", alt: "Falcon 9 startuj\u0105cy o zachodzie s\u0142o\u0144ca", caption: "Rakiety to wci\u0105\u017c twarz SpaceX. Pod spodem jest ju\u017c ca\u0142y stack AI." },
@@ -55,6 +56,7 @@ export const postsA: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/cover-cybercab.jpg",
+    xPostId: "2090690308816162989",
     body: [
       { type: "p", text: "Tesla oficjalnie otrzyma\u0142a pe\u0142ne pozwolenie na dzia\u0142alno\u015b\u0107 jako Autonomous Vehicle Network Company w Nevadzie. Komisja Nevada Transportation Authority zatwierdzi\u0142a wniosek 20 sierpnia 2026." },
       { type: "p", text: "Pozwolenie obejmuje ca\u0142e hrabstwo Clark (w tym Las Vegas) i \u2014 wed\u0142ug komisji \u2014 umo\u017cliwia operacje w ca\u0142ym stanie, po wcze\u015bniejszym powiadomieniu o rozszerzeniu geofence\u2019u." },
@@ -77,6 +79,7 @@ export const postsA: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/cover-megacharger.jpg",
+    xPostId: "2090691925539992028",
     body: [
       { type: "p", text: "Tesla otworzy\u0142a Megacharger w Vernon w Kalifornii (3130 Bandini Blvd). To druga lokalizacja w pe\u0142ni publiczna dla klient\u00f3w Tesla Semi." },
       { type: "p", text: "Stacja: 6 stanowisk, ka\u017cde do 1,2 MW. Vernon le\u017cy w strefie przemys\u0142owej na po\u0142udniowy wsch\u00f3d od centrum Los Angeles \u2014 magazyny i ruch z port\u00f3w LA i Long Beach." },
@@ -100,6 +103,7 @@ export const postsA: Post[] = [
     date: "20 sierpnia 2026",
     isoDate: "2026-08-20",
     img: "/img/grok-bot.jpg",
+    xPostId: "2090313220619706861",
     body: [
       { type: "p", text: "Ka\u017cde narz\u0119dzie AI, kt\u00f3rego do tej pory u\u017cywa\u0142e\u015b, czeka na Ciebie. Otwierasz, pytasz, zamykasz. Praca zostaje w Twoich r\u0119kach." },
       { type: "p", text: "Grok Bot odwraca uk\u0142ad. Bot dostaje komputer w chmurze, loguje si\u0119 do Twoich narz\u0119dzi i pracuje, gdy zamkniesz laptopa. Przestajesz promptowa\u0107 \u2014 zaczynasz delegowa\u0107." },

@@ -10,6 +10,7 @@ export const postsJpm: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/jpm-fremont.jpg",
+    xPostId: "2090806059724083472",
     body: [
       { type: "p", text: "Analitycy JPMorgan po niedawnym spotkaniu z Tesl\u0105 we Fremont i zwiedzaniu fabryki opublikowali notatk\u0119, kt\u00f3ra daje sporo konkret\u00f3w na temat plan\u00f3w firmy." },
       { type: "img", src: "/img/jpm-fremont.jpg", alt: "Fabryka Tesli we Fremont, Kalifornia", caption: "Fremont: tu JPMorgan ogl\u0105da\u0142 lini\u0119 i s\u0142ucha\u0142 zarz\u0105du. St\u0105d wysz\u0142a notatka." },

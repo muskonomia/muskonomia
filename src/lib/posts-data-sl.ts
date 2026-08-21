@@ -10,6 +10,7 @@ export const postsSl: Post[] = [
     date: "21 sierpnia 2026",
     isoDate: "2026-08-21",
     img: "/img/sl-vandenberg.jpg",
+    xPostId: "2090809953804030243",
     body: [
       { type: "p", text: "SpaceX osi\u0105gn\u0105\u0142 kolejny du\u017cy kamie\u0144 milowy w programie Starlink. 19 sierpnia 2026 roku, podczas misji Starlink Group 17-50, Falcon 9 wyni\u00f3s\u0142 z Vandenberg 24 satelity V2 Mini. Po ich rozmieszczeniu liczba Starlink\u00f3w na orbicie przekroczy\u0142a 11 000." },
       { type: "img", src: "/img/sl-vandenberg.jpg", alt: "Falcon 9 ze Starlinkami nad wybrze\u017cem Kalifornii", caption: "Vandenberg, 19 sierpnia 2026. Start o 04:01 UTC z SLC-4E \u2014 24 satelity V2 Mini." },
