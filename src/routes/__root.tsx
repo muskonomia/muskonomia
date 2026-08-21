@@ -13,7 +13,7 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       {
         name: "description",
-        content: "Najświeższe wiadomości o Elonie Musku, Tesli, SpaceX i xAI.",
+        content: "Aktualności o Tesli, SpaceX, xAI i Elonie Musku po polsku: Robotaxi, Starlink, Grok, Cybercab i Optimus.",
       },
       { name: "theme-color", content: "#0a0a0b" },
     ],

@@ -9,7 +9,7 @@ export function SiteFooter() {
           <a
             href="https://x.com/MuskonomiaPL"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-fg"
           >
             <XLogo className="h-4 w-4" />

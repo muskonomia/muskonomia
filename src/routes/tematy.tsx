@@ -8,8 +8,9 @@ import { TOPICS, postsByTopic } from "@/lib/posts";
 export const Route = createFileRoute("/tematy")({
   head: () =>
     pageHead({
-      title: "Tematy",
-      description: "Wpisy pogrupowane: Tesla, SpaceX, xAI i inne.",
+      title: "Tematy: Tesla, SpaceX, xAI",
+      description:
+        "Wpisy pogrupowane: Tesla, SpaceX, xAI i Elon Musk. Robotaxi, Starlink, Grok i reszta świata Muska w jednym miejscu.",
       path: "/tematy",
     }),
   component: Tematy,
@@ -22,7 +23,9 @@ function Tematy() {
       <main className="pt-16">
         <header className="mx-auto max-w-6xl px-5 py-8">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Dział</p>
-          <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">Tematy</h1>
+          <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">
+            Tesla, SpaceX, xAI
+          </h1>
           <p className="mt-3 max-w-xl text-muted">
             Każdy wpis z bloga ląduje tu automatycznie — Tesla, rakiety, xAI albo Inne (Boring
             Company, Neuralink, reszta).

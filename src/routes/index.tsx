@@ -8,7 +8,12 @@ import { posts } from "@/lib/posts";
 import { XLogo } from "@/components/x-logo";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead({ title: "Świat Elona Muska", description: SITE_DESCRIPTION, path: "/" }),
+  head: () =>
+    pageHead({
+      title: "Tesla, SpaceX, Elon Musk i xAI",
+      description: SITE_DESCRIPTION,
+      path: "/",
+    }),
   component: Home,
 });
 
@@ -28,7 +33,7 @@ function Home() {
       <section className="relative isolate flex min-h-svh items-end overflow-hidden" aria-labelledby="home-h1">
         <img
           src="/img/cybertruck-pl.png"
-          alt=""
+          alt="Tesla Cybertruck"
           className="absolute inset-0 h-full w-full object-cover object-[center_60%]"
         />
         <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/55 to-overlay/20" />

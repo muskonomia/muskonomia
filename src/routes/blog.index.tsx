@@ -7,8 +7,9 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/blog/")({
   head: () =>
     pageHead({
-      title: "Blog",
-      description: "Wpisy o Tesli, SpaceX, xAI i muskonomii — aktualności i analizy.",
+      title: "Blog Tesla, SpaceX i Elon Musk",
+      description:
+        "Wpisy o Tesli, SpaceX, xAI i Elonie Musku: Robotaxi, Starlink, Grok, Cybercab, Optimus. Newsy i analizy po polsku.",
       path: "/blog",
     }),
   component: BlogIndex,
@@ -23,7 +24,9 @@ function BlogIndex() {
       <main className="pt-16">
         <header className="mx-auto max-w-6xl px-5 py-8">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Dział</p>
-          <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">Blog</h1>
+          <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">
+            Blog Tesla, SpaceX, Elon Musk
+          </h1>
         </header>
 
         <section aria-labelledby="blog-featured">
@@ -31,7 +34,7 @@ function BlogIndex() {
           <Link to="/blog/$slug" params={{ slug: hero.slug }} className="group relative block min-h-[70vh] overflow-hidden">
             <img
               src={hero.img}
-              alt=""
+              alt={hero.title}
               className={`absolute inset-0 h-full w-full ${hero.contain ? "bg-fg object-contain" : hero.object ?? "object-cover"}`}
             />
             <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/50 to-overlay/15" />
