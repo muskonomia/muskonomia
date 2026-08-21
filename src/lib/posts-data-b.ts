@@ -18,7 +18,6 @@ export const postsB: Post[] = [
       { type: "img", src: "/img/modely-row.jpg", alt: "Trzeci rz\u0105d Model Y", caption: "Trzeci rz\u0105d jest niski \u2014 dla dzieci i kr\u00f3tkich tras, nie na maraton. Sk\u0142adany w sekund\u0119." },
       { type: "h2", text: "Baga\u017cnik, frunk i w\u00f3zek" },
       { type: "p", text: "Klapa unosi si\u0119 wysoko, pr\u00f3g jest niski, pod\u0142oga baga\u017cnika p\u0142aska. W\u00f3zek wchodzi bez demonta\u017cu k\u00f3\u0142. Frunk bierze kable, kamizelki i brudne rzeczy z dala od kanap. Sk\u0142adane oparcia \u2014 rower albo meble z Ikei." },
-      { type: "img", src: "/img/modely-trunk.jpg", alt: "Baga\u017cnik Tesla Model Y", caption: "Jeden du\u017cy kufer plus frunk. Na tydzie\u0144 w g\u00f3rach starcza bez boksu na dachu." },
       { type: "h2", text: "Bezpiecze\u0144stwo i spok\u00f3j" },
       { type: "p", text: "Niska bateria w pod\u0142odze, sztywne nadwozie, topowe oceny crash-test\u00f3w. Autopilot na autostradzie zdejmuje zm\u0119czenie z rodzic\u00f3w, nie z odpowiedzialno\u015bci. Kamery zamiast lusterek bocznych w nowszych egzemplarzach \u2014 martwe pole mniejsze przy wyje\u017adzie z bramy." },
       { type: "img", src: "/img/interior.jpg", alt: "Szklany dach Model Y", caption: "Szklany dach i du\u017co \u015bwiat\u0142a. W upale klimatyzacja wst\u0119pnie ch\u0142odzi auto z telefonu." },
