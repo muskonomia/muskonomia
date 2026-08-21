@@ -26,43 +26,27 @@ export function DiscussOnX({
       className="mx-auto mt-4 max-w-3xl rounded-xl border border-border bg-surface px-5 py-7 sm:px-8"
       aria-labelledby="discuss-x"
     >
-      <div className="flex items-start gap-4">
-        <XLogo className="mt-1 h-6 w-6 shrink-0 text-fg" />
-        <div className="min-w-0 flex-1">
-          <h2 id="discuss-x" className="font-display text-3xl font-semibold leading-none tracking-tight">
-            Dyskusja na X
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
-            {xPostId ? (
-              <>
-                To ten sam wpis, który poszedł na{" "}
-                <a
-                  href={`https://x.com/${X_HANDLE}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-fg hover:text-accent"
-                >
-                  @{X_HANDLE}
-                </a>
-                . Odpowiadaj tam — wątek zostaje przy artykule.
-              </>
-            ) : (
-              <>
-                Masz zdanie o tym wpisie? Napisz na X i oznacz{" "}
-                <a
-                  href={`https://x.com/${X_HANDLE}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-fg hover:text-accent"
-                >
-                  @{X_HANDLE}
-                </a>
-                .
-              </>
-            )}
-          </p>
-        </div>
+      <div className="flex items-center gap-4">
+        <XLogo className="h-6 w-6 shrink-0 text-fg" />
+        <h2 id="discuss-x" className="font-display text-3xl font-semibold leading-none tracking-tight">
+          Dyskusja na X
+        </h2>
       </div>
+
+      {xPostId ? null : (
+        <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
+          Masz zdanie o tym wpisie? Napisz na X i oznacz{" "}
+          <a
+            href={`https://x.com/${X_HANDLE}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-fg hover:text-accent"
+          >
+            @{X_HANDLE}
+          </a>
+          .
+        </p>
+      )}
 
       {xPostId && tweetUrl ? (
         <div className="mt-5 overflow-hidden rounded-lg bg-bg">
