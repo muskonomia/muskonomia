@@ -11,6 +11,7 @@ export const postsKat: Post[] = [
     date: "22 sierpnia 2026",
     isoDate: "2026-08-22",
     img: "/img/kat-cathode.jpg",
+    xPostId: "2091154635079733719",
     body: [
       {
         type: "p",
