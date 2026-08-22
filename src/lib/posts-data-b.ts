@@ -35,6 +35,7 @@ export const postsB: Post[] = [
     date: "17 sierpnia 2026",
     isoDate: "2026-08-17",
     img: "/img/terafab-render-night.jpg",
+    xPostId: "2089336088032686305",
     body: [
       { type: "p", text: "Terafab to wsp\u00f3lny zak\u0142ad chip\u00f3w Tesli i SpaceX. Nie kolejna linia lakiernicza: projektowanie, logika, pami\u0119\u0107, advanced packaging i testy pod jednym dachem. Cel pierwszej pe\u0142nej skali: ponad 1 terawat mocy obliczeniowej AI rocznie." },
       { type: "p", text: "Og\u0142oszenie: 21 marca 2026. Potwierdzenie lokalizacji i parametr\u00f3w fazy 1: 6 sierpnia 2026. Dwa place: prototyp w Austin i pe\u0142ny kompleks przy zbiorniku Gibbons Creek w hrabstwie Grimes, mi\u0119dzy Austin a Houston." },
@@ -64,6 +65,7 @@ export const postsB: Post[] = [
     isoDate: "2026-08-17",
     img: "/img/grok-chart.jpg",
     contain: true,
+    xPostId: "2089476588366684421",
     body: [
       { type: "p", text: "Grok 4.6 znalaz\u0142 si\u0119 w pierwszej tr\u00f3jce rankingu Artificial Analysis Healthcare & Medical Index. Wersja high: 50 punkt\u00f3w, zaledwie punkt za liderem (51). Wyprzedzi\u0142 m.in. GPT-5.6 Sol, Kimi K3 i Gemini 3.7 Flash." },
       { type: "p", text: "Indeks ocenia wiedz\u0119 medyczn\u0105, rozumowanie kliniczne, dokumentacj\u0119 pacjenta, ograniczanie halucynacji i agentyczne workflow\u2019y. B\u0142\u0119dy w tej domenie nie s\u0105 teoretyczne." },
@@ -81,6 +83,7 @@ export const postsB: Post[] = [
     date: "17 sierpnia 2026",
     isoDate: "2026-08-17",
     img: "/img/cover-cybercab.jpg",
+    xPostId: "2089464483261366666",
     body: [
       { type: "p", text: "Tesla ma wkr\u00f3tce rozpocz\u0105\u0107 publiczne testy Cybercaba \u2014 auta dedykowanego robotaxi. Pierwszy etap: sierpie\u0144 2026, Austin w Teksasie." },
       { type: "p", text: "17 sierpnia media poda\u0142y, \u017ce Tesla poinformowa\u0142a pracownik\u00f3w o roll-oucie. Najpierw przejazdy za\u0142ogi po drogach publicznych, kilka dni p\u00f3\u017aniej w\u0142\u0105czenie do oficjalnej us\u0142ugi Robotaxi w Austin." },

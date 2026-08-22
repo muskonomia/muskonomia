@@ -191,6 +191,7 @@ export const postsA: Post[] = [
     date: "17 sierpnia 2026",
     isoDate: "2026-08-17",
     img: "/img/grok-bot.jpg",
+    xPostId: "2089461241295015981",
     body: [
       { type: "p", text: "Grok Bot to nowa funkcja od xAI (early beta od sierpnia 2026), kt\u00f3ra pozwala tworzy\u0107 AI-wsp\u00f3\u0142pracownik\u00f3w. Ka\u017cdy bot dostaje w\u0142asn\u0105 to\u017csamo\u015b\u0107, pami\u0119\u0107 robocz\u0105 i dost\u0119p do prawdziwego komputera w chmurze \u2014 z przegl\u0105dark\u0105, systemem plik\u00f3w i terminalem. Praca idzie dalej nawet wtedy, gdy zamkniesz laptopa." },
       { type: "p", text: "Jeden u\u017cytkownik ma jedno wsp\u00f3lne \u015brodowisko. Kilka bot\u00f3w mo\u017ce dzia\u0142a\u0107 r\u00f3wnolegle, a pliki i sesje przegl\u0105darki s\u0105 wsp\u00f3\u0142dzielone." },
