@@ -82,6 +82,26 @@ function BlogPost() {
                   </figure>
                 );
               }
+              if (block.type === "video") {
+                return (
+                  <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
+                    <video
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={block.poster}
+                      className="aspect-video w-full bg-overlay"
+                    >
+                      <source src={block.src} type="video/mp4" />
+                    </video>
+                    {block.caption ? (
+                      <figcaption className="px-5 pt-2 text-sm text-muted sm:px-0">
+                        {block.caption}
+                      </figcaption>
+                    ) : null}
+                  </figure>
+                );
+              }
               if (block.type === "h2") {
                 return (
                   <h2
