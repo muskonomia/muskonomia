@@ -90,6 +90,9 @@ function BlogPost() {
                       playsInline
                       preload="metadata"
                       poster={block.poster}
+                      autoPlay={block.loop}
+                      muted={block.loop}
+                      loop={block.loop}
                       className="aspect-video w-full bg-overlay"
                     >
                       <source src={block.src} type="video/mp4" />

@@ -6,7 +6,7 @@ export type Block =
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean }
-  | { type: "video"; src: string; poster?: string; caption?: string };
+  | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean };
 
 export type TopicId = "tesla" | "spacex" | "xai" | "inne";
 
