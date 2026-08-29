@@ -63,7 +63,7 @@ export const postsVegasLoop: Post[] = [
       },
       {
         type: "p",
-        text: "123 to mapa. 19 to głosowanie. Podjazd to slogan. Tunel jest wciąż krótszy niż PDF.",
+        text: "Najbliższy realny przystanek nie przyjdzie z tej listy. Przyjdzie tak, jak Sahara: jeden hotel, konkretna ulica, godziny na drzwiach.",
       },
     ],
   },
