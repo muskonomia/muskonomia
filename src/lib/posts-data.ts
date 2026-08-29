@@ -19,7 +19,6 @@ export const postsData: Post[] = [
   ...postsScout,
   ...postsGb,
   ...postsSc,
-  ...postsCc,
   ...postsKat,
   ...postsNl,
   ...postsCb,
