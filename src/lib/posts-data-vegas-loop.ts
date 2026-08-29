@@ -57,14 +57,6 @@ export const postsVegasLoop: Post[] = [
         type: "p",
         text: "Rzeczniczka Clark County Jennifer Cooper powiedziała Review-Journal, że The Boring Company nie ma przyspieszonej ścieżki pozwoleń. Hrabstwo rozpatruje wnioski tak szybko, jak potrafi. 19 stacji na liście nie skraca kolejki do wiertła.",
       },
-      {
-        type: "p",
-        text: "Docelowo Loop ma jeździć Teslą pod Stripem, downtown i na lotnisko Harry Reid. Auto jedzie z A do B, bez stacji po drodze. Dlatego firma może pisać o stacji przy każdym podjeździe: w tej logice nie ma linii z dwunastoma przystankami. Jest tunel od drzwi do drzwi. Clark County zatwierdził na razie 19 kolejnych punktów na planie.",
-      },
-      {
-        type: "p",
-        text: "Najbliższy realny przystanek nie przyjdzie z tej listy. Przyjdzie tak, jak Sahara: jeden hotel, konkretna ulica, godziny na drzwiach.",
-      },
     ],
   },
 ];
