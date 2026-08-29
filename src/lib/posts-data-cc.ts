@@ -5,67 +5,56 @@ export const postsCc: Post[] = [
     slug: "tesla-zapowiada-wydarzenie-cybercab-w-austin",
     kicker: "Tesla",
     topic: "tesla",
-    title: "Tesla zapowiada wydarzenie Cybercab w Austin",
+    title: "Cybercaby już jeżdżą po Austin. Szef AI Tesli: ulice już nie będą takie same",
     excerpt:
-      "Oficjalny teaser: 3 września 2026, Austin. Exclusive Access — launch robotaxi bez kierownicy i pedałów. Pięć zaproszeń z konkursu Robotaxi (17–23 sierpnia).",
-    date: "22 sierpnia 2026",
-    isoDate: "2026-08-22",
-    img: "/img/cc-teaser.jpg",
-    contain: true,
-    xPostId: "2091158353506402347",
+      "Ashok Elluswamy wrzucił film ze złotym Cybercabem w centrum Austin. Bez kierownicy, bez pedałów, tydzień przed eventem 3 września.",
+    date: "29 sierpnia 2026",
+    isoDate: "2026-08-29",
+    img: "/img/cc-sugarwolf.jpg",
     body: [
       {
         type: "p",
-        text: "Tesla oficjalnie ogłosiła ekskluzywne wydarzenie związane z Cybercabem. Na grafice widnieje data 3 września 2026 oraz lokalizacja: Austin, Teksas.",
+        text: "Ashok Elluswamy, szef AI w Tesli, wrzucił krótki film ze złotym Cybercabem na ulicach centrum Austin. Komentarz jest lakoniczny: „The streets won’t be the same anymore”. Tydzień przed oficjalnym wydarzeniem 3 września auto bez kierownicy i pedałów po prostu jedzie przez miasto.",
+      },
+      {
+        type: "video",
+        src: "/video/cybercab-austin-ulice.mp4",
+        poster: "/img/cc-sugarwolf.jpg",
+        caption: "Film @aelluswamy: złoty Cybercab, centrum Austin. „The streets won’t be the same anymore.”",
       },
       {
         type: "img",
-        src: "/img/cc-teaser.jpg",
-        alt: "Oficjalny teaser Tesli: Cybercab Exclusive Access, 09.03.26, Austin TX",
-        caption:
-          "Oficjalny teaser @Tesla: Exclusive Access, 09.03.26, Austin, TX. Bez kierownicy, bez pedałów — i z konkretną datą.",
-        contain: true,
+        src: "/img/cc-sugarwolf.jpg",
+        alt: "Złoty Cybercab Tesli przejeżdża obok kawiarni Sugar Wolf w Austin",
+        caption: "Sugar Wolf, zwykła ulica, zwykła godzina. Nie Giga Texas.",
       },
       {
         type: "p",
-        text: "To oficjalny launch event dedykowanego robotaxi bez kierownicy i pedałów. Wcześniej Tesla prowadziła konkurs, w którym osoby korzystające z Robotaxi w Austin (w okresie 17–23 sierpnia) mogły wygrać zaproszenie. Pięć osób zostało wylosowanych.",
+        text: "Na nagraniu widać dwuosobowego Cybercaba w złotym lakierze, z napisem na boku, jak przejeżdża obok kawiarni Sugar Wolf, wjazdu na parking i skrzyżowania 3rd Street. W kabinie nie ma kierowcy. W kadrze pojawia się też człowiek w koszulce SpaceX, który filmuje pojazd z chodnika — reszta ruchu to zwykłe pickupy, hulajnogi i piesi.",
       },
       {
         type: "img",
-        src: "/img/cc-wnetrze.jpg",
-        alt: "Wnętrze Cybercaba bez kierownicy i pedałów, pasażer z rękami na kolanach",
-        caption:
-          "Tak wygląda kabina: ekran, brak kierownicy, brak pedałów. Podpis Tesli: safety monitor w pojeździe inżynierskim.",
-      },
-      {
-        type: "p",
-        text: "Cybercab to pierwszy model Tesli zaprojektowany od podstaw jako pojazd autonomiczny — bez kierownicy, pedałów i lusterka wstecznego. Produkcję rozpoczęto w Giga Texas, a od kilku miesięcy trwają testy na drogach publicznych oraz przejazdy dla pracowników na terenie fabryki.",
+        src: "/img/cc-spacex-film.jpg",
+        alt: "Mężczyzna w koszulce SpaceX filmuje złotego Cybercaba na ulicy w Austin",
+        caption: "Ktoś w SpaceX merchu filmuje z chodnika. Reszta miasta jedzie dalej.",
       },
       {
         type: "img",
-        src: "/img/cc-skrzydla.jpg",
-        alt: "Cybercab z otwartymi drzwiami skrzydłowymi na wydarzeniu w Austin",
-        caption:
-          "Skrzydła otwarte. Ten sam pojazd, który Tesla woziła na eventy, ma 3 września dostać oficjalną datę wdrożenia.",
+        src: "/img/cc-3rd.jpg",
+        alt: "Cybercab na skrzyżowaniu 3rd Street w Austin, bez kierowcy",
+        caption: "3rd Street. Piesi, hulajnogi, pickup. I pojazd bez kierownicy.",
       },
       {
         type: "p",
-        text: "Pojazd jest już testowany na drogach publicznych w Austin i innych lokalizacjach w Stanach Zjednoczonych od czerwca 2026 roku. Od lipca pracownicy Tesli jeżdżą Cybercabami po prywatnych drogach wokół kampusu w Giga Texas, zbierając feedback. Firma przeprowadziła też szkolenia dla służb ratunkowych w Austin, ucząc je, jak postępować z pojazdem w sytuacjach awaryjnych. To klasyczny, ostrożny schemat wdrożenia, podobny do tego, jaki Tesla zastosowała przed startem floty Robotaxi opartej na Modelach Y.",
-      },
-      {
-        type: "img",
-        src: "/img/cc-ulica.jpg",
-        alt: "Cybercab na ulicy w Austin, widok z tyłu",
-        caption:
-          "Na drodze, nie na scenie. Testy uliczne od czerwca — event 3 września ma być formalnym otwarciem, nie premierą konceptu.",
+        text: "To nie jest już przejazd po terenie Giga Texas. Relacje z tego samego dnia mówią o wielu Cybercabach na jednej z ruchliwszych ulic Austin. Tesla od miesięcy testuje robotaxi na Modelu Y; Cybercab ma być pierwszym seryjnym pojazdem zaprojektowanym od zera pod jazdę bez kierownicy i pedałów.",
       },
       {
         type: "p",
-        text: "Wydarzenie 3 września ma być momentem, w którym Tesla formalnie zaprezentuje pojazd szerszej publiczności i najprawdopodobniej rozpocznie lub ogłosi kolejne etapy wdrożenia Cybercaba do floty Robotaxi w Austin.",
+        text: "Oficjalne wydarzenie „Exclusive Access: Cybercab” zaplanowano na 3 września w Austin. Zaproszenia poszły do najbardziej aktywnych użytkowników aplikacji Robotaxi, transmisja ma być publiczna. Film Elluswamy’ego wygląda na świadomy teaser: nie render, nie parking przy Superchargerze, tylko zwykła ulica w godzinach, w których miasto naprawdę żyje.",
       },
       {
         type: "p",
-        text: "Na razie nie znamy szczegółów programu, ale sam fakt oficjalnego teaseru z konkretną datą pokazuje, że firma wchodzi w finalną fazę przygotowań.",
+        text: "Źródło: wpis Ashoka Elluswamy’ego na X.",
       },
     ],
   },
