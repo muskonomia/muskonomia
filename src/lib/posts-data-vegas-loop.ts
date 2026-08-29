@@ -15,51 +15,51 @@ export const postsVegasLoop: Post[] = [
     body: [
       {
         type: "p",
-        text: "25 sierpnia 2026 The Boring Company napisała, że Clark County zatwierdził dodatkowe 19 stacji Vegas Loop. System jest teraz uprawniony do 123. To nie 19 nowych otwarć. To 19 kropek na mapie, których jeszcze nie ma pod ziemią.",
+        text: "We wtorek 25 sierpnia 2026 r. The Boring Company ogłosiła, że Clark County zatwierdził dodatkowe 19 stacji Vegas Loop. Firma ma teraz zgody na 123 przystanki. Pod ziemią tych dziewiętnastu jeszcze nie ma. Są na mapie.",
       },
       {
         type: "p",
-        text: "W oficjalnym poście The Boring Company dziękuje Clark County za 19 stacji i pisze, że Loop jest teraz entitled do 123. Skoro to punkt-do-punktu, w limicie stacja mogłaby stanąć przy każdym podjeździe. https://x.com/boringcompany/status/2092396130361606374",
+        text: "W oficjalnym poście firma dziękuje Clark County i dokłada slogan: skoro Loop jedzie z punktu do punktu, bez przystanków po drodze, w skrajnym przypadku stacja mogłaby stanąć przy każdym podjeździe. https://x.com/boringcompany/status/2092396130361606374",
       },
       {
         type: "img",
         src: "/img/vegas-loop-123-stacji.jpg",
         alt: "Mapa Vegas Loop: trasy tuneli i stacje od downtown po lotnisko Harry Reid",
-        caption: "Mapa z posta The Boring Company, 25 sierpnia 2026. Czarne kropki to stacje, linie to tunele.",
+        caption: "Mapa z posta The Boring Company, 25 sierpnia 2026 r. Czarne kropki to stacje, linie to tunele.",
         contain: true,
       },
       {
         type: "p",
-        text: "Słowo, które tu pracuje, to entitled. Po polsku: zgoda planistyczna, nie bilet na stację. County dał firmie prawo budować te przystanki. Nie dał gotowego tunelu. Las Vegas Review-Journal pisze, że 19 stacji poszło na komisji zoningowej 19 sierpnia, a firma ogłosiła to we wtorek. Relacja Micka Akersa: https://www.reviewjournal.com/local/traffic/boring-co-s-vegas-loop-announces-approval-of-19-additional-stations-bringing-total-to-123-3869704/",
+        text: "To zgoda planistyczna, nie bilet na stację. Hrabstwo dało firmie prawo budować te przystanki. Nie dało gotowego tunelu. Las Vegas Review-Journal pisze, że 19 stacji przeszło komisję zoningową 19 sierpnia, a firma ogłosiła to we wtorek. Relacja Micka Akersa: https://www.reviewjournal.com/local/traffic/boring-co-s-vegas-loop-announces-approval-of-19-additional-stations-bringing-total-to-123-3869704/",
       },
       {
         type: "p",
-        text: "Gdzie te 19 ma wylądować, wiemy częściowo. Review-Journal (przedruk CDC Gaming) wymienia m.in. Grand Prix Plaza przy torze Formuły 1, przystanek w Chinatown, kilka stacji na Tropicana Avenue między Las Vegas Boulevard a Paradise Road, dwie przy Tuscany i miejsce po dawnym Gordon Biersch na Paradise, na północ od Flamingo, gdzie Boring planuje stację i biuro. https://cdcgaming.com/brief/las-vegas-19-more-boring-co-loop-stations-gain-approval/",
+        text: "Częściowo wiadomo, gdzie te stacje mają stanąć. Review-Journal, w przedruku CDC Gaming, wymienia m.in. Grand Prix Plaza przy torze Formuły 1 i przystanek w Chinatown. Kilka stacji ma trafić na Tropicana Avenue, między Las Vegas Boulevard a Paradise Road. Dwie przy Tuscany. Jeszcze działka po dawnym Gordon Biersch na Paradise, na północ od Flamingo: tam Boring planuje stację i biuro. https://cdcgaming.com/brief/las-vegas-19-more-boring-co-loop-stations-gain-approval/",
       },
       {
         type: "ul",
         items: [
-          "19 nowych stacji zatwierdzonych 19 sierpnia przez zoning Clark County",
+          "19 nowych stacji zatwierdzonych 19 sierpnia przez komisję zoningową Clark County",
           "123 stacje łącznie na zgodach (wcześniejszy plan: 104)",
-          "ok. 109 km tuneli w docelowej siatce, Tesla z punktu do punktu, bez przystanków po drodze",
+          "ok. 109 km tuneli w docelowej sieci; Tesla z punktu do punktu, bez przystanków po drodze",
           "na mapie: Strip, downtown, Chinatown, Allegiant Stadium, lotnisko Harry Reid",
         ],
       },
       {
         type: "p",
-        text: "Liczba, która zmienia obraz, nie 123. 123 minus to, co jeździ. Teslarati szacuje ok. 11 otwartych stacji i ponad 4 mln pasażerów od 2021. Review-Journal wymienia działające przystanki przy Las Vegas Convention Center oraz Resorts World, Encore, Fontainebleau, Westgate i Sahara. Lotnisko jest na mapie i w budowie, nie w rozkładzie. https://www.teslarati.com/county-vote-hands-elon-musks-vegas-tunnel-network-a-huge-new-target/",
+        text: "Liczy się nie 123 na papierze, tylko to, ile stacji już wozi ludzi. Teslarati szacuje około 11 otwartych przystanków i ponad 4 mln pasażerów od 2021 r. Review-Journal wymienia działające stacje przy Las Vegas Convention Center oraz przy Resorts World, Encore, Fontainebleau, Westgate i Sahara. Lotnisko jest na mapie i w budowie, nie w rozkładzie. https://www.teslarati.com/county-vote-hands-elon-musks-vegas-tunnel-network-a-huge-new-target/",
       },
       {
         type: "p",
-        text: "Sahara otworzyła stację 6 sierpnia 2026, przy Paradise Road, godziny 7–21, bilety z QR albo online. FOX5 Las Vegas: https://www.fox5vegas.com/2026/08/06/vegas-loop-station-now-open-at-sahara-las-vegas/ To jest tempo, w jakim Loop przyrasta na asfalcie: jeden hotel. 19 stacji na jednej sesji zoningowej to tempo, w jakim przyrasta na papierze.",
+        text: "Sahara otworzyła stację 6 sierpnia 2026 r. przy Paradise Road. Godziny 7–21, bilety z kodem QR albo przez internet. Relacja FOX5 Las Vegas: https://www.fox5vegas.com/2026/08/06/vegas-loop-station-now-open-at-sahara-las-vegas/ To tempo, w jakim Loop rośnie na asfalcie: jeden hotel. 19 stacji na jednej sesji komisji to tempo, w jakim rośnie na papierze.",
       },
       {
         type: "p",
-        text: "Rzeczniczka Clark County Jennifer Cooper powiedziała Review-Journal, że nie ma przyspieszonej ścieżki pozwoleń dla Boring. County recenzuje wnioski tak szybko, jak da radę. 19 stacji na liście nie skraca kolejki do wiertła.",
+        text: "Rzeczniczka Clark County Jennifer Cooper powiedziała Review-Journal, że The Boring Company nie ma przyspieszonej ścieżki pozwoleń. Hrabstwo rozpatruje wnioski tak szybko, jak potrafi. 19 stacji na liście nie skraca kolejki do wiertła.",
       },
       {
         type: "p",
-        text: "Docelowo Loop ma jeździć Teslą pod Stripem, downtown i do Harry Reid. Auto jedzie z A do B, bez stacji po drodze. Dlatego firma może napisać o stacji w każdym podjeździe: w tej logice nie ma linii z dwunastoma przystankami, jest dziura od domu do domu. County na razie kupił 19 kolejnych dziur na planie.",
+        text: "Docelowo Loop ma jeździć Teslą pod Stripem, downtown i na lotnisko Harry Reid. Auto jedzie z A do B, bez stacji po drodze. Dlatego firma może pisać o stacji przy każdym podjeździe: w tej logice nie ma linii z dwunastoma przystankami. Jest tunel od drzwi do drzwi. Clark County zatwierdził na razie 19 kolejnych punktów na planie.",
       },
       {
         type: "p",
