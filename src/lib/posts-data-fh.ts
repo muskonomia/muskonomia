@@ -5,9 +5,9 @@ export const postsFh: Post[] = [
     slug: "falcon-heavy-lc-39a-teleskop-roman-l2",
     kicker: "Start z Florydy",
     topic: "spacex",
-    title: "Falcon Heavy z LC-39A. Teleskop Roman odłączony, boosterzy na LZ-2 i LZ-40",
+    title: "Falcon Heavy z LC-39A. Teleskop Roman odłączony, boczne stopnie na LZ-2 i LZ-40",
     excerpt:
-      "Falcon Heavy wystartował z LC-39A z teleskopem NASA Nancy Grace Roman. To 13. lot z tego pada. Boosterzy usiadły na LZ-2 i LZ-40, Roman odłączony — ponad 3 miesiące do L2.",
+      "Falcon Heavy wystartował z LC-39A z teleskopem NASA Nancy Grace Roman. To 13. lot z tego pada. Boczne stopnie usiadły na LZ-2 i LZ-40, Roman odłączony — ponad 3 miesiące do L2.",
     date: "30 sierpnia 2026",
     isoDate: "2026-08-30",
     img: "/img/falcon-heavy-lc-39a-teleskop-roman.jpg",
@@ -30,7 +30,7 @@ export const postsFh: Post[] = [
       },
       {
         type: "p",
-        text: "Podróż zajmie ponad trzy miesiące. Stamtąd Roman ma robić zdjęcia wszechświata, jakich wcześniej nie było. Elon Musk nazwał lot misją eksploracyjną. DogeDesigner dodał, że to 13. sukces na 13 lotów Heavy, start dziewięć miesięcy przed terminem i w budżecie; rdzeń nie wracał, oba boosterzy wróciły. https://x.com/SpaceX/status/2094081879150403768 https://x.com/elonmusk/status/2094073761485988104 https://x.com/cb_doge/status/2094028432682205200 https://x.com/cb_doge/status/2094061665910493218",
+        text: "Podróż zajmie ponad trzy miesiące. Stamtąd Roman ma robić zdjęcia wszechświata, jakich wcześniej nie było. Elon Musk nazwał lot misją eksploracyjną. DogeDesigner dodał, że to 13. sukces na 13 lotów Heavy, start dziewięć miesięcy przed terminem i w budżecie; rdzeń nie wracał, oba boczne stopnie wróciły. https://x.com/SpaceX/status/2094081879150403768 https://x.com/elonmusk/status/2094073761485988104 https://x.com/cb_doge/status/2094028432682205200 https://x.com/cb_doge/status/2094061665910493218",
       },
       {
         type: "p",
