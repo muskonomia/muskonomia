@@ -1,4 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { DiscussOnX } from "@/components/discuss-on-x";
@@ -14,6 +15,53 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => (loaderData ? postHead(loaderData) : {}),
   component: BlogPost,
 });
+
+function RichText({ text }: { text: string }) {
+  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|(https?:\/\/[^\s<]+)/g;
+  const parts: ReactNode[] = [];
+  let last = 0;
+  let i = 0;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) parts.push(text.slice(last, m.index));
+    if (m[1] && m[2]) {
+      parts.push(
+        <a
+          key={i++}
+          href={m[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-hover"
+        >
+          {m[1]}
+        </a>,
+      );
+    } else {
+      let href = m[3];
+      let trail = "";
+      const cut = href.match(/^(.*?)([),.;:]+)$/);
+      if (cut) {
+        href = cut[1];
+        trail = cut[2];
+      }
+      parts.push(
+        <a
+          key={i++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-hover break-all"
+        >
+          {href}
+        </a>,
+      );
+      if (trail) parts.push(trail);
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) parts.push(text.slice(last));
+  return parts;
+}
 
 function BlogPost() {
   const post = Route.useLoaderData();
@@ -119,12 +167,18 @@ function BlogPost() {
                 return (
                   <ul key={i} className="list-disc space-y-2 pl-5">
                     {block.items.map((item) => (
-                      <li key={item}>{item}</li>
+                      <li key={item}>
+                        <RichText text={item} />
+                      </li>
                     ))}
                   </ul>
                 );
               }
-              return <p key={i}>{block.text}</p>;
+              return (
+                <p key={i}>
+                  <RichText text={block.text} />
+                </p>
+              );
             })}
             <Link
               to="/blog"
