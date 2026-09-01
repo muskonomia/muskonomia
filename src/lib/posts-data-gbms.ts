@@ -5,33 +5,37 @@ export const postsGbms: Post[] = [
     slug: "grok-bot-outlook-onedrive-musk-tansze-tokeny",
     kicker: "xAI",
     topic: "xai",
-    title: "Musk: Grok Bot wchodzi do Outlooka. I ma tanieć",
+    title: "Grok Bot dostaje Outlook, Kalendarz i OneDrive",
     excerpt:
-      "Nowe wtyczki: Outlook, Kalendarz i OneDrive. Dwudziesta minuta później Musk dopisał: automatyczna optymalizacja tokenów, żeby rachunek za Bota spadł.",
+      "Grok Bot dostaje bezpośredni dostęp do Outlooka, Kalendarza i OneDrive. Musk zapowiada automatyczną optymalizację tokenów, żeby koszt spadał.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
     img: "/img/gbms-bot.jpg",
     body: [
       {
         type: "p",
-        text: "Musk napisał dwa zdania, w odstępie dwudziestu minut. Najpierw: „Grok @Bot upgrades”. Potem: automatyczna optymalizacja tokenów, żeby obniżyć koszt. Między nimi jest cała zmiana – Bot przestaje być czatem i zaczyna siedzieć w skrzynce.",
+        text: "Grok Bot umie już czytać, pisać i działać na kontach Microsoft. Nowe wtyczki dają botom bezpośredni dostęp do Outlooka, Kalendarza i OneDrive. Musk dopisał, że wkrótce wejdzie automatyczna optymalizacja tokenów, żeby Grok Bot taniał.",
       },
       {
         type: "img",
         src: "/img/gbms-bot.jpg",
         alt: "Oficjalna grafika Grok Bota: Outlook, Calendar i OneDrive jako wtyczki",
-        caption: "Oficjalny kadr @bot. Czytać, pisać, działać. Źródło: x.com/bot.",
+        caption: "Oficjalny kadr @bot. Bot szuka slotu i trzyma go w kalendarzu Outlooka.",
         contain: true,
       },
       {
         type: "p",
-        text: "Konto @bot ogłosiło wtyczki: bezpośredni dostęp do Outlooka, Kalendarza i OneDrive. Bot ma czytać, pisać i działać na kontach Microsoft. Lauren z zespołu Grok Bota wrzuciła trzy linki do pluginów. To nie jest zrzut ekranu z PowerPointa. To uprawnienia do skrzynki, kalendarza i dysku.",
+        text: "Oficjalne konto Grok Bot napisało to wprost. Bot czyta, pisze i działa na kontach Microsoft. Nowe wtyczki: Outlook, Kalendarz i OneDrive. Grafika przy wpisie pokazuje bota, który sam szuka wolnego slotu i trzyma go w kalendarzu Outlooka. Źródło: [wpis @bot](https://x.com/bot/status/2094543253811183943).",
       },
       {
         type: "img",
         src: "/img/gbms-ms.jpg",
         alt: "Ikony Microsoft 365: Outlook, OneDrive, Teams, Word, Excel",
-        caption: "Trzy pierwsze: Outlook, Kalendarz, OneDrive. Reszta jeszcze nie.",
+        caption: "Trzy pierwsze: Outlook, Kalendarz, OneDrive.",
+      },
+      {
+        type: "p",
+        text: "Musk cytuje ten wpis i dopisuje trzy słowa: Grok Bot upgrades. Źródło: [wpis Muska](https://x.com/elonmusk/status/2094577304647164374).",
       },
       {
         type: "img",
@@ -41,7 +45,7 @@ export const postsGbms: Post[] = [
       },
       {
         type: "p",
-        text: "Drugi wpis Muska cytuje Yun-Ta Tsai z Tesli AI. Rada na dziś, zanim wejdzie automatyka: jak puchnie zużycie tokenów, każ Botowi otworzyć nowy kanał pod konkretne zadanie i zamknąć go po skończeniu. Kontekst nie puchnie. Jeśli zadanie ma wrócić – zapisać refleksję do repozytorium i odpalić ponownie. Musk dopisał, że wkrótce zrobi to sam system: automatyczna optymalizacja tokenów, niższy koszt Grok Bota.",
+        text: "Niecałe dwadzieścia minut później drugi wpis. Yun-Ta Tsai z Tesli AI podpowiada, co robić, gdy puchnie zużycie tokenów: nowy kanał pod konkretne zadanie, zamknąć po skończeniu, wnioski wrzucić do repozytorium, jeśli zadanie ma wrócić. Źródło: [Yun-Ta Tsai](https://x.com/yunta_tsai/status/2094459957848797332).",
       },
       {
         type: "img",
@@ -51,6 +55,10 @@ export const postsGbms: Post[] = [
         contain: true,
       },
       {
+        type: "p",
+        text: "Musk odpowiada, że wkrótce zrobi to sam system. Automatyczna optymalizacja tokenów, niższy koszt Grok Bota. Źródło: [wpis Muska](https://x.com/elonmusk/status/2094582173420449804).",
+      },
+      {
         type: "img",
         src: "/img/gbms-flow.jpg",
         alt: "Schemat Grok Bota: research, pliki, mail, kalendarz, raport",
@@ -58,11 +66,7 @@ export const postsGbms: Post[] = [
       },
       {
         type: "p",
-        text: "DogeDesigner tego wieczoru nie zdążył. Źródła są dwa i wystarczają: oficjalne konto Bota i dwa wpisy Muska. Jedno rozszerza zasięg. Drugie mówi, że ten zasięg ma nie zjeść portfela.",
-      },
-      {
-        type: "p",
-        text: "Źródła: [Musk o wtyczkach](https://x.com/elonmusk/status/2094577304647164374), [Musk o tokenach](https://x.com/elonmusk/status/2094582173420449804), [@bot](https://x.com/bot/status/2094543253811183943), [Yun-Ta Tsai](https://x.com/yunta_tsai/status/2094459957848797332).",
+        text: "Bot przestaje być czatem. Zaczyna siedzieć w skrzynce. A wkrótce ma nie zjeść portfela.",
       },
     ],
   },
