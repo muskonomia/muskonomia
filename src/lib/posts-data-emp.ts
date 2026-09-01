@@ -10,7 +10,7 @@ export const postsEmp: Post[] = [
       "NFOŚiGW objął 26 sierpnia akcje EMP i przelał spółce blisko 4,5 mld zł z KPO. To największa inwestycja Funduszu. NaszEauto się skończyło. W lipcu BEV miały w Polsce 4 proc. rynku i spadek o 41 proc. rok do roku. Produkcja planowana jest na 2029. JV z Foxconnem wciąż jest planem.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
-    img: "/img/emp-ceremonia.jpg",
+    img: "https://www.gov.pl/photo/cd3976d0-dd41-47ad-b979-68a0d315966b",
     body: [
       {
         type: "p",
@@ -18,7 +18,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "img",
-        src: "/img/emp-ceremonia.jpg",
+        src: "https://www.gov.pl/photo/cd3976d0-dd41-47ad-b979-68a0d315966b",
         alt: "Podpisanie umowy KPO na Polski Hub Elektromobilności, 13 maja 2026",
         caption: "13 maja 2026. Na ekranie: 4,5 mld zł z KPO. Fot. Ministerstwo Aktywów Państwowych.",
       },
@@ -32,7 +32,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "img",
-        src: "/img/emp-podpis.jpg",
+        src: "https://www.gov.pl/photo/d24230e2-858a-4ade-a81f-5e18037e2424",
         alt: "Podpisywanie umów NFOŚiGW i EMP",
         caption: "Umowa inwestycyjna i umowa akcjonariuszy. Fot. MAP.",
       },
@@ -46,7 +46,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "img",
-        src: "/img/emp-hennig.jpg",
+        src: "https://www.gov.pl/photo/e2de7035-fcc1-490a-b14a-ec5d80256b8c",
         alt: "Paulina Hennig-Kloska podczas ogłoszenia finansowania z KPO",
         caption: "Paulina Hennig-Kloska o „podwójnych korzyściach EKO”. Fot. MAP.",
       },
@@ -56,7 +56,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "img",
-        src: "/img/emp-gronkiewicz.jpg",
+        src: "https://www.gov.pl/photo/7188720b-5385-445e-a394-67495ab9244e",
         alt: "Cyprian Gronkiewicz, prezes EMP",
         caption: "Cyprian Gronkiewicz, prezes EMP. Fot. MAP.",
       },
