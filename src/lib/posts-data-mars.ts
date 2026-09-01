@@ -25,7 +25,7 @@ export const postsMars: Post[] = [
       },
       {
         type: "p",
-        text: "Dima Zeniuk napisał, że budowa bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk to potwierdził. Źródła: [wpis Dimy](https://x.com/DimaZeniuk/status/2094647676927087024), [wpis Muska](https://x.com/elonmusk/status/2094849443506122939).",
+        text: "[Dima Zeniuk](https://x.com/DimaZeniuk/status/2094647676927087024) napisał, że zbudowanie bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. [Musk](https://x.com/elonmusk/status/2094849443506122939) nie dokłada daty. Pisze Yes.",
       },
       {
         type: "img",
