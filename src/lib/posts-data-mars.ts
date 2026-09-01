@@ -5,27 +5,27 @@ export const postsMars: Post[] = [
     slug: "musk-baza-na-marsie-jednym-z-najwiekszych-wyzwan-w-historii",
     kicker: "SpaceX",
     topic: "spacex",
-    title: "Baza na Marsie będzie jednym z największych wyzwań",
+    title: "Baza na Marsie będzie jednym z największych wyzwań w historii",
     excerpt:
-      "Dima Zeniuk: baza na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk: Yes.",
+      "Dima Zeniuk: baza na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk: Yes. Na Marsa da się lecieć co 26 miesięcy, lot trwa sześć.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
     img: "/img/mars-alpha.jpg",
     body: [
       {
         type: "p",
-        text: "Dima Zeniuk napisał, że zbudowanie bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk cytuje kadr i dopisuje jedno słowo: Yes.",
+        text: "Dima Zeniuk napisał, że zbudowanie bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk cytuje kadr i dopisuje: Yes. Liczbę, która to spina, sam podał w lutym: na Marsa da się lecieć tylko gdy planety zgrają się co 26 miesięcy, a lot trwa sześć.",
       },
       {
         type: "img",
         src: "/img/mars-dima.jpg",
-        alt: "Grafika Dimy Zeniuka: baza na Marsie, którą Musk potwierdził słowem Yes",
+        alt: "Grafika Dimy Zeniuka: baza na Marsie, którą Musk potwierdził",
         caption: "Kadr Dimy. Źródło: @DimaZeniuk.",
         contain: true,
       },
       {
         type: "p",
-        text: "Dima Zeniuk rzucił zdanie i kadr. Building a base on Mars will be one of the greatest challenges in human history. Źródło: [wpis Dimy](https://x.com/DimaZeniuk/status/2094647676927087024).",
+        text: "Dima Zeniuk napisał, że budowa bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk to potwierdził. Źródła: [wpis Dimy](https://x.com/DimaZeniuk/status/2094647676927087024), [wpis Muska](https://x.com/elonmusk/status/2094849443506122939).",
       },
       {
         type: "img",
@@ -35,7 +35,7 @@ export const postsMars: Post[] = [
       },
       {
         type: "p",
-        text: "Musk nie dokłada planu. Cytuje i pisze: Yes. Źródło: [wpis Muska](https://x.com/elonmusk/status/2094849443506122939).",
+        text: "W lutym, w wpisie o mieście na Księżycu, rozrysował dlaczego Mars jest wolniejszy. Na Księżyc można startować co 10 dni, lot trwa dwa. Na Marsa tylko przy zgraniu planet co 26 miesięcy, sześć miesięcy w drodze. Stąd jego własne liczby: miasto na Księżycu potencjalnie poniżej 10 lat, Mars 20 plus. Misja SpaceX zostaje ta sama. Miasto na Marsie ma ruszyć za 5–7 lat. Priorytet to zabezpieczenie cywilizacji, a Księżyc jest szybszy. Źródło: [wpis Muska z lutego](https://x.com/elonmusk/status/2020640004628742577).",
       },
       {
         type: "img",
@@ -44,14 +44,18 @@ export const postsMars: Post[] = [
         caption: "Prawdziwy Jezero.",
       },
       {
+        type: "p",
+        text: "To nie jest rezygnacja. To jest tempo iteracji. Każde pudełko, które nie domknęło się na Marsie, czeka kolejne dwa lata na następne okno. Na Księżycu poprawkę da się polecieć w tym samym miesiącu.",
+      },
+      {
         type: "img",
         src: "/img/mars-starbase.jpg",
         alt: "Starbase w Teksasie: stacked Starship przy wieży, ocean w tle",
-        caption: "Starbase.",
+        caption: "Starbase. Stąd ma polecieć to, czego na Marsie jeszcze nie ma.",
       },
       {
         type: "p",
-        text: "Kadr Dimy. Base Alpha. Prawdziwy Jezero. Starbase.",
+        text: "Jest jeszcze twardsza rzecz. SpaceDaily pisał 27 sierpnia: po 13. locie testowym w lipcu SpaceX wciąż nie spróbował tankowania dwóch Starshipów na orbicie. Statek, który dochodzi na LEO, spala większość paliwa na wejście. Żeby iść dalej, tankowce muszą się zetknąć i przepchnąć superzimny metan i tlen. Progress tankował stacje od 1978, ale to była tona chemii, która stoi w temperaturze pokładowej. Tu chodzą setki ton dwóch cieczy, które ciągle chcą wrzeć. Źródło: [SpaceDaily](https://spacedaily.com/t-starship-large-scale-orbital-refuelling-mars/).",
       },
       {
         type: "img",
@@ -61,11 +65,15 @@ export const postsMars: Post[] = [
       },
       {
         type: "p",
-        text: "Zgoda dotyczy skali. Nie daty startu, nie budżetu, nie liczby statków.",
+        text: "Wewnętrzny transfer tlenu na locie 3, ponad 3 tony w jednym kadłubie, to nie jest demo tankowca. Dwa statki, dokowanie, zimne rury, powtórka. Tego jeszcze nie było.",
       },
       {
         type: "p",
-        text: "Rysunek bazy jest ładny. Yes znaczy, że trudniejszy niż wygląda. I że i tak trzeba.",
+        text: "Na powierzchni dochodzi druga fabryka paliwa. Metan i tlen z dwutlenku węgla z atmosfery i z lokalnej wody. Chemia jest znana. Zakład, który to robi sam, zanim załoga będzie od niego zależeć, nie stoi.",
+      },
+      {
+        type: "p",
+        text: "Księżyc jest szybszy. Mars jest tym, na co Musk mówi Yes. Jedno nie kasuje drugiego.",
       },
     ],
   },
