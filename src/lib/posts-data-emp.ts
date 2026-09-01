@@ -28,11 +28,11 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "Po tym przelewie państwo wyłożyło na plany EMP łącznie około 5,8 mld zł, [liczy Gazeta.pl](https://next.gazeta.pl/next/7,151003,32995305,rzadowy-fundusz-wylozyl-fortune-na-polskiego-elektryka-z-dusza.html). To największa państwowa inwestycja motoryzacyjna III RP. W komunikacie Fundusz mówi tylko o pakiecie większościowym. Procentu akcji po dilu nie podał.",
+        text: "Po tym przelewie państwo wyłożyło na plany EMP łącznie około 5,8 mld zł, [liczy Gazeta.pl](https://next.gazeta.pl/next/7,151003,32995305,rzadowy-fundusz-wylozyl-fortune-na-polskiego-elektryka-z-dusza.html). To największa państwowa inwestycja motoryzacyjna III RP. W komunikacie Fundusz mówi tylko o pakiecie większościowym. Ile procent akcji ma po tej transakcji, nie podał.",
       },
       {
         type: "p",
-        text: "Pieniądze poszły z programu Instrument wsparcia dla gospodarki niskoemisyjnej. 13 maja Fundusz i EMP podpisały umowę inwestycyjną i umowę akcjonariuszy, [pisała wtedy Gazeta](https://next.gazeta.pl/next/7,151003,32787423,rzad-inwestuje-jeszcze-4-5-mld-zl-w-polskie-elektryki-w-jaworznie.html). Walne podniosło kapitał, zmieniło statut i wpuściło do rady nadzorczej dwóch ludzi z NFOŚiGW.",
+        text: "Pieniądze poszły z programu Instrument wsparcia dla gospodarki niskoemisyjnej. [13 maja](https://next.gazeta.pl/next/7,151003,32787423,rzad-inwestuje-jeszcze-4-5-mld-zl-w-polskie-elektryki-w-jaworznie.html) Fundusz i EMP podpisały umowę inwestycyjną i umowę akcjonariuszy. Walne podniosło kapitał, zmieniło statut i wpuściło do rady nadzorczej dwóch ludzi z NFOŚiGW.",
       },
       {
         type: "img",
@@ -42,11 +42,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "Hub w Jaworznie ma być zakładem, zapleczem B+R, oprogramowaniem i częściami do baterii. [7 maja EMP](https://electromobilitypoland.pl/en/news/electromobility-poland-partners-with-foxconn-emp-hub-moves-into-the-next-phase-of-realization/) opisała halę: blacharnia, lakiernia, pakiet baterii, napęd, montaż końcowy. Do tego centrum B+R: oprogramowanie, dane, cyfrowa mobilność. Nowa europejska marka z siedzibą w Polsce, na start trzy modele. [Reuters](https://www.reuters.com/world/asia-pacific/polands-emp-teams-up-with-foxconn-build-ev-manufacturing-hub-2026-05-07/) dodał rynek UE i start produkcji w 2029. Prezes EMP powiedział tam o początkowych ok. 100 tys. aut rocznie i możliwej rozbudowie do 380–400 tys. To plan rozbudowy, nie pewnik z dnia otwarcia.",
-      },
-      {
-        type: "p",
-        text: "Fundusz planuje start produkcji na 2029 rok. Cały projekt: 2026–2030. Po starcie około 70 proc. wartości części ma pochodzić z UE, część z Polski. To plan, nie otwarcie hali.",
+        text: "Hub w Jaworznie ma być zakładem, zapleczem B+R, oprogramowaniem i częściami do baterii. [7 maja EMP](https://electromobilitypoland.pl/en/news/electromobility-poland-partners-with-foxconn-emp-hub-moves-into-the-next-phase-of-realization/) opisała halę: blacharnia, lakiernia, pakiet baterii, napęd, montaż końcowy. Do tego centrum B+R: oprogramowanie, dane, cyfrowa mobilność. Nowa europejska marka z siedzibą w Polsce, na start trzy modele. [Reuters](https://www.reuters.com/world/asia-pacific/polands-emp-teams-up-with-foxconn-build-ev-manufacturing-hub-2026-05-07/) dodał rynek UE i start produkcji w 2029. Prezes EMP powiedział tam o początkowych około 100 tys. aut rocznie i możliwej rozbudowie do 380–400 tys. To plan rozbudowy, nie pewnik z dnia otwarcia. Cały projekt: 2026–2030. Po starcie około 70 proc. wartości części ma pochodzić z UE, część z Polski.",
       },
       {
         type: "p",
@@ -54,7 +50,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "[Premier Tusk w czerwcu](https://biznes.pap.pl/wiadomosci/gry-i-technologie/update-poland-finalise-foxconn-talks-after-summer-works-semiconductor) zapowiedział finalizację po lecie i trzy średnie SUV-y. 10 czerwca w Sejmie Cyprian Gronkiewicz mówił, że JV ma mieć większość po stronie polskiej. Foxtron dokłada gotową platformę i kapitał. Druga generacja platformy ma mieć 70 proc. polskiego udziału projektowego.",
+        text: "Premier Tusk w czerwcu zapowiedział finalizację po lecie i trzy średnie SUV-y. 10 czerwca w Sejmie Cyprian Gronkiewicz mówił, że wspólna spółka ma mieć większość po stronie polskiej. Foxtron dokłada gotową platformę i kapitał. Druga generacja platformy ma mieć 70 proc. polskiego udziału projektowego.",
       },
       {
         type: "img",
@@ -64,7 +60,7 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "Jun Seki, szef strategii Foxconna od elektryków, powiedział, że firma stawia na otwarte platformy i fabrykę z produkcją wspieraną przez sztuczną inteligencję. EMP ma dostać platformy, inżynierię i know-how. Foxtron ma budować lokalne B+R i sieć dostawców na rynek europejski.",
+        text: "Jun Seki, szef strategii Foxconna od elektryków, powiedział, że firma stawia na otwarte platformy i fabrykę, w której produkcję ma wspierać sztuczna inteligencja. EMP ma dostać platformy, inżynierię i wiedzę techniczną. Foxtron ma budować lokalne B+R i sieć dostawców na rynek europejski.",
       },
       {
         type: "p",
