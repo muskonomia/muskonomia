@@ -1,4 +1,5 @@
 import type { Post } from "./posts";
+import { postsMars } from "./posts-data-mars";
 import { postsGbms } from "./posts-data-gbms";
 import { postsG20 } from "./posts-data-g20";
 import { postsV3 } from "./posts-data-v3";
@@ -28,6 +29,7 @@ import { postsA } from "./posts-data-a";
 import { postsB } from "./posts-data-b";
 
 export const postsData: Post[] = [
+  ...postsMars,
   ...postsGbms,
   ...postsG20,
   ...postsV3,
