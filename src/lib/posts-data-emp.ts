@@ -7,7 +7,7 @@ export const postsEmp: Post[] = [
     topic: "inne",
     title: "NFOŚiGW został właścicielem EMP za blisko 4,5 mld zł",
     excerpt:
-      "NFOŚiGW objął 26 sierpnia akcje EMP i przelał spółce blisko 4,5 mld zł z KPO. To największa inwestycja Funduszu. NaszEauto się skończyło. W lipcu BEV miały w Polsce 4 proc. rynku i spadek o 41 proc. rok do roku. Produkcja planowana jest na 2029. JV z Foxconnem wciąż jest planem.",
+      "NFOŚiGW objął 26 sierpnia akcje EMP i przelał spółce blisko 4,5 mld zł z KPO. Gazeta.pl liczy łącznie ok. 5,8 mld zł od państwa. NaszEauto się skończyło. W lipcu BEV miały w Polsce 4 proc. rynku i spadek o 41 proc. rok do roku. Produkcja planowana jest na 2029. Umowy JV z Foxconnem jeszcze nie ma.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
     img: "https://www.gov.pl/photo/cd3976d0-dd41-47ad-b979-68a0d315966b",
@@ -24,7 +24,11 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "[Wnp](https://www.wnp.pl/przemysl/polski-samochod-elektryczny-coraz-blizej-nfosigw-zainwestowal-blisko-4-5-mld-zl,1094520.html) i [Interia](https://motoryzacja.interia.pl/wiadomosci/news-4-5-mld-zl-na-polskie-auto-elektryczne-emp-dostala-przelew-n,nId,23536650) oddają komunikat: Polski Hub Elektromobilności i „polskie auto elektryczne”. Nie marka Izera. EMP powstała w 2016 roku pod tę markę. Udziały miały PGE, Energa, Enea i Tauron. Fabryki nie zbudowano. Działkę 117 ha na Jaworznickim Obszarze Gospodarczym spółka ma od końca 2023 roku, [przypomina money.pl](https://www.money.pl/mobility/rzadowy-nfosigw-dosypal-miliardy-do-izery-2-0-jest-data-startu-produkcji-elektrykow-7324428700510272a.html).",
+        text: "[Wnp](https://www.wnp.pl/przemysl/polski-samochod-elektryczny-coraz-blizej-nfosigw-zainwestowal-blisko-4-5-mld-zl,1094520.html) i [Interia](https://motoryzacja.interia.pl/wiadomosci/news-4-5-mld-zl-na-polskie-auto-elektryczne-emp-dostala-przelew-n,nId,23536650) oddają komunikat: Polski Hub Elektromobilności i „polskie auto elektryczne”. Nie marka Izera. EMP powstała w 2016 roku pod tę markę. Udziały miały PGE, Energa, Enea i Tauron. [Gazeta.pl](https://next.gazeta.pl/next/7,151003,32995305,rzadowy-fundusz-wylozyl-fortune-na-polskiego-elektryka-z-dusza.html) pisze, że energetyka dała na start około 70 mln zł. Fabryki nie zbudowano. Działkę 117 ha na Jaworznickim Obszarze Gospodarczym spółka ma od końca 2023 roku, [przypomina money.pl](https://www.money.pl/mobility/rzadowy-nfosigw-dosypal-miliardy-do-izery-2-0-jest-data-startu-produkcji-elektrykow-7324428700510272a.html).",
+      },
+      {
+        type: "p",
+        text: "Po tym przelewie państwo wyłożyło na plany EMP łącznie około 5,8 mld zł, [liczy Gazeta.pl](https://next.gazeta.pl/next/7,151003,32995305,rzadowy-fundusz-wylozyl-fortune-na-polskiego-elektryka-z-dusza.html). To największa państwowa inwestycja motoryzacyjna III RP. W komunikacie Fundusz mówi tylko o pakiecie większościowym. Procentu akcji po dilu nie podał.",
       },
       {
         type: "p",
@@ -38,17 +42,29 @@ export const postsEmp: Post[] = [
       },
       {
         type: "p",
-        text: "Hub w Jaworznie ma być zakładem, zapleczem B+R, oprogramowaniem i częściami do baterii. Fundusz planuje start produkcji na 2029 rok. Cały projekt: 2026–2030. Po starcie około 70 proc. wartości części ma pochodzić z UE, część z Polski. To plan, nie otwarcie hali.",
+        text: "Hub w Jaworznie ma być zakładem, zapleczem B+R, oprogramowaniem i częściami do baterii. [7 maja EMP](https://electromobilitypoland.pl/en/news/electromobility-poland-partners-with-foxconn-emp-hub-moves-into-the-next-phase-of-realization/) opisała halę: blacharnia, lakiernia, pakiet baterii, napęd, montaż końcowy. Do tego centrum B+R: oprogramowanie, dane, cyfrowa mobilność. Nowa europejska marka z siedzibą w Polsce, na start trzy modele. [Reuters](https://www.reuters.com/world/asia-pacific/polands-emp-teams-up-with-foxconn-build-ev-manufacturing-hub-2026-05-07/) dodał rynek UE i start produkcji w 2029. Prezes EMP powiedział tam o początkowych ok. 100 tys. aut rocznie i możliwej rozbudowie do 380–400 tys. To plan rozbudowy, nie pewnik z dnia otwarcia.",
       },
       {
         type: "p",
-        text: "EMP chce zrobić joint venture z Hon Hai (Foxconn) i Foxtron Vehicle Technologies. Umowę JV planuje na jesień 2026, budowę na wiosnę 2027. Podpisanej spółki jeszcze nie ma.",
+        text: "Fundusz planuje start produkcji na 2029 rok. Cały projekt: 2026–2030. Po starcie około 70 proc. wartości części ma pochodzić z UE, część z Polski. To plan, nie otwarcie hali.",
+      },
+      {
+        type: "p",
+        text: "Joint venture z Hon Hai (Foxconn) i Foxtron Vehicle Technologies nie jest podpisane. [EMP w maju](https://electromobilitypoland.pl/en/news/electromobility-poland-partners-with-foxconn-emp-hub-moves-into-the-next-phase-of-realization/) mówiła o wiążących umowach w drugiej połowie 2026. [Reuters](https://www.reuters.com/world/asia-pacific/polands-emp-teams-up-with-foxconn-build-ev-manufacturing-hub-2026-05-07/) to samo. [Business Insider](https://businessinsider.com.pl/biznes/fabryka-aut-elektrycznych-w-jaworznie-rzad-ujawnia-przelomowe-plany/xb8gkme): źródło w rządzie mówi o październiku, najpóźniej listopadzie. Rzecznik EMP Piotr Michniuk trzyma się jesieni. Budowa: wiosna 2027. Przygotowanie gruntu, według rządu, już trwa.",
+      },
+      {
+        type: "p",
+        text: "[Premier Tusk w czerwcu](https://biznes.pap.pl/wiadomosci/gry-i-technologie/update-poland-finalise-foxconn-talks-after-summer-works-semiconductor) zapowiedział finalizację po lecie i trzy średnie SUV-y. 10 czerwca w Sejmie Cyprian Gronkiewicz mówił, że JV ma mieć większość po stronie polskiej. Foxtron dokłada gotową platformę i kapitał. Druga generacja platformy ma mieć 70 proc. polskiego udziału projektowego.",
       },
       {
         type: "img",
         src: "https://www.gov.pl/photo/e2de7035-fcc1-490a-b14a-ec5d80256b8c",
         alt: "Paulina Hennig-Kloska podczas ogłoszenia finansowania z KPO",
         caption: "Paulina Hennig-Kloska o „podwójnych korzyściach EKO”. Fot. MAP.",
+      },
+      {
+        type: "p",
+        text: "Jun Seki, szef strategii Foxconna od elektryków, powiedział, że firma stawia na otwarte platformy i fabrykę z produkcją wspieraną przez sztuczną inteligencję. EMP ma dostać platformy, inżynierię i know-how. Foxtron ma budować lokalne B+R i sieć dostawców na rynek europejski.",
       },
       {
         type: "p",
