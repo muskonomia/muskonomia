@@ -39,7 +39,7 @@ function ArchiwumMiesiac() {
       }
     >
       {list.length ? (
-        <PostGrid posts={list} />
+        <PostGrid posts={list} limit={false} />
       ) : (
         <p className="text-muted">Brak wpisów w tym miesiącu.</p>
       )}

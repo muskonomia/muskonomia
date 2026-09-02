@@ -49,7 +49,7 @@ function Szukaj() {
           .
         </p>
       ) : (
-        <PostGrid posts={results} />
+        <PostGrid posts={results} limit={false} />
       )}
     </ListingShell>
   );

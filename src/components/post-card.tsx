@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import type { Post } from "@/lib/posts";
 import { PostMeta } from "@/components/post-meta";
@@ -30,12 +31,36 @@ export function PostCard({ post }: { post: Post }) {
   );
 }
 
-export function PostGrid({ posts }: { posts: Post[] }) {
+export function PostGrid({
+  posts,
+  limit = 12,
+}: {
+  posts: Post[];
+  limit?: number | false;
+}) {
+  const cap = limit === false ? posts.length : limit;
+  const [open, setOpen] = useState(false);
+  const hidden = Math.max(0, posts.length - cap);
+  const visible = open || hidden === 0 ? posts : posts.slice(0, cap);
+
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {posts.map((post) => (
-        <PostCard key={post.slug} post={post} />
-      ))}
+    <div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {visible.map((post) => (
+          <PostCard key={post.slug} post={post} />
+        ))}
+      </div>
+      {hidden > 0 && !open ? (
+        <div className="mt-10 text-center">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="rounded-md border border-border px-5 py-3 text-sm font-semibold text-fg hover:border-fg"
+          >
+            Pokaż starsze ({hidden})
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }
