@@ -31,9 +31,9 @@ export const postsCca: Post[] = [
       },
       {
         type: "img",
-        src: "/img/cc-wnetrze.jpg",
-        alt: "Wnętrze Cybercaba: dwa fotele i ekran, bez kierownicy i pedałów",
-        caption: "Kabina z testów w Austin. Dwa miejsca, środkowy ekran, zero kierownicy.",
+        src: "/img/inv-kabina.jpg",
+        alt: "Wnętrze Cybercaba z We, Robot: dwa fotele, środkowy ekran, bez kierownicy i pedałów",
+        caption: "Kabina Cybercaba. Dwa miejsca, środkowy ekran, zero kierownicy.",
       },
       {
         type: "p",
