@@ -44,6 +44,46 @@ async function grokPwaPlugin(): Promise<Plugin> {
   };
 }
 
+function xmlFeedsPlugin(): Plugin {
+  return {
+    name: "muskonomia:xml-feeds",
+    apply: "serve",
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        try {
+          const pathOnly = (req.url ?? "").split("?", 1)[0] ?? "";
+          if (pathOnly !== "/sitemap.xml" && pathOnly !== "/rss.xml") {
+            next();
+            return;
+          }
+          if ((req.method ?? "GET").toUpperCase() !== "GET") {
+            res.statusCode = 405;
+            res.setHeader("content-type", "text/plain; charset=utf-8");
+            res.end("Method Not Allowed");
+            return;
+          }
+          const mod = (await server.ssrLoadModule("/src/lib/feeds.ts")) as {
+            sitemapXml: () => string;
+            rssXml: () => string;
+          };
+          const body = pathOnly === "/rss.xml" ? mod.rssXml() : mod.sitemapXml();
+          res.statusCode = 200;
+          res.setHeader("content-type", "application/xml; charset=utf-8");
+          res.setHeader("cache-control", "public, max-age=3600");
+          res.end(body);
+        } catch (err) {
+          console.error("[xml-feeds] handler failed:", err);
+          if (!res.headersSent) {
+            res.statusCode = 500;
+            res.setHeader("content-type", "text/plain; charset=utf-8");
+            res.end("xml feed failed");
+          }
+        }
+      });
+    },
+  };
+}
+
 function pgliteBootstrapPlugin(): Plugin {
   return {
     name: "app-builder:pglite-bootstrap",
@@ -153,6 +193,7 @@ export default defineConfig(async ({ command, isPreview }) => ({
   resolve: { tsconfigPaths: true },
   plugins: [
     pgliteBootstrapPlugin(),
+    xmlFeedsPlugin(),
     authPopupPlugin(),
     await grokPwaPlugin(),
     tailwindcss(),
