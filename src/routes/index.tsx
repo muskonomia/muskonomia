@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { FormEvent, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { FormEvent, useState } from "react";
+import { PostGrid } from "@/components/post-card";
+import { TopicChips } from "@/components/topic-chips";
 import { pageHead } from "@/lib/seo";
 import { SITE_DESCRIPTION } from "@/lib/site";
-import { posts } from "@/lib/posts";
+import { posts, TOPICS, type TopicId } from "@/lib/posts";
 import { XLogo } from "@/components/x-logo";
 
 export const Route = createFileRoute("/")({
@@ -30,14 +32,14 @@ function Home() {
       <SiteHeader />
 
       <main>
-      <section className="relative isolate flex min-h-svh items-end overflow-hidden" aria-labelledby="home-h1">
+      <section className="relative isolate flex min-h-[36rem] items-end overflow-hidden" aria-labelledby="home-h1">
         <img
           src="/img/cybertruck-pl.png"
           alt="Tesla Cybertruck"
           className="absolute inset-0 h-full w-full object-cover object-[center_60%]"
         />
         <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/55 to-overlay/20" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-20 pt-32">
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-fg/80">
             Tesla · SpaceX · xAI
           </p>
@@ -51,20 +53,6 @@ function Home() {
             Najświeższe wiadomości z Tesli, SpaceX i xAI. Never count Elon out — he’s frequently
             late, but never wrong.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#blog"
-              className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-fg hover:bg-accent-hover"
-            >
-              Najnowsze wpisy
-            </a>
-            <a
-              href="#join"
-              className="rounded-md border border-fg/30 bg-overlay/40 px-5 py-3 text-sm font-semibold backdrop-blur-sm hover:border-fg"
-            >
-              Newsletter
-            </a>
-          </div>
         </div>
       </section>
 
@@ -74,41 +62,23 @@ function Home() {
         <h2 id="sec-tematy" className="font-display text-4xl font-semibold tracking-tight">
           Tematy
         </h2>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          <TopicCard
-            href="/tematy#tesla"
-            img="/img/cover-cybercab.jpg"
-            kicker="Tesla"
-            title="Tesla"
-            copy="Robotaxi, Semi, Cybertruck."
-          />
-          <TopicCard
-            href="/tematy#spacex"
-            img="/img/cover-falcon.jpg"
-            kicker="SpaceX"
-            title="SpaceX"
-            copy="Starlink, Starship, Księżyc."
-          />
-          <TopicCard
-            href="/tematy#xai"
-            img="/img/grok-bot.jpg"
-            kicker="xAI"
-            title="xAI"
-            copy="Grok, boty, Colossus."
-          />
-          <TopicCard
-            href="/tematy#inne"
-            img="/img/inline-rivian.jpg"
-            kicker="Inne"
-            title="Inne"
-            copy="Branża EV poza Teslą."
-          />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {TOPICS.map((topic) => (
+            <TopicCard
+              key={topic.id}
+              topic={topic.id}
+              img={topic.cover}
+              kicker={topic.label}
+              title={topic.label}
+              copy={topic.copy}
+            />
+          ))}
         </div>
       </section>
 
       <Link
-        to="/blog/$slug"
-        params={{ slug: "tesla-model-y-dla-rodziny" }}
+        to="/huby/$slug"
+        params={{ slug: "rodzina-w-tesli" }}
         className="relative isolate block min-h-[70vh] overflow-hidden"
         aria-labelledby="sec-wnetrze"
       >
@@ -129,15 +99,15 @@ function Home() {
               rakiet.
             </p>
             <span className="mt-6 inline-block text-sm font-semibold text-fg underline decoration-accent underline-offset-4">
-              Czytaj wpis →
+              Zobacz zbiór →
             </span>
           </div>
         </div>
       </Link>
 
       <Link
-        to="/blog/$slug"
-        params={{ slug: "terafab-ruszyly-pierwsze-prace-budowlane" }}
+        to="/huby/$slug"
+        params={{ slug: "terafab" }}
         className="relative isolate block overflow-hidden"
         aria-labelledby="sec-terafab"
       >
@@ -156,7 +126,7 @@ function Home() {
             Render, teren, liczby. Wszystko, co wiadomo o fabryce chipów Tesli i SpaceX.
           </p>
           <span className="mt-6 inline-block text-sm font-semibold text-fg underline decoration-accent underline-offset-4">
-            Czytaj wpis →
+            Zobacz zbiór →
           </span>
         </div>
       </Link>
@@ -166,17 +136,26 @@ function Home() {
           Wybrane historie
         </h2>
         <div className="grid gap-5 md:grid-cols-2">
-        <article className="overflow-hidden rounded-xl border border-border bg-surface">
-          <img src="/img/model3.jpg" alt="Matowa Tesla Model 3" className="h-56 w-full object-cover" />
+        <Link
+          to="/blog/$slug"
+          params={{ slug: "tesla-model-y-dla-rodziny" }}
+          className="overflow-hidden rounded-xl border border-border bg-surface"
+        >
+          <img src="/img/interior.jpg" alt="Szklany dach Model Y" className="h-56 w-full object-cover" />
           <div className="p-6">
             <p className="text-xs uppercase tracking-widest text-accent">Tesla</p>
-            <h3 className="mt-2 font-display text-2xl font-semibold">Matowy Model 3</h3>
+            <h3 className="mt-2 font-display text-2xl font-semibold">Model Y: auto, które ogarnia rodzinę</h3>
             <p className="mt-2 text-sm text-muted">
-              Design, hamulce i codzienność na ulicach — nie tylko Cybertruck.
+              Miejsce, cisza, foteliki, bagażnik i sieć Superchargerów. Krótko: dlaczego Y jest codziennym autem Tesli, nie
+              tylko Robotaxi.
             </p>
           </div>
-        </article>
-        <article className="overflow-hidden rounded-xl border border-border bg-surface">
+        </Link>
+        <Link
+          to="/blog/$slug"
+          params={{ slug: "grok-46-wchodzi-do-scislej-czolowki-medycznych-benchmarkow" }}
+          className="overflow-hidden rounded-xl border border-border bg-surface"
+        >
           <img
             src="/img/grok-chart.jpg"
             alt="Ranking Grok w indeksie medycznym"
@@ -189,7 +168,7 @@ function Home() {
               Indeks Artificial Analysis — Grok wśród liderów w zadaniach healthcare.
             </p>
           </div>
-        </article>
+        </Link>
         </div>
       </section>
 
@@ -250,8 +229,6 @@ function Home() {
 }
 
 function HomeBlog() {
-  const [hero, ...rest] = posts;
-
   return (
     <section id="blog" className="bg-bg" aria-labelledby="sec-blog">
       <div className="mx-auto max-w-6xl px-5 pt-20">
@@ -259,77 +236,36 @@ function HomeBlog() {
         <h2 id="sec-blog" className="mt-1 font-display text-4xl font-semibold tracking-tight">
           Blog
         </h2>
+        <div className="mt-6">
+          <TopicChips />
+        </div>
       </div>
-
-      {hero && (
-        <Link
-          to="/blog/$slug"
-          params={{ slug: hero.slug }}
-          className="group relative mx-auto mt-10 block min-h-[70vh] max-w-6xl overflow-hidden sm:rounded-xl"
-        >
-          <img
-            src={hero.img}
-            alt=""
-            className={`absolute inset-0 h-full w-full ${hero.contain ? "bg-fg object-contain" : hero.object ?? "object-cover"}`}
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/50 to-overlay/15" />
-          <div className="relative z-10 flex min-h-[70vh] items-end px-5 py-12 sm:px-10">
-            <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-fg/70">
-                {hero.kicker} · {hero.date}
-              </p>
-              <h3 className="mt-3 font-display text-5xl font-semibold leading-none sm:text-6xl">
-                {hero.title}
-              </h3>
-              <p className="mt-4 text-fg/90">{hero.excerpt}</p>
-            </div>
-          </div>
-        </Link>
-      )}
-
-      <div className="mx-auto grid max-w-6xl gap-5 px-5 py-12 sm:grid-cols-2 lg:grid-cols-3">
-        {rest.map((post) => (
-          <Link
-            key={post.slug}
-            to="/blog/$slug"
-            params={{ slug: post.slug }}
-            className="group relative min-h-72 overflow-hidden rounded-xl"
-          >
-            <img
-              src={post.img}
-              alt=""
-              className={`absolute inset-0 h-full w-full ${post.contain ? "bg-fg object-contain" : "object-cover"} transition duration-500 group-hover:scale-105`}
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/45 to-overlay/10" />
-            <div className="relative z-10 flex h-full min-h-72 flex-col justify-end p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-fg/75">
-                {post.kicker} · {post.date}
-              </p>
-              <h3 className="mt-1 font-display text-2xl font-semibold leading-none">{post.title}</h3>
-              <p className="mt-2 line-clamp-2 text-sm text-fg/80">{post.excerpt}</p>
-            </div>
-          </Link>
-        ))}
+      <div className="mx-auto max-w-6xl px-5 py-12">
+        <PostGrid posts={posts} />
       </div>
     </section>
   );
 }
 
 function TopicCard({
-  href,
+  topic,
   img,
   kicker,
   title,
   copy,
 }: {
-  href: string;
+  topic: TopicId;
   img: string;
   kicker: string;
   title: string;
   copy: string;
 }) {
   return (
-    <a href={href} className="group relative block min-h-72 overflow-hidden rounded-xl">
+    <Link
+      to="/tematy/$topic"
+      params={{ topic }}
+      className="group relative block min-h-72 overflow-hidden rounded-xl"
+    >
       <img
         src={img}
         alt=""
@@ -341,6 +277,6 @@ function TopicCard({
         <h3 className="mt-1 font-display text-3xl font-semibold leading-none">{title}</h3>
         <p className="mt-2 text-sm text-fg/80">{copy}</p>
       </div>
-    </a>
+    </Link>
   );
 }
