@@ -21,6 +21,8 @@ function postDocumentTitle(post: Post) {
   if (topic === "tesla" && !hay.includes("tesla")) extra.push("Tesla");
   if (topic === "spacex" && !hay.includes("spacex")) extra.push("SpaceX");
   if (topic === "xai" && !hay.includes("xai") && !hay.includes("grok")) extra.push("xAI");
+  if (topic === "neuralink" && !hay.includes("neuralink")) extra.push("Neuralink");
+  if (topic === "boring" && !hay.includes("boring") && !hay.includes("loop")) extra.push("Boring");
   return [post.title, ...extra, SITE_NAME].join(" | ");
 }
 
