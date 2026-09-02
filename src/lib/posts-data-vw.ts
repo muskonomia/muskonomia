@@ -24,11 +24,11 @@ export const postsVw: Post[] = [
       },
       {
         type: "p",
-        text: "Papier dla rady nadzorczej jest przygotowany na posiedzenie 3 i 4 września. [Wirtschaftswoche](https://www.wiwo.de/unternehmen/auto/vw-sanierungsplan-volkswagen-vorstand-plant-ende-der-produktion-in-diesen-vier-deutschen-werken/100251232.html) dostała dokument pod tytułem „Bericht zum Konzeptbeschluss Aufsichtsrat”. Zarząd przyjął koncepcję jednogłośnie. Koncern nie komentuje przecieków i odsyła sprawę do gremiów.",
+        text: "Umowa dla rady nadzorczej jest przygotowana na posiedzenie 3 i 4 września. [Wirtschaftswoche](https://www.wiwo.de/unternehmen/auto/vw-sanierungsplan-volkswagen-vorstand-plant-ende-der-produktion-in-diesen-vier-deutschen-werken/100251232.html) dostała dokument pod tytułem „Bericht zum Konzeptbeschluss Aufsichtsrat”. Zarząd przyjął koncepcję jednogłośnie. Koncern nie komentuje przecieków i odsyła sprawę do gremiów.",
       },
       {
         type: "p",
-        text: "W papierze są dwa zdania, które tłumaczą resztę. Obecne modele, biznes i struktury nie wystarczają, by utrzymać konkurencyjność i rentowność grupy. Drugi cel to ustabilizowanie ratingu kredytowego Volkswagen AG i kosztu refinansowania.",
+        text: "W umowie są dwa zdania, które tłumaczą resztę. Obecne modele, biznes i struktury nie wystarczają, by utrzymać konkurencyjność i rentowność grupy. Drugi cel to ustabilizowanie ratingu kredytowego Volkswagen AG i kosztu refinansowania.",
       },
       {
         type: "p",
@@ -74,7 +74,7 @@ export const postsVw: Post[] = [
       },
       {
         type: "p",
-        text: "Cztery hale mają dojechać do końca obecnej generacji. Następca ma powstać taniej, często za granicą. Poznań dostaje T8.",
+        text: "Cztery fabryki zostaną zamknięte. Kolejne mogą powstać taniej, często za granicą Niemiec. Poznań dostaje fabrykę T8.",
       },
     ],
   },
