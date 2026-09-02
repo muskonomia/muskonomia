@@ -1,4 +1,11 @@
+import { Link } from "@tanstack/react-router";
 import { XLogo } from "@/components/x-logo";
+import {
+  SITE_AUTHOR,
+  SITE_CONTACT_EMAIL,
+  SITE_CONTACT_PHONE_DISPLAY,
+  SITE_CONTACT_TEL,
+} from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -6,6 +13,18 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 sm:flex-row">
         <p>© 2026 muskonomia.pl — świat Elona Muska</p>
         <div className="flex flex-wrap items-center justify-center gap-5">
+          <Link to="/o-serwisie" className="hover:text-fg">
+            O serwisie
+          </Link>
+          <Link to="/huby" className="hover:text-fg">
+            Huby
+          </Link>
+          <Link to="/archiwum" className="hover:text-fg">
+            Archiwum
+          </Link>
+          <a href="/rss.xml" className="hover:text-fg">
+            RSS
+          </a>
           <a
             href="https://x.com/MuskonomiaPL"
             target="_blank"
@@ -20,6 +39,17 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
+      <p className="mx-auto mt-6 max-w-6xl px-5 text-center text-sm text-muted">
+        {SITE_AUTHOR}
+        {" · "}
+        <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="hover:text-fg">
+          {SITE_CONTACT_EMAIL}
+        </a>
+        {" · "}
+        <a href={SITE_CONTACT_TEL} className="hover:text-fg">
+          {SITE_CONTACT_PHONE_DISPLAY}
+        </a>
+      </p>
     </footer>
   );
 }
