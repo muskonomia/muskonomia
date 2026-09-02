@@ -1,14 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
 import { pageHead } from "@/lib/seo";
-import {
-  SITE_AUTHOR,
-  SITE_CONTACT_EMAIL,
-  SITE_CONTACT_PHONE_DISPLAY,
-  SITE_CONTACT_TEL,
-  SITE_X_HANDLE,
-  SITE_X_URL,
-} from "@/lib/site";
+import { SITE_AUTHOR, SITE_CONTACT_EMAIL, SITE_X_HANDLE, SITE_X_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/o-serwisie")({
   head: () =>
@@ -38,21 +31,11 @@ function OSerwisie() {
           To nie jest blog o pomocy humanitarnej. To nie jest serwis o katastrofizmie wokół
           Starlinka. Starlink pojawia się jako produkt SpaceX, nie jako scenariusz końca sieci.
         </p>
-        <p>
-          Redakcja: {SITE_AUTHOR}. Mail:{" "}
-          <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="text-accent hover:text-accent-hover">
-            {SITE_CONTACT_EMAIL}
-          </a>
-          . Telefon:{" "}
-          <a href={SITE_CONTACT_TEL} className="text-accent hover:text-accent-hover">
-            {SITE_CONTACT_PHONE_DISPLAY}
-          </a>
-          .
-        </p>
+        <p>Redakcja: {SITE_AUTHOR}.</p>
         <p>
           Kontakt serwisu:{" "}
-          <a href="mailto:muskonomia.pl@gmail.com" className="text-accent hover:text-accent-hover">
-            muskonomia.pl@gmail.com
+          <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="text-accent hover:text-accent-hover">
+            {SITE_CONTACT_EMAIL}
           </a>
           . Na X:{" "}
           <a

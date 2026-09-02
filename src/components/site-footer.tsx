@@ -1,11 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { XLogo } from "@/components/x-logo";
-import {
-  SITE_AUTHOR,
-  SITE_CONTACT_EMAIL,
-  SITE_CONTACT_PHONE_DISPLAY,
-  SITE_CONTACT_TEL,
-} from "@/lib/site";
+import { SITE_AUTHOR } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -41,14 +36,6 @@ export function SiteFooter() {
       </div>
       <p className="mx-auto mt-6 max-w-6xl px-5 text-center text-sm text-muted">
         {SITE_AUTHOR}
-        {" · "}
-        <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="hover:text-fg">
-          {SITE_CONTACT_EMAIL}
-        </a>
-        {" · "}
-        <a href={SITE_CONTACT_TEL} className="hover:text-fg">
-          {SITE_CONTACT_PHONE_DISPLAY}
-        </a>
       </p>
     </footer>
   );
