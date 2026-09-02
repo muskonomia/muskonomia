@@ -1,5 +1,26 @@
 import type { Post } from "./posts";
+import { postsGbm } from "./posts-data-gbm";
+import { postsGbl } from "./posts-data-gbl";
+import { postsCca } from "./posts-data-cca";
+import { postsVw } from "./posts-data-vw";
+import { postsEmp } from "./posts-data-emp";
+import { postsMars } from "./posts-data-mars";
+import { postsGbms } from "./posts-data-gbms";
+import { postsG20 } from "./posts-data-g20";
+import { postsV3 } from "./posts-data-v3";
 import { postsFsd } from "./posts-data-fsd";
+import { postsUae } from "./posts-data-uae";
+import { postsOr } from "./posts-data-or";
+import { postsGx } from "./posts-data-gx";
+import { postsInv } from "./posts-data-inv";
+import { postsRo } from "./posts-data-ro";
+import { postsLa } from "./posts-data-la";
+import { postsBv } from "./posts-data-bv";
+import { postsPw } from "./posts-data-pw";
+import { postsTb } from "./posts-data-tb";
+import { postsVegasLoop } from "./posts-data-vegas-loop";
+import { postsShip40 } from "./posts-data-ship40";
+import { postsAshokCybercab } from "./posts-data-ashok-cybercab";
 import { postsScout } from "./posts-data-scout";
 import { postsGb } from "./posts-data-gb";
 import { postsSc } from "./posts-data-sc";
@@ -14,13 +35,31 @@ import { postsJpm } from "./posts-data-jpm";
 import { posts0 } from "./posts-data-0";
 import { postsA } from "./posts-data-a";
 import { postsB } from "./posts-data-b";
-import { postsVegasLoop } from "./posts-data-vegas-loop";
-import { postsShip40 } from "./posts-data-ship40";
-import { postsAshokCybercab } from "./posts-data-ashok-cybercab";
 import { postsC } from "./posts-data-c";
 
 export const postsData: Post[] = [
+  ...postsGbm,
+  ...postsGbl,
+  ...postsCca,
+  ...postsVw,
+  ...postsEmp,
+  ...postsMars,
+  ...postsGbms,
+  ...postsG20,
+  ...postsV3,
   ...postsFsd,
+  ...postsUae,
+  ...postsOr,
+  ...postsGx,
+  ...postsInv,
+  ...postsRo,
+  ...postsLa,
+  ...postsBv,
+  ...postsPw,
+  ...postsTb,
+  ...postsVegasLoop,
+  ...postsShip40,
+  ...postsAshokCybercab,
   ...postsScout,
   ...postsGb,
   ...postsSc,
@@ -35,8 +74,5 @@ export const postsData: Post[] = [
   ...posts0,
   ...postsA,
   ...postsB,
-  ...postsVegasLoop,
-  ...postsShip40,
-  ...postsAshokCybercab,
   ...postsC,
 ];
