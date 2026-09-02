@@ -70,7 +70,7 @@ export const postsWsk: Post[] = [
       },
       {
         type: "p",
-        text: "Kiedy technologia daje lepszą jakość, cenę i wygodę, z czasem wypiera to, co było wcześniej. Tutaj doją jeszcze ekologia, regulacje i przede wszystkim bezpieczeństwo.",
+        text: "Kiedy technologia daje lepszą jakość, cenę i wygodę, z czasem wypiera to, co było wcześniej. Tutaj dojdą jeszcze ekologia, regulacje i przede wszystkim bezpieczeństwo.",
       },
       {
         type: "p",
