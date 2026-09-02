@@ -1,9 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { DiscussOnX } from "@/components/discuss-on-x";
-import { getPost, postJsonLd, postTopic, posts, postsByTopic, TOPICS } from "@/lib/posts";
+import { PostCard } from "@/components/post-card";
+import { PostMeta } from "@/components/post-meta";
+import { LinkedText } from "@/components/rich-text";
+import { getPost, postJsonLd, relatedPosts } from "@/lib/posts";
 import { postHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -16,65 +18,9 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogPost,
 });
 
-function RichText({ text }: { text: string }) {
-  const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|(https?:\/\/[^\s<]+)/g;
-  const parts: ReactNode[] = [];
-  let last = 0;
-  let i = 0;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(text)) !== null) {
-    if (m.index > last) parts.push(text.slice(last, m.index));
-    if (m[1] && m[2]) {
-      parts.push(
-        <a
-          key={i++}
-          href={m[2]}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-hover"
-        >
-          {m[1]}
-        </a>,
-      );
-    } else {
-      let href = m[3];
-      let trail = "";
-      const cut = href.match(/^(.*?)([),.;:]+)$/);
-      if (cut) {
-        href = cut[1];
-        trail = cut[2];
-      }
-      parts.push(
-        <a
-          key={i++}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-accent underline decoration-accent/40 underline-offset-2 hover:text-accent-hover break-all"
-        >
-          {href}
-        </a>,
-      );
-      if (trail) parts.push(trail);
-    }
-    last = m.index + m[0].length;
-  }
-  if (last < text.length) parts.push(text.slice(last));
-  return parts;
-}
-
 function BlogPost() {
   const post = Route.useLoaderData();
-  const topic = postTopic(post);
-  const topicMeta = TOPICS.find((t) => t.id === topic);
-  const others = postsByTopic(topic)
-    .filter((p) => p.slug !== post.slug)
-    .slice(0, 3);
-  if (others.length < 3) {
-    others.push(
-      ...posts.filter((p) => p.slug !== post.slug && !others.includes(p)).slice(0, 3 - others.length),
-    );
-  }
+  const others = relatedPosts(post, 3);
 
   return (
     <div className="min-h-screen bg-bg text-fg">
@@ -89,19 +35,10 @@ function BlogPost() {
             />
             <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/50 to-overlay/20" />
             <div className="relative z-10 mx-auto flex min-h-[80vh] max-w-3xl flex-col justify-end px-5 py-16">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-fg/70">
-                {post.kicker} ·{" "}
-                <time dateTime={post.isoDate}>{post.date}</time>
-                {topicMeta ? (
-                  <>
-                    {" "}
-                    ·{" "}
-                    <a href={`/tematy#${topic}`} className="hover:text-fg">
-                      {topicMeta.label}
-                    </a>
-                  </>
-                ) : null}
-              </p>
+              <PostMeta
+                post={post}
+                className="text-xs font-semibold uppercase tracking-[0.28em] text-fg/70"
+              />
               <h1 className="mt-3 font-display text-5xl font-semibold leading-none sm:text-6xl">
                 {post.title}
               </h1>
@@ -166,9 +103,9 @@ function BlogPost() {
               if (block.type === "ul") {
                 return (
                   <ul key={i} className="list-disc space-y-2 pl-5">
-                    {block.items.map((item) => (
-                      <li key={item}>
-                        <RichText text={item} />
+                    {block.items.map((item, j) => (
+                      <li key={j}>
+                        <LinkedText text={item} />
                       </li>
                     ))}
                   </ul>
@@ -176,7 +113,7 @@ function BlogPost() {
               }
               return (
                 <p key={i}>
-                  <RichText text={block.text} />
+                  <LinkedText text={block.text} />
                 </p>
               );
             })}
@@ -198,27 +135,18 @@ function BlogPost() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(postJsonLd(post)) }}
         />
 
-        <section className="mx-auto max-w-6xl px-5 pb-20" aria-labelledby="post-more">
-          <h2 id="post-more" className="mb-6 font-display text-3xl font-semibold tracking-tight">
-            Czytaj również
-          </h2>
-          <div className="grid gap-5 sm:grid-cols-3">
-          {others.map((p) => (
-            <Link
-              key={p.slug}
-              to="/blog/$slug"
-              params={{ slug: p.slug }}
-              className="relative min-h-56 overflow-hidden rounded-xl"
-            >
-              <img src={p.img} alt={p.title} className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-overlay/55" />
-              <div className="relative z-10 flex h-full min-h-56 items-end p-5">
-                <h3 className="font-display text-2xl font-semibold leading-none">{p.title}</h3>
-              </div>
-            </Link>
-          ))}
-          </div>
-        </section>
+        {others.length > 0 ? (
+          <section className="mx-auto max-w-6xl px-5 pb-20" aria-labelledby="post-more">
+            <h2 id="post-more" className="mb-6 font-display text-3xl font-semibold tracking-tight">
+              Czytaj również
+            </h2>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {others.map((p) => (
+                <PostCard key={p.slug} post={p} />
+              ))}
+            </div>
+          </section>
+        ) : null}
       </main>
       <SiteFooter />
     </div>
