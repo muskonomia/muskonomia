@@ -31,7 +31,7 @@ export const postsGbm: Post[] = [
         type: "img",
         src: "/img/gbms-ui.jpg",
         alt: "Grok Bot z listą agentów i czatem",
-        caption: "Home robots Sawyera Merritta. Osiem pamięci, siedem umiejętności, jeden przycisk.",
+        caption: "Grok Bot. Własny zespół agentów, nie jeden czat.",
       },
       {
         type: "p",
