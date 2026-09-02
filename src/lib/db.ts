@@ -15,7 +15,7 @@ export interface Sql {
   ): Promise<T[]>;
   query<T = Record<string, unknown>>(
     text: string,
-    params?: unknown[],
+    params?: unknown[]
   ): Promise<T[]>;
 }
 
