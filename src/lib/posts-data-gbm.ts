@@ -29,7 +29,7 @@ export const postsGbm: Post[] = [
       },
       {
         type: "p",
-        text: "Na liście Cursora widać dial bota i skippy’ego Matta Palmera, pisarza do maili i esejów, generator obrazów oraz franka Natashy Kuo, który ogarnia sale konferencyjne. Niżej są rekruter Tommy’ego Hansena, krytyk interfejsów, menedżer projektów Erica Zakariassona, bot do slajdów z rozmowy z klientem i partner do planowania eventów. W designie i marketingu leżą Imogen do briefów, Clip Bot do podpisanych wycinków z YouTube’a i copywriter, który ma pisać ludzkim głosem. W produkcie: ChatPRD Claire Vo i obserwator konkurencji. Jest też Best Video Editor od X Freeze.",
+        text: "Na liście Cursora widać dial bota i skippy’ego Matta Palmera, pisarza do maili i esejów, generator obrazów oraz franka Natashy Kuo, który ogarnia sale konferencyjne. Niżej są rekruter Tommy’ego Hansena, krytyk interfejsów, menedżer projektów Erica Zakariassona, bot do slajdów z rozmowy z klientem i partner do planowania imprez. W designie i marketingu leżą Imogen do briefów, Clip Bot do podpisanych wycinków z YouTube’a i copywriter, który ma pisać ludzkim głosem. W produkcie: ChatPRD Claire Vo i obserwator konkurencji. Jest też Best Video Editor od X Freeze.",
       },
       {
         type: "p",
@@ -37,7 +37,7 @@ export const postsGbm: Post[] = [
       },
       {
         type: "p",
-        text: "X Freeze napisał, o co tu chodzi: zamiast składać każdego agenta od zera, ludzie biorą gotowy zestaw, dokładają rutyny i narzędzia. Konto [Roundtable Space](https://x.com/RoundtableSpace/status/2095002526458470747) puściło to samo nagranie i doszło do 52 tys. wyświetleń. Cztery dni wcześniej to samo konto pisało o katalogu, który sam zbiera boty z społeczności. Tamten wpis zobaczyło 50 tys. osób.",
+        text: "X Freeze napisał, o co tu chodzi: zamiast składać każdego agenta od zera, ludzie biorą gotowy zestaw, dokładają rutyny i narzędzia. Konto [Roundtable Space](https://x.com/RoundtableSpace/status/2095002526458470747) puściło to samo nagranie i doszło do 52 tys. wyświetleń. Cztery dni wcześniej to samo konto pisało o katalogu, który sam zbiera boty ze społeczności. Tamten wpis zobaczyło 50 tys. osób.",
       },
       {
         type: "p",
@@ -45,7 +45,7 @@ export const postsGbm: Post[] = [
       },
       {
         type: "p",
-        text: "Wanda Wang po wtorkowym spotkaniu builderów wypisała, co już robią bez katalogu. Dają botom stanowiska. Każą im robić standup. Stawiają rutyny. Jeden z trików: wgrać Grok Bota na maszynę, na której już siedzi Grok Bot, żeby agent sam odpalał kolejnych. Sklep ma skrócić drogę od takiego przepisu do jednego kliknięcia.",
+        text: "Wanda Wang po wtorkowym spotkaniu twórców botów wypisała, co już robią bez katalogu. Dają botom stanowiska. Każą im robić poranną odprawę. Stawiają rutyny. Jeden z trików: wgrać Grok Bota na maszynę, na której już siedzi Grok Bot, żeby agent sam odpalał kolejnych. Sklep ma skrócić drogę od takiego przepisu do jednego kliknięcia.",
       },
     ],
   },
