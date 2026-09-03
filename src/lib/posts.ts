@@ -33,7 +33,16 @@ function byNewest(a: Post, b: Post) {
   return a.slug.localeCompare(b.slug);
 }
 
-export const posts: Post[] = [...postsData].sort(byNewest);
+function uniqueBySlug(list: Post[]) {
+  const seen = new Set<string>();
+  return list.filter((p) => {
+    if (seen.has(p.slug)) return false;
+    seen.add(p.slug);
+    return true;
+  });
+}
+
+export const posts: Post[] = uniqueBySlug(postsData).sort(byNewest);
 
 export const TOPICS: {
   id: TopicId;

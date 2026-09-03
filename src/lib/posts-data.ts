@@ -38,7 +38,6 @@ import { postsJpm } from "./posts-data-jpm";
 import { posts0 } from "./posts-data-0";
 import { postsA } from "./posts-data-a";
 import { postsB } from "./posts-data-b";
-import { postsC } from "./posts-data-c";
 
 export const postsData: Post[] = [
   ...postsCcol,
@@ -80,5 +79,4 @@ export const postsData: Post[] = [
   ...posts0,
   ...postsA,
   ...postsB,
-  ...postsC,
 ];
