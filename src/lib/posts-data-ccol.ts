@@ -10,7 +10,8 @@ export const postsCcol: Post[] = [
       "Dzień przed wydarzeniem Teslarati nagrało kilka złotych Cybercabów jeden za drugim w downtown. Teksas dopisał 45 sztuk do rejestru komercyjnego. Aplikacja Robotaxi 26.8.0 dostała wsparcie Cybercaba.",
     date: "3 września 2026",
     isoDate: "2026-09-03",
-    img: "/img/ccol-kolumna.jpg",
+    img: "/img/ccol-meme.jpg",
+    contain: true,
     body: [
       {
         type: "p",
