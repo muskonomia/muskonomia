@@ -11,6 +11,7 @@ export const postsCc: Post[] = [
     date: "29 sierpnia 2026",
     isoDate: "2026-08-29",
     img: "/img/cc-sugarwolf.jpg",
+    xPostId: "2091158353506402347",
     body: [
       {
         type: "p",
