@@ -38,7 +38,7 @@ export const postsLrt: Post[] = [
       },
       {
         type: "p",
-        text: "Przez lata amerykański akumulator znaczyl coś innego. Rudę wydobywano poza Stanami, przerabiano w Chinach i dopiero gotowy chemik wracał do Teksasu. Ten Cybertruck skraca środek łańcucha. Ruda nadal przypływa. Przeróbka, ogniwo i auto zostają w jednym stanie.",
+        text: "Przez lata amerykański akumulator znaczył coś innego. Rudę wydobywano poza Stanami, przerabiano w Chinach i dopiero gotowy chemik wracał do Teksasu. Ten Cybertruck skraca środek łańcucha. Ruda nadal przypływa. Przeróbka, ogniwo i auto zostają w jednym stanie.",
       },
       {
         type: "p",
