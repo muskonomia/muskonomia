@@ -48,43 +48,61 @@ function BlogPost() {
           <div className="mx-auto max-w-3xl space-y-5 px-5 py-16 text-base leading-relaxed text-fg/90 sm:text-lg">
             {post.body.map((block, i) => {
               if (block.type === "img") {
+                const img = (
+                  <img
+                    src={block.src}
+                    alt={block.alt}
+                    className={
+                      block.contain
+                        ? "max-h-[28rem] w-full bg-fg object-contain"
+                        : "aspect-video w-full object-cover"
+                    }
+                  />
+                );
                 return (
                   <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
-                    <img
-                      src={block.src}
-                      alt={block.alt}
-                      className={
-                        block.contain
-                          ? "max-h-[28rem] w-full bg-fg object-contain"
-                          : "aspect-video w-full object-cover"
-                      }
-                    />
+                    {block.href ? (
+                      <a href={block.href} target="_blank" rel="noopener noreferrer" className="block">
+                        {img}
+                      </a>
+                    ) : (
+                      img
+                    )}
                     {block.caption ? (
                       <figcaption className="px-5 pt-2 text-sm text-muted sm:px-0">
-                        {block.caption}
+                        <LinkedText text={block.caption} />
                       </figcaption>
                     ) : null}
                   </figure>
                 );
               }
               if (block.type === "video") {
+                const video = (
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={block.poster}
+                    autoPlay={block.loop}
+                    muted={block.loop}
+                    loop={block.loop}
+                    className="aspect-video w-full bg-overlay"
+                  >
+                    <source src={block.src} type="video/mp4" />
+                  </video>
+                );
                 return (
                   <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
-                    <video
-                      controls
-                      playsInline
-                      preload="metadata"
-                      poster={block.poster}
-                      autoPlay={block.loop}
-                      muted={block.loop}
-                      loop={block.loop}
-                      className="aspect-video w-full bg-overlay"
-                    >
-                      <source src={block.src} type="video/mp4" />
-                    </video>
+                    {block.href ? (
+                      <a href={block.href} target="_blank" rel="noopener noreferrer" className="block">
+                        {video}
+                      </a>
+                    ) : (
+                      video
+                    )}
                     {block.caption ? (
                       <figcaption className="px-5 pt-2 text-sm text-muted sm:px-0">
-                        {block.caption}
+                        <LinkedText text={block.caption} />
                       </figcaption>
                     ) : null}
                   </figure>

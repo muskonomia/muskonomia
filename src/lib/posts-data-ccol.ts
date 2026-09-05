@@ -21,13 +21,14 @@ export const postsCcol: Post[] = [
         type: "video",
         src: "/video/cybercab-kolumna-austin.mp4",
         poster: "/img/ccol-film.jpg",
-        caption: "Kolumna złotych Cybercabów przez centrum Austin. Źródło: @Teslarati.",
+        caption: "Kolumna złotych Cybercabów przez centrum Austin. [Źródło: @Teslarati](https://x.com/Teslarati/status/2095208257686048938).",
       },
       {
         type: "img",
         src: "/img/ccol-kolumna.jpg",
         alt: "Kilka złotych Cybercabów Tesli jeden za drugim przy chodniku w Austin",
         caption: "Nie jeden prototyp. Kolumna.",
+        href: "https://x.com/Teslarati/status/2095208257686048938",
       },
       {
         type: "p",
@@ -53,8 +54,9 @@ export const postsCcol: Post[] = [
         type: "img",
         src: "/img/ccol-app.jpg",
         alt: "Changelog aplikacji Tesla Robotaxi 26.8.0: Supports Cybercab in Austin, Texas",
-        caption: "Robotaxi 26.8.0 na iOS. Supports Cybercab in Austin, Texas. Źródło: @TeslaNewswire.",
+        caption: "Robotaxi 26.8.0 na iOS. Supports Cybercab in Austin, Texas. [Źródło: @TeslaNewswire](https://x.com/TeslaNewswire/status/2095430222640222425).",
         contain: true,
+        href: "https://x.com/TeslaNewswire/status/2095430222640222425",
       },
       {
         type: "img",

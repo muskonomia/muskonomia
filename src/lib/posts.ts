@@ -6,8 +6,8 @@ export type Block =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
-  | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean }
-  | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean };
+  | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
+  | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string };
 
 export const TOPIC_IDS = ["tesla", "spacex", "xai", "neuralink", "boring", "inne"] as const;
 export type TopicId = (typeof TOPIC_IDS)[number];

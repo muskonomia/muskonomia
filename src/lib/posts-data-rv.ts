@@ -24,6 +24,7 @@ export const postsRv: Post[] = [
         alt: "Strona tesla.com/robotaxi: Cybercab, Model Y i Robovan obok siebie",
         caption: "Cybercab. Model Y. Robovan. Trzy na jednej stronie.",
         contain: true,
+        href: "https://x.com/OverlyTrev/status/2095565443259859095",
       },
       {
         type: "p",
@@ -33,8 +34,9 @@ export const postsRv: Post[] = [
         type: "img",
         src: "/img/rv-strona.jpg",
         alt: "Zrzut tesla.com/robotaxi z trzema pojazdami i podpisami",
-        caption: "Oficjalna strona Robotaxi, 3 września 2026. Źródło: @OverlyTrev.",
+        caption: "Oficjalna strona Robotaxi, 3 września 2026. [Źródło: @OverlyTrev](https://x.com/OverlyTrev/status/2095565443259859095).",
         contain: true,
+        href: "https://x.com/OverlyTrev/status/2095565443259859095",
       },
       {
         type: "p",
@@ -62,6 +64,7 @@ export const postsRv: Post[] = [
         alt: "Opisy Cybercaba i Modelu Y na stronie Tesla Robotaxi",
         caption: "Cybercab: dwa miejsca, bez pedałów. Model Y: czterech i bagaż.",
         contain: true,
+        href: "https://www.tesla.com/robotaxi",
       },
       {
         type: "img",
@@ -69,6 +72,7 @@ export const postsRv: Post[] = [
         alt: "Karta Robovan na tesla.com/robotaxi z etykietą Arriving soon",
         caption: "Arriving soon. Nie data. Etykieta.",
         contain: true,
+        href: "https://www.tesla.com/robotaxi",
       },
       {
         type: "img",
