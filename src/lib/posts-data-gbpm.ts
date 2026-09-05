@@ -40,9 +40,28 @@ export const postsGbpm: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/GQvLinearPlaceholder",
-        alt: "",
-        caption: "",
+        src: "/img/cb-cursorbench.jpg",
+        alt: "Cursor i agenci kodujący w tle",
+        caption: "Cursor cloud agents. Developer je odpala, PM trzyma kurs.",
+        contain: true,
+      },
+      {
+        type: "p",
+        text: "Developer bierze zadania i robi do każdego PR. Ty testujesz i mergujesz, gdy boty pracują.",
+      },
+      {
+        type: "img",
+        src: "/img/gbms-bot.jpg",
+        alt: "Grok Bot na komputerze i w telefonie",
+        caption: "Boty pracują. Ty mergujesz.",
+      },
+      {
+        type: "p",
+        text: "To mocna pętla z kilku powodów. Kod powstaje sam, a agenci pilnują, żeby nie zjechał z toru. Cursor cloud agents są na tyle dobre, że jakość wychodzi wysoka. Wszystko jest poukładane: każde zadanie ma PR, a PR siedzi w Notion albo Linear.",
+      },
+      {
+        type: "p",
+        text: "Warto to postawić przy następnym buildzie. Ja tak przeniosłem jakieś 90% kodowania z AI do Grok Bota. (Cheat code: wrzuć ten wpis swojemu chief of staff botowi, niech to wszystko ustawi.)",
       },
     ],
   },
