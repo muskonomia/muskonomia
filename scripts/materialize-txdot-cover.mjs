@@ -1,12 +1,14 @@
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const parts = [1, 2, 3, 4]
-  .map((n) => join(root, "scripts", `txdot-cover.b64.${n}`))
-  .filter((p) => existsSync(p))
-  .map((p) => readFileSync(p, "utf8").trim())
+const scriptsDir = join(root, "scripts");
+// Only zero-padded two-digit parts (ignore legacy b64.1–4 placeholders)
+const parts = readdirSync(scriptsDir)
+  .filter((n) => /^txdot-cover\.b64\.\d{2}$/.test(n))
+  .sort()
+  .map((n) => readFileSync(join(scriptsDir, n), "utf8").trim())
   .join("");
 
 if (!parts) {
@@ -17,5 +19,6 @@ if (!parts) {
 const outDir = join(root, "public", "img");
 mkdirSync(outDir, { recursive: true });
 const out = join(outDir, "txdot-cybercab-okladka.jpg");
-writeFileSync(out, Buffer.from(parts, "base64"));
-console.log("[materialize-txdot-cover] wrote", out, Buffer.from(parts, "base64").length, "bytes");
+const buf = Buffer.from(parts, "base64");
+writeFileSync(out, buf);
+console.log("[materialize-txdot-cover] wrote", out, buf.length, "bytes");
