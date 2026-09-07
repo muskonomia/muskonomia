@@ -20,7 +20,7 @@ export const postsC25: Post[] = [
         type: "ul",
         items: [
           "15 punktów to sam opis, bez zdjęcia",
-          "Cybercab w aplikacji [Robotaxi](https://x.com/RobotaxiRadar/status/2096667247104438307) od 4 września, tylko wycinek Austin",
+          "Cybercab w aplikacji od 4 września, tylko wycinek Austin",
           "reszta mapy: test, transport, parking przy salonie albo przejazd",
           "[Sawyer Merritt](https://x.com/SawyerMerritt/status/2096282460635943220): ponad 35 sztuk przy lotnisku w Miami",
           "[Bartlett](https://x.com/RobotaxiRadar/status/2095953016549494928) pod Memphis: 12–15 sztuk przy centrum Tesli; drugi skład w Tennessee jest przy Dover",
@@ -36,7 +36,7 @@ export const postsC25: Post[] = [
         type: "img",
         src: "https://pbs.twimg.com/media/HRgJbR8asAAmn7_.jpg",
         alt: "Mapa USA ze zgłoszeniami Cybercaba w 25 stanach i Dystrykcie Kolumbii",
-        caption: "25 stanów i Dystrykt Kolumbii. 15 punktów bez zdjęcia. [Źródło: @RobotaxiRadar](https://x.com/RobotaxiRadar/status/2096667247104438307).",
+        caption: "25 stanów i Dystrykt Kolumbii. 15 punktów bez zdjęcia. [Źródło: Robotaxi Radar](https://x.com/RobotaxiRadar/status/2096667247104438307).",
         href: "https://x.com/RobotaxiRadar/status/2096667247104438307",
       },
       {
