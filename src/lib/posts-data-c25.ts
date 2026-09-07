@@ -14,7 +14,7 @@ export const postsC25: Post[] = [
     body: [
       {
         type: "p",
-        text: "6 września mapa publicznych zgłoszeń [Robotaxi Radar](https://x.com/RobotaxiRadar/status/2096667247104438307) objęła 25 stanów USA i Dystrykt Kolumbii. Tydzień wcześniej osobne punkty miały głównie Teksas, Kalifornia, Floryda i Waszyngton. Działająca usługa Robotaxi na nowych Cybercabach nadal jest tylko w Austin. Zgłoszenie to nie to samo, co kurs — reszta mapy to test, transport, parking przy salonie albo przejazd. 15 punktów to sam opis, bez zdjęcia; nikt tego niezależnie nie weryfikował.",
+        text: "6 września mapa publicznych zgłoszeń [Robotaxi Radar](https://x.com/RobotaxiRadar/status/2096667247104438307) objęła 25 stanów USA i Dystrykt Kolumbii. Tydzień wcześniej osobne punkty miały głównie Teksas, Kalifornia, Floryda i Waszyngton. Działająca usługa Robotaxi na nowych Cybercabach nadal jest tylko w Austin.",
       },
       {
         type: "ul",
