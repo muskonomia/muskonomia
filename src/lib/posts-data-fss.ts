@@ -14,7 +14,7 @@ export const postsFss: Post[] = [
     body: [
       {
         type: "p",
-        text: "Tesla Europe ogłosiła 7 września zgodę na FSD Supervised w Słowenii. Włączenie ma ruszyć wkrótce. To szóste państwo Unii i pierwsza nowa flaga od czerwca.",
+        text: "[Tesla Europe](https://x.com/teslaeurope/status/2097007168939593780) ogłosiła 7 września zgodę na FSD Supervised w Słowenii. Włączenie ma ruszyć wkrótce. To szóste państwo Unii i pierwsza nowa flaga od czerwca.",
       },
       {
         type: "img",
@@ -25,7 +25,7 @@ export const postsFss: Post[] = [
       },
       {
         type: "p",
-        text: "[Komunikat Tesli Europe](https://x.com/teslaeurope/status/2097007168939593780) zmieścił się w dwóch zdaniach. Do zdjęcia poszła kabina na drodze dwujezdniowej: ręce na udach, na ekranie wizualizacja pasa. Musk powtórzył zdanie Tesli. Słoweńska [24ur i STA](https://www.24ur.com/novice/znanost-in-tehnologija/tesla-v-sloveniji-uvaja-popolnoma-samostojno-voznjo-pod-nadzorom.html) dopisały, że funkcja wejdzie bezprzewodową aktualizacją.",
+        text: "Komunikat zmieścił się w dwóch zdaniach. Do zdjęcia poszła kabina na drodze dwujezdniowej: ręce na udach, na ekranie wizualizacja pasa. Musk powtórzył zdanie Tesli. Słoweńska [24ur i STA](https://www.24ur.com/novice/znanost-in-tehnologija/tesla-v-sloveniji-uvaja-popolnoma-samostojno-voznjo-pod-nadzorom.html) dopisały, że funkcja wejdzie bezprzewodową aktualizacją.",
       },
       {
         type: "img",
