@@ -7,14 +7,14 @@ export const postsG75: Post[] = [
     topic: "tesla",
     title: "Giga Berlin dokłada trzy zmiany, żeby dociągnąć do 7500 Model Y tygodniowo",
     excerpt:
-      "Tesla w Grünheide jedzie poniżej 6500 Model Y tygodniowo. Od połowy października ma być 7500. We wrześniu trzy obowiązkowe zmiany.",
+      "Na ten moment w Tesli Grünheide zjeżdża z taśmy poniżej 6500 Model Y tygodniowo. Od połowy października ma ich być 7500. We wrześniu trzy obowiązkowe zmiany.",
     date: "8 września 2026",
     isoDate: "2026-09-08",
     img: "/img/giga-berlin-sonderschichten.jpg",
     body: [
       {
         type: "p",
-        text: "Tesla w Grünheide zjeżdża z taśmy poniżej 6500 Model Y tygodniowo. Od połowy października ma być 7500. Brakuje około 1000 sztuk. Zakład nie stawia nowej hali. Dokłada trzy obowiązkowe zmiany we wrześniu.",
+        text: "Na ten moment w Tesli Grünheide zjeżdża z taśmy poniżej 6500 Model Y tygodniowo. Od połowy października ma ich już być 7500. Brakuje około 1000 sztuk na tydzień. Zostanie to osiągnięte przez dołożenie trzech obowiązkowych zmian już we wrześniu.",
       },
       {
         type: "img",
