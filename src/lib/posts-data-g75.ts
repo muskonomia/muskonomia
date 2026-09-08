@@ -32,7 +32,7 @@ export const postsG75: Post[] = [
       },
       {
         type: "p",
-        text: "W czerwcu André Thierig, dyrektor zakładu, powiedział załodze, że z około 5000 tygodniowo mają dojść do 7500. Takt w dużej części linii miał spaść z około 80 sekund do 45. Takt już prawie jest. Sztuki nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za [Handelsblattem](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html) liczy, że nawet po tych trzech zmianach najmocniejszy tydzień września da 7100–7300 aut. Część stanowisk jeszcze się przestawia i automatyzuje. To hamuje tygodniówkę mocniej niż zegar na linii.",
+        text: "W czerwcu André Thierig, dyrektor zakładu, powiedział załodze, że z około 5000 tygodniowo mają dojść do 7500. Tak oddaje [Handelsblatt](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html). Takt w dużej części linii miał spaść z około 80 sekund do 45. Takt już prawie jest. Sztuki nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za [Handelsblattem](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html) liczy, że nawet po tych trzech zmianach najmocniejszy tydzień września da 7100–7300 aut. Część stanowisk jeszcze się przestawia i automatyzuje. To hamuje tygodniówkę mocniej niż zegar na linii.",
       },
       {
         type: "p",
