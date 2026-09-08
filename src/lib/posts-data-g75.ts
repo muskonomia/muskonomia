@@ -14,33 +14,33 @@ export const postsG75: Post[] = [
     body: [
       {
         type: "p",
-        text: "Tesla w Grünheide jedzie teraz poniżej 6500 Model Y na tydzień. Od połowy października zakład ma wypuszczać 7500. Brakuje około 1000 sztuk tygodniowo. Lukę zamyka trzema obowiązkowymi zmianami we wrześniu.",
+        text: "Tesla w Grünheide zjeżdża z taśmy poniżej 6500 Model Y tygodniowo. Od połowy października ma być 7500. Brakuje około 1000 sztuk. Zakład nie stawia nowej hali. Dokłada trzy obowiązkowe zmiany we wrześniu.",
       },
       {
         type: "img",
         src: "/img/giga-berlin-sonderschichten.jpg",
-        alt: "Model Y przed halą Giga Berlin",
-        caption: "Giga Berlin. We wrześniu trzy obowiązkowe zmiany na Model Y.",
+        alt: "Karoserie Model Y na taśmie Giga Berlin",
+        caption: "Taśma w Grünheide. Takt 45 s jest blisko, tygodniówka jeszcze nie.",
       },
       {
         type: "p",
-        text: "[Handelsblatt](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html) dostał mail od „Giga Berlin Leadership Team”. Z radą zakładową ustalone są trzy terminy: noc 18 września, ranek 19 września i noc 25 września. W tygodniu od 14 września wchodzą dwie dodatkowe zmiany, w następnym jedna. Każda z grup — Niebieska, Czerwona i Srebrna — pracuje raz.",
+        text: "Mail od „Giga Berlin Leadership Team” trafił do [Handelsblatt](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html). Z radą zakładową są trzy daty: noc 18 września, ranek 19 września i noc 25 września. W tygodniu od 14 września wchodzą dwie dodatkowe zmiany, tydzień później jedna. Grupy Niebieska, Czerwona i Srebrna biorą po jednej.",
       },
       {
         type: "p",
-        text: "Zmiany obejmują całą produkcję aut i zaplecze. Drive Unit, bateria i ogniwa zostają poza tym grafikiem. Z jednej dodatkowej zmiany schodzi około 450 aut. Za te godziny jest 35 proc. dodatku. Kto ma ujemne saldo na koncie czasu, ten dodatku nie dostaje. Odpracowuje minus.",
+        text: "Na te godziny idzie cała produkcja aut i zaplecze. Zespół napędowy, bateria i ogniwa zostają w domu. Z jednej zmiany schodzi około 450 samochodów. Dodatek wynosi 35 proc. Kto ma dziurę na koncie czasu, dodatku nie widzi. Spłaca minus godzinami.",
       },
       {
         type: "p",
-        text: "W czerwcu dyrektor zakładu André Thierig zapowiedział skok z około 5000 do 7500 tygodniowo. Takt w dużej części linii miał spaść z około 80 sekund do 45. To tempo, według relacji z fabryki, jest już w większości na miejscu. Sztuki jeszcze nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za Handelsblattem pisze, że nawet z dodatkowymi zmianami najmocniejszy tydzień września da 7100–7300 sztuk. W tle są tarcia przy przebudowie i dalszej automatyzacji części stanowisk.",
+        text: "W czerwcu André Thierig, dyrektor zakładu, powiedział załodze, że z około 5000 tygodniowo mają dojść do 7500. Takt w dużej części linii miał spaść z około 80 sekund do 45. Takt już prawie jest. Sztuki nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za Handelsblattem liczy, że nawet po tych trzech zmianach najmocniejszy tydzień września da 7100–7300 aut. Część stanowisk jeszcze się przestawia i automatyzuje. To hamuje tygodniówkę mocniej niż zegar na linii.",
       },
       {
         type: "p",
-        text: "Grünheide buduje wyłącznie Model Y na Europę. W 2025 r. zeszło stamtąd nieco ponad 202 tys. aut. Handelsblatt liczy to jako 54 proc. mocy. Linia stała. Popyt wrócił nierówno. W sierpniu Tesla zarejestrowała w Niemczech 3034 samochody, o 110,5 proc. więcej niż rok wcześniej. Od stycznia do sierpnia plus wynosi 182 proc. — 32 258 sztuk według [KBA](https://www.kba.de/DE/Presse/Pressemitteilungen/Fahrzeugzulassungen/2026/pm35_2026_n_08_26_pm_komplett.html).",
+        text: "Grünheide robi tylko Model Y na Europę. W 2025 r. zeszło stamtąd nieco ponad 202 tys. sztuk. Handelsblatt oddaje to jako 54 proc. mocy. Zakład stał częściowo pusty. Teraz popyt wraca falami. W sierpniu Tesla zarejestrowała w Niemczech 3034 samochody, o 110,5 proc. więcej niż rok wcześniej. Od stycznia do sierpnia plus wynosi 182 proc., 32 258 sztuk — tak liczy [KBA](https://www.kba.de/DE/Presse/Pressemitteilungen/Fahrzeugzulassungen/2026/pm35_2026_n_08_26_pm_komplett.html).",
       },
       {
         type: "p",
-        text: "Kilkanaście kilometrów stąd Volkswagen tnie. Kolejnych 50 tys. etatów i pytanie o przyszłość Emden, Zwickau, Hanoweru i Neckarsulm. Tam problemem jest nadmiar mocy. W Brandenburgii Tesla nie nadąża z taśmą.",
+        text: "Na X ta wiadomość idzie jako dowód, że problemem nie jest brak zamówień. [Kanał Giga Berlin](https://x.com/Gf4Tesla/status/2096857595612983330) powtarza te same liczby i kładzie ciężar na popyt. Obok wraca Volkswagen: kolejne 50 tys. etatów do cięcia i pytanie o Emden, Zwickau, Hanower i Neckarsulm. Tam mocy jest za dużo. Tu Tesli brakuje około 1000 aut na tydzień.",
       },
     ],
   },
