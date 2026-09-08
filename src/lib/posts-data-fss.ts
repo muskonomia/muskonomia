@@ -31,13 +31,13 @@ export const postsFss: Post[] = [
         type: "img",
         src: "https://pbs.twimg.com/media/HRo9cu2XYAAFwLb.jpg",
         alt: "Mapa Europy z sześcioma flagami krajów, które zatwierdziły FSD Supervised",
-        caption: "Holandia, Litwa, Estonia, Dania, Belgia, Słowenia. Reszta szara. [Roland Pircher](https://x.com/piloly/status/2097058158946443697).",
+        caption: "Holandia, Litwa, Estonia, Dania, Belgia, Słowenia. Reszta poza listą. [Roland Pircher](https://x.com/piloly/status/2097058158946443697).",
         href: "https://x.com/piloly/status/2097058158946443697",
         contain: true,
       },
       {
         type: "p",
-        text: "Mapa z tego wieczoru jest czytelna. [Roland Pircher](https://x.com/piloly/status/2097058158946443697) zaznaczył sześć flag: Holandię z 10 kwietnia, Litwę i Estonię z maja, Danię i Belgię z czerwca, Słowenię z 7 września. Reszta kontynentu zostaje szara. Holenderski RDW dał wtedy tymczasową homologację pod UN-R-171 i z wyłączeniem części zachowań na mocy unijnego artykułu 39. Kolejne stolice biorą ten papier. Nie czekają na Brukselę.",
+        text: "Na liście są Holandia z 10 kwietnia, Litwa i Estonia z maja, Dania i Belgia z czerwca oraz Słowenia z 7 września. Reszta kontynentu zostaje poza listą. Holenderski RDW dał wtedy tymczasową homologację pod UN-R-171 i z wyłączeniem części zachowań na mocy unijnego artykułu 39. Kolejne stolice biorą ten papier. Nie czekają na Brukselę.",
       },
       {
         type: "p",
