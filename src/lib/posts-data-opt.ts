@@ -44,7 +44,7 @@ export const postsOpt: Post[] = [
       },
       {
         type: "p",
-        text: "Chiński rynek zareagował rano 7 września. ETF robotyczny 560770 rósł o 2,15 proc. W czołówce sesji były m.in. Green Harmonic i Orbbec. Sama zwiżka nie mówi, kto dostał ten konkretny komplet. Mówi, że Szanghaj czyta 5000 sztuk jako sygnał z taśmy, nie z sceny.",
+        text: "Chiński rynek zareagował rano 7 września. ETF robotyczny 560770 rósł o 2,15 proc. W czołówce sesji były m.in. Green Harmonic i Orbbec. Sama zwyżka nie mówi, kto dostał ten konkretny komplet. Mówi, że Szanghaj czyta 5000 sztuk jako sygnał z taśmy, nie z sceny.",
       },
       {
         type: "p",
