@@ -32,15 +32,15 @@ export const postsG75: Post[] = [
       },
       {
         type: "p",
-        text: "W czerwcu André Thierig, dyrektor zakładu, powiedział załodze, że z około 5000 tygodniowo mają dojść do 7500. Takt w dużej części linii miał spaść z około 80 sekund do 45. Takt już prawie jest. Sztuki nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za Handelsblattem liczy, że nawet po tych trzech zmianach najmocniejszy tydzień września da 7100–7300 aut. Część stanowisk jeszcze się przestawia i automatyzuje. To hamuje tygodniówkę mocniej niż zegar na linii.",
+        text: "W czerwcu André Thierig, dyrektor zakładu, powiedział załodze, że z około 5000 tygodniowo mają dojść do 7500. Takt w dużej części linii miał spaść z około 80 sekund do 45. Takt już prawie jest. Sztuki nie. [Elektroauto-news](https://www.elektroauto-news.net/news/tesla-gruenheide-sonderschichten-produktion) za [Handelsblattem](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html) liczy, że nawet po tych trzech zmianach najmocniejszy tydzień września da 7100–7300 aut. Część stanowisk jeszcze się przestawia i automatyzuje. To hamuje tygodniówkę mocniej niż zegar na linii.",
       },
       {
         type: "p",
-        text: "Grünheide robi tylko Model Y na Europę. W 2025 r. zeszło stamtąd nieco ponad 202 tys. sztuk. Handelsblatt oddaje to jako 54 proc. mocy. Zakład stał częściowo pusty. Teraz popyt wraca falami. W sierpniu Tesla zarejestrowała w Niemczech 3034 samochody, o 110,5 proc. więcej niż rok wcześniej. Od stycznia do sierpnia plus wynosi 182 proc., 32 258 sztuk — tak liczy [KBA](https://www.kba.de/DE/Presse/Pressemitteilungen/Fahrzeugzulassungen/2026/pm35_2026_n_08_26_pm_komplett.html).",
+        text: "Grünheide robi tylko Model Y na Europę. W 2025 r. zeszło stamtąd nieco ponad 202 tys. sztuk. [Handelsblatt](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html) oddaje to jako 54 proc. mocy. Zakład stał częściowo pusty. Teraz popyt wraca falami. W sierpniu Tesla zarejestrowała w Niemczech 3034 samochody, o 110,5 proc. więcej niż rok wcześniej. Od stycznia do sierpnia plus wynosi 182 proc., 32 258 sztuk — tak liczy [KBA](https://www.kba.de/DE/Presse/Pressemitteilungen/Fahrzeugzulassungen/2026/pm35_2026_n_08_26_pm_komplett.html).",
       },
       {
         type: "p",
-        text: "Na X ta wiadomość idzie jako dowód, że problemem nie jest brak zamówień. [Muskonomy](https://x.com/muskonomy/status/2097008733633290729) zebrał liczby z Handelsblattu. [Kanał Giga Berlin](https://x.com/Gf4Tesla/status/2096857595612983330) powtarza to samo i kładzie ciężar na popyt. Obok wraca Volkswagen: kolejne 50 tys. etatów do cięcia i pytanie o Emden, Zwickau, Hanower i Neckarsulm. Tam mocy jest za dużo. Tu Tesli brakuje około 1000 aut na tydzień.",
+        text: "Na X ta wiadomość idzie jako dowód, że problemem nie jest brak zamówień. [Muskonomy](https://x.com/muskonomy/status/2097008733633290729) zebrał liczby z [Handelsblattu](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html). [Kanał Giga Berlin](https://x.com/Gf4Tesla/status/2096857595612983330) powtarza to samo i kładzie ciężar na popyt. Obok wraca Volkswagen: kolejne 50 tys. etatów do cięcia i pytanie o Emden, Zwickau, Hanower i Neckarsulm. Tam mocy jest za dużo. Tu Tesli brakuje około 1000 aut na tydzień.",
       },
     ],
   },
