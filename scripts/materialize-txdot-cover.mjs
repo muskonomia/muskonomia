@@ -3,19 +3,30 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const parts = [1, 2, 3, 4]
-  .map((n) => join(root, "scripts", `txdot-cover.b64.${n}`))
-  .filter((p) => existsSync(p))
-  .map((p) => readFileSync(p, "utf8").trim())
-  .join("");
-
-if (!parts) {
-  console.warn("[materialize-txdot-cover] no b64 parts found, skip");
-  process.exit(0);
-}
-
 const outDir = join(root, "public", "img");
 mkdirSync(outDir, { recursive: true });
-const out = join(outDir, "txdot-cybercab-okladka.jpg");
-writeFileSync(out, Buffer.from(parts, "base64"));
-console.log("[materialize-txdot-cover] wrote", out, Buffer.from(parts, "base64").length, "bytes");
+
+function materialize(prefix, nums, outName) {
+  const parts = nums
+    .map((n) => join(root, "scripts", `${prefix}${n}`))
+    .filter((p) => existsSync(p))
+    .map((p) => readFileSync(p, "utf8").trim())
+    .join("");
+
+  if (!parts) {
+    console.warn(`[materialize] no b64 parts for ${outName}, skip`);
+    return;
+  }
+
+  const out = join(outDir, outName);
+  const buf = Buffer.from(parts, "base64");
+  writeFileSync(out, buf);
+  console.log("[materialize] wrote", out, buf.length, "bytes");
+}
+
+materialize("txdot-cover.b64.", [1, 2, 3, 4], "txdot-cybercab-okladka.jpg");
+materialize(
+  "nashville-tasm.b64.",
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "nashville-prufrock-tasm.jpg",
+);
