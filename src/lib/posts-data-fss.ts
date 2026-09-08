@@ -41,7 +41,7 @@ export const postsFss: Post[] = [
       },
       {
         type: "p",
-        text: "To nadal nie jest zgoda Unii. Tesla Europe [1 września](https://x.com/teslaeurope/status/2094661569582096779) pisała o głosowaniu Komitetu Technicznego ds. Pojazdów Silnikowych 6 października. Do tego dnia otworzyła dane, które wcześniej poszły do RDW. W pięciu krajach system jeździł wtedy u ponad 70 tys. klientów, ponad 1 mln km dziennie. Na 100 mln km unijnych dróg Tesla liczyła 4,1 raza mniej kolizji niż przy jeździe ręcznej. W 2025 r. Europa zanotowała 19 400 ofiar śmiertelnych na drogach, około 53 dziennie.",
+        text: "[Głosowanie](https://x.com/teslaeurope/status/2094661569582096779) Komitetu Technicznego ds. Pojazdów Silnikowych ma się odbyć 6 października. Do tego dnia Tesla otworzyła dane, które wcześniej poszły do RDW. W pięciu krajach system jeździł u ponad 70 tys. klientów, ponad 1 mln km dziennie. Na 100 mln km unijnych dróg użytkownicy FSD mieli 4,1 raza mniej kolizji niż przy jeździe ręcznej. W 2025 r. Europa zanotowała 19 400 ofiar śmiertelnych na drogach, około 53 dziennie.",
       },
       {
         type: "p",
