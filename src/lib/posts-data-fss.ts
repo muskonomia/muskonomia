@@ -49,7 +49,7 @@ export const postsFss: Post[] = [
       },
       {
         type: "p",
-        text: "Kierowca dalej odpowiada za każdy manewr. STA oddaje to samo zdanie Tesli: auto z FSD Supervised nie jest autonomiczne. System ma brać miasto, skrzyżowania i zmianę pasa. Oczy zostają na drodze.",
+        text: "Kierowca dalej odpowiada za każdy manewr. Auto z FSD Supervised nie jest autonomiczne. To nadal auto działające pod nadzorem kierowcy.",
       },
       {
         type: "p",
