@@ -26,3 +26,4 @@ function materialize(prefix, nums, outName) {
 
 materialize("txdot-cover.b64.", [1, 2, 3, 4], "txdot-cybercab-okladka.jpg");
 materialize("nashville-tasm-full.b64.", [1, 2, 3], "nashville-prufrock-tasm.jpg");
+materialize("samsung-taylor-okladka.b64.", [1, 2, 3, 4, 5, 6, 7], "samsung-taylor-okladka.jpg");
