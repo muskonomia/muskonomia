@@ -10,7 +10,7 @@ function materialize(prefix, nums, outName) {
   const parts = nums
     .map((n) => join(root, "scripts", `${prefix}${n}`))
     .filter((p) => existsSync(p))
-    .map((p) => readFileSync(p, "utf8").trim())
+    .map((p) => readFileSync(p, "utf8").replace(/\s+/g, ""))
     .join("");
 
   if (!parts) {
@@ -25,8 +25,4 @@ function materialize(prefix, nums, outName) {
 }
 
 materialize("txdot-cover.b64.", [1, 2, 3, 4], "txdot-cybercab-okladka.jpg");
-materialize(
-  "nashville-tasm.b64.",
-  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-  "nashville-prufrock-tasm.jpg",
-);
+materialize("nashville-tasm-full.b64.", [1, 2, 3], "nashville-prufrock-tasm.jpg");
