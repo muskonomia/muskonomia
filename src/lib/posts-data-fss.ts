@@ -7,14 +7,14 @@ export const postsFss: Post[] = [
     topic: "tesla",
     title: "FSD Supervised dostało zgodę w Słowenii",
     excerpt:
-      "Tesla Europe ogłosiła 7 września zgodę na FSD Supervised w Słowenii. To szóste państwo UE i pierwsza nowa flaga od czerwca. Włączenie ma ruszyć wkrótce.",
+      "Szóste państwo Unii, pierwsza nowa flaga od czerwca. Tesla Europe dała znać 7 września, że włączenie ruszy wkrótce.",
     date: "7 września 2026",
     isoDate: "2026-09-07",
     img: "/img/fsd-amsterdam.jpg",
     body: [
       {
         type: "p",
-        text: "[Tesla Europe](https://x.com/teslaeurope/status/2097007168939593780) ogłosiła 7 września zgodę na FSD Supervised w Słowenii. Włączenie ma ruszyć wkrótce. To szóste państwo Unii i pierwsza nowa flaga od czerwca.",
+        text: "Słowenia jest szóstym państwem Unii z tą funkcją. [Tesla Europe](https://x.com/teslaeurope/status/2097007168939593780) potwierdziła to 7 września. Włączenie ma ruszyć wkrótce.",
       },
       {
         type: "img",
