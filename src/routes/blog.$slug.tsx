@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { DiscussOnX } from "@/components/discuss-on-x";
+import { DiscussOnX, XPostEmbed } from "@/components/discuss-on-x";
 import { PostCard } from "@/components/post-card";
 import { PostMeta } from "@/components/post-meta";
 import { LinkedText } from "@/components/rich-text";
@@ -96,6 +96,13 @@ function BlogPost() {
                         <LinkedText text={block.caption} />
                       </figcaption>
                     ) : null}
+                  </figure>
+                );
+              }
+              if (block.type === "x") {
+                return (
+                  <figure key={i} className="sm:mx-0">
+                    <XPostEmbed id={block.id} handle={block.handle} />
                   </figure>
                 );
               }
