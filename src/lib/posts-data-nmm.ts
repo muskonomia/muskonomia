@@ -16,6 +16,7 @@ export const postsNmm: Post[] = [
         type: "p",
         text: "[Vincent Maurin](https://x.com/vincent_maurin/status/2095885738260701365) z paryskiego akceleratora wrzucił w piątek krótką listę. 137 tys. wyświetleń. Ludzie nienawidzą Elona za klimat, majątek i ego. A on, pisze Maurin, robi akurat te rzeczy, za które dostaje po głowie.",
       },
+      { type: "x", id: "2095885738260701365", handle: "vincent_maurin" },
       {
         type: "p",
         text: "To nie jest nowy spór. Nowy jest tylko rozmiar. Cybercab jeździ już po Austin. Rakiety wracają na barkę. Ktoś po wylewie rusza kursorem siłą myśli. I wciąż pierwsza linijka pod zdjęciem Muska brzmi, że niszczy planetę albo że jest za bogaty, żeby go słuchać.",
