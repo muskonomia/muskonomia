@@ -34,6 +34,7 @@ export const postsOpt: Post[] = [
         type: "p",
         text: "Wewnętrzny plan Tesli na 2026 r. Jiemian oddaje jako 10–20 tys. sztuk. Część relacji z łańcucha, którą zebrał [Ming](https://x.com/tslaming/status/2096977354044432895), kotwiczy tegoroczną bazę bliżej 15 tys. [Humanoids Daily](https://www.humanoidsdaily.com/news/supply-chain-rumors-hint-at-massive-optimus-order-as-fremont-production-line-ramps-up) powtarza ten sam przedział i dodaje, że te maszyny mają iść najpierw do fabryk Tesli, nie do klientów. Te liczby nie pochodzą z komunikatu Tesli. To to, co dostawcy mówią o papierze, który do nich przyszedł.",
       },
+      { type: "x", id: "2096977354044432895", handle: "tslaming" },
       {
         type: "p",
         text: "Wytyczne zakupowe, które krążą od lata, są konkretne. We wrześniu dostawcy mają dojść do 1000 kompletów tygodniowo. Na koniec roku tempo ma wynosić 2000–2500 tygodniowo. Jiemian dopisuje, że tygodniówka może jeszcze pójść wyżej niż wcześniejsze 2500. To nadal plan zakupowy, nie raport z taśmy.",
@@ -44,7 +45,7 @@ export const postsOpt: Post[] = [
       },
       {
         type: "p",
-        text: "Chiński rynek zareagował rano 7 września. ETF robotyczny 560770 rósł o 2,15 proc. W czołówce sesji były m.in. Green Harmonic i Orbbec. Sama zwyżka nie mówi, kto dostał ten konkretny komplet. Mówi, że Szanghaj czyta 5000 sztuk jako sygnał z taśmy, nie z sceny.",
+        text: "Chiński rynek zareagował rano 7 września. ETF robotyczny 560770 rósł o 2,15 proc. W czołówce sesji były m.in. Green Harmonic i Orbbec. Sama zwiżka nie mówi, kto dostał ten konkretny komplet. Mówi, że Szanghaj czyta 5000 sztuk jako sygnał z taśmy, nie z sceny.",
       },
       {
         type: "p",
