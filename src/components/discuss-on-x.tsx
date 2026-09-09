@@ -4,7 +4,7 @@ import { absoluteUrl } from "@/lib/site";
 
 const X_HANDLE = "MuskonomiaPL";
 
-function XPostEmbed({ id }: { id: string }) {
+export function XPostEmbed({ id, handle }: { id: string; handle: string }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,12 +27,12 @@ function XPostEmbed({ id }: { id: string }) {
     s.setAttribute("data-twitter-wjs", "1");
     s.onload = load;
     document.body.appendChild(s);
-  }, [id]);
+  }, [id, handle]);
 
   return (
-    <div ref={ref} className="mt-5 overflow-hidden [&_.twitter-tweet]:mx-auto">
+    <div ref={ref} className="overflow-hidden [&_.twitter-tweet]:mx-auto">
       <blockquote className="twitter-tweet" data-dnt="true" data-theme="dark">
-        <a href={`https://x.com/${X_HANDLE}/status/${id}`}>Wpis @{X_HANDLE} na X</a>
+        <a href={`https://x.com/${handle}/status/${id}`}>Wpis @{handle} na X</a>
       </blockquote>
     </div>
   );
@@ -68,7 +68,7 @@ export function DiscussOnX({
         </h2>
       </div>
 
-      {xPostId ? <XPostEmbed id={xPostId} /> : (
+      {xPostId ? <div className="mt-5"><XPostEmbed id={xPostId} handle={X_HANDLE} /></div> : (
         <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
           Masz zdanie o tym wpisie? Napisz na X i oznacz{" "}
           <a
