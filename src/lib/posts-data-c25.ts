@@ -16,6 +16,7 @@ export const postsC25: Post[] = [
         type: "p",
         text: "6 września mapa publicznych zgłoszeń [Robotaxi Radar](https://x.com/RobotaxiRadar/status/2096667247104438307) objęła 25 stanów USA i Dystrykt Kolumbii. Tydzień wcześniej osobne punkty miały głównie Teksas, Kalifornia, Floryda i Waszyngton. Działająca usługa Robotaxi na nowych Cybercabach nadal jest tylko w Austin.",
       },
+      { type: "x", id: "2096667247104438307", handle: "RobotaxiRadar" },
       {
         type: "ul",
         items: [
