@@ -77,29 +77,20 @@ function BlogPost() {
                 );
               }
               if (block.type === "video") {
-                const video = (
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster={block.poster}
-                    autoPlay={block.loop}
-                    muted={block.loop}
-                    loop={block.loop}
-                    className="aspect-video w-full bg-overlay"
-                  >
-                    <source src={block.src} type="video/mp4" />
-                  </video>
-                );
                 return (
                   <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
-                    {block.href ? (
-                      <a href={block.href} target="_blank" rel="noopener noreferrer" className="block">
-                        {video}
-                      </a>
-                    ) : (
-                      video
-                    )}
+                    <video
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={block.poster}
+                      autoPlay={block.loop}
+                      muted={block.loop}
+                      loop={block.loop}
+                      className="aspect-video w-full bg-overlay"
+                    >
+                      <source src={block.src} type="video/mp4" />
+                    </video>
                     {block.caption ? (
                       <figcaption className="px-5 pt-2 text-sm text-muted sm:px-0">
                         <LinkedText text={block.caption} />
