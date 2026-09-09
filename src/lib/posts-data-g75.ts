@@ -42,6 +42,7 @@ export const postsG75: Post[] = [
         type: "p",
         text: "Na X ta wiadomość idzie jako dowód, że problemem nie jest brak zamówień. [Muskonomy](https://x.com/muskonomy/status/2097008733633290729) zebrał liczby z [Handelsblattu](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html). [Kanał Giga Berlin](https://x.com/Gf4Tesla/status/2096857595612983330) powtarza to samo i kładzie ciężar na popyt. Obok wraca Volkswagen: kolejne 50 tys. etatów do cięcia i pytanie o Emden, Zwickau, Hanower i Neckarsulm. Tam mocy jest za dużo. Tu Tesli brakuje około 1000 aut na tydzień.",
       },
+      { type: "x", id: "2097008733633290729", handle: "muskonomy" },
     ],
   },
 ];
