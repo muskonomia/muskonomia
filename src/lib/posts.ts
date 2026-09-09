@@ -7,7 +7,8 @@ export type Block =
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
-  | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string };
+  | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string }
+  | { type: "x"; id: string; handle: string };
 
 export const TOPIC_IDS = ["tesla", "spacex", "xai", "neuralink", "boring", "inne"] as const;
 export type TopicId = (typeof TOPIC_IDS)[number];
@@ -124,6 +125,7 @@ export function postPlainText(post: Post) {
       if (b.type === "ul") return b.items.join(" ");
       if (b.type === "img") return b.alt;
       if (b.type === "video") return b.caption ?? "";
+      if (b.type === "x") return `Wpis @${b.handle} na X`;
       if (b.type === "p" || b.type === "h2") return b.text;
       return "";
     })

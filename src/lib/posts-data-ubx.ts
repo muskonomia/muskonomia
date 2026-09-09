@@ -17,11 +17,9 @@ export const postsUbx: Post[] = [
         text: "8 września [konto Robotaxi](https://x.com/robotaxi/status/2097422261624193106) puściło film z linii Cybercaba w Giga Texas. Moduły powstają równolegle, a całość jest złożona w jednym kroku na końcu. Linia ma zajmować o połowę mniej miejsca. Musk napisał, że produkcję przeprojektowano tak, by szła ponad 5 razy szybciej niż klasyczna.",
       },
       {
-        type: "img",
-        src: "/img/cybercab-unboxed-linia.jpg",
-        alt: "Ujęcie z filmu linii Unboxed Cybercaba w Giga Texas",
-        caption: "Ujęcie z filmu. Kliknij, żeby otworzyć nagranie na X. [Źródło: @robotaxi](https://x.com/robotaxi/status/2097422261624193106).",
-        href: "https://x.com/robotaxi/status/2097422261624193106",
+        type: "x",
+        id: "2097422261624193106",
+        handle: "robotaxi",
       },
       {
         type: "p",
