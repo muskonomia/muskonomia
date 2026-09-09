@@ -16,6 +16,7 @@ export const postsFss: Post[] = [
         type: "p",
         text: "[Tesla Europe](https://x.com/teslaeurope/status/2097007168939593780) ogłosiła 7 września zgodę na FSD Supervised w Słowenii. Usługa ma zostać włączona wkrótce. To szóste państwo Unii.",
       },
+      { type: "x", id: "2097007168939593780", handle: "teslaeurope" },
       {
         type: "img",
         src: "https://pbs.twimg.com/media/HRoQcaOaoAA18fp.jpg",
