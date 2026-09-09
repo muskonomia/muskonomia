@@ -17,6 +17,7 @@ export const postsGbpm: Post[] = [
         type: "p",
         text: "[Alex Finn](https://x.com/AlexFinn/status/2095944004932432216). Cursor cloud agents w Grok Bocie są rewelacyjne, ale trzeba ich używać dobrze. Sekret: potrzebujesz bota developera i bota od zarządzania projektem.",
       },
+      { type: "x", id: "2095944004932432216", handle: "AlexFinn" },
       {
         type: "img",
         src: "https://pbs.twimg.com/media/HRZJ8TBbkAAq4R1.png",
