@@ -17,6 +17,7 @@ export const postsSl5: Post[] = [
         type: "p",
         text: "Łącze ma obsłużyć dwie rzeczy naraz. Pasażer streamuje i gra. Auto zostaje w sieci, gdy LTE nie wystarcza. [Starlink](https://x.com/Starlink/status/2095667919493779512) napisał wprost: V5 da łączność do operacji pojazdu i rozrywki pasażera nawet w miejscach ze słabą albo zatłoczoną komórką. [Musk](https://x.com/elonmusk/status/2095669235993252297) dopiął to jednym zdaniem. Starlink pozwoli oglądać w Cybercabie wideo 4K na żywo.",
       },
+      { type: "x", id: "2095667919493779512", handle: "Starlink" },
       {
         type: "video",
         src: "https://video.twimg.com/amplify_video/2095648643659317251/vid/avc1/3840x2160/5xYvmK5ICiE4O_T4.mp4",
