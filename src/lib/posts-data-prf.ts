@@ -26,6 +26,7 @@ export const postsPrf: Post[] = [
         type: "p",
         text: "[Wpis TBC](https://x.com/boringcompany/status/2097171928381616339) mówi o wapieniu powyżej 10 000 psi. [Blog z 1 sierpnia](https://www.boringcompany.com/blogaugust2026) podaje wyniki rdzeni bliżej 14 000 psi, czyli około 96 MPa. To twardy kamień. Maszyny i tak idą, bo skała wychodzi z tunelu bez przerwy.",
       },
+      { type: "x", id: "2097171928381616339", handle: "boringcompany" },
       {
         type: "p",
         text: "Każda tarcza kruszy front. Urobek jedzie taśmą przez wyrobisko, potem przez pionową kasetę i dwa ułożone jeden nad drugim przenośniki. Spada do dołu na powierzchni. Druga kaseta, pod MB2, ruszyła po starcie z Lot 16 przy kapitole stanu. Tunele leżą obok siebie. W sierpniu TBC podała odstęp około 6 m.",
