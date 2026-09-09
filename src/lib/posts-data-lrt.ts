@@ -16,6 +16,7 @@ export const postsLrt: Post[] = [
         type: "p",
         text: "Konto [Cybertrucka](https://x.com/cybertruck/status/2096003208015659206) pokazało pierwszego pickupa z ogniwami 4680, w których siedzi lit z własnej rafinerii Tesli nad Zatoką Meksykańską. Od wbicia łopaty pod Robstown minęły trzy lata. [Musk](https://x.com/elonmusk/status/2096019186510094759) dopisał pod zdjęciem cztery słowa: „Lithium made in America”.",
       },
+      { type: "x", id: "2096003208015659206", handle: "cybertruck" },
       {
         type: "img",
         src: "https://pbs.twimg.com/media/HRZ_xcwboAA6J4l.jpg",
