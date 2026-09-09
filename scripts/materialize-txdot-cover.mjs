@@ -28,3 +28,4 @@ materialize("txdot-cover.b64.", [1, 2, 3, 4], "txdot-cybercab-okladka.jpg");
 materialize("nashville-tasm-full.b64.", [1, 2, 3], "nashville-prufrock-tasm.jpg");
 materialize("samsung-taylor-okladka.b64.", [1, 2, 3, 4, 5, 6, 7], "samsung-taylor-okladka.jpg");
 materialize("cybercab-unboxed-linia.b64.", [1, 2, 3, 4, 5, 6, 7, 8], "cybercab-unboxed-linia.jpg");
+materialize("fsd-ace-unik.b64.", [1], "fsd-ace-unik.jpg");
