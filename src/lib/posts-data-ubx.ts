@@ -11,6 +11,7 @@ export const postsUbx: Post[] = [
     date: "9 września 2026",
     isoDate: "2026-09-09",
     img: "/img/cybercab-unboxed-linia.jpg",
+    xPostId: "2097607958162973120",
     body: [
       {
         type: "p",
