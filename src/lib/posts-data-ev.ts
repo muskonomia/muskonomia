@@ -26,10 +26,12 @@ export const postsEv: Post[] = [
         type: "p",
         text: "[Tesla AI](https://x.com/Tesla_AI/status/2095767350070890688) zapowiedziała to 4 września. FSD może wejść samo, gdy zderzenie jest blisko, a zwykłe hamowanie awaryjne może nie wystarczyć. Drugi przypadek: kamera widzi, że kierowca jest mocno rozproszony albo zrzucił FSD przez przypadek.",
       },
+      { type: "x", id: "2095767350070890688", handle: "Tesla_AI" },
       {
         type: "p",
         text: "Instrukcja, którą [ściągnięto wraz z paczką](https://x.com/SawyerMerritt/status/2097517561239707949), rozdziela te dwa przypadki. Skręt z toru zderzenia działa, gdy włączone są jednocześnie AEB i FSD nadzorowane, a FSD w tej chwili nie prowadzi.",
       },
+      { type: "x", id: "2097517561239707949", handle: "SawyerMerritt" },
       {
         type: "p",
         text: "Widełki są wąskie. Chodzi o zderzenie czołowe z innym pojazdem, gdy hamowanie w linii prostej może nie zdążyć, a zjazd na sąsiedni pas albo na pobocze daje większą szansę. Wtedy Model Y skręca, hamuje albo przyspiesza i jedzie dalej. AEB samo tylko wciska pedał.",
