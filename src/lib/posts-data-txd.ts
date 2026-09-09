@@ -17,6 +17,7 @@ export const postsTxd: Post[] = [
         type: "p",
         text: "Marc Williams z teksańskiego departamentu transportu był na starcie Cybercaba w Austin. Auto bez kierownicy i pedałów wycenił na 30 tys. dolarów, około 111 tys. zł. Potem [napisał na LinkedInie](https://x.com/SawyerMerritt/status/2096265654743527433), że pojazd w końcu zszedł z deski kreślarskiej oraz testów do pełnoprawnego działania na naszych ulicach.",
       },
+      { type: "x", id: "2096265654743527433", handle: "SawyerMerritt" },
       {
         type: "img",
         src: "/img/txdot-cybercab-okladka.jpg",
