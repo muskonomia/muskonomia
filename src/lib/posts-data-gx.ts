@@ -12,6 +12,7 @@ export const postsGx: Post[] = [
     isoDate: "2026-09-11",
     img: "/img/gx-galaxy.jpg",
     contain: true,
+    xPostId: "2098330705222684786",
     body: [
       {
         type: "p",
