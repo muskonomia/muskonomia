@@ -26,6 +26,12 @@ export const postsTxd: Post[] = [
         contain: true,
       },
       {
+        type: "img",
+        src: "/img/txdot-cybercab-austin.jpg",
+        alt: "Złoty Cybercab w Austin, pasażer wkłada gitarę do bagażnika",
+        caption: "Austin. Auto bez kierownicy, które TxDOT widział na ulicach.",
+      },
+      {
         type: "p",
         text: "Williams podkreśla, że Cybercab został specjalnie wyprodukowany i zbudowany pod autonomię: nie ma fizycznych sterów, jest ekran, a cena wychodzi niżej niż u większości nowych aut konsumenckich.",
       },

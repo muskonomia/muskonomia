@@ -35,7 +35,7 @@ export const postsC25: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HRgJbR8asAAmn7_.jpg",
+        src: "/img/c25-mapa.jpg",
         alt: "Mapa USA ze zgłoszeniami Cybercaba w 25 stanach i Dystrykcie Kolumbii",
         caption: "25 stanów USA i Dystrykt Kolumbii. [Źródło: Robotaxi Radar](https://x.com/RobotaxiRadar/status/2096667247104438307).",
         href: "https://x.com/RobotaxiRadar/status/2096667247104438307",

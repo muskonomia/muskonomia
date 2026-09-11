@@ -56,7 +56,7 @@ export const postsWsk: Post[] = [
       },
       {
         type: "img",
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Waymo_Jaguar_I-Pace_in_San_Francisco_January_2026.jpg/1280px-Waymo_Jaguar_I-Pace_in_San_Francisco_January_2026.jpg",
+        src: "/img/zkr-waymo.jpg",
         alt: "Waymo Jaguar I-Pace na Embarcadero w San Francisco",
         caption: "Waymo Jaguar I-Pace w San Francisco. Fot. 4300streetcar / Wikimedia Commons.",
       },

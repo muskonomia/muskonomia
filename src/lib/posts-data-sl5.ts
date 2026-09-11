@@ -10,7 +10,7 @@ export const postsSl5: Post[] = [
       "Starlink V5 wejdzie w Cybercaba wprost. Łącze do operacji pojazdu i rozrywki, gdy LTE słabnie. Musk: wideo 4K na żywo.",
     date: "5 września 2026",
     isoDate: "2026-09-05",
-    img: "https://pbs.twimg.com/media/HNs_wwqbEAAuK8Q.jpg",
+    img: "/img/sl5-v5.jpg",
     xPostId: "2095667919493779512",
     body: [
       {
@@ -30,7 +30,7 @@ export const postsSl5: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HNs_wwqbEAAuK8Q.jpg",
+        src: "/img/sl5-v5.jpg",
         alt: "Przekrój Cybercaba z anteną Starlink V5 z tyłu dachu, obok GPS i LTE",
         caption: "Antena V5 z tyłu dachu. Źródło: Tesla, 20 lipca 2026.",
         contain: true,

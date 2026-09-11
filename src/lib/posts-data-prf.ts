@@ -24,6 +24,19 @@ export const postsPrf: Post[] = [
         caption: "Nagranie z drona TBC, 8 września. Wapień z MB1 i MB2 spada taśmami do dołu na powierzchni.",
       },
       {
+        type: "img",
+        src: "/img/nashville-prufrock-dron.jpg",
+        alt: "Kadr z nagrania TBC: taśmy zsypują skałę do wyrobiska w Nashville",
+        caption: "Kadr z drona TBC. Dwie taśmy, dwa Prufrocki.",
+        href: "https://x.com/boringcompany/status/2097171928381616339",
+      },
+      {
+        type: "img",
+        src: "/img/nashville-prufrock-tarcza.jpg",
+        alt: "Tarcza Prufrocka na placu TBC, noże i siłowniki",
+        caption: "Tarcza Prufrocka. MB3 ma dojechać we wrześniu.",
+      },
+      {
         type: "p",
         text: "[Wpis TBC](https://x.com/boringcompany/status/2097171928381616339) mówi o wapieniu powyżej 10 000 psi. [Blog z 1 sierpnia](https://www.boringcompany.com/blogaugust2026) podaje wyniki rdzeni bliżej 14 000 psi, czyli około 96 MPa. To twardy kamień. Maszyny i tak idą, bo skała wychodzi z tunelu bez przerwy.",
       },

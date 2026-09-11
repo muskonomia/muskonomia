@@ -23,6 +23,20 @@ export const postsUbx: Post[] = [
         handle: "robotaxi",
       },
       {
+        type: "img",
+        src: "/img/cybercab-unboxed-linia.jpg",
+        alt: "Złoty Cybercab na linii Unboxed w Giga Texas, żółte roboty wokół",
+        caption: "Linia Unboxed w Giga Texas. Moduły równolegle, rama na końcu.",
+        href: "https://x.com/robotaxi/status/2097422261624193106",
+      },
+      {
+        type: "img",
+        src: "/img/cybercab-unboxed-roboty.jpg",
+        alt: "Kadr z filmu Tesli: Cybercab między robotami na linii Unboxed",
+        caption: "Kadr z filmu Robotaxi, 8 września.",
+        href: "https://x.com/robotaxi/status/2097422261624193106",
+      },
+      {
         type: "p",
         text: "Robotaxi nazwało to pierwszą prawdziwą rewolucją w produkcji samochodów od ponad wieku. [Phil Beisel](https://x.com/pbeisel/status/2097474106589651107), wcześniej w Apple i przy starcie zespołu technicznego Riviana, rozwinął to zdanie. Przy produkcji Forda z 1913 r. nadwozie jechało od początku do końca, a części były dokładane do niego po drodze. Ten sam model produkcji został skopiowany przez Toyotę z drobnymi modyfikacjami. Unboxed robi odwrotnie: duże moduły składa się i testuje, póki są otwarte, a długa linia montażu końcowego znika.",
       },

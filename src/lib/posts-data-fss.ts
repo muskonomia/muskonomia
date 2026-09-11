@@ -19,7 +19,7 @@ export const postsFss: Post[] = [
       { type: "x", id: "2097007168939593780", handle: "teslaeurope" },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HRoQcaOaoAA18fp.jpg",
+        src: "/img/fss-kabina.jpg",
         alt: "Kabina Tesli z FSD Supervised: ręce na udach, wizualizacja pasa na ekranie",
         caption: "Kabina z ogłoszenia Tesli Europe. Ręce na udach, wzrok na drodze.",
         href: "https://x.com/teslaeurope/status/2097007168939593780",
@@ -30,7 +30,7 @@ export const postsFss: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HRo9cu2XYAAFwLb.jpg",
+        src: "/img/fss-mapa.jpg",
         alt: "Mapa Europy z sześcioma flagami krajów, które zatwierdziły FSD Supervised",
         caption: "Holandia, Litwa, Estonia, Dania, Belgia, Słowenia. Reszta poza listą. [Roland Pircher](https://x.com/piloly/status/2097058158946443697).",
         href: "https://x.com/piloly/status/2097058158946443697",

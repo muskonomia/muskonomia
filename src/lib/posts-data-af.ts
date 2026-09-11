@@ -22,7 +22,7 @@ export const postsAf: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HRZJ8TBbkAAq4R1.png",
+        src: "/img/gbpm-boty.jpg",
         alt: "Lista botów Finna: Hank deweloper, Kelly kierownik projektu, Reed badacz",
         caption: "Hank koduje. Kelly prowadzi tablicę. Źródło: @AlexFinn.",
         contain: true,

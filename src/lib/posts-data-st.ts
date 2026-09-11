@@ -24,6 +24,12 @@ export const postsSt: Post[] = [
         caption: "Taylor, Teksas. Pełny portfel 2 nm jeszcze przed serią.",
       },
       {
+        type: "img",
+        src: "/img/samsung-taylor-dzwigi.jpg",
+        alt: "Budowa fabryki Samsunga w Taylor: dźwigi i budynek z napisem SAMSUNG",
+        caption: "Taylor w budowie. Próbny rozruch na przełomie września i października.",
+      },
+      {
         type: "p",
         text: "[BusinessKorea](https://www.businesskorea.co.kr/news/articleView.html?idxno=276433) podał 8 września, że zamówienia zapełniły zakład jeszcze zanim z linii zjedzie pierwsza seryjna płytka. Obok Tesli na tej samej liście są Broadcom z kolejnym układem komunikacyjnym i Arm z chipem AI do urządzeń. Początkowa moc to 50 tys. płytek na miesiąc. TSMC na porównywalnym procesie kręci około 80 tys.",
       },

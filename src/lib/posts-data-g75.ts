@@ -24,6 +24,12 @@ export const postsG75: Post[] = [
         caption: "Taśma w Grünheide. Takt 45 s jest blisko, tygodniówka jeszcze nie.",
       },
       {
+        type: "img",
+        src: "/img/giga-berlin-karoseria.jpg",
+        alt: "Karoseria Model Y w Giga Berlin przy stanowisku Tesla Central",
+        caption: "Karoseria Model Y w Grünheide. Zakład robi tylko Y-ki na Europę.",
+      },
+      {
         type: "p",
         text: "Mail od „Giga Berlin Leadership Team” trafił do [Handelsblatt](https://www.handelsblatt.com/unternehmen/industrie/elektromobilitaet-1000-tesla-pro-woche-zu-wenig-sonderschichten-in-gruenheide/100252042.html). Z radą zakładową są trzy daty: noc 18 września, ranek 19 września i noc 25 września. W tygodniu od 14 września wchodzą dwie dodatkowe zmiany, tydzień później jedna. Grupy Niebieska, Czerwona i Srebrna biorą po jednej.",
       },

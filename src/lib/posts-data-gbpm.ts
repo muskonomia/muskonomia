@@ -10,7 +10,7 @@ export const postsGbpm: Post[] = [
       "Alex Finn: w Grok Bocie ustaw developera i project managera. PM daje zadania z Notion lub Linear, developer robi PR-y przez Cursor cloud agents.",
     date: "5 września 2026",
     isoDate: "2026-09-05",
-    img: "https://pbs.twimg.com/media/HRZJ8TBbkAAq4R1.png",
+    img: "/img/gbpm-boty.jpg",
     xPostId: "2095944004932432216",
     body: [
       {
@@ -20,7 +20,7 @@ export const postsGbpm: Post[] = [
       { type: "x", id: "2095944004932432216", handle: "AlexFinn" },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HRZJ8TBbkAAq4R1.png",
+        src: "/img/gbpm-boty.jpg",
         alt: "Lista botów: Hank HIM Developer, Kelly HIM Project Manager, Reed HIM Researcher",
         caption: "Developer i project manager obok siebie. Źródło: @AlexFinn.",
         contain: true,

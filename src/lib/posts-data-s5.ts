@@ -48,7 +48,7 @@ export const postsS5: Post[] = [
       },
       {
         type: "img",
-        src: "https://pbs.twimg.com/media/HNs_wwqbEAAuK8Q.jpg",
+        src: "/img/sl5-v5.jpg",
         alt: "Przekrój Cybercaba Tesli z anteną Starlink V5 w dachu",
         caption: "Antena z tyłu dachu, obok GPS i LTE. Źródło: @Tesla, 20 lipca 2026.",
         contain: true,
