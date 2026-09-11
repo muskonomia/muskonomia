@@ -21,7 +21,7 @@ export const postsSm: Post[] = [
         type: "img",
         src: "/img/sm-eu.jpg",
         alt: "Grafika Tesli Europe: Semi z kamerami zamiast lusterek, zasięg 550 km, 40 ton",
-        caption: "Semi is coming to Europe. Źródło: @teslaeurope.",
+        caption: "Semi is coming to Europe. Kamery, nie lusterka. Źródło: @teslaeurope.",
         contain: true,
         href: "https://x.com/teslaeurope/status/2098429681607307452",
       },
@@ -42,9 +42,9 @@ export const postsSm: Post[] = [
       },
       {
         type: "img",
-        src: "/img/sm-mega.jpg",
-        alt: "Tesla Semi podłączony do Megachargera przy Giga Nevada",
-        caption: "Megacharger. W Europie do 800 kW, nie 1,2 MW z amerykańskiego Long Range.",
+        src: "/img/sm-port.jpg",
+        alt: "Tesla Semi bez lusterek ciągnie kontener na terenie portu",
+        caption: "Wersja bez klasycznych lusterek. W Europie Megacharger do 800 kW.",
       },
       {
         type: "p",
@@ -52,9 +52,9 @@ export const postsSm: Post[] = [
       },
       {
         type: "img",
-        src: "/img/sm-szosa.jpg",
-        alt: "Tesla Semi z naczepą na drodze przy Giga Nevada",
-        caption: "W USA Semi schodzi z linii obok Giga Nevada. 805 km przy 37,2 tony — inna wersja.",
+        src: "/img/sm-concept.jpg",
+        alt: "Tesla Semi w studiu bez lusterek bocznych, srebrna kabina",
+        caption: "Czysta kabina, bez lusterek. Europa dostaje 550 km przy 40 tonach.",
       },
       {
         type: "p",
@@ -69,12 +69,6 @@ export const postsSm: Post[] = [
       {
         type: "p",
         text: "Tesla planuje dostawy na 2027 rok. Formalne otwarcie europejskie ma być na targach w Hanowerze.",
-      },
-      {
-        type: "img",
-        src: "/img/sm-studio.jpg",
-        alt: "Tesla Semi w studiu, trzy czwarte, czarne tło",
-        caption: "Dostawy od 2027. Skąd — Nevada albo Berlin — Tesla jeszcze nie powiedziała.",
       },
       {
         type: "p",
