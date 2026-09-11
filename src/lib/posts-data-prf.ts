@@ -11,6 +11,7 @@ export const postsPrf: Post[] = [
     date: "8 września 2026",
     isoDate: "2026-09-08",
     img: "/img/nashville-prufrock-tasm.jpg",
+    xPostId: "2097304366243791018",
     body: [
       {
         type: "p",

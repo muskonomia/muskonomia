@@ -11,6 +11,7 @@ export const postsPwv: Post[] = [
     date: "10 września 2026",
     isoDate: "2026-09-10",
     img: "/img/pw-vpp.jpg",
+    xPostId: "2098053447262027785",
     contain: true,
     body: [
       {

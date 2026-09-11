@@ -11,6 +11,7 @@ export const postsG75: Post[] = [
     date: "8 września 2026",
     isoDate: "2026-09-08",
     img: "/img/giga-berlin-sonderschichten.jpg",
+    xPostId: "2097306615900782801",
     body: [
       {
         type: "p",

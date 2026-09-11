@@ -11,6 +11,7 @@ export const postsTbc: Post[] = [
     date: "10 września 2026",
     isoDate: "2026-09-10",
     img: "/img/tbc-d.jpg",
+    xPostId: "2098049660644384967",
     body: [
       {
         type: "p",
