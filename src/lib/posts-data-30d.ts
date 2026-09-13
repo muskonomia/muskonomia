@@ -3,11 +3,11 @@ import type { Post } from "./posts";
 export const posts30d: Post[] = [
   {
     slug: "cybercab-semi-roadster",
-    kicker: "30 dni",
+    kicker: "Wydarzenia",
     topic: "tesla",
-    title: "Tesla w 30 dni: Cybercab, Semi i Roadster",
+    title: "Tesla: trzy wydarzenia, trzy pojazdy",
     excerpt:
-      "Cybercab 3 września w Austin już był. Semi 24 września w Nevadzie. Roadster 1 października. Trzy premiery w 30 dni.",
+      "Trzy wydarzenia, trzy pojazdy. Cybercab 3 września w Austin już był. Semi 24 września w Nevadzie. Roadster 1 października.",
     date: "13 września 2026",
     isoDate: "2026-09-13",
     img: "/img/30d-okladka.jpg",
@@ -15,13 +15,13 @@ export const posts30d: Post[] = [
     body: [
       {
         type: "p",
-        text: "Trzy daty, trzy pojazdy, jeden krąg. Cybercab 3 września w Austin już był. Semi 24 września w fabryce w Nevadzie. Roadster 1 października. Sawyer Merritt: trzy eventy w 30 dni.",
+        text: "Trzy wydarzenia, trzy pojazdy. Cybercab 3 września w Austin już był. Semi 24 września w fabryce w Nevadzie. Roadster 1 października.",
       },
       {
         type: "img",
         src: "/img/30d-okladka.jpg",
         alt: "Grafika Tesli: Cybercab 3 września w Austin, Semi 24 września w Nevadzie, Roadster 1 października",
-        caption: "Cybercab. Semi. Roadster. 30 dni.",
+        caption: "Trzy wydarzenia. Trzy pojazdy.",
         contain: true,
       },
       { type: "x", id: "2098870630632337715", handle: "SawyerMerritt" },
