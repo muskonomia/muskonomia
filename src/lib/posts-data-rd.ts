@@ -26,7 +26,6 @@ export const postsRd: Post[] = [
         href: "https://x.com/Tesla/status/2098843535730725124",
       },
       { type: "x", id: "2098843535730725124", handle: "Tesla" },
-      { type: "x", id: "2098932438055469451", handle: "elonmusk" },
       {
         type: "p",
         text: "To pierwsza twarda data od 2017 r. Wtedy Tesla pokazała prototyp i obiecała dostawy w 2020. Termin schodził kolejno na 2022, 2023, 2024 i okolice 2025–2026. Na walnym w listopadzie Musk mówił o produkcji w 2027 albo 2028. Po pokazie ma minąć jeszcze 12–18 miesięcy, zanim coś zjedzie z linii.",
