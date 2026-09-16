@@ -5,7 +5,7 @@ export const postsNh: Post[] = [
     slug: "nhtsa-av-tesla-26-zderzen",
     kicker: "Robotaxi",
     topic: "tesla",
-    title: "NHTSA: Tesla ma 2 nowe zderzenia a Waymo 94",
+    title: "NHTSA? Tesla ma dwa nowe zderzenia/wypadki drogowe. A Waymo ma 94.",
     excerpt:
       "NHTSA do 17 sierpnia: Tesla 26 zgłoszeń robotaxi, wszystkie w Teksasie. Waymo 2214. Zoox 156. Wpis nie oznacza winy. Bez przebiegu to nie ranking.",
     date: "16 września 2026",
