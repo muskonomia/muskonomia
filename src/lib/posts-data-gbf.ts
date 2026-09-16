@@ -1,0 +1,79 @@
+import type { Post } from "./posts";
+
+export const postsGbf: Post[] = [
+  {
+    slug: "grok-bot-galaxy-wskazowki-founderow",
+    kicker: "Grok Bot",
+    topic: "xai",
+    title: "Grok Bot te 20 zasad sprawi że zrobisz więcej za mniej",
+    excerpt:
+      "Z sesji dla founderów na Grok Bot Galaxy zostaje dwudziestka zasad: najpierw API, bot jak pracownik, cała robota w jednym poleceniu.",
+    date: "16 września 2026",
+    isoDate: "2026-09-16",
+    img: "/img/gbf-okladka.jpg",
+    contain: true,
+    body: [
+      {
+        type: "p",
+        text: "Trzej pracownicy SpaceXAI — Matt Palmer, Lauren Tan i Roshan Sadanani — od 15 września stawiają firmę od czystej kartki. Narzędzie: Grok Bot. 72 godziny, stream na żywo, [Grok Bot Galaxy](https://muskonomia.pl/blog/grok-bot-galaxy-15-17-wrzesnia) w San Francisco.",
+      },
+      { type: "x", id: "2099890276315848743", handle: "bot" },
+      {
+        type: "img",
+        src: "/img/gbf-okladka.jpg",
+        alt: "Lista dwudziestu zasad Grok Bota z sesji dla founderów na Galaxy",
+        caption: "Z sesji dla founderów. Źródło: @kloss_xyz, za Shub Gaur.",
+        contain: true,
+        href: "https://x.com/kloss_xyz/status/2100076338896113709",
+      },
+      {
+        type: "p",
+        text: "Pierwszy dzień zamknęła sesja dla founderów. Z niej zostaje kompendium.",
+      },
+      {
+        type: "ul",
+        items: [
+          "1. Przeglądarka i sterowanie komputerem są mocne, ale drogie. Jeśli zadanie nie wymaga klikania po interfejsie, logowania albo kontroli na ekranie, najpierw connector, API albo MCP. Komputer zostaw na robotę, która naprawdę potrzebuje ekranu.",
+          "2. Większość wydatków idzie w klikanie formularzy i stron, które już pokrywa zwykłe narzędzie.",
+          "3. Rutyny działają, dopóki ktoś ich nie audytuje. Powtarzalną pracę wsadź w zegar. To, co pali tokeny, zabijaj według harmonogramu. Automatyczna optymalizacja jest tańsza niż pamięć. Duplikaty i pętle co 15 minut potrafią iść w tle. Pilnuj sformułowania polecenia.",
+          "4. Trzymaj bota, który regularnie odpuszcza zbędne rutyny i pilnuje kosztów.",
+          "5. Bot to nie jednorazowy agent. Zostaw go, dawaj poprawki, niech składa wiedzę jak pracownik. Nie wyrzucaj go po jednym słabym przebiegu albo po tymczasowym zadaniu.",
+          "6. Używaj tego, czego boty już się nauczyły, i pracy kilku botów naraz. Mają być z biegiem czasu lepsze.",
+          "7. Niech porównują swoje szkice i błędy z wersją, którą zatwierdzasz.",
+          "8. Możesz uczyć boty umiejętności i kazać im coś zapomnieć. Tak czyścisz pamięć i kontekst.",
+          "9. Zrób bota głosowego, który uczy się z Twoich wpisów, maili, szkiców i tekstów.",
+          "10. Grupuj boty według specjalizacji. Losowe pytania nie mogą mieszać ról specjalistom.",
+          "11. Founder albo szef sztabu pilnuje jakości decyzji i tempa. Każde inne rzemiosło nadaje się na stałego bota z dostępem do narzędzi.",
+          "12. Rozpisz swoje obowiązki z choć jednego dnia. Nawet jeśli zajmie to godzinę albo dwie. Potem oddaj je głęboko, razem z weryfikacją. Da się zautomatyzować więcej, niż się wydaje.",
+          "13. Chcesz coś zrobić — daj całe zadanie, w tym sprawdzenie. Potem nie siadaj nad ukończeniem.",
+          "14. Rzeczy, które wydają się nieskalowalne, stają się powtarzalne, gdy jedzie je bot. Podłączaj kolejne narzędzia, jeśli Ci z tym po drodze.",
+          "15. Botom i rutynom każ milczeć. Piszą tylko, gdy naprawdę jest powód. Inaczej zasypią wiadomościami.",
+          "16. Grupy i kanały ustawiaj precyzyjnie. Bez parametrów i bez wskazania konkretnego bota odezwą się wszyscy i spalą tokeny.",
+          "17. Ciasteczka logowania importuj tylko tam, gdzie chcesz zostać zalogowany i gdzie botowi ufasz.",
+          "18. Umiejętności i zapisane lekcje wypuszczaj często. Powtarzalny przepływ bije sprytny jednorazowy prompt.",
+          "19. Feedback founderowi może zejść do godzin. Wąskie gardło to to, który feedback przyjmujesz. Zrób sitko na szum.",
+          "20. Weź szablony ze sklepu Grok Bota. Zespół je sprawdził. Można ich użyć albo przerobić. Jak wgrywasz cudzy setup, najpierw dopytaj, aż go ogarniesz.",
+        ],
+      },
+      {
+        type: "img",
+        src: "/img/gbf-sala.jpg",
+        alt: "Uczestnik Grok Bot Galaxy z laptopem w sali The Howard",
+        caption: "The Howard, San Francisco. Trzy dni na żywo.",
+        href: "https://x.com/beingamanpal/status/2100096457252716577",
+      },
+      {
+        type: "img",
+        src: "/img/gbf-gtm.jpg",
+        alt: "Grafika DogeDesigner: Grok Bot buduje pipeline sprzedaży i CRM",
+        caption: "Bot nie odpowiada. Robotę robi. Źródło: @cb_doge.",
+        contain: true,
+        href: "https://x.com/cb_doge/status/2099901153261859216",
+      },
+      {
+        type: "p",
+        text: "16 września na Galaxy idzie sprzedaż, SDR-zy i support. 17 września marketing i pokaz tego, co z trzech dni zostanie.",
+      },
+    ],
+  },
+];
