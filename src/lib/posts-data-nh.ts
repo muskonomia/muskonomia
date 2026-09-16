@@ -29,7 +29,6 @@ export const postsNh: Post[] = [
         type: "p",
         text: "Federalny [obowiązek zgłoszeń](https://www.nhtsa.gov/laws-regulations/standing-general-order-crash-reporting) każe wpisać każdy wypadek drogowy, w którym auto z włączonym systemem autonomicznym brało udział, a ktoś odniósł obrażenia albo szkoda jest poważna. Auto mogło równie dobrze stać a ktoś mógł wjechać z tyłu. W tabeli i tak jest to zanotowane bez orzekania kogo to była wina.",
       },
-      { type: "x", id: "2099853692568469887", handle: "mehauff7" },
       {
         type: "p",
         text: "Flota Tesli to około tysiąc aut na ten moment a Waymo ma ponad 3 tysiące aut.",
