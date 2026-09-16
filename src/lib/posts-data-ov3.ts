@@ -12,6 +12,7 @@ export const postsOv3: Post[] = [
     isoDate: "2026-09-16",
     img: "/img/ov3-okladka.jpg",
     contain: true,
+    xPostId: "2100155995863334938",
     body: [
       {
         type: "p",
