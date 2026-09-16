@@ -5,7 +5,7 @@ export const postsGbf: Post[] = [
     slug: "grok-bot-galaxy-wskazowki-founderow",
     kicker: "Grok Bot",
     topic: "xai",
-    title: "Grok Bot te 20 zasad sprawi że zrobisz więcej za mniej",
+    title: "Dwudziestka zasad Grok Bota dla founderów",
     excerpt:
       "Z sesji dla founderów na Grok Bot Galaxy zostaje dwudziestka zasad: najpierw API, bot jak pracownik, cała robota w jednym poleceniu.",
     date: "16 września 2026",
@@ -15,7 +15,7 @@ export const postsGbf: Post[] = [
     body: [
       {
         type: "p",
-        text: "Trzej pracownicy SpaceXAI — Matt Palmer, Lauren Tan i Roshan Sadanani — od 15 września stawiają firmę od czystej kartki. Narzędzie: Grok Bot. 72 godziny, stream na żywo, [Grok Bot Galaxy](https://muskonomia.pl/blog/grok-bot-galaxy-15-17-wrzesnia) w San Francisco.",
+        text: "Trzej pracownicy SpaceXAI — Matt Palmer, Lauren Tan i Roshan Sadanani — od 15 września stawiają firmę od zera.",
       },
       { type: "x", id: "2099890276315848743", handle: "bot" },
       {
@@ -35,7 +35,7 @@ export const postsGbf: Post[] = [
         items: [
           "1. Przeglądarka i sterowanie komputerem są mocne, ale drogie. Jeśli zadanie nie wymaga klikania po interfejsie, logowania albo kontroli na ekranie, najpierw connector, API albo MCP. Komputer zostaw na robotę, która naprawdę potrzebuje ekranu.",
           "2. Większość wydatków idzie w klikanie formularzy i stron, które już pokrywa zwykłe narzędzie.",
-          "3. Rutyny działają, dopóki ktoś ich nie audytuje. Powtarzalną pracę wsadź w zegar. To, co pali tokeny, zabijaj według harmonogramu. Automatyczna optymalizacja jest tańsza niż pamięć. Duplikaty i pętle co 15 minut potrafią iść w tle. Pilnuj sformułowania polecenia.",
+          "3. Rutyny działają, dopóki ktoś ich nie audytuje. Powtarzalną pracę wsadź w rutyny. To, co pali tokeny, zabijaj według harmonogramu. Automatyczna optymalizacja jest tańsza niż pamięć. Duplikaty i pętle co 15 minut potrafią iść w tle. Pilnuj sformułowania polecenia.",
           "4. Trzymaj bota, który regularnie odpuszcza zbędne rutyny i pilnuje kosztów.",
           "5. Bot to nie jednorazowy agent. Zostaw go, dawaj poprawki, niech składa wiedzę jak pracownik. Nie wyrzucaj go po jednym słabym przebiegu albo po tymczasowym zadaniu.",
           "6. Używaj tego, czego boty już się nauczyły, i pracy kilku botów naraz. Mają być z biegiem czasu lepsze.",
@@ -50,8 +50,8 @@ export const postsGbf: Post[] = [
           "15. Botom i rutynom każ milczeć. Piszą tylko, gdy naprawdę jest powód. Inaczej zasypią wiadomościami.",
           "16. Grupy i kanały ustawiaj precyzyjnie. Bez parametrów i bez wskazania konkretnego bota odezwą się wszyscy i spalą tokeny.",
           "17. Ciasteczka logowania importuj tylko tam, gdzie chcesz zostać zalogowany i gdzie botowi ufasz.",
-          "18. Umiejętności i zapisane lekcje wypuszczaj często. Powtarzalny przepływ bije sprytny jednorazowy prompt.",
-          "19. Feedback founderowi może zejść do godzin. Wąskie gardło to to, który feedback przyjmujesz. Zrób sitko na szum.",
+          "18. Umiejętności i zapisane lekcje wypuszczaj często. Powtarzalny przepływ jest lepszy od jednorazowego prompta.",
+          "19. Aby otrzymać treściwy feedback, załóż odpowiednie filtry na to co chcesz dostawać",
           "20. Weź szablony ze sklepu Grok Bota. Zespół je sprawdził. Można ich użyć albo przerobić. Jak wgrywasz cudzy setup, najpierw dopytaj, aż go ogarniesz.",
         ],
       },
@@ -69,10 +69,6 @@ export const postsGbf: Post[] = [
         caption: "Bot nie odpowiada. Robotę robi. Źródło: @cb_doge.",
         contain: true,
         href: "https://x.com/cb_doge/status/2099901153261859216",
-      },
-      {
-        type: "p",
-        text: "16 września na Galaxy idzie sprzedaż, SDR-zy i support. 17 września marketing i pokaz tego, co z trzech dni zostanie.",
       },
     ],
   },
