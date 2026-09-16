@@ -12,6 +12,7 @@ export const postsGbf: Post[] = [
     isoDate: "2026-09-16",
     img: "/img/gbf-okladka.jpg",
     contain: true,
+    xPostId: "2100257950136680778",
     body: [
       {
         type: "p",

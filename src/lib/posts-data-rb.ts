@@ -12,6 +12,7 @@ export const postsRb: Post[] = [
     isoDate: "2026-09-16",
     img: "/img/rb-okladka.jpg",
     contain: true,
+    xPostId: "2100259710423237114",
     body: [
       {
         type: "p",
