@@ -62,6 +62,10 @@ export const postsRz: Post[] = [
         type: "p",
         text: "Teraz czekamy na pokaz, który Tesla przygotowała na 1 października. Wtedy pewnie zaprezentuje wszystkie dane techniczne i dokładną cenę auta.",
       },
+      {
+        type: "p",
+        text: "Źródło: [Tesla Owners Slovenia](https://x.com/TeslaOwnersSLO/status/2101250259087192445).",
+      },
     ],
   },
 ];
