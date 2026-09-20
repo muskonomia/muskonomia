@@ -51,7 +51,7 @@ export const postsRz: Post[] = [
       },
       {
         type: "p",
-        text: "Formularz wrócił na kilkanaście dni przed odsłonięciem 1 października. Polska strona Tesli na razie zostaje przy Modelu 3 i Y.",
+        text: "Formularz działa m.in. w Niemczech, Francji, Włoszech, Hiszpanii, Czechach, krajach nordyckich i w Wielkiej Brytanii. U południowych sąsiadów Czechy są otwarte. Polska zostaje poza kolejką, tak samo Austria i Słowenia.",
       },
     ],
   },
