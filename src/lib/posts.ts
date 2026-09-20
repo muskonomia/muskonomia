@@ -87,8 +87,13 @@ export function postsByTopic(id: TopicId) {
   return posts.filter((p) => postTopic(p) === id);
 }
 
+const SLUG_ALIASES: Record<string, string> = {
+  "nowa-tesla-zamowienia-otwarte-bez-polski": "tesla-otworzyla-rezerwacje-roadstera",
+};
+
 export function getPost(slug: string) {
-  return posts.find((p) => p.slug === slug);
+  const canonical = SLUG_ALIASES[slug] ?? slug;
+  return posts.find((p) => p.slug === canonical);
 }
 
 export function relatedPosts(post: Post, limit = 3) {
