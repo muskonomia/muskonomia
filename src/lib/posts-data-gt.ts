@@ -11,6 +11,7 @@ export const postsGt: Post[] = [
     date: "20 września 2026",
     isoDate: "2026-09-20",
     img: "/img/gt-teren.jpg",
+    xPostId: "2101561101297049609",
     body: [
       {
         type: "p",

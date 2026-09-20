@@ -12,6 +12,7 @@ export const postsG3: Post[] = [
     isoDate: "2026-09-20",
     img: "/img/g3-okladka.jpg",
     contain: true,
+    xPostId: "2101550971025342821",
     body: [
       {
         type: "p",
