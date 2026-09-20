@@ -2,7 +2,7 @@ import type { Post } from "./posts";
 
 export const postsRz: Post[] = [
   {
-    slug: "nowa-tesla-zamowienia-otwarte-bez-polski",
+    slug: "tesla-otworzyla-rezerwacje-roadstera",
     kicker: "Roadster",
     topic: "tesla",
     title: "Nowa Tesla: zamówienia otwarte, bez Polski",
