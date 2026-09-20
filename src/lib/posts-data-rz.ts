@@ -7,7 +7,7 @@ export const postsRz: Post[] = [
     topic: "tesla",
     title: "Nowa Tesla: zamówienia otwarte, bez Polski",
     excerpt:
-      "Tesla znów zbiera zaliczki na Roadstera. Tesla Owners Slovenia zestawiła 17 rynków z formularzem. Polski i Słowenii na liście nie ma.",
+      "Tesla otworzyła rezerwacje Roadstera w 17 krajach Europy. Zaliczka: 4000 plus 39 000 euro (ok. 188 tys. zł). Polski i Słowenii jeszcze nie ma. Pokaz 1 października.",
     date: "20 września 2026",
     isoDate: "2026-09-20",
     img: "/img/rd-okladka.jpg",
