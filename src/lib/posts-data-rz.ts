@@ -53,6 +53,11 @@ export const postsRz: Post[] = [
         type: "p",
         text: "Formularz działa m.in. w Niemczech, Francji, Włoszech, Hiszpanii, Czechach, krajach nordyckich i w Wielkiej Brytanii. U południowych sąsiadów Czechy są otwarte. Polska zostaje poza kolejką, tak samo Austria i Słowenia.",
       },
+      {
+        type: "p",
+        text: "Norbert Cała z techlove.pl ujął to krótko: rezerwować można, w Polsce jeszcze nie. Dodał, że o aucie nie wiadomo nic, nawet ceny, a pokaz jest 1 października. Kto wpłaci drugą ratę przed tym dniem, robi to w ciemno.",
+      },
+      { type: "x", id: "2101300951462113339", handle: "norbertcala" },
     ],
   },
 ];
