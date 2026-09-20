@@ -28,7 +28,7 @@ export const postsRz: Post[] = [
       { type: "x", id: "2101250259087192445", handle: "TeslaOwnersSLO" },
       {
         type: "p",
-        text: "Na liście Słoweńców są: Belgia, Czechy, Dania, Niemcy, Hiszpania, Francja, Irlandia, Islandia, Włochy, Luksemburg, Holandia, Norwegia, Portugalia, Szwajcaria, Szwecja, Finlandia i Wielka Brytania. Zaliczka w Europie: 4 tys. euro kartą od razu i 39 tys. euro przelewem w 10 dni. Razem 43 tys. euro (ok. 184 tys. zł). Ceny auta Tesla nie podała.",
+        text: "Na liście Słoweńców są: Belgia, Czechy, Dania, Niemcy, Hiszpania, Francja, Irlandia, Islandia, Włochy, Luksemburg, Holandia, Norwegia, Portugalia, Szwajcaria, Szwecja, Finlandia i Wielka Brytania. Miejsce w kolejce kosztuje 4000 euro kartą od ręki i 39 000 euro przelewem w ciągu 10 dni. Razem 43 000 euro, ok. 188 tys. zł po średnim kursie NBP z 18 września (4,3633 zł za euro). Ceny auta Tesla nadal nie podała.",
       },
       {
         type: "img",
