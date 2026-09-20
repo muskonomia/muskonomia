@@ -41,7 +41,7 @@ export const postsRz: Post[] = [
       { type: "x", id: "2101088347036782855", handle: "SawyerMerritt" },
       {
         type: "p",
-        text: "To te same kwoty co w 2017 r. Tesla pisze, że zaliczka jest zwrotna, a ewentualna cena na stronie to tylko szacunek. Opcje, osprzęt i sprzęt jeszcze się układają. Ostateczna kwota ma paść przy konfiguracji.",
+        text: "To te same kwoty co w 2017 r. Wtedy Tesla pokazała prototyp i obiecała dostawy w 2020. Termin schodził rok po roku. Na walnym Musk mówił o produkcji w 2027 albo 2028, 12–18 miesięcy po pokazie. Nikt jeszcze nie odebrał seryjnego egzemplarza.",
       },
       {
         type: "img",
@@ -51,7 +51,7 @@ export const postsRz: Post[] = [
       },
       {
         type: "p",
-        text: "Formularz wrócił na kilkanaście dni przed odsłonięciem 1 października. Produkcja, jak Tesla mówiła przy teaserze, i tak ma ruszyć 12–18 miesięcy po pokazie. Polska strona Tesli na razie zostaje przy Modelu 3 i Y.",
+        text: "Formularz wrócił na kilkanaście dni przed odsłonięciem 1 października. Polska strona Tesli na razie zostaje przy Modelu 3 i Y.",
       },
     ],
   },
