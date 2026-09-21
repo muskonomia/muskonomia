@@ -7,7 +7,7 @@ export const postsAs: Post[] = [
     topic: "boring",
     title: "Boring pracuje nad tunelem Austin–San Antonio powyżej 200 mph",
     excerpt:
-      "TBC bierze się za prosty tunel, prekursor Hyperloopa, Austin–San Antonio. Musk: powyżej 200 mph, ponad 320 km/h, poniżej 30 minut zamiast 2,5 godziny. Westgate–lotnisko: około trzy minuty.",
+      "Musk podał tunel Austin–San Antonio powyżej 200 mph i czas poniżej 30 minut zamiast 2,5 godziny w korku. Przy Westgate wjazd na lotnisko jest prawie gotowy, hotel mówi o trzech minutach.",
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/tbc-vegas.jpg",
