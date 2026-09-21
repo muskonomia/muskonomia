@@ -42,7 +42,7 @@ export const postsCz: Post[] = [
       },
       {
         type: "p",
-        text: "Na liście są Holandia z 10 kwietnia, Litwa i Estonia z maja, Dania i Belgia z czerwca, Słowenia z 7 września i Czechy z 21 września. Polska zostaje poza listą.",
+        text: "Przed głosowaniem Unii na liście są Holandia, Litwa, Estonia, Dania, Belgia, Słowenia i Czechy. To około 11,8 proc. ludności Unii przy progu 65 proc. na wspólną zgodę. To nadal nie jest zgoda UE. Tesla Europe 1 września pisała o głosowaniu Komitetu Technicznego ds. Pojazdów Silnikowych 6 października. Czechy biorą holenderski papier wcześniej, tak jak Słowenia.",
       },
       {
         type: "img",
@@ -51,10 +51,6 @@ export const postsCz: Post[] = [
         caption: "Siedem flag przed głosowaniem TCMV. [Roland Pircher](https://x.com/piloly/status/2101951262891589933).",
         contain: true,
         href: "https://x.com/piloly/status/2101951262891589933",
-      },
-      {
-        type: "p",
-        text: "To nie jest zgoda Unii. 6 października Komitet Techniczny ds. Pojazdów Motorowych ma głosować nad pakietem dla 27 stolic. Siedem flag to około 12 proc. ludności UE. Potrzeba 15 państw i 65 proc. ludności.",
       },
       {
         type: "p",
