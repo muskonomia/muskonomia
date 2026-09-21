@@ -11,6 +11,7 @@ export const postsMf: Post[] = [
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/mf-superheavy.jpg",
+    xPostId: "2101922291718209668",
     body: [
       {
         type: "p",
