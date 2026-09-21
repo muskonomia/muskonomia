@@ -38,6 +38,10 @@ export const postsCz: Post[] = [
       { type: "x", id: "2101947564106944900", handle: "min_dopravy" },
       {
         type: "p",
+        text: "Już w maju Tesla Czechy woziła FSD Supervised na specjalnych tablicach i zapraszała ministerstwo na jazdę. Wiosną przedłużono też jazdy próbne w Pradze i Brnie. W czerwcu urząd jeszcze czekał na Brukselę i pisał, że papier RDW obowiązuje tylko w Holandii. Dziś mówi o miesiącach oceny z ekspertami i Teslą: m.in. znaki, limity prędkości i to, czy kierowca patrzy na drogę.",
+      },
+      {
+        type: "p",
         text: "Na liście są Holandia z 10 kwietnia, Litwa i Estonia z maja, Dania i Belgia z czerwca, Słowenia z 7 września i Czechy z 21 września. Polska zostaje poza listą.",
       },
       {
