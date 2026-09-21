@@ -7,14 +7,14 @@ export const postsCz: Post[] = [
     topic: "tesla",
     title: "FSD Supervised dostało zgodę w Czechach",
     excerpt:
-      "Tesla Europe ogłosiła 21 września zgodę na FSD Supervised w Czechach. Rollout wkrótce. Siódme państwo Unii. Ministerstwo uznało holenderski papier RDW.",
+      "Tesla Europe ogłosiła 21 września zgodę na FSD Supervised w Czechach. Włączenie ma ruszyć wkrótce. To siódme państwo Unii, dwa tygodnie po Słowenii.",
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/cz-okladka.jpg",
     body: [
       {
         type: "p",
-        text: "[Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410) ogłosiła 21 września zgodę na FSD Supervised w Czechach. Usługa ma zostać włączona wkrótce. To siódme państwo Unii.",
+        text: "[Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410) ogłosiła 21 września zgodę na FSD Supervised w Czechach. Włączenie ma ruszyć wkrótce. To siódme państwo Unii, dwa tygodnie po Słowenii.",
       },
       { type: "x", id: "2101947798933385410", handle: "teslaeurope" },
       {
