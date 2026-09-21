@@ -26,6 +26,10 @@ export const postsAs: Post[] = [
         href: "https://x.com/XFreeze/status/2101738029794648097",
       },
       { type: "x", id: "2101738029794648097", handle: "XFreeze" },
+      {
+        type: "p",
+        text: "Firma odpowiada, że z parkingu w Austin do restauracji w San Antonio da się dojechać w około 30 minut, jeśli na obu końcach staną stacje Loop. Linia ma być bezpośrednia, bez przystanków po drodze.",
+      },
       { type: "x", id: "2101743162838647183", handle: "boringcompany" },
       {
         type: "p",
