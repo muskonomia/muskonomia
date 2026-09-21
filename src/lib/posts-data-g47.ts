@@ -35,9 +35,9 @@ export const postsG47: Post[] = [
       {
         type: "img",
         src: "/img/g47-tabela.jpg",
-        alt: "Tabela Grok 4.7: ceny tokenów i wyniki na CursorBench, DeepSWE, Harvey Legal i EEBench",
+        alt: "Tabela Grok 4.7 xHigh: ceny tokenów i wyniki na CursorBench, DeepSWE, EEBench, Harvey Legal",
         caption:
-          "Grok 4.7 xhigh przy cenie 4.6. Harvey Legal i EEBench wygrane. CursorBench: Fable 5.1 Max nadal wyżej. Źródło: [SpaceXAI](https://x.ai/news/grok-4-7).",
+          "Grok 4.7 xHigh przy cenie 4.6. Harvey Legal i EEBench wygrane. CursorBench: Fable 5.1 Max nadal wyżej. Źródło: [SpaceXAI](https://x.ai/news/grok-4-7).",
         contain: true,
         href: "https://x.ai/news/grok-4-7",
       },
@@ -60,6 +60,19 @@ export const postsG47: Post[] = [
       {
         type: "p",
         text: "Na Harvey Legal i EEBench Grok 4.7 wyprzedza GPT-5.6 Sol Max i Fable 5.1 Max. Na CursorBench 4.0 Fable 5.1 Max zostaje wyżej, 51,8%. DeepSWE wygrywa Sol, 72,7%.",
+      },
+      {
+        type: "img",
+        src: "/img/g47-cursorbench.jpg",
+        alt: "Wykres CursorBench 4.0: wynik względem średniego kosztu zadania, Grok 4.7 na granicy Pareto",
+        caption:
+          "CursorBench 4.0: wynik do średniego kosztu zadania. Grok 4.7 na granicy Pareto, niżej niż Fable 5.1. Źródło: [SpaceXAI](https://x.ai/news/grok-4-7).",
+        contain: true,
+        href: "https://x.ai/news/grok-4-7",
+      },
+      {
+        type: "p",
+        text: "Na wykresie Grok 4.7 trzyma się granicy wyniku do ceny. Fable 5.1 jest wyżej, ale drożej. Opus 5 i GPT-5.6 Sol są niżej albo droższe.",
       },
       {
         type: "p",
