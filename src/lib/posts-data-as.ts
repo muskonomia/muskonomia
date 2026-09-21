@@ -2,7 +2,7 @@ import type { Post } from "./posts";
 
 export const postsAs: Post[] = [
   {
-    slug: "boring-austin-san-antonio-200-mph",
+    slug: "tunel-austin-san-antonio-ponizej-30-min",
     kicker: "Boring",
     topic: "boring",
     title: "Boring pracuje nad tunelem Austin–San Antonio powyżej 200 mph",
