@@ -11,6 +11,7 @@ export const postsG47: Post[] = [
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/g47-og.jpg",
+    xPostId: "2102078614267183201",
     body: [
       {
         type: "p",
