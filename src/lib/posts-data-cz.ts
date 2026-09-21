@@ -7,7 +7,7 @@ export const postsCz: Post[] = [
     topic: "tesla",
     title: "FSD Supervised dostało zgodę w Czechach",
     excerpt:
-      "Tesla Europe ogłosiła 21 września zgodę na FSD Supervised w Czechach. Włączenie ma ruszyć wkrótce. To siódme państwo Unii, dwa tygodnie po Słowenii.",
+      "Tesla Europe i czeskie ministerstwo ogłosiły 21 września zgodę na FSD Supervised. Czechy są siódmym państwem UE. Włączenie ma ruszyć wkrótce, przed głosowaniem Unii 6 października.",
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/cz-okladka.jpg",
