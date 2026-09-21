@@ -25,7 +25,7 @@ export const postsCz: Post[] = [
       },
       {
         type: "p",
-        text: "[Ministerstwo transportu Czech](https://md.gov.cz/Media/Media-a-tiskove-zpravy/Ceska-republika-uznala-prozatimni-schvaleni-system) uznało tymczasową zgodę holenderskiego RDW z 10 kwietnia. Podstawa: artykuł 39 rozporządzenia (UE) 2018/858. Kierowca dalej odpowiada za każdy manewr. To nadal SAE 2, jazda nadzorowana.",
+        text: "Czeskie Ministerstwo Transportu powiedziało to samo minutę wcześniej. Uznało tymczasową homologację holenderskiego RDW.",
       },
       {
         type: "img",
