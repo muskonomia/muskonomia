@@ -58,6 +58,10 @@ export const postsCz: Post[] = [
       },
       {
         type: "p",
+        text: "W Niemczech, Francji, Włoszech i w Polsce funkcji nadal nie ma. Czeska flaga weszła przed niemiecką.",
+      },
+      {
+        type: "p",
         text: "Minister Ivan Bednárik: Czechy chcą otwierać drogę nowoczesnym technologiom, ale bezpieczeństwo zostaje na pierwszym miejscu. Miesiące oceniano, jak system trzyma limity, czyta znaki i pilnuje, czy kierowca patrzy na drogę.",
       },
       {
