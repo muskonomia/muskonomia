@@ -14,7 +14,7 @@ export const postsCz: Post[] = [
     body: [
       {
         type: "p",
-        text: "[Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410) ogłosiła 21 września zgodę na FSD Supervised w Czechach. Włączenie ma ruszyć wkrótce. To siódme państwo Unii, dwa tygodnie po Słowenii.",
+        text: "Tesla Europe ogłosiła 21 września zgodę na FSD Supervised w Czechach. Włączenie ma ruszyć wkrótce. To siódme państwo Unii, dwa tygodnie po Słowenii.",
       },
       { type: "x", id: "2101947798933385410", handle: "teslaeurope" },
       {
@@ -38,7 +38,7 @@ export const postsCz: Post[] = [
       { type: "x", id: "2101947564106944900", handle: "min_dopravy" },
       {
         type: "p",
-        text: "Już w maju Tesla Czechy woziła FSD Supervised na specjalnych tablicach i zapraszała ministerstwo na jazdę. Wiosną przedłużono też jazdy próbne w Pradze i Brnie. W czerwcu urząd jeszcze czekał na Brukselę i pisał, że papier RDW obowiązuje tylko w Holandii. Dziś mówi o miesiącach oceny z ekspertami i Teslą: m.in. znaki, limity prędkości i to, czy kierowca patrzy na drogę.",
+        text: "Już w maju Tesla Czechy woziła FSD Supervised na specjalnych tablicach i zapraszała ministerstwo na jazdę. Wiosną przedłużono też jazdy próbne w Pradze i Brnie. W czerwcu urząd jeszcze czekał na Brukselę i pisał, że papier RDW obowiązuje tylko w Holandii. Dziś mówi o miesiącach oceny z ekspertami i Teslą — m.in. znaki, limity prędkości i to, czy kierowca patrzy na drogę.",
       },
       {
         type: "p",
@@ -54,19 +54,11 @@ export const postsCz: Post[] = [
       },
       {
         type: "p",
-        text: "Kierowca zostaje przy odpowiedzialności. Ministerstwo powtarza: asystent poziomu 2, nie autonomia. Trzeba patrzeć na ruch i być gotowym przejąć kierownicę. W innych krajach Unii abonament wynosi 99 euro miesięcznie, około 432 zł po średnim kursie NBP z 18 września. Tesla Czechy ceny przy tej zgodzie nie podała.",
+        text: "Kierowca zostaje przy odpowiedzialności. Ministerstwo powtarza: asystent poziomu 2, nie autonomia. Trzeba patrzeć na ruch i być gotowym przejąć kierownicę. W innych krajach Unii abonament wynosi 99 euro miesięcznie, około 432 zł po średnim kursie NBP z 18 września. Tesli Czechy ceny przy tej zgodzie nie podały.",
       },
       {
         type: "p",
         text: "W Niemczech, Francji, Włoszech i w Polsce funkcji nadal nie ma. Czeska flaga weszła przed niemiecką.",
-      },
-      {
-        type: "p",
-        text: "Minister Ivan Bednárik: Czechy chcą otwierać drogę nowoczesnym technologiom, ale bezpieczeństwo zostaje na pierwszym miejscu. Miesiące oceniano, jak system trzyma limity, czyta znaki i pilnuje, czy kierowca patrzy na drogę.",
-      },
-      {
-        type: "p",
-        text: "Źródła: [Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410), [Ministerstwo transportu Czech](https://x.com/min_dopravy/status/2101947564106944900), [komunikat](https://md.gov.cz/Media/Media-a-tiskove-zpravy/Ceska-republika-uznala-prozatimni-schvaleni-system).",
       },
     ],
   },
