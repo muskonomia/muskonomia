@@ -54,6 +54,10 @@ export const postsCz: Post[] = [
       },
       {
         type: "p",
+        text: "Kierowca zostaje przy odpowiedzialności. Ministerstwo powtarza: asystent poziomu 2, nie autonomia. Trzeba patrzeć na ruch i być gotowym przejąć kierownicę. W innych krajach Unii abonament wynosi 99 euro miesięcznie, około 432 zł po średnim kursie NBP z 18 września. Tesla Czechy ceny przy tej zgodzie nie podała.",
+      },
+      {
+        type: "p",
         text: "Minister Ivan Bednárik: Czechy chcą otwierać drogę nowoczesnym technologiom, ale bezpieczeństwo zostaje na pierwszym miejscu. Miesiące oceniano, jak system trzyma limity, czyta znaki i pilnuje, czy kierowca patrzy na drogę.",
       },
       {
