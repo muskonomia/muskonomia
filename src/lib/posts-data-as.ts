@@ -66,6 +66,10 @@ export const postsAs: Post[] = [
         type: "p",
         text: "Steve Hill z Las Vegas Convention and Visitors Authority mówił 14 września, że pierwszy tunel pod Paradise, od Westgate dalej w stronę lotniska, jest kwestią tygodni — koniec września, najpóźniej październik. To odcinek dualny, około 3,4 km. Pełny łącznik na Harry Reid nadal nie ma ogłoszonej daty; część kursów już jedzie mieszanką tunelu i powierzchni.",
       },
+      {
+        type: "p",
+        text: "Źródła: [Elon Musk](https://x.com/elonmusk/status/2101732496396439751), [Las Vegas Locally](https://x.com/LasVegasLocally/status/2101839637610426618).",
+      },
     ],
   },
 ];
