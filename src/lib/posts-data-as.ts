@@ -33,6 +33,10 @@ export const postsAs: Post[] = [
       { type: "x", id: "2101743162838647183", handle: "boringcompany" },
       {
         type: "p",
+        text: "Trasa, koszt, pozwolenia i data startu nie padły. Oba miasta dzieli dystans około 130 km. To nie pełny Hyperloop powyżej 600 mph w tunelu z obniżonym ciśnieniem — pierwszy, prostszy odcinek.",
+      },
+      {
+        type: "p",
         text: "Tego samego weekendu przy Westgate w Las Vegas wjazd do tunelu na lotnisko jest już prawie gotowy. Hotel liczy przejazd na około trzy minuty.",
       },
       {
