@@ -40,6 +40,10 @@ export const postsAs: Post[] = [
         text: "Tego samego weekendu przy Westgate w Las Vegas wjazd do tunelu na lotnisko jest już prawie gotowy. Hotel liczy przejazd na około trzy minuty.",
       },
       {
+        type: "p",
+        text: "Natomiast w Las Vegas przy Westgate dwa wjazdy w ziemię mają stać się najszybszą drogą na Harry Reid. Wjazd jezdni jest skończony; zostały kosmetyka i rolety.",
+      },
+      {
         type: "img",
         src: "/img/as-wg1.jpg",
         alt: "Wjazd do tunelu Vegas Loop przy Westgate",
