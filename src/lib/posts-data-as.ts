@@ -57,6 +57,11 @@ export const postsAs: Post[] = [
       },
       { type: "x", id: "2101466375776833874", handle: "Mic_VegasSphere" },
       { type: "x", id: "2101839637610426618", handle: "LasVegasLocally" },
+      {
+        type: "p",
+        text: "Westgate mówi o trzech minutach. Tego samego wieczoru TBC podała stan Vegas Loop: 14 tuneli i 14 stacji, do końca roku ma być 28.",
+      },
+      { type: "x", id: "2101876532092469424", handle: "boringcompany" },
     ],
   },
 ];
