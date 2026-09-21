@@ -1,0 +1,65 @@
+import type { Post } from "./posts";
+
+export const postsCz: Post[] = [
+  {
+    slug: "fsd-supervised-w-czechach",
+    kicker: "FSD",
+    topic: "tesla",
+    title: "FSD Supervised dostało zgodę w Czechach",
+    excerpt:
+      "Tesla Europe ogłosiła 21 września zgodę na FSD Supervised w Czechach. Rollout wkrótce. Siódme państwo Unii. Ministerstwo uznało holenderski papier RDW.",
+    date: "21 września 2026",
+    isoDate: "2026-09-21",
+    img: "/img/cz-okladka.jpg",
+    body: [
+      {
+        type: "p",
+        text: "[Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410) ogłosiła 21 września zgodę na FSD Supervised w Czechach. Usługa ma zostać włączona wkrótce. To siódme państwo Unii.",
+      },
+      { type: "x", id: "2101947798933385410", handle: "teslaeurope" },
+      {
+        type: "video",
+        src: "/video/fsd-czechy.mp4",
+        poster: "/img/cz-okladka.jpg",
+        caption: "Klip Tesli Europe z ogłoszenia zgody. Źródło: @teslaeurope.",
+      },
+      {
+        type: "p",
+        text: "[Ministerstwo transportu Czech](https://md.gov.cz/Media/Media-a-tiskove-zpravy/Ceska-republika-uznala-prozatimni-schvaleni-system) uznało tymczasową zgodę holenderskiego RDW z 10 kwietnia. Podstawa: artykuł 39 rozporządzenia (UE) 2018/858. Kierowca dalej odpowiada za każdy manewr. To nadal SAE 2, jazda nadzorowana.",
+      },
+      {
+        type: "img",
+        src: "/img/cz-md.jpg",
+        alt: "Grafika Ministerstwa transportu Czech: FSD Supervised dopuszczone w Česku",
+        caption: "Ministerstwo uznało papier RDW. Źródło: @min_dopravy.",
+        contain: true,
+        href: "https://x.com/min_dopravy/status/2101947564106944900",
+      },
+      { type: "x", id: "2101947564106944900", handle: "min_dopravy" },
+      {
+        type: "p",
+        text: "Na liście są Holandia z 10 kwietnia, Litwa i Estonia z maja, Dania i Belgia z czerwca, Słowenia z 7 września i Czechy z 21 września. Polska zostaje poza listą.",
+      },
+      {
+        type: "img",
+        src: "/img/cz-mapa.jpg",
+        alt: "Mapa Unii: siedem państw z FSD Supervised przed głosowaniem 6 października",
+        caption: "Siedem flag przed głosowaniem TCMV. [Roland Pircher](https://x.com/piloly/status/2101951262891589933).",
+        contain: true,
+        href: "https://x.com/piloly/status/2101951262891589933",
+      },
+      {
+        type: "p",
+        text: "To nie jest zgoda Unii. 6 października Komitet Techniczny ds. Pojazdów Motorowych ma głosować nad pakietem dla 27 stolic. Siedem flag to około 12 proc. ludności UE. Potrzeba 15 państw i 65 proc. ludności.",
+      },
+      {
+        type: "p",
+        text: "Minister Ivan Bednárik: Czechy chcą otwierać drogę nowoczesnym technologiom, ale bezpieczeństwo zostaje na pierwszym miejscu. Miesiące oceniano, jak system trzyma limity, czyta znaki i pilnuje, czy kierowca patrzy na drogę.",
+      },
+      {
+        type: "p",
+        text: "Źródła: [Tesla Europe](https://x.com/teslaeurope/status/2101947798933385410), [Ministerstwo transportu Czech](https://x.com/min_dopravy/status/2101947564106944900), [komunikat](https://md.gov.cz/Media/Media-a-tiskove-zpravy/Ceska-republika-uznala-prozatimni-schvaleni-system).",
+      },
+    ],
+  },
+];
