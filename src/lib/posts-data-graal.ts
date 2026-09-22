@@ -7,29 +7,30 @@ export const postsGraal: Post[] = [
     topic: "spacex",
     title: "SpaceX wrzucił film o odzysku Starshipa z oceanu",
     excerpt:
-      "SpaceX wrzucił trzeci odcinek serii o Starshipie. Od Grasshoppera i Falcona do Ship 40 na oceanie. Film jest po to, żeby go zobaczyć.",
+      "SpaceX wrzucił trzeci odcinek serii o Starshipie. Dokument o odzysku z oceanu — warto zobaczyć ten i dwa wcześniejsze.",
     date: "22 września 2026",
     isoDate: "2026-09-22",
     img: "/img/graal-okladka.jpg",
     body: [
       {
         type: "p",
-        text: "SpaceX wrzucił na YouTube trzeci odcinek serii o Starshipie. [„The Holy Grail of Rocketry”](https://www.youtube.com/watch?v=EthkNLasUa8) nie jest relacją ze startu. To film o wielokrotnym locie: od Grasshoppera i Falcona do Ship 40, który po wodowaniu został na Oceanie Indyjskim.",
+        text: "SpaceX wrzucił trzeci odcinek serii o Starshipie. [„Starship — The Holy Grail of Rocketry”](https://www.youtube.com/watch?v=EthkNLasUa8) to dokument o wielokrotnym locie — od Grasshoppera i Falcona do Ship 40 na Oceanie Indyjskim.",
       },
       {
         type: "img",
         src: "/img/graal-okladka.jpg",
-        alt: "Kadr z filmu SpaceX The Holy Grail of Rocketry",
-        caption: "[Obejrzyj na YouTube](https://www.youtube.com/watch?v=EthkNLasUa8).",
+        alt: "Kadr z filmu SpaceX Starship — The Holy Grail of Rocketry",
+        caption:
+          "[Obejrzyj na YouTube](https://www.youtube.com/watch?v=EthkNLasUa8). 28 minut. Trzeci odcinek serii STARSHIP.",
         href: "https://www.youtube.com/watch?v=EthkNLasUa8",
       },
       {
         type: "p",
-        text: "Najpierw widać, jak firma uczyła rakietę wracać. Potem kamera schodzi na pokład wyprawy po górny stopień. Statek leży w wodzie. Tarcza cieplna jest już po ogniu, a nie z renderu.",
+        text: "Kto lubi rakiety i piękne kadry, naprawdę warto zobaczyć. Formalnie to dokument, ale ekipa wskoczyła poziom wyżej w tym, jak da się taką historię opowiedzieć i pokazać. Fan SpaceX, rakiet i kosmosu powinien obejrzeć ten odcinek i dwa wcześniejsze.",
       },
       {
         type: "p",
-        text: "[Obejrzyj na YouTube](https://www.youtube.com/watch?v=EthkNLasUa8). Reszty nie da się opisać.",
+        text: "[Obejrzyj na YouTube](https://www.youtube.com/watch?v=EthkNLasUa8).",
       },
     ],
   },
