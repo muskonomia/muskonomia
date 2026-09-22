@@ -12,6 +12,7 @@ export const postsDsx: Post[] = [
     isoDate: "2026-09-21",
     img: "/img/dsx-okladka.jpg",
     contain: true,
+    xPostId: "2102242728587248117",
     body: [
       {
         type: "p",

@@ -11,6 +11,7 @@ export const postsVpp580: Post[] = [
     date: "21 września 2026",
     isoDate: "2026-09-21",
     img: "/img/vpp580-okladka.jpg",
+    xPostId: "2102238323053895743",
     body: [
       {
         type: "p",

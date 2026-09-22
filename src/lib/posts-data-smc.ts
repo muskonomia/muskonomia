@@ -12,6 +12,7 @@ export const postsSmc: Post[] = [
     isoDate: "2026-09-17",
     img: "/img/smc-okladka.jpg",
     contain: true,
+    xPostId: "2100761750131908919",
     body: [
       {
         type: "p",

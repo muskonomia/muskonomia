@@ -12,6 +12,7 @@ export const postsAi5: Post[] = [
     isoDate: "2026-09-17",
     img: "/img/ai5-okladka.jpg",
     contain: true,
+    xPostId: "2100761711942812111",
     body: [
       {
         type: "p",
