@@ -17,7 +17,6 @@ export const postsGbt: Post[] = [
         type: "p",
         text: "Tesla 22 września udostępniła Grok Bota w kabinie. Na filmie z Cybertrucka widzimy, jak asystent czyta skrzynkę, sprawdza kalendarz i dopisuje godzinę zameldowania do planu wyjazdu nad Tahoe. Ręce zostają wolne.",
       },
-      { type: "x", id: "2102430656349544590", handle: "Tesla" },
       {
         type: "img",
         src: "/img/grok-bot-fsd-kabina.jpg",
