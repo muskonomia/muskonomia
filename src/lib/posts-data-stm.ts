@@ -16,6 +16,11 @@ export const postsStm: Post[] = [
         type: "p",
         text: "Komentarz Elona Muska z 20 września 2026 o Starlinku V3 przekona wielu, że SpaceX zszywa Starlink i Starmind w jednego satelitę. Oba projekty korzystają z tych samych części: paneli, laserów, silników i dispensera Starshipa, więc fuzja brzmi wiarygodnie. SpaceX konsoliduje fabrykę i platformę, a nie przykleja pełnej stacji bazowej i pełnego centrum danych do jednego kadłuba.",
       },
+      { type: "h2", text: "Co Musk powiedział 20 września" },
+      {
+        type: "p",
+        text: "Tego dnia Musk odpowiedział na informację, że FCC przyjęła do rozpatrzenia wniosek SpaceX o 100 tys. satelitów Gen3 Starlink. Wniosek obejmuje dwie powłoki na bardzo niskiej orbicie Ziemi — 323–327,5 km i 473–477,5 km oraz inklinacje od 26° do 96,9° (SSO).",
+      },
       { type: "x", id: "2101466638939832365", handle: "elonmusk" },
       {
         type: "img",
