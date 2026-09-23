@@ -10,6 +10,7 @@ export const postsPcx: Post[] = [
       "23 września Cybercaby wjechały na dach garażu w Giga Texas. Przy zjeździe i na outboundzie jest ich więcej. Od startu produkcji widać je też na testach w USA oraz na pokazach w Australii i Chinach.",
     date: "23 września 2026",
     isoDate: "2026-09-23",
+    xPostId: "2102855513725952396",
     img: "/img/pcx-dach.jpg",
     body: [
       {
