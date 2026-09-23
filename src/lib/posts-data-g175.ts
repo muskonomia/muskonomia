@@ -14,7 +14,7 @@ export const postsG175: Post[] = [
     body: [
       {
         type: "p",
-        text: "Po 14 sierpnia Cursor wszedł w skład SpaceXAI. Dwa zespoły wsparcia złożyły się wokół szerszej palety produktów, a w kolejce czekał start Grok Bota. We wpisie z 22 września firma podaje skutek: zgłoszeń przybyło o 175 proc., etatów w supporcie — zero. Bez Bota, pisze SpaceXAI, mogłoby dojść około 200 osób.",
+        text: "Po 14 sierpnia Cursor wszedł w skład SpaceXAI. Dwa zespoły wsparcia złożyły się wokół szerszej palety produktów, a w kolejce czekał start Grok Bota. We [wpisie z 22 września](https://x.ai/news/grok-bot-customer-support) firma podaje skutek: zgłoszeń przybyło o 175 proc., etatów w supporcie — zero. Bez Bota, pisze SpaceXAI, mogłoby dojść około 200 osób.",
       },
       { type: "x", id: "2102460785649959362", handle: "bot" },
       {
