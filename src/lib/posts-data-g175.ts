@@ -33,7 +33,7 @@ export const postsG175: Post[] = [
       { type: "h2", text: "Jak to weszło" },
       {
         type: "p",
-        text: "Zamiast rekrutacji puściła bota na te same narzędzia, których używa zespół. Najpierw podłączyli Plain do biletów i Linear do błędów. Bot udawał właściciela zgłoszenia, ale pisał tylko notatki wewnętrzne. Każdy zapis wymagał człowieka. Potem doszły ślady i oceny każdego przebiegu. Bot sam oglądał, gdzie zszedł z kursu. Pierwszego dnia ludzie sprawdzali ton, treść i to, czy trzyma się instrukcji. Pod koniec dnia zaczął odpowiadać klientom sam. Zakres rósł stopniowo, od najprostszych spraw.",
+        text: "Bot dostał te same narzędzia co ludzie. Najpierw Plain do zgłoszeń i Linear do błędów. Pisał tylko notatki wewnętrzne. Każdy zapis wymaga zgody człowieka. Gdy odpowiedzi trzymały ton i sens, zespół puścił go w najprostsze sprawy. Tego samego dnia, po ręcznym przeglądzie, Bot zaczął pisać do klientów.",
       },
       { type: "h2", text: "Od wejścia do zamknięcia" },
       {
