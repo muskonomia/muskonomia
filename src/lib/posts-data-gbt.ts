@@ -10,6 +10,7 @@ export const postsGbt: Post[] = [
       "Tesla 22 września udostępniła Grok Bota w kabinie. W Polsce FSD jeszcze nie ma; Bot pewnie będzie pierwszy, bo nie czeka na przepisy państwowe.",
     date: "23 września 2026",
     isoDate: "2026-09-23",
+    xPostId: "2102640264451932316",
     img: "/img/grok-bot-fsd-kabina.jpg",
     contain: true,
     body: [

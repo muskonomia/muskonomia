@@ -10,6 +10,7 @@ export const postsIt: Post[] = [
       "Na Bolonia–Mediolan Starlink na Italo doszedł do 192 Mbps przy 300 km/h. 19 z 51 pociągów już ma zestaw. Cała flota w marcu 2027. Wi-Fi darmowe.",
     date: "10 września 2026",
     isoDate: "2026-09-10",
+    xPostId: "2098301442415096244",
     img: "/img/it-peron.jpg",
     body: [
       {

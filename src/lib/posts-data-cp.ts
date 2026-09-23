@@ -10,6 +10,7 @@ export const postsCp: Post[] = [
       "10 września Cursor puścił Projects. Jeden koordynator trzyma wątek przez miesiące, rozdaje robotę podagentom i działa jak Grok Bot, tylko w repozytorium.",
     date: "11 września 2026",
     isoDate: "2026-09-11",
+    xPostId: "2098474510550745505",
     img: "/img/cursor-projects-okladka.png",
     contain: true,
     body: [

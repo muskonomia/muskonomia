@@ -10,6 +10,7 @@ export const postsDnia: Post[] = [
       "We wtorek ZET SCALE wskazał Teslę jako głównego dostawcę 2500 e-ciężarówek. Tego samego dnia w kabinie pojawił się Grok Bot, a w Austin pokazano 67. Cybercaba.",
     date: "23 września 2026",
     isoDate: "2026-09-23",
+    xPostId: "2102670816961839567",
     img: "/img/dnia-semi.jpg",
     body: [
       {

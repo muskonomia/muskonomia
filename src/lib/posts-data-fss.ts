@@ -10,6 +10,7 @@ export const postsFss: Post[] = [
       "Tesla Europe ogłosiła 7 września zgodę na FSD Supervised w Słowenii. Usługa ma zostać włączona wkrótce. To szóste państwo Unii.",
     date: "7 września 2026",
     isoDate: "2026-09-07",
+    xPostId: "2097158310264734155",
     img: "/img/fsd-amsterdam.jpg",
     body: [
       {

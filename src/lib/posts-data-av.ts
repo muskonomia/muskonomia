@@ -10,6 +10,7 @@ export const postsAv: Post[] = [
       "Kontrakty Starlink Aviation obejmują ponad 7000 samolotów. SeatWiFi 13 września: 21 linii i 1214 potwierdzonych maszyn w powietrzu.",
     date: "13 września 2026",
     isoDate: "2026-09-13",
+    xPostId: "2099132791954788614",
     img: "/img/sl7-okladka.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsSm: Post[] = [
       "Tesla Europe: Semi z zasięgiem do 550 km przy 40 tonach, 1 kWh/km, Megacharger do 800 kW. Dostawy od 2027. Targi w Hanowerze.",
     date: "11 września 2026",
     isoDate: "2026-09-11",
+    xPostId: "2098465461390434717",
     img: "/img/sm-eu.jpg",
     contain: true,
     body: [

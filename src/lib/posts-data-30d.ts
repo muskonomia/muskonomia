@@ -10,6 +10,7 @@ export const posts30d: Post[] = [
       "Trzy wydarzenia, trzy pojazdy. Cybercab 3 września w Austin już był. Semi 24 września w Nevadzie. Roadster 1 października.",
     date: "13 września 2026",
     isoDate: "2026-09-13",
+    xPostId: "2099022258740052345",
     img: "/img/30d-okladka.jpg",
     contain: true,
     body: [

@@ -10,6 +10,7 @@ export const postsNh: Post[] = [
       "NHTSA do 17 sierpnia: Tesla 26 zgłoszeń robotaxi, wszystkie w Teksasie. Waymo 2214. Zoox 156. Wpis nie oznacza winy. Bez przebiegu to nie ranking.",
     date: "16 września 2026",
     isoDate: "2026-09-16",
+    xPostId: "2100269605281292326",
     img: "/img/nh-okladka.jpg",
     contain: true,
     body: [

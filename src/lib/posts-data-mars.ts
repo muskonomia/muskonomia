@@ -10,6 +10,7 @@ export const postsMars: Post[] = [
       "Dima Zeniuk: budowa bazy na Marsie będzie jednym z największych wyzwań w historii ludzkości. Musk to potwierdził. Na Marsa da się lecieć co 26 miesięcy, lot trwa sześć.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
+    xPostId: "2095578401432023178",
     img: "/img/mars-alpha.jpg",
     body: [
       {

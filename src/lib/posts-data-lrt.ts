@@ -10,6 +10,7 @@ export const postsLrt: Post[] = [
       "Tesla włożyła do seryjnego Cybertrucka ogniwa 4680 z litem z własnej rafinerii pod Corpus Christi. Ruda nadal jedzie z zagranicy, przeróbka jest już teksaska.",
     date: "4 września 2026",
     isoDate: "2026-09-04",
+    xPostId: "2096155045582569641",
     img: "/img/lrt-cybertruck.jpg",
     body: [
       {

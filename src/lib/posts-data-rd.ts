@@ -10,6 +10,7 @@ export const postsRd: Post[] = [
       "Tesla: „Go for launch”, data 10.01. Musk: odsłonięcie nowego Roadstera 1 października w Waco. Produkcja nadal 12–18 miesięcy później.",
     date: "13 września 2026",
     isoDate: "2026-09-13",
+    xPostId: "2098991234836492668",
     img: "/img/rd-okladka.jpg",
     contain: true,
     body: [

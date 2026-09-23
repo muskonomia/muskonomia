@@ -10,6 +10,7 @@ export const postsGbms: Post[] = [
       "Grok Bot dostaje bezpośredni dostęp do Outlooka, Kalendarza i OneDrive. Musk zapowiada automatyczną optymalizację tokenów, żeby koszt spadał.",
     date: "1 września 2026",
     isoDate: "2026-09-01",
+    xPostId: "2095578420553961650",
     img: "/img/gbms-bot.jpg",
     body: [
       {

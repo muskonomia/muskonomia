@@ -10,6 +10,7 @@ export const postsScout: Post[] = [
       "Ponad 160 tys. rezerwacji. 87% wybiera generator benzynowy i 805 km zamiast czystego BEV. Traveler i Terra, produkcja 2027–2028.",
     date: "22 sierpnia 2026",
     isoDate: "2026-08-22",
+    xPostId: "2091266828026712192",
     img: "/img/scout-para.jpg",
     body: [
       {

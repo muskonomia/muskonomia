@@ -10,6 +10,7 @@ export const postsAce: Post[] = [
       "Tesla AI wysyła FSD Supervised v14.3.9. System może sam się włączyć, gdy zderzenie jest blisko, a hamowanie awaryjne może nie wystarczyć, albo gdy kierowca jest mocno rozproszony.",
     date: "4 września 2026",
     isoDate: "2026-09-04",
+    xPostId: "2096055621195866503",
     img: "/img/fsd-amsterdam.jpg",
     body: [
       {

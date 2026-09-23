@@ -10,6 +10,7 @@ export const postsZkr: Post[] = [
       "W USA Uber ma ponad milion kierowców. Autonomiczna Tesla jest o połowę tańsza. Waymo jeździ w 14 miastach. Uber goni, bo platforma bez usługi nie wystarczy.",
     date: "6 września 2026",
     isoDate: "2026-09-06",
+    xPostId: "2096775381810561059",
     img: "/img/cc-ulica.jpg",
     body: [
       {

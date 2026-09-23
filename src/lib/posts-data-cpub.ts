@@ -10,6 +10,7 @@ export const postsCpub: Post[] = [
       "Od 4 września Cybercab jeździ w Austin z aplikacji. W rejestrze około 45 sztuk. Czas oczekiwania skoczył z kilku minut do ponad godziny. Sawyer: 92,51 dolara za trzy godziny vs ok. 200 Uberem.",
     date: "4 września 2026",
     isoDate: "2026-09-04",
+    xPostId: "2096045215266066800",
     img: "/img/cpub-drzwi.jpg",
     body: [
       {

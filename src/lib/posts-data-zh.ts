@@ -10,6 +10,7 @@ export const postsZh: Post[] = [
       "Zhero, H1 Holdings i Tesla Energy: umowa ramowa na około 3 GWh Megapacków we Włoszech. Start od 200 MW gotowych do budowy. Kwoty firmy nie podały.",
     date: "12 września 2026",
     isoDate: "2026-09-12",
+    xPostId: "2098985945504551321",
     img: "/img/zh-okladka.jpg",
     body: [
       {

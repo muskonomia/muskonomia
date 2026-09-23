@@ -10,6 +10,7 @@ export const postsS5: Post[] = [
       "Tesla pokazała kabinę Cybercaba z 22-calowym ekranem. Starlink potwierdza, że V5 wejdzie w auto wprost i utrzyma łączność tam, gdzie komórka słabnie.",
     date: "4 września 2026",
     isoDate: "2026-09-04",
+    xPostId: "2096155094764892270",
     img: "/img/cpub-fotel.jpg",
     body: [
       {

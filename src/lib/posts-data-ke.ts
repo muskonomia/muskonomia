@@ -10,6 +10,7 @@ export const postsKe: Post[] = [
       "Kenijski regulator: 27 616 stałych abonentów Starlinka na 30 czerwca. Plus 10 191 w rok, 58,5 proc. Udział z 0,8 na 1 proc. W Nigerii Starlink jest już drugim ISP.",
     date: "22 września 2026",
     isoDate: "2026-09-22",
+    xPostId: "2102293799074496950",
     img: "/img/ke-starlink.jpg",
     contain: true,
     body: [

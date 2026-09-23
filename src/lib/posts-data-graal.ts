@@ -10,6 +10,7 @@ export const postsGraal: Post[] = [
       "SpaceX wrzucił trzeci odcinek serii o Starshipie. Dokument o odzysku z oceanu — warto zobaczyć ten i dwa wcześniejsze.",
     date: "22 września 2026",
     isoDate: "2026-09-22",
+    xPostId: "2102481163864461364",
     img: "/img/graal-okladka.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsAf: Post[] = [
       "Finn składa w Grok Bocie dwa boty. Jeden koduje w chmurowych agentach Cursora. Drugi trzyma tablicę w Notion albo Linearze.",
     date: "5 września 2026",
     isoDate: "2026-09-05",
+    xPostId: "2096155263958917385",
     img: "/img/gbms-ui.jpg",
     body: [
       {

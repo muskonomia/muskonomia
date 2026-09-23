@@ -10,6 +10,7 @@ export const postsLsw: Post[] = [
       "Sędzia Fernando Rodriguez Jr. 21 września oddalił wniosek o zakaz wymiany 715 akrów przy Starbase. Organizacje nie wykazały legitymacji. Meritum sprawy zostaje.",
     date: "22 września 2026",
     isoDate: "2026-09-22",
+    xPostId: "2102376667024920980",
     img: "/img/lsw-okladka.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsMsa: Post[] = [
       "Morgan Stanley: autonomia Tesli Semi to 12–18 tys. dolarów miesięcznie od sztuki i 17 mld dolarów z oprogramowania w 2040 r. przy 82 tys. ciężarówek. Cel byczy 840 dolarów.",
     date: "12 września 2026",
     isoDate: "2026-09-12",
+    xPostId: "2098759772128297344",
     img: "/img/tesla-semi-autonomia-okladka.jpg",
     contain: true,
     body: [

@@ -10,6 +10,7 @@ export const postsVw: Post[] = [
       "Zarząd VW przyjął daty końca produkcji w Emden, Zwickau, Hanowerze i Neckarsulm. Ponad 45 tys. miejsc pracy, następcy jadą m.in. do Poznania.",
     date: "2 września 2026",
     isoDate: "2026-09-02",
+    xPostId: "2095578380771225954",
     img: "https://uploads.vw-mms.de/system/production/images/vwn/088/030/images/dc7cc4c3ba5c0d5e8053af31d9ad2005bb280bd0/DB2026IM00003_web_1600.jpg",
     body: [
       {

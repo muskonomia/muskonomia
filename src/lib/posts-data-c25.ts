@@ -10,6 +10,7 @@ export const postsC25: Post[] = [
       "6 września mapa zgłoszeń Cybercaba objęła 25 stanów i Dystrykt Kolumbii. Usługa Robotaxi na nowych Cybercabach nadal tylko w Austin. Przy lotnisku w Miami stoi ponad 35 sztuk.",
     date: "6 września 2026",
     isoDate: "2026-09-06",
+    xPostId: "2096867553838596485",
     img: "/img/cpub-drzwi.jpg",
     body: [
       {

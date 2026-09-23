@@ -10,6 +10,7 @@ export const postsTw: Post[] = [
       "Joe Tegtmeyer: wycinka Terafaba SpaceX i Tesli ruszyła koło 6 sierpnia. Miesiąc później z drona widać niwelację, drogi i ciężki sprzęt.",
     date: "16 września 2026",
     isoDate: "2026-09-16",
+    xPostId: "2100271663854031015",
     img: "/img/tw-okladka.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsWsk: Post[] = [
       "Koń kiedyś woził do pracy. Potem to samo robił prywatny samochód. Autonomiczne taksówki mogą sprawić, że własne auto zostanie hobby.",
     date: "2 września 2026",
     isoDate: "2026-09-02",
+    xPostId: "2095578357173985483",
     img: "/img/cc-ulica.jpg",
     body: [
       {
