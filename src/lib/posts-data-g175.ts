@@ -14,7 +14,7 @@ export const postsG175: Post[] = [
     body: [
       {
         type: "p",
-        text: "Po połączeniu z Cursorem zgłoszeń do wsparcia SpaceXAI jest o 175 proc. więcej. Nowych ludzi nie zatrudnili. Grok Bot przejął kolejkę. Bez niego firma liczy, że potrzebowałaby około 200 osób.",
+        text: "Po 14 sierpnia Cursor wszedł w skład SpaceXAI. Dwa zespoły wsparcia złożyły się wokół szerszej palety produktów, a w kolejce czekał start Grok Bota. We wpisie z 22 września firma podaje skutek: zgłoszeń przybyło o 175 proc., etatów w supporcie — zero. Bez Bota, pisze SpaceXAI, mogłoby dojść około 200 osób.",
       },
       { type: "x", id: "2102460785649959362", handle: "bot" },
       {
@@ -33,11 +33,7 @@ export const postsG175: Post[] = [
       { type: "h2", text: "Jak to weszło" },
       {
         type: "p",
-        text: "14 sierpnia Cursor wszedł do SpaceXAI. Dwa zespoły wsparcia zeszły się przy szerszym portfelu. W tym samym czasie firma szykowała start Grok Bota i spodziewała się kolejnej fali zgłoszeń. Zamiast rekrutacji puściła bota na te same narzędzia, których używa zespół.",
-      },
-      {
-        type: "p",
-        text: "Najpierw podłączyli Plain do biletów i Linear do błędów. Bot udawał właściciela zgłoszenia, ale pisał tylko notatki wewnętrzne. Każdy zapis wymagał człowieka. Potem doszły ślady i oceny każdego przebiegu. Bot sam oglądał, gdzie zszedł z kursu. Pierwszego dnia ludzie sprawdzali ton, treść i to, czy trzyma się instrukcji. Pod koniec dnia zaczął odpowiadać klientom sam. Zakres rósł stopniowo, od najprostszych spraw.",
+        text: "Zamiast rekrutacji puściła bota na te same narzędzia, których używa zespół. Najpierw podłączyli Plain do biletów i Linear do błędów. Bot udawał właściciela zgłoszenia, ale pisał tylko notatki wewnętrzne. Każdy zapis wymagał człowieka. Potem doszły ślady i oceny każdego przebiegu. Bot sam oglądał, gdzie zszedł z kursu. Pierwszego dnia ludzie sprawdzali ton, treść i to, czy trzyma się instrukcji. Pod koniec dnia zaczął odpowiadać klientom sam. Zakres rósł stopniowo, od najprostszych spraw.",
       },
       { type: "h2", text: "Od wejścia do zamknięcia" },
       {
