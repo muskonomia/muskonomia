@@ -10,6 +10,7 @@ export const postsCkat: Post[] = [
       "Tesla złożyła pierwszego Cybercaba z katodą z własnej fabryki w Giga Texas, pierwszej wielkoskalowej linii tego materiału w Ameryce Północnej. Musk potwierdził nikiel z Austin.",
     date: "24 września 2026",
     isoDate: "2026-09-24",
+    xPostId: "2103088296335200650",
     img: "/img/cybercab-katoda-giga-texas.jpg",
     body: [
       {

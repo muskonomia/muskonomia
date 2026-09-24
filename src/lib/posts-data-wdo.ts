@@ -10,6 +10,7 @@ export const postsWdo: Post[] = [
       "W aplikacji Tesli na Androida są trzy pliki PNG z etykietą gen3. Stawy zakryte, korpus jednolity, łydki czarne. Daty premiery nie ma.",
     date: "24 września 2026",
     isoDate: "2026-09-24",
+    xPostId: "2103083302450008492",
     img: "/img/opt-gen3.jpg",
     contain: true,
     body: [
