@@ -10,6 +10,7 @@ export const postsIe: Post[] = [
       "Tesla oddała w Irlandii 15-tysięczne auto i potwierdziła pracę z władzami nad FSD Supervised. Czechy są siódmym rynkiem w Europie.",
     date: "24 września 2026",
     isoDate: "2026-09-24",
+    xPostId: "2103208565284728901",
     img: "/img/ie-fsd-15000.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsSx6: Post[] = [
       "Musk: model SpaceX klasy Fable albo GPT-6 za dwa, trzy miesiące. Pierwsze miejsce w AI — za około pół roku, jeśli tempo poprawy dalej rośnie. Prace mają dopiero trzy lata, OpenAI prawie dziesięć.",
     date: "24 września 2026",
     isoDate: "2026-09-24",
+    xPostId: "2103209688250663333",
     img: "/img/spacex-ai-colossus.jpg",
     body: [
       {
