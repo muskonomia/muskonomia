@@ -13,6 +13,14 @@ export const postsMem: Post[] = [
     img: "/img/colossus-2-wizualizacja.jpg",
     body: [
       {
+        type: "img",
+        src: "/img/kampus-memphis-macrohard-mapa.jpg",
+        alt: "Wizualizacja kampusu SpaceX AI w Memphis i Southaven z halami Macrohard i Macroharder",
+        caption:
+          "Wizualizacja kampusu SpaceX AI na granicy Tennessee i Missisipi. U góry hale Macrohard i Macroharder.",
+        contain: true,
+      },
+      {
         type: "p",
         text: "SpaceX AI opublikował [stronę](https://www.spacex.com/Mid-South) o swoim ośrodku w Memphis i sąsiednim Southaven. Wynika z niej, że hale Colossus I i II zajmą łącznie ponad 230 tys. m², pomieszczą miliony procesorów graficznych i dostaną ponad 2 GW mocy. Firma szacuje swoje inwestycje w regionie od 2024 r. na ponad 90 mld dolarów (ok. 346 mld zł), a zatrudnia tam ponad 7500 osób i współpracuje z ponad 630 dostawcami.",
       },
