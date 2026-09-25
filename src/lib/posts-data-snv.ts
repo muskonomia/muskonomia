@@ -33,6 +33,7 @@ export const postsSnv: Post[] = [
         type: "p",
         text: "Do końca roku Tesla chce uruchomić ponad 30 stacji Megacharger z ponad 200 stanowiskami o mocy megawata. Podczas pokazu Semi ładowało się na żywo mocą 1,2 MW i w niespełna pół godziny odzyskało ok. 60 proc. energii.",
       },
+      { type: "x", id: "2103301365506150639", handle: "SawyerMerritt" },
     ],
   },
 ];
