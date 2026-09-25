@@ -99,6 +99,21 @@ function BlogPost() {
                   </figure>
                 );
               }
+              if (block.type === "youtube") {
+                return (
+                  <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="h-full w-full"
+                        src={`https://www.youtube-nocookie.com/embed/${block.id}`}
+                        title="YouTube"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                    </div>
+                  </figure>
+                );
+              }
               if (block.type === "x") {
                 return (
                   <figure key={i} className="sm:mx-0">

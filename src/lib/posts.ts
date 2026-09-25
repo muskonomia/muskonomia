@@ -8,7 +8,8 @@ export type Block =
   | { type: "ul"; items: string[] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
   | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string }
-  | { type: "x"; id: string; handle: string };
+  | { type: "x"; id: string; handle: string }
+  | { type: "youtube"; id: string };
 
 export const TOPIC_IDS = ["tesla", "spacex", "xai", "neuralink", "boring", "inne"] as const;
 export type TopicId = (typeof TOPIC_IDS)[number];
