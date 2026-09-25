@@ -10,6 +10,7 @@ export const postsNoy: Post[] = [
       "We wrześniu Norwegowie zarejestrowali 4044 Model Y, więcej niż dziewięć kolejnych modeli razem. To 29 proc. nowych elektryków.",
     date: "25 września 2026",
     isoDate: "2026-09-25",
+    xPostId: "2103420435714982227",
     img: "/img/model-y-norwegia-wrzesien.jpg",
     body: [
       {

@@ -10,6 +10,7 @@ export const postsAg: Post[] = [
       "Już od października Anthropic i Google zapłacą SpaceX ponad 2 mld dolarów miesięcznie za moc obliczeniową.",
     date: "25 września 2026",
     isoDate: "2026-09-25",
+    xPostId: "2103420498449195477",
     img: "/img/anthropic-google-gpu.jpg",
     body: [
       {
