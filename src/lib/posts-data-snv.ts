@@ -10,6 +10,7 @@ export const postsSnv: Post[] = [
       "Nowa fabryka pod Reno ma robić tysiąc ciężarówek tygodniowo. Pierwsze Semi trafią do klientów jeszcze w tym tygodniu.",
     date: "25 września 2026",
     isoDate: "2026-09-25",
+    xPostId: "2103453756184502585",
     img: "/img/tesla-semi-nevada-linia.jpg",
     body: [
       {
