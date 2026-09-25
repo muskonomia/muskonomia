@@ -10,7 +10,7 @@ export const postsCol2: Post[] = [
       "W Colossusie pracuje dziś 780 tys. GPU. W przyszłym tygodniu dojdzie 220 tys. GB300 i klaster przekroczy milion.",
     date: "25 września 2026",
     isoDate: "2026-09-25",
-    img: "/img/spacex-ai-colossus.jpg",
+    img: "/img/minihard-gb300.jpg",
     body: [
       {
         type: "p",
