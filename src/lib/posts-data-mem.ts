@@ -10,6 +10,7 @@ export const postsMem: Post[] = [
       "Hale Colossus I i II w Memphis i Southaven dostaną ponad 2 GW mocy. Magazyn energii przy kampusie będzie ponad trzy razy większy od największego w Europie.",
     date: "25 września 2026",
     isoDate: "2026-09-25",
+    xPostId: "2103547027925639434",
     img: "/img/colossus-2-wizualizacja.jpg",
     body: [
       {
