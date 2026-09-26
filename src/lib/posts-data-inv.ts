@@ -2,50 +2,68 @@ import type { Post } from "./posts";
 
 export const postsInv: Post[] = [
   {
-    slug: "firmy-muska-90-mld-inwestycji",
-    kicker: "Kapitał",
-    topic: "inne",
-    title: "Firmy Muska inwestują w tym roku 90 mld dolarów",
+    slug: "tesla-wpuszcza-na-cybercaba-dwadziescia-osob",
+    kicker: "Tesla",
+    topic: "tesla",
+    title: "Tesla wpuszcza na Cybercaba dwadzieścia osób",
     excerpt:
-      "SpaceX z xAI i X ma w tym roku wydać na inwestycje około 65 mld dolarów, Tesla ponad 25 mld. Razem to około 90 mld dolarów, a do 2030 r. nawet 680 mld.",
-    date: "26 września 2026",
-    isoDate: "2026-09-26",
-    img: "/img/starbase-inwestycje-okladka.jpg",
+      "Teslaconomics policzył zaproszenia na 3 września w Austin: około 20 osób, plus jeden. Reszta ma stream. Event to pokaz maszyny, nie start sieci.",
+    date: "31 sierpnia 2026",
+    isoDate: "2026-08-31",
+    img: "/img/inv-event.jpg",
     body: [
       {
         type: "p",
-        text: "Dziś zacząłem sumować wszystkie inwestycje w firmach Elona Muska i naszło mnie przy tym kilka przemyśleń. SpaceX, w którym są już xAI i X, ma w tym roku przeznaczyć na inwestycje około 65 mld dolarów, czyli mniej więcej 250 mld zł. Tesla zapowiedziała ponad 25 mld dolarów, około 96 mld zł. Razem daje to około 90 mld dolarów w jeden rok, blisko 346 mld zł po kursie NBP z 25 września (3,8404 zł za dolara).",
+        text: "Teslaconomics policzył zaproszenia na wydarzenie w Austin i wyszło mu mniej więcej 20 osób, nie licząc plus jeden. Sam o tym napisał. Reszta ma stream.",
       },
       {
         type: "img",
-        src: "/img/firmy-muska-inwestycje-infografika.svg",
-        alt: "Inwestycje firm Elona Muska w tym roku i ogłoszone megaprojekty",
-        caption: "Inwestycje firm Elona Muska w tym roku i ogłoszone megaprojekty",
+        src: "/img/inv-event.jpg",
+        alt: "Oficjalna grafika Tesli: Exclusive Access Cybercab, 3 września 2026, Austin",
+        caption: "Exclusive Access. 09.03.26, Austin. Lista jest krótka.",
+      },
+      {
+        type: "img",
+        src: "/img/inv-zaproszenie.jpg",
+        alt: "Grafika Teslaconomics: zaproszenie na Cybercab launch 3 września 2026",
+        caption:
+          "Teslaconomics: jedyny Koreańczyk na liście, z tego co widzi na X — około 20 zaproszeń. Źródło: @Teslaconomics.",
         contain: true,
       },
       {
         type: "p",
-        text: "Te 90 mld dolarów liczę osobno od ogłoszonych megaprojektów, bo to dwie różne rzeczy. Pierwsza liczba to wydatki jednego roku, a duże inwestycje rozkładają się na lata. Starbase Louisiana to do 100 mld dolarów (około 384 mld zł), a Terafab w hrabstwie Grimes do 119 mld dolarów we wszystkich fazach (około 457 mld zł). W hrabstwie Fort Bend ma powstać fabryka ogniw słonecznych za 10 mld dolarów, około 38 mld zł. Centrum danych xAI w Southaven to ponad 20 mld dolarów, czyli ponad 76 mld zł, a w Bastrop rośnie coraz większe skupisko fabryk.",
+        text: "Cybercab to dwuosobowe auto bez kierownicy i pedałów, zbudowane od zera pod przejazd na wezwanie. Ma jeździć w aplikacji Robotaxi: wsiadasz, jedziesz, wysiadasz. Bez kierowcy, bez własnego samochodu, bez miejsca na trzeciego pasażera. Tesla testuje egzemplarze na ulicach Austin, event 3 września ma być pierwszym publicznym pokazem tej maszyny, nie startem całej sieci.",
+      },
+      {
+        type: "img",
+        src: "/img/inv-kabina.jpg",
+        alt: "Wnętrze Cybercaba: dwa fotele, brak kierownicy i pedałów, ekran na ścianie",
+        caption: "Dwa miejsca. Żadnej kierownicy. Żadnego trzeciego pasażera.",
       },
       {
         type: "p",
-        text: "Jeśli tempo z tego roku się utrzyma, do 2030 r. wyjdzie około 450 mld dolarów, czyli około 1,73 bln zł. Z dużymi projektami będzie to bliżej 680 mld dolarów, około 2,61 bln zł. Gdyby JPMorgan miał rację, że sam SpaceX dojdzie do 200 mld dolarów rocznie (około 768 mld zł), suma zbliży się do biliona dolarów, czyli około 3,84 bln zł.",
+        text: "Sieć już istnieje — tylko na Modelu Y. Oficjalna mapa Tesli obejmuje dziś sześć miast: Austin, Dallas i Houston w Teksasie oraz Miami, Orlando i Tampa na Florydzie. Godziny: 6:00–22:00, siedem dni w tygodniu. W Austin usługa bez nadzoru w kabinie działa na całym obszarze metra, około 635 km². Nevada ma zgodę na nawet 5000 pojazdów w hrabstwie Clark, ale to na razie papier, nie flota na ulicy.",
+      },
+      {
+        type: "img",
+        src: "/img/inv-mapa.jpg",
+        alt: "Mapa aplikacji Robotaxi: strefy Tampa i Orlando",
+        caption: "Aplikacja Robotaxi. Sześć miast, Model Y. Cybercab do tej siatki dopiero dołączy.",
+        contain: true,
+      },
+      {
+        type: "img",
+        src: "/img/inv-flota.jpg",
+        alt: "Rząd złotych Cybercabów na parkingu Tesli",
+        caption: "Flota już stoi. Na event wpuszczają dwudziestu.",
       },
       {
         type: "p",
-        text: "Najbardziej przemawia do mnie porównanie z gospodarką. Spółki Muska inwestują dziś co roku około 0,28 proc. amerykańskiego PKB. Program Apollo przez cały okres trwania pochłaniał średnio około 0,21 proc., podobnie jak Projekt Manhattan. Tamte przedsięwzięcia prowadził rząd federalny, a tu mamy kilka firm, którymi kieruje jeden człowiek.",
+        text: "Dlatego krótka lista 3 września nie dotyczy Robotaxi jako takiego. Dotyczy momentu, w którym do tej siatki ma dołączyć auto jedyne w swoim rodzaju.",
       },
       {
         type: "p",
-        text: "Pieniądze w księgach samego Muska to dopiero pierwszy krąg. Ludzie, którzy nauczyli się zawodu w SpaceX i Tesli, zakładają własne firmy: Tom Mueller założył Impulse Space, Will Bruey współtworzył Vardę, bracia Kunjur uruchomili K2 Space, a JB Straubel zbudował Redwood Materials.",
-      },
-      {
-        type: "p",
-        text: "Dalej jest szerszy krąg konkurentów, którzy istnieją, bo SpaceX i Tesla pokazały, że się da. To każda firma rakietowa goniąca wielokrotne użycie rakiet, chińskie odpowiedzi na Starlinka, światowy przemysł aut elektrycznych i wszyscy, którzy ścigają się w budowie humanoidalnych robotów. Biorąc to wszystko pod uwagę, uważam, że Musk stał się czymś bliskim jednoosobowej reindustrializacji Ameryki.",
-      },
-      {
-        type: "p",
-        text: "Trzeba uczciwie zaznaczyć, że Alphabet i Meta wydają w samych dolarach więcej, a Alphabet może do 2030 r. prześcignąć wszystkich. Muska wyróżnia zakres, bo rakiety, wyrzutnie, satelity, moc obliczeniowa dla AI, fabryki chipów, energetyka słoneczna, auta i roboty powstają u niego jednocześnie. Duża część z tego to sprzęt, którego nikt wcześniej nie budował w takiej skali. Nie znajduję w historii nikogo, kto naraz uruchomił tyle fizycznych projektów rzędu 100 mld dolarów.",
+        text: "Źródło: [wpis Teslaconomics](https://x.com/Teslaconomics/status/2094192809620513152).",
       },
     ],
   },
