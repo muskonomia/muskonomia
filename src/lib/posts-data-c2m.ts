@@ -10,6 +10,7 @@ export const postsC2m: Post[] = [
       "Przy Colossusie II w Memphis ma stanąć magazyn energii na 3,3 GWh, według SpaceXAI największy w Ameryce podpięty do sieci. Sawyer Merritt przypisuje go Megapackom Tesli.",
     date: "26 września 2026",
     isoDate: "2026-09-26",
+    xPostId: "2103974151652352439",
     img: "/img/colossus-2-magazyn-energii.jpg",
     body: [
       {
