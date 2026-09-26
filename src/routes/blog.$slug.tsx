@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { DiscussOnX, XPostEmbed } from "@/components/discuss-on-x";
+import { Comments } from "@/components/comments";
 import { PostCard } from "@/components/post-card";
 import { PostMeta } from "@/components/post-meta";
 import { LinkedText } from "@/components/rich-text";
@@ -156,6 +157,10 @@ function BlogPost() {
             </Link>
           </div>
         </article>
+
+        <div className="px-5 pb-4">
+          <Comments slug={post.slug} />
+        </div>
 
         <div className="px-5 pb-16">
           <DiscussOnX title={post.title} slug={post.slug} xPostId={post.xPostId} />
