@@ -1,9 +1,9 @@
 import { useEffect, useState, type FormEvent } from "react";
-import { Link } from "@tanstack/react-router";
 import { addComment, deleteComment, listComments, type PublicComment } from "@/lib/comments.functions";
-import { useCurrentUserState } from "@/lib/auth/use-current-user";
 
 const MAX_LEN = 1000;
+const NAME_KEY = "musko-comment-name";
+const TOKEN_KEY = "musko-comment-token";
 
 function when(iso: string) {
   const date = new Date(iso);
@@ -17,17 +17,32 @@ function when(iso: string) {
 }
 
 export function Comments({ slug }: { slug: string }) {
-  const { user, isPending } = useCurrentUserState();
   const [items, setItems] = useState<PublicComment[]>([]);
+  const [name, setName] = useState("");
+  const [draftName, setDraftName] = useState("");
+  const [token, setToken] = useState("");
   const [body, setBody] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
+    const stored = window.localStorage.getItem(NAME_KEY) ?? "";
+    let id = window.localStorage.getItem(TOKEN_KEY);
+    if (!id) {
+      id = crypto.randomUUID();
+      window.localStorage.setItem(TOKEN_KEY, id);
+    }
+    setName(stored);
+    setDraftName(stored);
+    setToken(id);
+  }, []);
+
+  useEffect(() => {
+    if (!token) return;
     let cancelled = false;
     setLoading(true);
-    listComments({ data: { slug } })
+    listComments({ data: { slug, token } })
       .then((rows) => {
         if (!cancelled) setItems(rows);
       })
@@ -40,19 +55,36 @@ export function Comments({ slug }: { slug: string }) {
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, token]);
+
+  function saveName(event: FormEvent) {
+    event.preventDefault();
+    const next = draftName.replace(/\s+/g, " ").trim();
+    if (!next || next.length > 40) {
+      setError("Podaj imię, do 40 znaków.");
+      return;
+    }
+    window.localStorage.setItem(NAME_KEY, next);
+    setName(next);
+    setError("");
+  }
+
+  function clearName() {
+    window.localStorage.removeItem(NAME_KEY);
+    setName("");
+    setDraftName("");
+  }
 
   async function onSubmit(event: FormEvent) {
     event.preventDefault();
     setError("");
     setSending(true);
     try {
-      const created = await addComment({ data: { slug, body } });
+      const created = await addComment({ data: { slug, body, name, token } });
       setItems((prev) => [...prev, created]);
       setBody("");
     } catch (err) {
-      const message = err instanceof Error ? err.message : "";
-      setError(message === "Unauthorized" ? "Zaloguj się, żeby napisać." : message || "Nie udało się wysłać.");
+      setError(err instanceof Error ? err.message : "Nie udało się wysłać.");
     } finally {
       setSending(false);
     }
@@ -61,7 +93,7 @@ export function Comments({ slug }: { slug: string }) {
   async function onDelete(id: string) {
     setError("");
     try {
-      await deleteComment({ data: { id } });
+      await deleteComment({ data: { id, token } });
       setItems((prev) => prev.filter((item) => item.id !== id));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Nie udało się usunąć.");
@@ -76,7 +108,6 @@ export function Comments({ slug }: { slug: string }) {
       <h2 id="comments-heading" className="font-display text-3xl font-semibold leading-none tracking-tight">
         Komentarze
       </h2>
-      <p className="mt-2 text-sm text-muted">Test. Płaska lista, bez odpowiedzi na odpowiedzi.</p>
 
       <div className="mt-6 space-y-5">
         {loading ? <p className="text-sm text-muted">Wczytuję…</p> : null}
@@ -92,7 +123,7 @@ export function Comments({ slug }: { slug: string }) {
               </time>
             </div>
             <p className="mt-1 whitespace-pre-wrap text-base leading-relaxed text-fg/90">{item.body}</p>
-            {user && (user.id === item.userId || user.primaryEmail?.toLowerCase() === "sebastian.lipinski@gmail.com") ? (
+            {item.mine ? (
               <button
                 type="button"
                 onClick={() => onDelete(item.id)}
@@ -106,8 +137,14 @@ export function Comments({ slug }: { slug: string }) {
       </div>
 
       <div className="mt-6 border-t border-border pt-5">
-        {isPending ? null : user ? (
+        {name ? (
           <form onSubmit={onSubmit} className="space-y-3">
+            <p className="text-sm text-muted">
+              Piszesz jako <span className="font-medium text-fg">{name}</span>.{" "}
+              <button type="button" onClick={clearName} className="hover:text-accent">
+                Zmień imię
+              </button>
+            </p>
             <label htmlFor="comment-body" className="block text-sm font-medium">
               Napisz komentarz
             </label>
@@ -134,12 +171,26 @@ export function Comments({ slug }: { slug: string }) {
             </div>
           </form>
         ) : (
-          <p className="text-sm text-muted">
-            <Link to="/login" className="font-medium text-fg hover:text-accent">
-              Zaloguj się
-            </Link>
-            , żeby napisać komentarz.
-          </p>
+          <form onSubmit={saveName} className="space-y-3">
+            <label htmlFor="comment-name" className="block text-sm font-medium">
+              Podaj swoje imię
+            </label>
+            <input
+              id="comment-name"
+              value={draftName}
+              onChange={(event) => setDraftName(event.target.value.slice(0, 40))}
+              maxLength={40}
+              placeholder="Imię"
+              className="w-full rounded-md border border-border bg-bg px-3 py-2 text-sm outline-none focus:border-accent"
+            />
+            <button
+              type="submit"
+              disabled={!draftName.trim()}
+              className="rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent-hover disabled:opacity-50"
+            >
+              Zaloguj
+            </button>
+          </form>
         )}
         {error ? <p className="mt-3 text-sm text-accent">{error}</p> : null}
       </div>

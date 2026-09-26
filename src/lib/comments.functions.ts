@@ -1,9 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
-import { authMiddleware } from "@/lib/auth/middleware";
 import { getPost } from "@/lib/posts";
 
 const MAX_LEN = 1000;
-const MODERATORS = new Set(["sebastian.lipinski@gmail.com"]);
 
 type CommentRow = {
   id: string;
@@ -15,10 +13,10 @@ type CommentRow = {
 
 export type PublicComment = {
   id: string;
-  userId: string;
   authorName: string;
   body: string;
   createdAt: string;
+  mine: boolean;
 };
 
 function cleanSlug(value: unknown): string {
@@ -36,14 +34,27 @@ function cleanBody(value: unknown): string {
   return body;
 }
 
-function toPublic(row: CommentRow): PublicComment {
+function cleanName(value: unknown): string {
+  const name = typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
+  if (name.length < 1 || name.length > 40) throw new Error("Podaj imię, do 40 znaków.");
+  if (/https?:|www\.|@/i.test(name)) throw new Error("Imię nie może być linkiem.");
+  return name;
+}
+
+function cleanToken(value: unknown): string {
+  const token = typeof value === "string" ? value.trim() : "";
+  if (!/^[0-9a-f-]{36}$/i.test(token)) throw new Error("Odśwież stronę i spróbuj jeszcze raz.");
+  return token;
+}
+
+function toPublic(row: CommentRow, token: string): PublicComment {
   const created = row.created_at instanceof Date ? row.created_at : new Date(row.created_at);
   return {
     id: row.id,
-    userId: row.user_id,
     authorName: row.author_name,
     body: row.body,
     createdAt: created.toISOString(),
+    mine: row.user_id === token,
   };
 }
 
@@ -54,16 +65,19 @@ async function db() {
 
 const recent = new Map<string, number[]>();
 
-function allowPost(userId: string) {
+function allowPost(token: string) {
   const now = Date.now();
-  const stamps = (recent.get(userId) ?? []).filter((t) => now - t < 10 * 60 * 1000);
+  const stamps = (recent.get(token) ?? []).filter((t) => now - t < 10 * 60 * 1000);
   if (stamps.length >= 6) throw new Error("Za dużo komentarzy naraz. Spróbuj za chwilę.");
   stamps.push(now);
-  recent.set(userId, stamps);
+  recent.set(token, stamps);
 }
 
 export const listComments = createServerFn({ method: "GET" })
-  .inputValidator((data: { slug: string }) => ({ slug: cleanSlug(data?.slug) }))
+  .inputValidator((data: { slug: string; token?: string }) => ({
+    slug: cleanSlug(data?.slug),
+    token: typeof data?.token === "string" && /^[0-9a-f-]{36}$/i.test(data.token) ? data.token : "",
+  }))
   .handler(async ({ data }) => {
     const sql = await db();
     const rows = await sql<CommentRow>`
@@ -72,54 +86,41 @@ export const listComments = createServerFn({ method: "GET" })
       where slug = ${data.slug}
       order by created_at asc
     `;
-    return rows.map(toPublic);
+    return rows.map((row) => toPublic(row, data.token));
   });
 
 export const addComment = createServerFn({ method: "POST" })
-  .middleware([authMiddleware])
-  .inputValidator((data: { slug: string; body: string }) => ({
+  .inputValidator((data: { slug: string; body: string; name: string; token: string }) => ({
     slug: cleanSlug(data?.slug),
     body: cleanBody(data?.body),
+    name: cleanName(data?.name),
+    token: cleanToken(data?.token),
   }))
-  .handler(async ({ data, context }) => {
-    allowPost(context.userId);
+  .handler(async ({ data }) => {
+    allowPost(data.token);
     const sql = await db();
-    const users = await sql<{ name: string }>`
-      select name from "user" where id = ${context.userId} limit 1
-    `;
-    const authorName = (users[0]?.name ?? "Czytelnik").trim().slice(0, 80) || "Czytelnik";
     const id = crypto.randomUUID();
     const rows = await sql<CommentRow>`
       insert into post_comment (id, slug, user_id, author_name, body)
-      values (${id}, ${data.slug}, ${context.userId}, ${authorName}, ${data.body})
+      values (${id}, ${data.slug}, ${data.token}, ${data.name}, ${data.body})
       returning id, user_id, author_name, body, created_at
     `;
-    return toPublic(rows[0]);
+    return toPublic(rows[0], data.token);
   });
 
 export const deleteComment = createServerFn({ method: "POST" })
-  .middleware([authMiddleware])
-  .inputValidator((data: { id: string }) => {
+  .inputValidator((data: { id: string; token: string }) => {
     const id = typeof data?.id === "string" ? data.id.trim() : "";
     if (!/^[0-9a-f-]{36}$/i.test(id)) throw new Error("Nie ma takiego komentarza.");
-    return { id };
+    return { id, token: cleanToken(data?.token) };
   })
-  .handler(async ({ data, context }) => {
+  .handler(async ({ data }) => {
     const sql = await db();
-    const users = await sql<{ email: string }>`
-      select email from "user" where id = ${context.userId} limit 1
+    const rows = await sql<{ id: string }>`
+      delete from post_comment
+      where id = ${data.id} and user_id = ${data.token}
+      returning id
     `;
-    const email = users[0]?.email?.toLowerCase() ?? "";
-    const moderator = MODERATORS.has(email);
-    const rows = moderator
-      ? await sql<{ id: string }>`
-          delete from post_comment where id = ${data.id} returning id
-        `
-      : await sql<{ id: string }>`
-          delete from post_comment
-          where id = ${data.id} and user_id = ${context.userId}
-          returning id
-        `;
     if (!rows.length) throw new Error("Nie można usunąć tego komentarza.");
     return { ok: true };
   });
