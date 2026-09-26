@@ -44,7 +44,7 @@ function websiteJsonLd() {
         "@id": `${SITE_URL}/#org`,
         name: SITE_NAME,
         url: SITE_URL,
-        email: "muskonomia.pl@gmail.com",
+        email: "sebanrgcrypto@gmail.com",
         logo: {
           "@type": "ImageObject",
           url: `${SITE_URL}/img/logo.png`,

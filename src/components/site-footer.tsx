@@ -29,7 +29,7 @@ export function SiteFooter() {
             <XLogo className="h-4 w-4" />
             Śledź na X
           </a>
-          <a href="mailto:muskonomia.pl@gmail.com" className="hover:text-fg">
+          <a href="mailto:sebanrgcrypto@gmail.com" className="hover:text-fg">
             Kontakt
           </a>
         </div>

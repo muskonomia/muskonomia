@@ -7,7 +7,7 @@ export const SITE_X_HANDLE = "@MuskonomiaPL";
 export const SITE_X_URL = "https://x.com/MuskonomiaPL";
 
 export const SITE_AUTHOR = "SEBIX";
-export const SITE_CONTACT_EMAIL = "muskonomia.pl@gmail.com";
+export const SITE_CONTACT_EMAIL = "sebanrgcrypto@gmail.com";
 
 export function absoluteUrl(path: string) {
   const p = path.startsWith("/") ? path : `/${path}`;

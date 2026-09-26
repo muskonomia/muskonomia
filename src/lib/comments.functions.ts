@@ -65,6 +65,33 @@ async function db() {
 
 const recent = new Map<string, number[]>();
 
+const NOTIFY_TO = "sebanrgcrypto@gmail.com";
+
+async function notifyOwner(name: string, slug: string, body: string) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5000);
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${NOTIFY_TO}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        _subject: `Nowy komentarz: ${name}`,
+        _template: "box",
+        _captcha: "false",
+        imie: name,
+        wpis: `https://muskonomia.pl/blog/${slug}`,
+        komentarz: body,
+      }),
+      signal: controller.signal,
+    });
+    if (!res.ok) console.error("[comments] notify", res.status);
+  } catch (err) {
+    console.error("[comments] notify failed", err);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function allowPost(token: string) {
   const now = Date.now();
   const stamps = (recent.get(token) ?? []).filter((t) => now - t < 10 * 60 * 1000);
@@ -105,6 +132,7 @@ export const addComment = createServerFn({ method: "POST" })
       values (${id}, ${data.slug}, ${data.token}, ${data.name}, ${data.body})
       returning id, user_id, author_name, body, created_at
     `;
+    await notifyOwner(data.name, data.slug, data.body);
     return toPublic(rows[0], data.token);
   });
 

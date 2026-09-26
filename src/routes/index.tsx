@@ -209,7 +209,7 @@ function Home() {
             <p className="mt-2 text-muted">@MuskonomiaPL — starty, wycieki i newsy, zanim wejdą na bloga.</p>
           </a>
           <a
-            href="mailto:muskonomia.pl@gmail.com"
+            href="mailto:sebanrgcrypto@gmail.com"
             className="flex flex-col items-center justify-center rounded-xl border border-border bg-surface px-6 py-14 text-center transition hover:border-fg"
           >
             <svg viewBox="0 0 24 24" aria-hidden="true" className="h-10 w-10 fill-none stroke-current stroke-[1.6]">
@@ -217,7 +217,7 @@ function Home() {
               <path d="M3 7l9 7 9-7" />
             </svg>
             <h2 className="mt-5 font-display text-4xl font-semibold">Kontakt</h2>
-            <p className="mt-2 text-muted">muskonomia.pl@gmail.com</p>
+            <p className="mt-2 text-muted">sebanrgcrypto@gmail.com</p>
           </a>
         </div>
       </section>

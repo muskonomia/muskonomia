@@ -9,7 +9,7 @@ export const Route = createFileRoute("/o-serwisie")({
     pageHead({
       title: "O serwisie",
       description:
-        "muskonomia.pl — aktualności o Tesli, SpaceX, xAI, Neuralink i The Boring Company po polsku. Kontakt: muskonomia.pl@gmail.com.",
+        "muskonomia.pl — aktualności o Tesli, SpaceX, xAI, Neuralink i The Boring Company po polsku. Kontakt: sebanrgcrypto@gmail.com.",
       path: "/o-serwisie",
       image: "/img/terafab-render-night.jpg",
     }),
