@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 980" role="img" aria-label="Inwestycje firm Elona Muska w tym roku i ogłoszone megaprojekty">
+  <rect width="1080" height="980" fill="#f3f0e8"/>
+  <rect x="0" y="0" width="1080" height="8" fill="#111111"/>
+  <text x="64" y="88" fill="#111111" font-family="Georgia, 'Iowan Old Style', Palatino, serif" font-size="44" font-weight="700">Inwestycje firm Muska</text>
+  <text x="64" y="168" fill="#111111" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">W tym roku</text>
+  <line x1="64" y1="184" x2="1016" y2="184" stroke="#111111" stroke-width="1"/>
+  <text x="64" y="232" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">SpaceX (z xAI i X): ok. 65 mld USD</text>
+  <text x="64" y="280" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">Tesla: ponad 25 mld USD</text>
+  <rect x="48" y="308" width="984" height="64" rx="6" fill="#111111"/>
+  <text x="64" y="350" fill="#f3f0e8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700">Razem: ok. 90 mld USD</text>
+  <text x="64" y="444" fill="#111111" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">Megaprojekty (na lata)</text>
+  <line x1="64" y1="460" x2="1016" y2="460" stroke="#111111" stroke-width="1"/>
+  <text x="64" y="512" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">Starbase Louisiana: do 100 mld USD</text>
+  <text x="64" y="564" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">Terafab: do 119 mld USD</text>
+  <text x="64" y="616" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">Fort Bend (ogniwa słoneczne): 10 mld USD</text>
+  <text x="64" y="668" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">Southaven (centrum danych xAI): ponad 20 mld USD</text>
+  <text x="64" y="760" fill="#111111" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">Do 2030 r.</text>
+  <line x1="64" y1="776" x2="1016" y2="776" stroke="#111111" stroke-width="1"/>
+  <text x="64" y="828" fill="#1a1a1a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26">w obecnym tempie: ok. 450 mld USD</text>
+  <rect x="48" y="856" width="984" height="64" rx="6" fill="#111111"/>
+  <text x="64" y="898" fill="#f3f0e8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="700">z dużymi projektami: ok. 680 mld USD</text>
+</svg>
