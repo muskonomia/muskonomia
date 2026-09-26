@@ -95,10 +95,39 @@ function createNeonSql(): Promise<Sql> {
   return globalRef.__pgSqlPromise__;
 }
 
+async function pgliteAsset(name: string): Promise<Blob> {
+  const { readFile } = await import("node:fs/promises");
+  const { existsSync } = await import("node:fs");
+  const { join } = await import("node:path");
+  const candidates = [
+    join(process.cwd(), "public", "vendor", name),
+    join(process.cwd(), "vendor", name),
+    join(process.cwd(), "_libs", name),
+    join(process.cwd(), "server", "_libs", name),
+  ];
+  for (const path of candidates) {
+    if (!existsSync(path)) continue;
+    const buf = await readFile(path);
+    return new Blob([new Uint8Array(buf)]);
+  }
+  const origin = (process.env.BETTER_AUTH_URL || "https://muskonomia.pl").replace(/\/$/, "");
+  const res = await fetch(`${origin}/vendor/${name}`);
+  if (!res.ok) throw new Error(`Brak pliku bazy ${name} (${res.status}).`);
+  return await res.blob();
+}
+
 async function createPgliteSql(): Promise<Sql> {
   globalRef.__pgliteInstance__ ??= (async () => {
     const { PGlite } = await import("@electric-sql/pglite");
+    const [fsBundle, wasm, initdb] = await Promise.all([
+      pgliteAsset("pglite.data"),
+      pgliteAsset("pglite.wasm"),
+      pgliteAsset("initdb.wasm"),
+    ]);
     const pg = new PGlite({
+      fsBundle,
+      pgliteWasmModule: await WebAssembly.compile(await wasm.arrayBuffer()),
+      initdbWasmModule: await WebAssembly.compile(await initdb.arrayBuffer()),
       parsers: {
         [OID_INT8]: Number,
         [OID_DATE]: identity,

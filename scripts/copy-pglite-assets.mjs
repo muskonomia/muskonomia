@@ -3,7 +3,13 @@ import { cpSync, existsSync, readdirSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const require = createRequire(import.meta.url);
-const dist = join(dirname(require.resolve("@electric-sql/pglite/package.json")), "dist");
+let dist = "";
+try {
+  dist = join(dirname(require.resolve("@electric-sql/pglite/package.json")), "dist");
+} catch (err) {
+  console.warn("[pglite] package not installed, skip:", err instanceof Error ? err.message : err);
+  process.exit(0);
+}
 const files = ["pglite.data", "pglite.wasm", "initdb.wasm"];
 
 function findLibs(dir, acc, depth) {
@@ -30,7 +36,12 @@ function findLibs(dir, acc, depth) {
 }
 
 const targets = [];
-for (const root of [".output", "dist", ".nitro", "server"]) findLibs(root, targets, 0);
+try {
+  for (const root of [".output", "dist", ".nitro", "server"]) findLibs(root, targets, 0);
+} catch (err) {
+  console.warn("[pglite] scan failed:", err instanceof Error ? err.message : err);
+  process.exit(0);
+}
 if (!targets.length) {
   console.warn("[pglite] no _libs directory after build — skipped");
   process.exit(0);
