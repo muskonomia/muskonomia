@@ -46,7 +46,14 @@ const LOCAL_DEV_ORIGINS: string[] = [
   "http://[::1]:8080",
 ];
 const baseURL = explicitBaseURL ?? {
-  allowedHosts: [...previewAllowedHosts, "localhost", "127.0.0.1", "[::1]"],
+  allowedHosts: [
+    ...previewAllowedHosts,
+    "muskonomia.pl",
+    "www.muskonomia.pl",
+    "localhost",
+    "127.0.0.1",
+    "[::1]",
+  ],
   protocol: "auto" as const,
   fallback: "http://localhost:8080",
 };

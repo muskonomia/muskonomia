@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GROK_PROVIDERS, authEnabled, signIn } from "@/lib/auth/client";
+import { GROK_PROVIDERS, authEnabled } from "@/lib/auth/client";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -10,19 +10,18 @@ function Login() {
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
       <main className="grid min-h-screen place-items-center px-5 pt-16">
-        <div className="w-full max-w-sm space-y-5 rounded-xl border border-border bg-surface p-8">
+        <div className="relative z-10 w-full max-w-sm space-y-5 rounded-xl border border-border bg-surface p-8">
           <h1 className="font-display text-3xl font-semibold tracking-wide">Zaloguj się</h1>
           <p className="text-sm text-muted">Dołącz, żeby śledzić aktualności Tesli, SpaceX i xAI.</p>
           {authEnabled ? (
             GROK_PROVIDERS.map((p) => (
-              <button
+              <a
                 key={p.providerId}
-                type="button"
-                onClick={() => signIn(p.providerId, { callbackURL: "/" })}
-                className="w-full rounded-md border border-border bg-bg px-4 py-3 text-sm font-medium hover:border-accent"
+                href={`/api/login/${p.idp === "twitter" ? "x" : "google"}`}
+                className="block w-full rounded-md border border-border bg-bg px-4 py-3 text-center text-sm font-medium hover:border-accent"
               >
                 Kontynuuj z {p.label}
-              </button>
+              </a>
             ))
           ) : (
             <p className="text-sm text-muted">Logowanie wyłączone.</p>
