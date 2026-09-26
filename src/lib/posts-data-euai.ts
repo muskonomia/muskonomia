@@ -10,6 +10,7 @@ export const postsEuai: Post[] = [
       "Musk przewiduje miliard humanoidalnych robotów w dziesięć lat, 10 mld w 15 i 100 mld w 20. Cybercab jeździ komercyjnie w Teksasie, a Kalifornia ma dojść około połowy 2027 r.",
     date: "26 września 2026",
     isoDate: "2026-09-26",
+    xPostId: "2103739551344730481",
     img: "/img/musk-cmg-wywiad.jpg",
     body: [
       {

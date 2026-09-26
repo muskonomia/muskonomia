@@ -10,6 +10,7 @@ export const postsKap: Post[] = [
       "SpaceX z xAI i X ma w tym roku wydać na inwestycje około 65 mld dolarów, Tesla ponad 25 mld. Razem to około 90 mld dolarów, a do 2030 r. nawet 680 mld.",
     date: "26 września 2026",
     isoDate: "2026-09-26",
+    xPostId: "2103738161956274650",
     img: "/img/starbase-inwestycje-okladka.jpg",
     body: [
       {
