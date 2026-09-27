@@ -10,6 +10,7 @@ export const postsK1p: Post[] = [
       "1 października SpaceX chce wystrzelić trzy rakiety z trzech platform: Crew-13, Transporter-18 ze 130 ładunkami i Falcon Heavy z misją NROL-97. Tego samego dnia Tesla pokaże w Waco nowego Roadstera.",
     date: "27 września 2026",
     isoDate: "2026-09-27",
+    xPostId: "2104098469870747827",
     img: "/img/1-pazdziernika-trzy-starty.jpg",
     body: [
       {
