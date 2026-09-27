@@ -11,6 +11,7 @@ export const postsTfb: Post[] = [
       "W hrabstwie Grimes w Teksasie większość stóp fundamentowych Terafabu jest już zalana betonem, pół roku po ogłoszeniu projektu. Budowa terminala CPK wciąż czeka na pozwolenie, prawie dziewięć lat po przyjęciu koncepcji.",
     date: "27 września 2026",
     isoDate: "2026-09-27",
+    xPostId: "2104159303976263986",
     img: "/img/terafab-grimes-stopy-fundamentowe.jpg",
     body: [
       {
