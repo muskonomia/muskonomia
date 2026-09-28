@@ -10,6 +10,7 @@ export const postsL14: Post[] = [
       "W 14. locie Starship ma po raz pierwszy wejść na pełną orbitę. Misja może potrwać prawie 10 godzin i ma kilka punktów decyzyjnych.",
     date: "28 września 2026",
     isoDate: "2026-09-28",
+    xPostId: "2104463024853491935",
     img: "/img/starship-lot-14-pierwsza-orbita.jpg",
     contain: true,
     body: [
