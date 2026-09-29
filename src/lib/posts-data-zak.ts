@@ -10,6 +10,7 @@ export const postsZak: Post[] = [
       "Od fabryki we Fremoncie kupionej za 42 mln dolarów po wniosek o 10,1 mld na ogniwa słoneczne pod Houston. Tesla ma rafinerię litu, trzy fabryki Megapacków, klaster Cortex i buduje fabrykę Optimusa.",
     date: "29 września 2026",
     isoDate: "2026-09-29",
+    xPostId: "2104859370869682622",
     img: "/img/tesla-zaklady-mapa.jpg",
     credit:
       "Gigafactory Texas pod Austin, budynek 1 (czerwiec 2022). Fot. Larry D. Moore, Wikimedia Commons, CC BY 4.0",

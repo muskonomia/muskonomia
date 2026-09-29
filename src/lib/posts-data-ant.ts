@@ -10,6 +10,7 @@ export const postsAnt: Post[] = [
       "Według prospektu opisanego przez Reutersa Anthropic miał w 2025 r. prawie 4,6 mld dolarów przychodu i 42 mld dolarów straty netto, głównie księgowej. Debiut mógłby wycenić spółkę na ponad 2 bln dolarów.",
     date: "29 września 2026",
     isoDate: "2026-09-29",
+    xPostId: "2104818229126279236",
     img: "/img/anthropic-prospekt-42-mld-straty.jpg",
     credit: "Fot. Alecsandra Dragoi / DSIT, CC BY 2.0, via Wikimedia Commons (kadr)",
     body: [
