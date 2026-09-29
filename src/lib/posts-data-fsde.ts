@@ -63,8 +63,9 @@ export const postsFsde: Post[] = [
       { type: "x", id: "2104517163738378679", handle: "PAITvlog" },
       {
         type: "p",
-        text: "**Aktualizacja, 29 września 2026 r.:** Chorwacja dołączyła dziś jako ósmy kraj. Tesla ogłosiła, że FSD Supervised zostało tam zatwierdzone, a wdrożenie u klientów ruszy wkrótce ([RTÉ](https://www.rte.ie/news/business/2026/0929/1593334-tesla-fsd-croatia/), [eletric-vehicles.com](https://eletric-vehicles.com/tesla/croatia-approves-tesla-fsd-weeks-after-regulator-said-it-would-wait/)).",
+        text: "**Aktualizacja, 29 września 2026 r.:** Chorwacja dołączyła dziś jako ósmy kraj. Tesla ogłosiła, że FSD Supervised zostało tam zatwierdzone, a wdrożenie u klientów ruszy wkrótce ([komunikat Tesli](https://x.com/teslaeurope/status/2104844301461262602)).",
       },
+      { type: "x", id: "2104844301461262602", handle: "teslaeurope" },
     ],
   },
 ];
