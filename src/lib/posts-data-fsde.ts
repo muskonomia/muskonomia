@@ -60,7 +60,6 @@ export const postsFsde: Post[] = [
         text: "Autor: PAIT ([@PAITvlog](https://x.com/PAITvlog/status/2104517163738378679)), 28 września 2026 r.",
       },
       { type: "quote", paragraphs: pait },
-      { type: "x", id: "2104517163738378679", handle: "PAITvlog" },
       {
         type: "p",
         text: "**Aktualizacja, 29 września 2026 r.:** Chorwacja dołączyła dziś jako ósmy kraj. Tesla ogłosiła, że FSD Supervised zostało tam zatwierdzone, a wdrożenie u klientów ruszy wkrótce ([komunikat Tesli](https://x.com/teslaeurope/status/2104844301461262602)).",
