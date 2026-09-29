@@ -10,6 +10,7 @@ export const postsGbb: Post[] = [
       "Od 1 października pracownicy produkcji w Grünheide dostają 5 proc. więcej, a fachowcy 4 proc. i premię. Stawka wejściowa wyniesie około 45 750 euro rocznie. Układu zbiorowego nadal nie ma.",
     date: "29 września 2026",
     isoDate: "2026-09-29",
+    xPostId: "2104812216365007018",
     img: "/img/giga-berlin-podwyzki.jpg",
     credit:
       "Fot. Michael Wolf, Penig / Wikimedia Commons, CC BY-SA 3.0 (źródło: [https://commons.wikimedia.org/wiki/File:Tesla_Gigafactory_4_DJI_20230728124439.JPG](https://commons.wikimedia.org/wiki/File:Tesla_Gigafactory_4_DJI_20230728124439.JPG))",
