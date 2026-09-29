@@ -47,6 +47,7 @@ export const postsFsde: Post[] = [
       "FSD Supervised działa już w ośmiu krajach Europy, a polski TDT wciąż analizuje holenderską homologację. Publikuję w całości tekst PAIT o tym, jak wygląda zatwierdzanie systemu.",
     date: "29 września 2026",
     isoDate: "2026-09-29",
+    xPostId: "2104913602486456399",
     img: "/img/tesla-fsd-europa-polska.jpg",
     credit: "Fot. S5A-0043 / Wikimedia Commons, CC BY 4.0 (kadr)",
     body: [

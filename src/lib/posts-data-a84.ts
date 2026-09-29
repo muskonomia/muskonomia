@@ -11,6 +11,7 @@ export const postsA84: Post[] = [
       "Według poufnego prospektu Anthropica opisanego przez Reutersa umowy z xAI, spółką zależną SpaceX, mogą do 2029 r. kosztować do 84,5 mld dolarów. Z majowego prospektu SpaceX wynikało blisko 45 mld dolarów. Większość umów można wypowiedzieć w 90 dni.",
     date: "29 września 2026",
     isoDate: "2026-09-29",
+    xPostId: "2104988765047709981",
     img: "/img/nvidia-hgx-b200-anthropic-spacex.jpg",
     credit:
       "Płyta Nvidia HGX B200 z ośmioma procesorami graficznymi. Fot. Pokiiri / Wikimedia Commons, CC BY-SA 4.0 (kadr)",
