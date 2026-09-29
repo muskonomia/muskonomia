@@ -45,6 +45,11 @@ function BlogPost() {
               </h1>
             </div>
           </header>
+          {post.credit ? (
+            <p className="mx-auto max-w-3xl px-5 pt-4 text-xs leading-relaxed text-muted">
+              <LinkedText text={post.credit} />
+            </p>
+          ) : null}
 
           <div className="mx-auto max-w-3xl space-y-5 px-5 py-16 text-base leading-relaxed text-fg/90 sm:text-lg">
             {post.body.map((block, i) => {
