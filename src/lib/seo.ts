@@ -61,6 +61,8 @@ export function pageHead(opts: {
   path: string;
   type?: "website" | "article";
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   jsonLd?: unknown;
 }) {
   const title = documentTitle(opts.title);
@@ -83,6 +85,13 @@ export function pageHead(opts: {
       { property: "og:description", content: description },
       { property: "og:url", content: url },
       { property: "og:image", content: image },
+      ...(opts.imageWidth && opts.imageHeight
+        ? [
+            { property: "og:image:width", content: String(opts.imageWidth) },
+            { property: "og:image:height", content: String(opts.imageHeight) },
+            { property: "og:image:type", content: "image/jpeg" },
+          ]
+        : []),
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: SITE_X_HANDLE },
       { name: "twitter:creator", content: SITE_X_HANDLE },
@@ -109,7 +118,9 @@ export function postHead(post: Post) {
     description: post.excerpt,
     path,
     type: "article",
-    image: post.img,
+    image: post.card ?? post.img,
+    imageWidth: post.card ? 1200 : undefined,
+    imageHeight: post.card ? 630 : undefined,
     jsonLd: postJsonLd(post),
   });
 }

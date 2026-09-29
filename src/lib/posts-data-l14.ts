@@ -12,6 +12,7 @@ export const postsL14: Post[] = [
     isoDate: "2026-09-28",
     xPostId: "2104463024853491935",
     img: "/img/starship-lot-14-pierwsza-orbita.jpg",
+    card: "/img/starship-lot-14-karta.jpg",
     contain: true,
     body: [
       {

@@ -22,6 +22,7 @@ export type Post = {
   date: string;
   isoDate: string;
   img: string;
+  card?: string;
   object?: string;
   contain?: boolean;
   topic?: TopicId;
