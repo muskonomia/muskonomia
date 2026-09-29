@@ -1,0 +1,70 @@
+import type { Post } from "./posts";
+
+const pait: string[] = [
+  "Proces zatwierdzania Tesla FSD w Europie wygląda coraz bardziej absurdalnie.",
+  "Od wielu miesięcy regulatorzy zastanawiają się, czy kierowca może uruchomić w swoim samochodzie ASYSTENTA JAZDY - system SAE Level 2, który wymaga ciągłego nadzoru człowieka, a jednocześnie rygorystycznie monitoruje uwagę kierowcy.",
+  "Wątpliwości wygląda tak, jakbyśmy mieli do czynienia z niesprawdzoną technologią, którą dopiero po raz pierwszy zamierzamy wypuścić na publiczne drogi.",
+  "Tymczasem FSD (Supervised) jest już legalnie dostępne w 14 krajach na świecie, gdzie 660 MILIONÓW osób ma do niego dostęp!",
+  "W samej Europie FSD działa już w 7 państwach: Holandii, Belgii, Danii, Estonii, Litwie, Słowenii i Czechach.",
+  "Globalnie samochody przejechały z aktywnym FSD już około 24 MILIARDÓW kilometrów.",
+  "A w samej Europie do września Tesla raportowała ponad 140 MILIONÓW kilometrów przejechanych przez klientów - cywilnych kierowców jak my wszyscy.",
+  "To nie jest technologia eksperymentalna! To system, który jest codziennością MILIONÓW osób na świecie.",
+  "A mimo tego w kolejnych państwach europejskich nadal trwa dyskusja, czy w ogóle można pozwolić kierowcy na jego uruchomienie, przecież to nonsens!",
+  "Całość powoli zaczyna tracić ramy logicznej dyskusji.",
+  "Zrozumiałbym ogromną ostrożność, gdybyśmy rozmawiali o technologii przetestowanej na kilkudziesięciu samochodach w USA, w środowisku zupełnie innym od europejskiego.",
+  "ALE TAK NIE JEST.",
+  "FSD od miesięcy jeździ po Holandii, Belgii, Danii, Litwie i Estonii. Niedawno dołączyły także Słowenia i Czechy.",
+  "To europejskie drogi. Europejskie oznakowanie. Europejskie miasta. Europejskie przepisy.",
+  "Holandia jest świetnym przykładem środowiska, które trudno uznać za łatwe dla systemu jazdy: rowerzyści, piesi, wąskie uliczki, ronda i skomplikowane skrzyżowania.",
+  "Co więcej, holenderskie RDW nie dopuściło FSD „na słowo Tesli”. System był przez ponad 18 miesięcy badany i testowany zarówno na torze, jak i na drogach publicznych. RDW przeprowadziło również własne testy i niezależnie analizowało dane Tesli.",
+  "Po tych testach urząd stwierdził, że prawidłowe używanie FSD Supervised ma POZYTYWNY wpływ na bezpieczeństwo ruchu drogowego.",
+  "Ja, posiadając polskie prawo jazdy, mogę pojechać do Belgii czy Holandii i prowadzić tam samochód. Duńczyk może przyjechać do Polski i prowadzić tutaj.",
+  "Ale dokładnie ten sam nadzorowany przez człowieka system wspomagania kierowcy po przekroczeniu granicy państwa, które go zatwierdziło, zostaje wyłączony.",
+  "A do tego ciągłe wątpliwości co do speed-offset...",
+  "Po zaostrzeniu monitorowania kierowcy i usunięciu profili jazdy FSD, możliwość dostosowania prędkości do rzeczywistych warunków drogowych jest jednym z elementów pozwalających systemowi zachowywać się naturalnie w ruchu.",
+  "Błędnie wykryte ograniczenia prędkości to codzienność, Tesla wprost mówi, że ta funkcja jest potrzebna, aby zachować płynność ruchu.",
+  "W analizie europejskich przejazdów sprawdzono sytuacje, w których system podnosił maksymalną prędkość ponad błędnie lub zbyt nisko rozpoznane ograniczenie.",
+  "W 98% takich przypadków FSD nadal jechało z prędkością równą lub NIŻSZĄ od mediany prędkości otaczających samochodów.",
+  "Czyli nie chodzi o funkcję „jedź jak najszybciej”.",
+  "Chodzi między innymi o możliwość uniknięcia sytuacji, w której samochód błędnie odczyta ograniczenie i zacznie poruszać się znacznie wolniej od całego otaczającego ruchu, bo to będzie prowokować gwałtowne wyprzedzanie, frustrację i agresywne zachowania innych kierowców.",
+  "To nie jest pojazd autonomiczny. To asystent jazdy, który przez cały czas jest nadzorowany przez człowieka.",
+  "FSD rzadko popełnia błędy, ale nie jest systemem idealnym. Po dopuszczeniu do ruchu Tesla dostanie POTĘŻNĄ ilość danych z floty, która przyczyni się do wyeliminowania tych błędów i zwiększenia nieomylności systemu, ale póki co;",
+  "Jeżeli samochód jedzie zbyt szybko - obowiązkiem kierowcy jest zwolnić.",
+  "Jeżeli FSD wybierze niewłaściwy pas - kierowca ma przejąć kontrolę i to skorygować.",
+  "Jeżeli system podejmie złą decyzję - kierowca nadal pozostaje odpowiedzialny za prowadzenie pojazdu.",
+  "Na tym właśnie polega system Supervised.",
+  "Nie rozmawiamy więc o eksperymencie, w którym samochód samodzielnie podejmuje wszystkie decyzje bez nadzoru człowieka.",
+  "Rozmawiamy o technologii wspomagającej kierowcę, używanej codziennie od lat na publicznych drogach i mającej za sobą miliardy kilometrów realnej jazdy.",
+];
+
+export const postsFsde: Post[] = [
+  {
+    slug: "tesla-fsd-osiem-krajow-europy-polska",
+    kicker: "FSD",
+    topic: "tesla",
+    title: "Tesla FSD działa w ośmiu krajach Europy, a Polska wciąż się zastanawia",
+    excerpt:
+      "FSD Supervised działa już w ośmiu krajach Europy, a polski TDT wciąż analizuje holenderską homologację. Publikuję w całości tekst PAIT o tym, jak wygląda zatwierdzanie systemu.",
+    date: "29 września 2026",
+    isoDate: "2026-09-29",
+    img: "/img/tesla-fsd-europa-polska.jpg",
+    credit: "Fot. S5A-0043 / Wikimedia Commons, CC BY 4.0 (kadr)",
+    body: [
+      {
+        type: "p",
+        text: "Oddaję dziś głos PAIT, autorowi kanału [@PAITvlog](https://x.com/PAITvlog), który od lat śledzi rozwój Tesli w Polsce. Jego tekst najlepiej pokazuje, jak absurdalnie wygląda dziś zatwierdzanie FSD w Europie. Holenderski urząd RDW dopuścił system po długich testach, kolejne kraje uznały tę homologację, a nasz TDT wciąż to analizuje. Publikuję jego wpis w całości, bez żadnych zmian.",
+      },
+      { type: "x", id: "2104488297951105109", handle: "FSDEurope" },
+      {
+        type: "p",
+        text: "Autor: PAIT ([@PAITvlog](https://x.com/PAITvlog/status/2104517163738378679)), 28 września 2026 r.",
+      },
+      { type: "quote", paragraphs: pait },
+      { type: "x", id: "2104517163738378679", handle: "PAITvlog" },
+      {
+        type: "p",
+        text: "**Aktualizacja, 29 września 2026 r.:** Chorwacja dołączyła dziś jako ósmy kraj. Tesla ogłosiła, że FSD Supervised zostało tam zatwierdzone, a wdrożenie u klientów ruszy wkrótce ([RTÉ](https://www.rte.ie/news/business/2026/0929/1593334-tesla-fsd-croatia/), [eletric-vehicles.com](https://eletric-vehicles.com/tesla/croatia-approves-tesla-fsd-weeks-after-regulator-said-it-would-wait/)).",
+      },
+    ],
+  },
+];

@@ -57,10 +57,10 @@ function SourceLink({ href, children }: { href: string; children: string }) {
   );
 }
 
-export function LinkedText({ text }: { text: string }) {
+function linkNodes(text: string, keyBase: number): ReactNode[] {
   const nodes: ReactNode[] = [];
   let last = 0;
-  let key = 0;
+  let key = keyBase;
   const re = new RegExp(MARKDOWN_OR_URL.source, "g");
   let match: RegExpExecArray | null;
   while ((match = re.exec(text)) !== null) {
@@ -90,5 +90,24 @@ export function LinkedText({ text }: { text: string }) {
   if (last < text.length) {
     nodes.push(<span key={key++}>{text.slice(last)}</span>);
   }
-  return <>{nodes}</>;
+  return nodes;
+}
+
+export function LinkedText({ text }: { text: string }) {
+  const chunks = text.split(/(\*\*[^*]+\*\*)/);
+  if (chunks.length === 1) return <>{linkNodes(text, 0)}</>;
+  return (
+    <>
+      {chunks.map((chunk, i) => {
+        const bold = chunk.startsWith("**") && chunk.endsWith("**") && chunk.length > 4;
+        const inner = bold ? chunk.slice(2, -2) : chunk;
+        if (!inner) return null;
+        return bold ? (
+          <strong key={i}>{linkNodes(inner, i * 1000)}</strong>
+        ) : (
+          <span key={i}>{linkNodes(inner, i * 1000)}</span>
+        );
+      })}
+    </>
+  );
 }

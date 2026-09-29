@@ -127,6 +127,20 @@ function BlogPost() {
                   </figure>
                 );
               }
+              if (block.type === "quote") {
+                return (
+                  <blockquote
+                    key={i}
+                    className="space-y-4 border-l-2 border-accent/70 pl-4"
+                  >
+                    {block.paragraphs.map((text, j) => (
+                      <p key={j}>
+                        <LinkedText text={text} />
+                      </p>
+                    ))}
+                  </blockquote>
+                );
+              }
               if (block.type === "h2") {
                 return (
                   <h2

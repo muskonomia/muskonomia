@@ -4,6 +4,7 @@ import { HUBS } from "./hubs";
 
 export type Block =
   | { type: "p"; text: string }
+  | { type: "quote"; paragraphs: string[] }
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
