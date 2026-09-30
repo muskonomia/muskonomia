@@ -10,6 +10,7 @@ export const postsSmr: Post[] = [
       "Budowy w USA, 900 mln dolarów dotacji i plany OSGE w Polsce. Działające SMR-y w Rosji i Chinach pracują jednak średnio na około jedną trzecią mocy, a energia z nowych bloków ma kosztować według Lazarda około 214 dolarów za MWh. Kilka lat temu podobne obietnice dotyczyły wodoru.",
     date: "30 września 2026",
     isoDate: "2026-09-30",
+    xPostId: "2105199564500177326",
     img: "/img/smr-yt-fabryka-modulow.jpg",
     credit: "Kadr z filmu kanału Undecided na YouTube (wizualizacja: Ultra Safe Nuclear Corporation)",
     body: [
