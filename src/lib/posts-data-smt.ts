@@ -19,11 +19,6 @@ export const postsSmt: Post[] = [
         text: "S.E. Robinson wrzucił 30-minutową wycieczkę po fabryce Semi w Sparks w Nevadzie. Prowadzi ją szef zakładu Rob Rayl, razem z ekipą linii. Nagranie powstało podczas Semi Rollout 24 września. Widać tłocznię, spawanie nadwozia, dach, malowanie proszkowe, pakiet baterii, osie i ślub kabiny z ramą.",
       },
       { type: "youtube", id: "E406h8JQyok" },
-      {
-        type: "p",
-        text: "To ten sam materiał, który Robinson puścił [na X](https://x.com/SERobinsonJr/status/2105279153285025930). Na YouTube leży pod tytułem „TOUR OF THE NEW TESLA SEMI FACTORY”.",
-      },
-      { type: "x", id: "2105279153285025930", handle: "SERobinsonJr" },
     ],
   },
 ];
