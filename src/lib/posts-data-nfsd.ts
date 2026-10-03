@@ -9,6 +9,7 @@ export const postsNfsd: Post[] = [
     excerpt: "Niemieckie ministerstwo transportu podaje, że unijna decyzja o FSD Supervised jest na razie planowana na grudzień, a 6 października TCMV tylko rozmawia. Berlin ma zastrzeżenia do przekraczania prędkości nawet o 50 proc. i do jazdy w centrach miast.",
     date: "30 września 2026",
     isoDate: "2026-09-30",
+    xPostId: "2105269761244324073",
     img: "/img/bmv-berlin-invalidenstrasse-44.jpg",
     credit: "Siedziba Federalnego Ministerstwa Transportu przy Invalidenstraße 44 w Berlinie. Fot. Raimond Spekking / Wikimedia Commons, CC BY-SA 4.0 (kadr)",
     body: [

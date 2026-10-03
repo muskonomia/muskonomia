@@ -9,6 +9,7 @@ export const postsBd: Post[] = [
     excerpt: "Musk w Białym Domu: każde 5 GW dodatkowego prądu to ok. 1 proc. PKB USA, a Starship ma wynosić na orbitę setki gigawatów mocy obliczeniowej rocznie. Huang pokazał OpenShell i BlueField do pilnowania agentów SI, Tom Brown mówił o Claude Opus 5.5, a szefowie firm podpisali deklarację o czterech poziomach kontroli.",
     date: "30 września 2026",
     isoDate: "2026-09-30",
+    xPostId: "2105361378181513635",
     img: "/img/bialy-dom-zlota-era-si-scena.jpg",
     credit: "Tom Brown, Elon Musk, Jensen Huang i Gavin Baker na scenie „The Golden Age of AI” w Białym Domu, 29 września 2026 r. Kadr z transmisji z Białego Domu, wideo: Sawyer Merritt / X",
     body: [

@@ -9,6 +9,7 @@ export const postsSlc: Post[] = [
     excerpt: "Starlink for Communities ma pozwolić jednemu zestawowi Starlinka obsłużyć sąsiadów, którzy kupią karnet na godzinę, dobę, tydzień albo miesiąc. Cen i terminu startu nie ma. Płacenie za krótki dostęp do internetu jest powszechne w Afryce i Azji.",
     date: "2 października 2026",
     isoDate: "2026-10-02",
+    xPostId: "2105985508862001286",
     img: "/img/starlink-instalacja-dach-szkoly-ghana.jpg",
     credit: "Montaż zestawu Starlinka na dachu szkoły w Ghanie. Kadr z filmu Starlink/SpaceX na X ([wpis @Starlink](https://x.com/Starlink/status/1987973737191534851))",
     body: [

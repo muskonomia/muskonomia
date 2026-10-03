@@ -9,6 +9,7 @@ export const postsAi5m: Post[] = [
     excerpt: "Musk obciął pamięć w chipach Tesli pod produkcję Optimusa, a potem podniósł AI5 z 72 do 96 GB LPDDR5, bo inaczej Tesla byłaby jedynym kupcem najmniejszej wersji kości. AI6 zostaje przy 144 GB LPDDR6, a przepustowość pamięci się nie zmienia.",
     date: "2 października 2026",
     isoDate: "2026-10-02",
+    xPostId: "2105983442580038016",
     img: "/img/optimus-dwa-roboty-sztokholm-2024.jpg",
     credit: "Dwa roboty Optimus wystawione w Sztokholmie w maju 2024 r. Fot. Ulf Klingström / Wikimedia Commons, domena publiczna",
     body: [

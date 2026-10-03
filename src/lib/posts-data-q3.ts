@@ -9,6 +9,7 @@ export const postsQ3: Post[] = [
     excerpt: "Tesla przebiła o 24 558 aut konsensus, który sama zebrała, ale została o 10 567 aut poniżej rekordu z trzeciego kwartału 2025 r. Magazyny energii dały 13,7 GWh, mniej niż rekord i oczekiwania analityków. Wyniki finansowe spółka poda 21 października.",
     date: "2 października 2026",
     isoDate: "2026-10-02",
+    xPostId: "2106045432711299276",
     img: "/img/tesla-model-y-salon-santana-row-2025.jpg",
     credit: "Odświeżony Model Y w salonie Tesli w centrum handlowym Santana Row w San Jose w Kalifornii, marzec 2025 r. Fot. Dllu / Wikimedia Commons, CC BY-SA 4.0",
     body: [

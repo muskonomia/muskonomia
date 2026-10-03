@@ -9,6 +9,7 @@ export const postsSxw: Post[] = [
     excerpt: "Od 28 września do 1 października czasu amerykańskiego SpaceX wystrzelił Starshipa, dwa Falcony 9 i Falcona Heavy z czterech stanowisk w trzech stanach. Na orbitę trafiło 26 satelitów Starlink V3, załoga Crew-13, 130 ładunków Transportera-18 i pierwszy ładunek NRO na Falconie Heavy.",
     date: "2 października 2026",
     isoDate: "2026-10-02",
+    xPostId: "2105983811427188795",
     img: "/img/falcon-heavy-boczny-stopien-ladowanie-roman.jpg",
     credit: "Boczny stopień Falcona Heavy ląduje na Cape Canaveral po starcie teleskopu Roman 30 sierpnia 2026 r. Te same boczne stopnie poleciały 1 października z misją NROL-97. Fot. Emre Kelly / U.S. Space Force, domena publiczna",
     body: [

@@ -9,6 +9,7 @@ export const postsCtn: Post[] = [
     excerpt: "Od misji Crew-13 w razie awarii na stanowisku astronautów ma wywozić Cybertruck, a nie wojskowy wóz MRAP. NASA uznała, że pojazd spełnia jej wymagania. W Unii Europejskiej Cybertruck nie ma homologacji, a jego dopuszczalna masa całkowita sięga 4159 kg.",
     date: "3 października 2026",
     isoDate: "2026-10-03",
+    xPostId: "2106302166927540427",
     img: "/img/cybertruck-przy-starcie-falcona-9-z-dragonem.jpg",
     credit: "Cybertruck z numerem 40 na stanowisku startowym podczas startu Falcona 9 z kapsułą Dragon. Zdjęcie opublikowane 1 października 2026 r. (czasu amerykańskiego) przez oficjalne konto Tesli @cybertruck na X; Tesla nie podała autora ani startu. Materiał prasowy Tesli",
     body: [
