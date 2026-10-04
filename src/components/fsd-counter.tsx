@@ -47,7 +47,13 @@ export function FsdCounterView({
         {formatMiles(total)}
       </p>
       <p className="mt-3 text-lg text-muted">mil na FSD (Supervised)</p>
-      <p className="mt-1 text-sm text-muted">{formatMiles(milesToKm(total))} km</p>
+      <p
+        className="mt-10 font-display text-5xl font-semibold leading-none tracking-tight tabular-nums sm:text-7xl"
+        style={{ fontVariantNumeric: "tabular-nums" }}
+      >
+        {formatMiles(milesToKm(total))}
+      </p>
+      <p className="mt-3 text-lg text-muted">kilometrów</p>
       <dl className="mt-10 grid gap-4 sm:grid-cols-3">
         <Stat label="Mile w mieście" value={formatMiles(city)} />
         <Stat label="Tempo" value={`${formatMiles(perSecond)} mil/s`} />
