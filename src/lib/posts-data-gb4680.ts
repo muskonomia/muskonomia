@@ -9,6 +9,7 @@ export const postsGb4680: Post[] = [
     excerpt: "Tesla chce od 2027 roku produkować w Grünheide własne ogniwa 4680 i dojść do 18 GWh rocznie. Szef fabryki ogniw Robert Meyer przyznaje, że kosztowo ten krok mało się opłaca, a do produkcji ogniw firma zatrudni ponad 1500 osób. Zakład leży ok. 50 km od polskiej granicy.",
     date: "4 października 2026",
     isoDate: "2026-10-04",
+    xPostId: "2106664565920485722",
     img: "/img/giga-berlin-grunheide-z-lotu-ptaka-2023.jpg",
     credit: "Gigafactory Berlin-Brandenburg w Grünheide z lotu ptaka, lipiec 2023. Fot. Michael Wolf / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tesla_Gigafactory_4_DJI_20230728123435.JPG), licencja [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)",
     body: [
