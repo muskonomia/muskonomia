@@ -21,7 +21,9 @@ export function FsdCounterView({
   const total = fsdMiles(counter.totalMilesStart, counter.totalMilesPerMs, counter.seedEpochMs, now);
   const city = fsdMiles(counter.cityMilesStart, counter.cityMilesPerMs, counter.seedEpochMs, now);
   const perSecond = Math.round(counter.totalMilesPerMs * 1000);
+  const perSecondKm = Math.round(perSecond * 1.609344);
   const perDay = Math.round((counter.totalMilesPerMs * 1000 * 86400) / 1_000_000);
+  const perDayKm = Math.round((perDay * 1.609344));
 
   if (size === "card") {
     return (
@@ -56,8 +58,8 @@ export function FsdCounterView({
       <p className="mt-3 text-lg text-muted">kilometrów</p>
       <dl className="mt-10 grid gap-4 sm:grid-cols-3">
         <Stat label="Mile w mieście" value={formatMiles(city)} />
-        <Stat label="Tempo" value={`${formatMiles(perSecond)} mil/s`} />
-        <Stat label="Na dobę" value={`ok. ${formatMiles(perDay)} mln mil`} />
+        <Stat label="Tempo" value={`${formatMiles(perSecond)} mil/s — ${formatMiles(perSecondKm)} km/s`} />
+        <Stat label="Na dobę" value={`ok. ${formatMiles(perDay)} mln mil — ok. ${formatMiles(perDayKm)} mln km`} />
       </dl>
     </div>
   );
@@ -67,7 +69,7 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="rounded-xl border border-border bg-surface px-5 py-4">
       <dt className="text-xs uppercase tracking-widest text-muted">{label}</dt>
-      <dd className="mt-2 font-display text-2xl font-semibold tabular-nums">{value}</dd>
+      <dd className="mt-2 font-display text-xl font-semibold leading-snug tabular-nums sm:text-2xl">{value}</dd>
     </div>
   );
 }
