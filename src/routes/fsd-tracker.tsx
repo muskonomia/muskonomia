@@ -48,8 +48,10 @@ function FsdTrackerPage() {
         <p className="mt-3 max-w-2xl text-muted">
           Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
         </p>
-        <div className="mt-10 grid items-start gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,0.65fr)]">
-          <FsdCounterView counter={counter} />
+        <div className="mt-10">
+          <FsdCounterView counter={counter} layout="split" />
+        </div>
+        <div className="mt-8">
           <UnsupervisedCard count={fleet.ok ? fleet.teslaUnsupervised : null} />
         </div>
         {fleet.ok ? (
@@ -102,14 +104,15 @@ function FsdTrackerPage() {
 
 function UnsupervisedCard({ count }: { count: number | null }) {
   return (
-    <aside className="rounded-2xl border border-border bg-bg/75 px-6 py-8 backdrop-blur-sm">
-      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla Robotaxi</p>
-      <p className="mt-6 font-display text-[2.4rem] font-semibold leading-none tracking-tight tabular-nums sm:text-[3.6rem]">
-        {count === null ? "—" : formatMiles(count)}
-      </p>
-      <p className="mt-2.5 text-lg text-muted">aut bez kierowcy</p>
-      <p className="mt-1 text-base text-muted">Unsupervised</p>
-      <p className="mt-6 max-w-sm text-sm text-muted">
+    <aside className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3 rounded-2xl border border-border bg-bg/75 px-6 py-5 backdrop-blur-sm">
+      <div>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla Robotaxi</p>
+        <p className="mt-2 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
+          {count === null ? "—" : formatMiles(count)}
+        </p>
+        <p className="mt-2 text-muted">aut bez kierowcy · Unsupervised</p>
+      </div>
+      <p className="max-w-sm text-sm text-muted">
         Auta Tesli w służbie poza Bay Area. Tam jeździ człowiek, więc ta liczba go nie liczy.
       </p>
     </aside>

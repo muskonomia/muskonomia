@@ -5,10 +5,12 @@ export function FsdCounterView({
   counter,
   live = true,
   size = "page",
+  layout = "row",
 }: {
   counter: FsdCounter;
   live?: boolean;
   size?: "page" | "card";
+  layout?: "row" | "split";
 }) {
   const [now, setNow] = useState(counter.asOfMs);
 
@@ -40,7 +42,19 @@ export function FsdCounterView({
     );
   }
 
-  return (
+  const stats = (
+    <>
+      <Stat label="Kilometry w mieście" km={`${formatMiles(milesToKm(city))} km`} miles={`${formatMiles(city)} mil`} />
+      <Stat label="Tempo" km={`${formatMiles(perSecondKm)} km/s`} miles={`${formatMiles(perSecond)} mil/s`} />
+      <Stat
+        label="Na dobę"
+        km={`ok. ${formatMiles(perDayKm)} mln km`}
+        miles={`ok. ${formatMiles(perDay)} mln mil`}
+      />
+    </>
+  );
+
+  const totals = (
     <div>
       <p
         className="font-display text-[2.4rem] font-semibold leading-none tracking-tight tabular-nums sm:text-[3.6rem]"
@@ -56,15 +70,22 @@ export function FsdCounterView({
         {formatMiles(total)}
       </p>
       <p className="mt-1.5 text-base text-muted">mil</p>
-      <dl className="mt-8 grid gap-4 sm:grid-cols-3">
-        <Stat label="Kilometry w mieście" km={`${formatMiles(milesToKm(city))} km`} miles={`${formatMiles(city)} mil`} />
-        <Stat label="Tempo" km={`${formatMiles(perSecondKm)} km/s`} miles={`${formatMiles(perSecond)} mil/s`} />
-        <Stat
-          label="Na dobę"
-          km={`ok. ${formatMiles(perDayKm)} mln km`}
-          miles={`ok. ${formatMiles(perDay)} mln mil`}
-        />
-      </dl>
+    </div>
+  );
+
+  if (layout === "split") {
+    return (
+      <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.7fr)]">
+        {totals}
+        <dl className="grid gap-3">{stats}</dl>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      {totals}
+      <dl className="mt-8 grid gap-4 sm:grid-cols-3">{stats}</dl>
     </div>
   );
 }
