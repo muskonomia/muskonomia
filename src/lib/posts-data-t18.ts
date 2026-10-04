@@ -9,6 +9,7 @@ export const postsT18: Post[] = [
     excerpt: "Falcon 9 wyniósł 1 października 130 ładunków, a wśród nich trzy satelity sprawdzające elementy centrów danych w kosmosie. Google testuje cztery układy TPU, Star Catcher chce przesłać energię między dwoma statkami, a Cowboy Space laserem klasy kilowatowej z orbity na Ziemię.",
     date: "3 października 2026",
     isoDate: "2026-10-03",
+    xPostId: "2106312748682383790",
     img: "/img/transporter-18-falcon-9-start-vandenberg.jpg",
     credit: "Falcon 9 z misją Transporter-18 po starcie z bazy Vandenberg Space Force Base w Kalifornii, 1 października 2026 r. Fot. SpaceX, materiał prasowy ze strony misji",
     body: [
