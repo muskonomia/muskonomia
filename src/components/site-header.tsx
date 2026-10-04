@@ -19,11 +19,11 @@ export function SiteHeader() {
           <Link to="/blog" className="hover:text-fg">
             Blog
           </Link>
-          <Link to="/o-serwisie" className="hidden hover:text-fg sm:inline">
-            O serwisie
-          </Link>
           <Link to="/fsd-tracker" className="whitespace-nowrap hover:text-fg">
             FSD Tracker
+          </Link>
+          <Link to="/o-serwisie" className="hidden hover:text-fg sm:inline">
+            O serwisie
           </Link>
           <div className="hidden md:block">
             <SearchForm compact />
