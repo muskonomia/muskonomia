@@ -25,14 +25,15 @@ function FsdTrackerPage() {
 
   return (
     <div className="relative min-h-screen text-fg">
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
+      <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
         <img
           src="/img/fsd-tracker-cybercab.jpg"
           alt=""
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-bg/45 via-bg/72 to-bg/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-bg/65 via-bg/40 to-bg/80" />
       </div>
+      <div className="relative z-10">
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
@@ -60,6 +61,7 @@ function FsdTrackerPage() {
         </p>
       </main>
       <SiteFooter />
+      </div>
     </div>
   );
 }
