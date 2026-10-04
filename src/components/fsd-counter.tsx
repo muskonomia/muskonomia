@@ -6,11 +6,13 @@ export function FsdCounterView({
   live = true,
   size = "page",
   layout = "row",
+  part = "all",
 }: {
   counter: FsdCounter;
   live?: boolean;
   size?: "page" | "card";
   layout?: "row" | "split";
+  part?: "all" | "totals" | "stats";
 }) {
   const [now, setNow] = useState(counter.asOfMs);
 
@@ -72,6 +74,14 @@ export function FsdCounterView({
       <p className="mt-1.5 text-base text-muted">mil</p>
     </div>
   );
+
+  if (part === "stats") {
+    return <dl className="grid gap-3">{stats}</dl>;
+  }
+
+  if (part === "totals") {
+    return totals;
+  }
 
   if (layout === "split") {
     return (

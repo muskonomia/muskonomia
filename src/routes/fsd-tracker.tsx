@@ -44,12 +44,17 @@ function FsdTrackerPage() {
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
-        <h1 className="mt-1.5 font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>
-        <p className="mt-3 max-w-2xl text-muted">
-          Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
-        </p>
-        <div className="mt-10">
-          <FsdCounterView counter={counter} layout="split" />
+        <div className="mt-1.5 grid items-start gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.7fr)]">
+          <div>
+            <h1 className="font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>
+            <p className="mt-3 max-w-2xl text-muted">
+              Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
+            </p>
+            <div className="mt-10">
+              <FsdCounterView counter={counter} part="totals" />
+            </div>
+          </div>
+          <FsdCounterView counter={counter} part="stats" />
         </div>
         <div className="mt-8">
           <UnsupervisedCard count={fleet.ok ? fleet.teslaUnsupervised : null} />
@@ -60,7 +65,6 @@ function FsdTrackerPage() {
               title="Bez kierowcy"
               note="Miasta, w których robotaxi jeździ unsupervised."
               rows={unsupervised}
-              barClass="bg-fg"
             />
             <CityBars
               title="Z kierowcą"
@@ -112,9 +116,6 @@ function UnsupervisedCard({ count }: { count: number | null }) {
         </p>
         <p className="mt-2 text-muted">aut bez kierowcy · Unsupervised</p>
       </div>
-      <p className="max-w-sm text-sm text-muted">
-        Auta Tesli w służbie poza Bay Area. Tam jeździ człowiek, więc ta liczba go nie liczy.
-      </p>
     </aside>
   );
 }
@@ -128,7 +129,7 @@ function CityBars({
   title: string;
   note: string;
   rows: RobotaxiCityBar[];
-  barClass: string;
+  barClass?: string;
 }) {
   const max = Math.max(...rows.map((row) => row.inService), 1);
   return (
@@ -146,7 +147,10 @@ function CityBars({
                 <span className="tabular-nums">{formatMiles(row.inService)}</span>
               </div>
               <div className="mt-1.5 h-2 rounded-full bg-white/10">
-                <div className={`h-2 rounded-full ${barClass}`} style={{ width: `${(row.inService / max) * 100}%` }} />
+                <div
+                  className={`h-2 rounded-full ${barClass ?? barColor(row.provider)}`}
+                  style={{ width: `${(row.inService / max) * 100}%` }}
+                />
               </div>
             </li>
           ))}
@@ -156,4 +160,10 @@ function CityBars({
       )}
     </section>
   );
+}
+
+function barColor(provider: string) {
+  if (provider === "Tesla") return "bg-accent";
+  if (provider === "Waymo") return "bg-sky-400";
+  return "bg-white";
 }
