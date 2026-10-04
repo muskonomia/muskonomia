@@ -25,9 +25,9 @@ export function SiteHeader() {
           <Link to="/o-serwisie" className="hidden hover:text-fg sm:inline">
             O serwisie
           </Link>
-          <a href="/#join" className="hover:text-fg">
-            Newsletter
-          </a>
+          <Link to="/fsd-tracker" className="whitespace-nowrap hover:text-fg">
+            FSD Tracker
+          </Link>
           <div className="hidden md:block">
             <SearchForm compact />
           </div>

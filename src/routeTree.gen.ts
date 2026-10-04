@@ -23,6 +23,7 @@ import { Route as SzukajRouteImport } from './routes/szukaj'
 import { Route as ArchiwumIndexRouteImport } from './routes/archiwum.index'
 import { Route as ArchiwumYearMonthRouteImport } from './routes/archiwum.$year.$month'
 import { Route as OSerwisieRouteImport } from './routes/o-serwisie'
+import { Route as FsdTrackerRouteImport } from './routes/fsd-tracker'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
@@ -95,6 +96,11 @@ const OSerwisieRoute = OSerwisieRouteImport.update({
   path: '/o-serwisie',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FsdTrackerRoute = FsdTrackerRouteImport.update({
+  id: '/fsd-tracker',
+  path: '/fsd-tracker',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/archiwum/': typeof ArchiwumIndexRoute
   '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
   '/o-serwisie': typeof OSerwisieRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
@@ -133,6 +140,7 @@ export interface FileRoutesByTo {
   '/archiwum': typeof ArchiwumIndexRoute
   '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
   '/o-serwisie': typeof OSerwisieRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/archiwum/': typeof ArchiwumIndexRoute
   '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
   '/o-serwisie': typeof OSerwisieRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/archiwum/'
     | '/archiwum/$year/$month'
     | '/o-serwisie'
+    | '/fsd-tracker'
     | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/archiwum'
     | '/archiwum/$year/$month'
     | '/o-serwisie'
+    | '/fsd-tracker'
     | '/api/auth/$'
   id:
     | '__root__'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/archiwum/'
     | '/archiwum/$year/$month'
     | '/o-serwisie'
+    | '/fsd-tracker'
     | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
@@ -222,6 +234,7 @@ export interface RootRouteChildren {
   ArchiwumIndexRoute: typeof ArchiwumIndexRoute
   ArchiwumYearMonthRoute: typeof ArchiwumYearMonthRoute
   OSerwisieRoute: typeof OSerwisieRoute
+  FsdTrackerRoute: typeof FsdTrackerRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
@@ -325,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OSerwisieRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fsd-tracker': {
+      id: '/fsd-tracker'
+      path: '/fsd-tracker'
+      fullPath: '/fsd-tracker'
+      preLoaderRoute: typeof FsdTrackerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -350,6 +370,7 @@ const rootRouteChildren: RootRouteChildren = {
   ArchiwumIndexRoute: ArchiwumIndexRoute,
   ArchiwumYearMonthRoute: ArchiwumYearMonthRoute,
   OSerwisieRoute: OSerwisieRoute,
+  FsdTrackerRoute: FsdTrackerRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport

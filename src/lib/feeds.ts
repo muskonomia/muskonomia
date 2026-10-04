@@ -31,6 +31,7 @@ export function sitemapXml() {
     { path: "/tematy", changefreq: "weekly", priority: "0.8", lastmod: latestPost },
     { path: "/huby", changefreq: "weekly", priority: "0.7", lastmod: latestPost },
     { path: "/o-serwisie", changefreq: "monthly", priority: "0.5", lastmod: today },
+    { path: "/fsd-tracker", changefreq: "daily", priority: "0.6", lastmod: today },
     { path: "/szukaj", changefreq: "weekly", priority: "0.4", lastmod: today },
     { path: "/archiwum", changefreq: "weekly", priority: "0.5", lastmod: latestPost },
   ];

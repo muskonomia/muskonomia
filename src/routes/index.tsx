@@ -1,15 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { FormEvent, useState } from "react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PostGrid } from "@/components/post-card";
 import { TopicChips } from "@/components/topic-chips";
+import { FsdCounterView } from "@/components/fsd-counter";
 import { pageHead } from "@/lib/seo";
 import { SITE_DESCRIPTION } from "@/lib/site";
 import { posts, TOPICS, type TopicId } from "@/lib/posts";
 import { XLogo } from "@/components/x-logo";
+import { getFsdCounter } from "@/lib/fsd-counter.functions";
 
 export const Route = createFileRoute("/")({
+  loader: () => getFsdCounter(),
   head: () =>
     pageHead({
       title: "Tesla, SpaceX, Elon Musk i xAI",
@@ -20,12 +22,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const [subscribed, setSubscribed] = useState(false);
-
-  function onJoin(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSubscribed(true);
-  }
+  const counter = Route.useLoaderData();
 
   return (
     <div className="min-h-screen bg-bg text-fg">
@@ -172,32 +169,17 @@ function Home() {
         </div>
       </section>
 
-      <section id="join" className="px-5 pb-24" aria-labelledby="sec-newsletter">
+      <section id="join" className="px-5 pb-24" aria-label="FSD Tracker">
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-3">
-          <div className="rounded-xl border border-border bg-surface px-6 py-14 text-center">
-            <h2 id="sec-newsletter" className="font-display text-4xl font-semibold">
-              Newsletter
-            </h2>
-            <p className="mt-2 text-muted">Krótki newsletter o Tesli, SpaceX i Groku.</p>
-            {subscribed ? (
-              <p className="mt-6 text-sm font-medium text-fg">Zapisane. Dzięki.</p>
-            ) : (
-              <form onSubmit={onJoin} className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
-                <input
-                  type="email"
-                  required
-                  placeholder="Twój email"
-                  className="min-h-12 flex-1 rounded-md border border-border bg-bg px-4 text-sm text-fg outline-none placeholder:text-muted focus:border-accent"
-                />
-                <button
-                  type="submit"
-                  className="min-h-12 rounded-md bg-accent px-6 text-sm font-semibold text-fg hover:bg-accent-hover"
-                >
-                  Zapisz się
-                </button>
-              </form>
-            )}
-          </div>
+          <Link
+            to="/fsd-tracker"
+            className="flex flex-col items-center justify-center rounded-xl border border-border bg-surface px-6 py-14 text-center transition hover:border-fg"
+          >
+            <FsdCounterView counter={counter} size="card" />
+            <span className="mt-6 text-sm font-semibold text-fg underline decoration-accent underline-offset-4">
+              Otwórz licznik →
+            </span>
+          </Link>
           <a
             href="https://x.com/MuskonomiaPL"
             target="_blank"
