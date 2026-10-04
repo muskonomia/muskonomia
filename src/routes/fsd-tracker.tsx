@@ -70,7 +70,6 @@ function FsdTrackerPage() {
               title="Z kierowcą"
               note="Miasta, w których robotaxi jedzie supervised, z człowiekiem na pokładzie."
               rows={supervised}
-              barClass="bg-amber-300"
             />
           </div>
         ) : (
