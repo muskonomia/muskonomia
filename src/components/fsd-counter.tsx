@@ -57,22 +57,26 @@ export function FsdCounterView({
       </p>
       <p className="mt-1.5 text-base text-muted">mil</p>
       <dl className="mt-8 grid gap-4 sm:grid-cols-3">
+        <Stat label="Mile w mieście" km={`${formatMiles(milesToKm(city))} km`} miles={`${formatMiles(city)} mil`} />
+        <Stat label="Tempo" km={`${formatMiles(perSecondKm)} km/s`} miles={`${formatMiles(perSecond)} mil/s`} />
         <Stat
-          label="Mile w mieście"
-          value={`${formatMiles(city)} mil — ${formatMiles(milesToKm(city))} km`}
+          label="Na dobę"
+          km={`ok. ${formatMiles(perDayKm)} mln km`}
+          miles={`ok. ${formatMiles(perDay)} mln mil`}
         />
-        <Stat label="Tempo" value={`${formatMiles(perSecond)} mil/s — ${formatMiles(perSecondKm)} km/s`} />
-        <Stat label="Na dobę" value={`ok. ${formatMiles(perDay)} mln mil — ok. ${formatMiles(perDayKm)} mln km`} />
       </dl>
     </div>
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, km, miles }: { label: string; km: string; miles: string }) {
   return (
     <div className="rounded-xl border border-border bg-surface px-5 py-4">
       <dt className="text-xs uppercase tracking-widest text-muted">{label}</dt>
-      <dd className="mt-2 font-display text-xl font-semibold leading-snug tabular-nums sm:text-2xl">{value}</dd>
+      <dd className="mt-2">
+        <p className="font-display text-xl font-semibold leading-snug tabular-nums sm:text-2xl">{km}</p>
+        <p className="mt-1 font-display text-sm font-semibold tabular-nums text-muted sm:text-base">{miles}</p>
+      </dd>
     </div>
   );
 }
