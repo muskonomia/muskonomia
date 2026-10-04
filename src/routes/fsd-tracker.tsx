@@ -36,14 +36,14 @@ function FsdTrackerPage() {
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
-        <h1 className="mt-2 font-display text-5xl font-semibold tracking-tight sm:text-6xl">FSD Tracker</h1>
-        <p className="mt-4 max-w-2xl text-muted">
+        <h1 className="mt-1.5 font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>
+        <p className="mt-3 max-w-2xl text-muted">
           Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
         </p>
-        <div className="mt-12">
+        <div className="mt-10">
           <FsdCounterView counter={counter} />
         </div>
-        <p className="mt-10 max-w-2xl text-sm text-muted">
+        <p className="mt-8 max-w-2xl text-sm text-muted">
           Licznik nie czyta każdego auta w tej sekundzie. Tesla bierze stan floty z jednego momentu i dokłada mile w
           stałym tempie. Sama pisze, że przyrost to średnie tempo floty i że liczba może nie obejmować wzrostu floty
           ani darmowych okresów próbnych.

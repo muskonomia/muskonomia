@@ -43,20 +43,20 @@ export function FsdCounterView({
   return (
     <div>
       <p
-        className="font-display text-5xl font-semibold leading-none tracking-tight tabular-nums sm:text-7xl"
+        className="font-display text-[2.4rem] font-semibold leading-none tracking-tight tabular-nums sm:text-[3.6rem]"
         style={{ fontVariantNumeric: "tabular-nums" }}
       >
         {formatMiles(milesToKm(total))}
       </p>
-      <p className="mt-3 text-lg text-muted">kilometrów</p>
+      <p className="mt-2.5 text-lg text-muted">kilometrów</p>
       <p
-        className="mt-8 font-display text-3xl font-semibold leading-none tracking-tight tabular-nums text-muted sm:text-4xl"
+        className="mt-[1.6rem] font-display text-[1.5rem] font-semibold leading-none tracking-tight tabular-nums text-muted sm:text-[1.8rem]"
         style={{ fontVariantNumeric: "tabular-nums" }}
       >
         {formatMiles(total)}
       </p>
-      <p className="mt-2 text-base text-muted">mil</p>
-      <dl className="mt-10 grid gap-4 sm:grid-cols-3">
+      <p className="mt-1.5 text-base text-muted">mil</p>
+      <dl className="mt-8 grid gap-4 sm:grid-cols-3">
         <Stat
           label="Mile w mieście"
           value={`${formatMiles(city)} mil — ${formatMiles(milesToKm(city))} km`}
