@@ -27,7 +27,7 @@ function FsdTrackerPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
         <h1 className="mt-2 font-display text-5xl font-semibold tracking-tight sm:text-6xl">FSD Tracker</h1>
         <p className="mt-4 max-w-2xl text-muted">
-          Mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
+          Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
         </p>
         <div className="mt-12">
           <FsdCounterView counter={counter} />
