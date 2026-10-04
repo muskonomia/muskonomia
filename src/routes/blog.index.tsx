@@ -21,7 +21,6 @@ function BlogIndex() {
   return (
     <ListingShell
       title="Blog Tesla, SpaceX, Elon Musk"
-      description="Wszystkie wpisy, od najnowszych. Bez wyróżnionej karty — ta sama waga."
       toolbar={
         <div className="flex flex-col gap-4">
           <TopicChips />

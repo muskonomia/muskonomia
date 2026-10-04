@@ -26,10 +26,6 @@ function Tematy() {
           <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">
             Tesla, SpaceX, xAI
           </h1>
-          <p className="mt-3 max-w-xl text-muted">
-            Każdy wpis z bloga ląduje tu automatycznie — Tesla, rakiety, xAI albo Inne (Boring
-            Company, Neuralink, reszta).
-          </p>
           <nav className="mt-6 flex flex-wrap gap-2" aria-label="Tematy">
             {TOPICS.map((t) => (
               <a

@@ -13,9 +13,6 @@ export function SiteHeader() {
           />
         </Link>
         <nav className="flex items-center gap-3 text-sm font-medium text-muted sm:gap-5">
-          <Link to="/" className="hidden hover:text-fg sm:inline">
-            Start
-          </Link>
           <Link to="/tematy" className="hover:text-fg">
             Tematy
           </Link>

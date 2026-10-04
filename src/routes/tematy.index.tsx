@@ -16,10 +16,7 @@ export const Route = createFileRoute("/tematy/")({
 
 function Tematy() {
   return (
-    <ListingShell
-      title="Tesla, SpaceX, xAI, Neuralink, Boring"
-      description="Każdy wpis z bloga ląduje tu automatycznie — osobny dział, osobny adres. Inne to Rivian, Scout i reszta branży."
-    >
+    <ListingShell title="Tesla, SpaceX, xAI, Neuralink, Boring">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {TOPICS.map((topic) => (
           <TopicOverviewCard key={topic.id} id={topic.id} />
