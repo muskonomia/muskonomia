@@ -11,8 +11,11 @@ export const Route = createFileRoute("/fsd-tracker")({
     pageHead({
       title: "FSD Tracker",
       description:
-        "Ile mil przejechały auta Tesli na FSD (Supervised). Licznik idzie w tym samym tempie co na tesla.com/fsd/safety.",
+        "Kilometry i mile przejechane przez wszystkie auta Tesli na FSD (Supervised).",
       path: "/fsd-tracker",
+      image: "/img/fsd-tracker-cybercab.jpg",
+      imageWidth: 1468,
+      imageHeight: 1258,
     }),
   component: FsdTrackerPage,
 });
@@ -21,7 +24,15 @@ function FsdTrackerPage() {
   const counter = Route.useLoaderData();
 
   return (
-    <div className="min-h-screen bg-bg text-fg">
+    <div className="relative min-h-screen text-fg">
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
+        <img
+          src="/img/fsd-tracker-cybercab.jpg"
+          alt=""
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-bg/45 via-bg/72 to-bg/90" />
+      </div>
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
