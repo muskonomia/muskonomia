@@ -57,7 +57,7 @@ export function FsdCounterView({
       </p>
       <p className="mt-1.5 text-base text-muted">mil</p>
       <dl className="mt-8 grid gap-4 sm:grid-cols-3">
-        <Stat label="Mile w mieście" km={`${formatMiles(milesToKm(city))} km`} miles={`${formatMiles(city)} mil`} />
+        <Stat label="Kilometry w mieście" km={`${formatMiles(milesToKm(city))} km`} miles={`${formatMiles(city)} mil`} />
         <Stat label="Tempo" km={`${formatMiles(perSecondKm)} km/s`} miles={`${formatMiles(perSecond)} mil/s`} />
         <Stat
           label="Na dobę"
