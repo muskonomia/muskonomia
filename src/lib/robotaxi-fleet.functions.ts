@@ -22,7 +22,7 @@ function empty(asOfMs: number): RobotaxiFleet {
 
 export const getRobotaxiFleet = createServerFn({ method: "GET" }).handler(async (): Promise<RobotaxiFleet> => {
   const asOfMs = Date.now();
-  if (cache && asOfMs - cache.at < 5 * 60 * 1000) return { ...cache.value, asOfMs };
+  if (cache && asOfMs - cache.at < 6 * 60 * 60 * 1000) return { ...cache.value, asOfMs };
   try {
     const { loadRobotaxiFleet } = await import("@/lib/robotaxi-fleet.server");
     const value = await loadRobotaxiFleet(asOfMs);
