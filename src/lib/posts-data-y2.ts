@@ -10,6 +10,7 @@ export const postsY2: Post[] = [
       "Od stycznia do sierpnia 2026 roku na świecie sprzedało się 748 088 Tesli Model Y, 2,3 raza więcej niż drugiego BYD Songa, w trzech czwartych hybrydowego. BYD ma w dwudziestce osiem modeli, a 17 z 20 aut pochodzi od chińskich marek. W sierpniu auta na prąd miały 27 proc. światowego rynku.",
     date: "5 października 2026",
     isoDate: "2026-10-05",
+    xPostId: "2106995083916521775",
     img: "/img/top10-elektrykow-swiat-styczen-sierpien-2026.jpg",
     contain: true,
     credit:
