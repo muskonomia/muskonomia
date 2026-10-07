@@ -12,7 +12,7 @@ export const postsMb: Post[] = [
     isoDate: "2026-10-07",
     img: "/img/mercedes-glc-elektryczny-x540-2026.jpg",
     credit:
-      "Elektryczny Mercedes-Benz GLC 400 4MATIC z technologią EQ w wersji AMG Line, 12 kwietnia 2026 r. Fot. [M 93](https://commons.wikimedia.org/wiki/User:M_93) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_400_4MATIC_mit_EQ-Technologie_AMG_Line_(X_540)_%E2%80%93_f_12042026.jpg), [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/deed.pl)",
+      "Elektryczny Mercedes-Benz GLC 400 4MATIC z technologią EQ w wersji AMG Line, 12 kwietnia 2026 r. Fot. [M 93](https://commons.wikimedia.org/wiki/User:M_93) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_400_4MATIC_mit_EQ-Technologie_AMG_Line_%28X_540%29_%E2%80%93_f_12042026.jpg), [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/deed.pl)",
     body: [
       {
         type: "p",
