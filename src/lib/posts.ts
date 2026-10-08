@@ -6,6 +6,7 @@ export type Block =
   | { type: "p"; text: string }
   | { type: "quote"; paragraphs: string[] }
   | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
   | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string }
@@ -135,7 +136,7 @@ export function postPlainText(post: Post) {
       if (b.type === "img") return b.alt;
       if (b.type === "video") return b.caption ?? "";
       if (b.type === "x") return `Wpis @${b.handle} na X`;
-      if (b.type === "p" || b.type === "h2") return b.text;
+      if (b.type === "p" || b.type === "h2" || b.type === "h3") return b.text;
       return "";
     })
     .join(" ");

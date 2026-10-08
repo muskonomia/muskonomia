@@ -151,6 +151,16 @@ function BlogPost() {
                   </h2>
                 );
               }
+              if (block.type === "h3") {
+                return (
+                  <h3
+                    key={i}
+                    className="pt-2 font-display text-2xl font-semibold leading-tight text-fg"
+                  >
+                    {block.text}
+                  </h3>
+                );
+              }
               if (block.type === "ul") {
                 return (
                   <ul key={i} className="list-disc space-y-2 pl-5">
