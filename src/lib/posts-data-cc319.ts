@@ -10,6 +10,7 @@ export const postsCc319: Post[] = [
       "W rejestrze aut autonomicznych w Teksasie Tesla ma już 319 Cybercabów, o 150 więcej niż tydzień wcześniej, i 420 Modeli Y. Wpis do rejestru nie oznacza, że auto wozi pasażerów, a Tesla nie podaje, ile Cybercabów obsługuje klientów.",
     date: "9 października 2026",
     isoDate: "2026-10-09",
+    xPostId: "2108444612054429795",
     img: "/img/tesla-cybercab-i280-palo-alto-2026.jpg",
     credit:
       "Cybercab na autostradzie międzystanowej I-280 niedaleko Palo Alto w Kalifornii, 19 września 2026 r. Fot. [Daniel Lu (dllu)](https://commons.wikimedia.org/wiki/User:Dllu) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tesla_Cybercab_on_Interstate_280_near_Palo_Alto_dllu.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pl)",

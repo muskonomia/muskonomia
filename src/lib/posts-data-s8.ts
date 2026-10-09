@@ -10,6 +10,7 @@ export const postsS8: Post[] = [
       "SpaceX przejmuje od Grain Management ogólnokrajowy portfel licencji 800 MHz, do 14 MHz widma sparowanego, które ma dać Starlink Mobile zasięg w budynkach. Ceny nie podano, a umowa wymaga zgody FCC. Akcje AT&T, Verizona i T-Mobile straciły po sesji ok. 5–8 proc.",
     date: "9 października 2026",
     isoDate: "2026-10-09",
+    xPostId: "2108441259442389288",
     img: "/img/anteny-sieci-komorkowej-minneapolis.jpg",
     credit:
       "Anteny sieci komórkowej na maszcie w Minneapolis, maj 2019 r. Fot. [Tony Webster](https://www.flickr.com/people/87296837@N00) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cellular_5G_Equipment_-_Cell_Tower_Antennas.jpg), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/deed.pl)",
