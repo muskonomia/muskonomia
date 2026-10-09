@@ -1,5 +1,5 @@
 import type { Post } from "./posts";
-import { postsSm } from "./posts-data-sm";
+import { postsS8 } from "./posts-data-s8";
 import { postsGbx } from "./posts-data-gbx";
 import { postsMb } from "./posts-data-mb";
 import { postsNp } from "./posts-data-np";
@@ -133,7 +133,7 @@ import { postsA } from "./posts-data-a";
 import { postsB } from "./posts-data-b";
 
 export const postsData: Post[] = [
-  ...postsSm,
+  ...postsS8,
   ...postsGbx,
   ...postsMb,
   ...postsNp,
