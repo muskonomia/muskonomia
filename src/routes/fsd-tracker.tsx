@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { FsdCounterView } from "@/components/fsd-counter";
 import { getFsdCounter } from "@/lib/fsd-counter.functions";
-import { getRobotaxiFleet, type RobotaxiCityBar } from "@/lib/robotaxi-fleet.functions";
+import { getRobotaxiFleet, type RobotaxiCityBar, type TexasRegistry } from "@/lib/robotaxi-fleet.functions";
 import { formatMiles } from "@/lib/fsd-counter";
 import { pageHead } from "@/lib/seo";
 
@@ -75,6 +75,7 @@ function FsdTrackerPage() {
         ) : (
           <p className="mt-14 text-sm text-muted">Wykresy miast chwilowo niedostępne.</p>
         )}
+        <RegistryTable registry={fleet.registry} />
         <p className="mt-8 max-w-2xl text-sm text-muted">
           Licznik nie czyta każdego auta w tej sekundzie. Tesla bierze stan floty z jednego momentu i dokłada mile w
           stałym tempie. Sama pisze, że przyrost to średnie tempo floty i że liczba może nie obejmować wzrostu floty
@@ -103,6 +104,61 @@ function FsdTrackerPage() {
       </div>
     </div>
   );
+}
+
+function RegistryTable({ registry }: { registry: TexasRegistry | null }) {
+  if (!registry?.rows.length) {
+    return <p className="mt-14 text-sm text-muted">Rejestr Teksasu chwilowo niedostępny.</p>;
+  }
+  const total = registry.rows.reduce((sum, row) => sum + row.count, 0);
+  return (
+    <section className="mt-14 overflow-hidden rounded-2xl border border-border bg-bg/75 backdrop-blur-sm">
+      <div className="px-6 pt-5">
+        <h2 className="font-display text-3xl font-semibold tracking-tight">Rejestr Teksasu</h2>
+        <p className="mt-2 max-w-2xl text-sm text-muted">
+          Auta wpisane do rejestru TxDMV. To pozwolenie na przewozy, nie liczba aut widzianych na ulicy.
+        </p>
+      </div>
+      <table className="mt-4 w-full text-sm">
+        <thead>
+          <tr className="text-left text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            <th className="px-6 py-2 font-semibold">Operator</th>
+            <th className="px-6 py-2 font-semibold">Model</th>
+            <th className="px-6 py-2 text-right font-semibold">W rejestrze</th>
+          </tr>
+        </thead>
+        <tbody>
+          {registry.rows.map((row) => (
+            <tr key={`${row.provider}-${row.model}`} className="border-t border-border/70">
+              <td className="px-6 py-2.5">{row.provider}</td>
+              <td className="px-6 py-2.5">{row.model}</td>
+              <td className="px-6 py-2.5 text-right tabular-nums">{formatMiles(row.count)}</td>
+            </tr>
+          ))}
+          <tr className="border-t border-border font-semibold">
+            <td className="px-6 py-3" colSpan={2}>
+              Razem
+            </td>
+            <td className="px-6 py-3 text-right tabular-nums">{formatMiles(total)}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p className="px-6 py-4 text-sm text-muted">Stan rejestru: {registryWhen(registry.generatedAt)}.</p>
+    </section>
+  );
+}
+
+function registryWhen(iso: string) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "brak daty";
+  return new Intl.DateTimeFormat("pl-PL", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/Warsaw",
+  }).format(date);
 }
 
 function UnsupervisedCard({ count }: { count: number | null }) {

@@ -7,17 +7,29 @@ export type RobotaxiCityBar = {
   inService: number;
 };
 
+export type TexasRegistryRow = {
+  provider: string;
+  model: string;
+  count: number;
+};
+
+export type TexasRegistry = {
+  generatedAt: string;
+  rows: TexasRegistryRow[];
+};
+
 export type RobotaxiFleet = {
   ok: boolean;
   asOfMs: number;
   teslaUnsupervised: number;
   cities: RobotaxiCityBar[];
+  registry: TexasRegistry | null;
 };
 
 let cache: { at: number; value: RobotaxiFleet } | null = null;
 
 function empty(asOfMs: number): RobotaxiFleet {
-  return { ok: false, asOfMs, teslaUnsupervised: 0, cities: [] };
+  return { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null };
 }
 
 export const getRobotaxiFleet = createServerFn({ method: "GET" }).handler(async (): Promise<RobotaxiFleet> => {
