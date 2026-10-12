@@ -10,6 +10,7 @@ export const postsMb: Post[] = [
       "Od lipca do września Mercedes-Benz sprzedał w Chinach 86 800 osobówek, o 31 proc. mniej niż przed rokiem. Poza Chinami sprzedaż wzrosła o 1 proc., a aut w pełni elektrycznych marka sprzedała rekordowe 68 400.",
     date: "7 października 2026",
     isoDate: "2026-10-07",
+    xPostId: "2107936217346302244",
     img: "/img/mercedes-glc-elektryczny-x540-2026.jpg",
     credit:
       "Elektryczny Mercedes-Benz GLC 400 4MATIC z technologią EQ w wersji AMG Line, 12 kwietnia 2026 r. Fot. [M 93](https://commons.wikimedia.org/wiki/User:M_93) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLC_400_4MATIC_mit_EQ-Technologie_AMG_Line_%28X_540%29_%E2%80%93_f_12042026.jpg), [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/deed.pl)",

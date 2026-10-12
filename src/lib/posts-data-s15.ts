@@ -10,6 +10,7 @@ export const postsS15: Post[] = [
       "Musk ocenia, że 15. lot Starshipa może się odbyć za cztery do sześciu tygodni, a jego najważniejszym celem ma być złapanie statku przez wieżę. SpaceX nie podała daty.",
     date: "12 października 2026",
     isoDate: "2026-10-12",
+    xPostId: "2109520850147852387",
     img: "/img/starship-flight15-reuse-okladka.jpg",
     credit:
       "Start Starshipa w 5. locie testowym, Starbase, 13 października 2024 r. (zdjęcie archiwalne). Fot. Steve Jurvetson, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/), via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SpaceX_Ignition_%2854063834163%29.jpg)",

@@ -10,6 +10,7 @@ export const postsCc300: Post[] = [
       "Miesiąc po starcie przejazdów Tesla ma w Austin ponad 300 Cybercabów, osiem razy więcej niż na początku. Ogłosiła to w drugą rocznicę pokazu We, Robot, a szef AI Ashok Elluswamy zapowiada Dallas.",
     date: "11 października 2026",
     isoDate: "2026-10-11",
+    xPostId: "2109230949166727172",
     img: "/img/tesla-cybercab-san-francisco-2026-9yz.jpg",
     credit:
       "Cybercab na Harrison Street w San Francisco, czerwiec 2026 r. Fot. 9yz, [CC BY 4.0](https://commons.wikimedia.org/wiki/File:Tesla_Cybercab_-_San_Francisco_-_June_2026.jpg) (Wikimedia Commons)",

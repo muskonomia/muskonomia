@@ -10,6 +10,7 @@ export const postsTul: Post[] = [
       "Tesla otworzyła w Tulare w Kalifornii piąty publiczny Megacharger dla Semi, z czterema stanowiskami. Ma już pięć stacji z 30 stanowiskami, a do końca roku chce ich mieć ponad 30, z ponad 200 stanowiskami.",
     date: "10 października 2026",
     isoDate: "2026-10-10",
+    xPostId: "2108803728237031563",
     img: "/img/tesla-semi-pepsico-sacramento-dllu.jpg",
     credit:
       "Tesla Semi z floty PepsiCo na drodze niedaleko Sacramento w Kalifornii, 31 października 2023 r. Fot. [Daniel Lu (dllu)](https://commons.wikimedia.org/wiki/User:Dllu) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tesla_Semi_Pepsi_2023-10-31-13-39-37_DSCF2583_dllu.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pl)",

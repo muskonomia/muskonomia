@@ -64,11 +64,17 @@ export function DiscussOnX({
       <div className="flex items-center gap-4">
         <XLogo className="h-6 w-6 shrink-0 text-fg" />
         <h2 id="discuss-x" className="font-display text-3xl font-semibold leading-none tracking-tight">
-          Dyskusja na X
+          {tweetUrl ? (
+            <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+              Dyskusja na X
+            </a>
+          ) : (
+            "Dyskusja na X"
+          )}
         </h2>
       </div>
 
-      {xPostId ? <div className="mt-5"><XPostEmbed id={xPostId} handle={X_HANDLE} /></div> : (
+      {xPostId ? null : (
         <p className="mt-3 text-sm leading-relaxed text-muted sm:text-base">
           Masz zdanie o tym wpisie? Napisz na X i oznacz{" "}
           <a

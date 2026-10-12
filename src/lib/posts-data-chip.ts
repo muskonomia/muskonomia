@@ -10,6 +10,7 @@ export const postsChip: Post[] = [
       "Na X Takeover w Giga Texas Musk przyznał, że wciąż uczy się produkcji chipów. Terafab ma zacząć od maszyn od tych samych dostawców co konkurencja, a potem budować własne.",
     date: "11 października 2026",
     isoDate: "2026-10-11",
+    xPostId: "2109181692422349191",
     img: "/img/plytka-krzemowa-enrique-jimenez.jpg",
     credit:
       "Płytka krzemowa z układami scalonymi. Fot. Enrique Jiménez / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Silicon_Wafer_20190210.jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.pl)",

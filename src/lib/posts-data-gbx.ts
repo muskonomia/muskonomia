@@ -11,6 +11,7 @@ export const postsGbx: Post[] = [
       "Elon Musk zapowiedział, że Grok Bot będzie korzystał z najlepszego modelu do zadania, także z Claude Opus 5.5, Midjourney i Suno. Bot przeszukuje już X bez konektora, a od sierpnia dostał m.in. Team Boty w Slacku, 1Password, głos, rutyny i dostęp do finansów.",
     date: "8 października 2026",
     isoDate: "2026-10-08",
+    xPostId: "2108091781560647754",
     img: "/img/grok-bot-nowosci-pazdziernik-2026.jpg",
     credit: "Grafika: Grok Bot / [@XFreeze](https://x.com/XFreeze/status/2107827336146202679)",
     body: [

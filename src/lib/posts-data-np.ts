@@ -10,6 +10,7 @@ export const postsNp: Post[] = [
       "We wrześniu elektryki stanowiły 34,5 proc. nowych osobówek w Niemczech i 6,1 proc. w Polsce. Niemcy dopłacają prywatnym kupującym do 6000 euro i przyznali już 100 tys. dopłat, a w Polsce po końcu NaszEauto rejestracje elektryków spadają piąty miesiąc z rzędu. Tesla urosła w Niemczech o 268,7 proc., a w Polsce straciła 21,2 proc.",
     date: "6 października 2026",
     isoDate: "2026-10-06",
+    xPostId: "2107363942804721811",
     img: "/img/niemcy-polska-udzial-elektrykow-wrzesien-2026.jpg",
     contain: true,
     credit:
