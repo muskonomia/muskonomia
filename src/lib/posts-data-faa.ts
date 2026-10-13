@@ -10,6 +10,7 @@ export const postsFaa: Post[] = [
       "FAA otwiera ocenę środowiskową wniosku SpaceX o do 456 startów i 912 lądowań Starshipa rocznie w Starbase. To nie jest zgoda, a do czasu decyzji obowiązuje limit 25 startów i 50 lądowań.",
     date: "13 października 2026",
     isoDate: "2026-10-13",
+    xPostId: "2110098082410938672",
     img: "/img/starbase-wieza-startowa-plougmann-2021.jpg",
     credit:
       "Starbase w Teksasie we wrześniu 2021 r. Od lewej booster Super Heavy, statek SN20, zbiorniki paliwa i wieża startowa. Fot. Lars Plougmann, [CC BY-SA 2.0](https://commons.wikimedia.org/wiki/File:SpaceX_Starbase_launch_facility_%2851438071556%29.jpg) (Wikimedia Commons)",
