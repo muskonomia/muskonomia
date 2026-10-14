@@ -101,7 +101,7 @@ function allowPost(token: string) {
 }
 
 export const listComments = createServerFn({ method: "GET" })
-  .inputValidator((data: { slug: string; token?: string }) => ({
+  .validator((data: { slug: string; token?: string }) => ({
     slug: cleanSlug(data?.slug),
     token: typeof data?.token === "string" && /^[0-9a-f-]{36}$/i.test(data.token) ? data.token : "",
   }))
@@ -117,7 +117,7 @@ export const listComments = createServerFn({ method: "GET" })
   });
 
 export const addComment = createServerFn({ method: "POST" })
-  .inputValidator((data: { slug: string; body: string; name: string; token: string }) => ({
+  .validator((data: { slug: string; body: string; name: string; token: string }) => ({
     slug: cleanSlug(data?.slug),
     body: cleanBody(data?.body),
     name: cleanName(data?.name),
@@ -137,7 +137,7 @@ export const addComment = createServerFn({ method: "POST" })
   });
 
 export const deleteComment = createServerFn({ method: "POST" })
-  .inputValidator((data: { id: string; token: string }) => {
+  .validator((data: { id: string; token: string }) => {
     const id = typeof data?.id === "string" ? data.id.trim() : "";
     if (!/^[0-9a-f-]{36}$/i.test(id)) throw new Error("Nie ma takiego komentarza.");
     return { id, token: cleanToken(data?.token) };
