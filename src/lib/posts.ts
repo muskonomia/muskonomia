@@ -8,6 +8,7 @@ export type Block =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "ul"; items: string[] }
+  | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "img"; src: string; alt: string; caption?: string; contain?: boolean; href?: string }
   | { type: "video"; src: string; poster?: string; caption?: string; loop?: boolean; href?: string }
   | { type: "x"; id: string; handle: string }
@@ -133,6 +134,9 @@ export function postPlainText(post: Post) {
   return post.body
     .map((b) => {
       if (b.type === "ul") return b.items.join(" ");
+      if (b.type === "table") {
+        return [b.headers.join(" "), ...b.rows.map((row) => row.join(" "))].join(" ");
+      }
       if (b.type === "img") return b.alt;
       if (b.type === "video") return b.caption ?? "";
       if (b.type === "x") return `Wpis @${b.handle} na X`;

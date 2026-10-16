@@ -172,6 +172,41 @@ function BlogPost() {
                   </ul>
                 );
               }
+              if (block.type === "table") {
+                return (
+                  <div key={i} className="-mx-5 overflow-x-auto sm:mx-0">
+                    <table className="w-full min-w-[40rem] border-collapse text-left text-sm leading-snug">
+                      <thead>
+                        <tr className="border-b border-fg/25">
+                          {block.headers.map((cell, j) => (
+                            <th key={j} className="px-3 py-2 font-semibold align-bottom">
+                              <LinkedText text={cell} />
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {block.rows.map((row, r) => (
+                          <tr key={r} className="border-b border-fg/10">
+                            {row.map((cell, c) => (
+                              <td
+                                key={c}
+                                className={
+                                  c === 0
+                                    ? "px-3 py-2 font-medium align-top"
+                                    : "px-3 py-2 align-top text-fg/90"
+                                }
+                              >
+                                <LinkedText text={cell} />
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                );
+              }
               return (
                 <p key={i}>
                   <LinkedText text={block.text} />
