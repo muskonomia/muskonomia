@@ -18,6 +18,8 @@ export const postsRd26: Post[] = [
         text: "Auto będzie dostępne w trzech wersjach, a w najszybszej ma przyspieszać od 0 do 60 mph (ok. 97 km/h) w mniej niż 0,59 s. Rezerwacje Tesla już przyjmuje, ale ceny nie podała.",
       },
       { type: "x", id: "2110923937383076330", handle: "niccruzpatane" },
+      { type: "p", text: "Oficjalny film Tesli z premiery:" },
+      { type: "x", id: "2110906094155399277", handle: "Tesla" },
       {
         type: "p",
         text: "Pokaz, który [zapowiadaliśmy](https://muskonomia.pl/blog/fsd-paris-motor-show-pokaz-roadstera-czwartek), Tesla transmitowała w nocy z czwartku na piątek. Krótko po nim [opisała trzy wersje auta](https://x.com/Tesla/status/2110905588402295283). Performance to dwumiejscowy model do jazdy po drogach, z aktywną aerodynamiką i wielotrybowym systemem ssącym, który ma zapewnić docisk na drodze i na torze. Thrust, również dwumiejscowy, jest przeznaczony na tor i ma z tyłu dysze na zimny gaz, dzięki którym przyspiesza do 60 mph w mniej niż sekundę. Jednoosobowa wersja Rocket ma dysze rozmieszczone na obwodzie nadwozia, pozwalające przyspieszać do przodu i w górę oraz obracać się na boki. „Więc tak, potrafi latać” – pisze Tesla.",
