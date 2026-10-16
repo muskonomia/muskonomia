@@ -12,6 +12,7 @@ export const postsRd26: Post[] = [
     isoDate: "2026-10-16",
     img: "/img/tesla-roadster-2026-okladka.jpg",
     credit: "Fot. Tesla",
+    xPostId: "2110980121486102819",
     body: [
       {
         type: "p",
