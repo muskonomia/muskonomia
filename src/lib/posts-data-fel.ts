@@ -46,6 +46,7 @@ export const postsFel: Post[] = [
         type: "p",
         text: "Roadster i rakieta mają zresztą wspólną historię. W 2018 r. Falcon Heavy wyniósł w kosmos Roadstera, o czym [przypomniała Tesla](https://x.com/Tesla/status/2110901359952408576). Po tegorocznej premierze firma [podsumowała](https://x.com/Tesla/status/2110933466053562557), że najpierw był Roadster w rakiecie, a teraz jest rakieta w Roadsterze.",
       },
+      { type: "x", id: "2110926164306931860", handle: "Tesla" },
       {
         type: "p",
         text: "Najbardziej martwi nas jednak to, z jakim nastawieniem dorastają dzieci. Od najmłodszych lat słyszą głównie o zagrożeniach, a dużo rzadziej o tym, co ludzie potrafią naprawić. Ekologia powinna być zadaniem dla pomysłowości, a nie lekcją rezygnacji. Pojemność baterii, zasięg, tania energia i nowe materiały to problemy dla inżynierów. Rozwiązania przychodzą z laboratoriów, fabryk i kolejnych prób, a nie z poczucia winy.",
