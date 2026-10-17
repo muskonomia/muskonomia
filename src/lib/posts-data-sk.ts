@@ -12,6 +12,7 @@ export const postsSk: Post[] = [
     isoDate: "2026-10-17",
     img: "/img/fsd-slowacja-teslaeurope.jpg",
     credit: "Fot. Tesla",
+    xPostId: "2111357126530482489",
     body: [
       {
         type: "p",

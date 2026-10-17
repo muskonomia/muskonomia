@@ -13,6 +13,7 @@ export const postsGps: Post[] = [
     img: "/img/starlink-satelity-spacex-cc0.jpg",
     credit:
       "Satelity Starlink przed rozmieszczeniem na orbicie, 24 maja 2019 r. Fot. SpaceX, CC0",
+    xPostId: "2111357248886731239",
     body: [
       {
         type: "p",
