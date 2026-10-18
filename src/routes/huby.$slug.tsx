@@ -10,7 +10,10 @@ export const Route = createFileRoute("/huby/$slug")({
   loader: ({ params }) => {
     const hub = getHub(params.slug);
     if (!hub) throw notFound();
-    return { hub, list: hubPosts(hub) };
+    return {
+      hub: { id: hub.id, title: hub.title, copy: hub.copy, cover: hub.cover },
+      list: hubPosts(hub),
+    };
   },
   head: ({ loaderData }) =>
     loaderData

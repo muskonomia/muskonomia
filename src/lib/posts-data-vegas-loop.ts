@@ -51,7 +51,7 @@ export const postsVegasLoop: Post[] = [
       },
       {
         type: "p",
-        text: "Sahara otworzyła stację 6 sierpnia 2026 r. przy Paradise Road. Godziny 7–21, bilety z kodem QR albo przez internet. Relacja FOX5 Las Vegas: [Relacja FOX5 Las Vegas](https://www.fox5vegas.com/2026/08/06/vegas-loop-station-now-open-at-sahara-las-vegas/) To tempo, w jakim Loop rośnie na asfalcie: jeden hotel. 19 stacji na jednej sesji komisji to tempo, w jakim rośnie na papierze.",
+        text: "Sahara otworzyła stację 6 sierpnia 2026 r. przy Paradise Road. Godziny 7–21, bilety z kodem QR albo przez internet. Relacja FOX5 Las Vegas. To tempo, w jakim Loop rośnie na asfalcie: jeden hotel. 19 stacji na jednej sesji komisji to tempo, w jakim rośnie na papierze.",
       },
       {
         type: "p",

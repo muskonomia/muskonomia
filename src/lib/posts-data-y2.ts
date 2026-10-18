@@ -80,7 +80,7 @@ export const postsY2: Post[] = [
       },
       {
         type: "p",
-        text: "Na [stronie BYD Polska](https://www.byd.com/pl/promocje) są Seal U, Atto 2, Dolphin Surf i Dolphin, czyli cztery modele z dwudziestki pod europejskimi nazwami. MG4 sprzedaje w Polsce SAIC Motor Poland, a model ma własną [stronę MG Motor Poland](https://www.mgmotor.pl/model/mg4). Toyota bZ4X jest w polskich salonach. Na początku roku [Toyota Central Europe](https://www.toyotanews.eu/pl/aktualnosci/4251-item-toyota-bz4x-w-obnizonych-cenach-elektryczny-suv-juz-od-165-900-zl) podawała ceny od 165 900 zł.",
+        text: "Na [stronie BYD Polska](https://www.byd.com/pl/promocje) są Seal U, Atto 2, Dolphin Surf i Dolphin, czyli cztery modele z dwudziestki pod europejskimi nazwami. MG4 sprzedaje w Polsce SAIC Motor Poland, a model ma własną [stronę MG Motor Poland](https://web.archive.org/web/20260518084545/https://www.mgmotor.pl/model/mg4). Toyota bZ4X jest w polskich salonach. Na początku roku [Toyota Central Europe](https://www.toyotanews.eu/pl/aktualnosci/4251-item-toyota-bz4x-w-obnizonych-cenach-elektryczny-suv-juz-od-165-900-zl) podawała ceny od 165 900 zł.",
       },
       {
         type: "p",

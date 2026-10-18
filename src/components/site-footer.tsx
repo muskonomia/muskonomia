@@ -21,7 +21,7 @@ export function SiteFooter() {
             RSS
           </a>
           <a
-            href="https://x.com/MuskonomiaPL"
+            href="https://x.com/Muskonomia"
             target="_blank"
             rel="me noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-fg"

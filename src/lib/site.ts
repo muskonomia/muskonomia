@@ -10,6 +10,7 @@ export const SITE_AUTHOR = "SEBIX";
 export const SITE_CONTACT_EMAIL = "sebanrgcrypto@gmail.com";
 
 export function absoluteUrl(path: string) {
+  if (/^https?:\/\//i.test(path)) return path;
   const p = path.startsWith("/") ? path : `/${path}`;
   return `${SITE_URL}${p}`;
 }

@@ -29,7 +29,7 @@ export const postsGrun: Post[] = [
       },
       {
         type: "p",
-        text: "„Już w 2023 r. Tesla opisała we wniosku o zezwolenie częściowe etapową rozbudowę Gigafactory Berlin-Brandenburg i związany z nią wpływ na środowisko. Decyzja z 15 października 2024 r. potwierdziła, że rozbudowa jest co do zasady możliwa do zatwierdzenia. Planowany wniosek o zezwolenie częściowe dla północnego budynku produkcyjnego jest jej kontynuacją” – napisała Tesla w oświadczeniu dla rbb. Tamto [pierwsze zezwolenie częściowe](https://www.rbb24.de/wirtschaft/beitrag/2024/10/tesla-erweiterung-teilgenehmigung-fabrik.html) obejmowało plan wzrostu produkcji z 500 tys. do miliona aut i ogniw z 50 do 100 GWh rocznie na dotychczasowym terenie, ale nie nowe linie produkcyjne. Te wymagają kolejnych postępowań.",
+        text: "„Już w 2023 r. Tesla opisała we wniosku o zezwolenie częściowe etapową rozbudowę Gigafactory Berlin-Brandenburg i związany z nią wpływ na środowisko. Decyzja z 15 października 2024 r. potwierdziła, że rozbudowa jest co do zasady możliwa do zatwierdzenia. Planowany wniosek o zezwolenie częściowe dla północnego budynku produkcyjnego jest jej kontynuacją” – napisała Tesla w oświadczeniu dla rbb. Tamto [pierwsze zezwolenie częściowe](https://web.archive.org/web/20250515060426/https://www.rbb24.de/wirtschaft/beitrag/2024/10/tesla-erweiterung-teilgenehmigung-fabrik.html) obejmowało plan wzrostu produkcji z 500 tys. do miliona aut i ogniw z 50 do 100 GWh rocznie na dotychczasowym terenie, ale nie nowe linie produkcyjne. Te wymagają kolejnych postępowań.",
       },
       {
         type: "p",
