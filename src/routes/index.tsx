@@ -181,7 +181,7 @@ function Home() {
             </span>
           </Link>
           <a
-            href="https://x.com/MuskonomiaPL"
+            href="https://x.com/Muskonomia"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center justify-center rounded-xl border border-border bg-surface px-6 py-14 text-center transition hover:border-fg"

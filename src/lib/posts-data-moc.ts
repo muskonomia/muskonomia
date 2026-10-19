@@ -11,6 +11,7 @@ export const postsMoc: Post[] = [
     date: "19 października 2026",
     isoDate: "2026-10-19",
     img: "/img/colossus-2-macrohard-memphis-z-lotu-spacex-2026.jpg",
+    xPostId: "2112103218092138788",
     credit:
       "Budynek Macrohard w kampusie Colossus II w Memphis z lotu ptaka, zdjęcie opublikowane przez SpaceX we wrześniu 2026 r. Fot. SpaceX",
     body: [

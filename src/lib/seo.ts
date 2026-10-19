@@ -6,7 +6,6 @@ import {
   SITE_OG,
   SITE_URL,
   SITE_X_HANDLE,
-  SITE_X_URL,
   absoluteUrl,
 } from "./site";
 
@@ -49,7 +48,7 @@ function websiteJsonLd() {
           "@type": "ImageObject",
           url: `${SITE_URL}/img/logo.png`,
         },
-        sameAs: [SITE_X_URL],
+        sameAs: ["https://x.com/Muskonomia"],
       },
     ],
   };
