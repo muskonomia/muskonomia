@@ -14,6 +14,7 @@ export const postsQ3r: Post[] = [
     img: "/img/spacex-q3-2026-wyniki-colossus.jpg",
     credit:
       "Budynek Macrohard w kampusie Colossus II w Memphis z lotu ptaka, zdjęcie opublikowane przez SpaceX we wrześniu 2026 r. Fot. SpaceX",
+    xPostId: "2112645814355206325",
     body: [
       {
         type: "p",

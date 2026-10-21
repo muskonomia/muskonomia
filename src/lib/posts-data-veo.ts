@@ -12,6 +12,7 @@ export const postsVeo: Post[] = [
     isoDate: "2026-10-20",
     img: "/img/starlink-mobile-satelita-nad-ziemia-starlink.jpg",
     credit: "Satelita Starlink nad Ziemią. Grafika: Starlink",
+    xPostId: "2112455159141831010",
     body: [
       {
         type: "p",

@@ -20,7 +20,7 @@ export const postsNsc: Post[] = [
       },
       {
         type: "p",
-        text: "Liczba za wrzesień pochodzi z [raportu SpaceX złożonego w SEC](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm). Trzy miesiące wcześniej firma miała 1,4 GW, a rok wcześniej 0,6 GW. Prognozę na październik podał dyrektor finansowy Bret Johnsen podczas [konferencji wynikowej 20 października](https://www.fool.com/earnings/call-transcripts/2026/10/20/spacex-spcx-q3-2026-earnings-call-transcript/). Według niego SpaceX dojdzie do „blisko 2,2 GW mocy nominalnej na koniec samego października”, a do końca roku do 2,5–3 GW. Z tych dwóch liczb wyliczyliśmy, że w październiku przybędzie około pół gigawata. W całym trzecim kwartale było to 300 MW, czyli średnio około 100 MW miesięcznie.",
+        text: "Liczba za wrzesień pochodzi z [raportu SpaceX złożonego w SEC](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm). Trzy miesiące wcześniej firma miała 1,4 GW, a rok wcześniej 0,6 GW. Prognozę na październik podał dyrektor finansowy Bret Johnsen podczas [konferencji z wyników kwartalnych 20 października](https://www.fool.com/earnings/call-transcripts/2026/10/20/spacex-spcx-q3-2026-earnings-call-transcript/). Według niego SpaceX dojdzie do „blisko 2,2 GW mocy nominalnej na koniec samego października”, a do końca roku do 2,5–3 GW. Z tych dwóch liczb wyliczyliśmy, że w październiku przybędzie około pół gigawata. W całym trzecim kwartale było to 300 MW, czyli średnio około 100 MW miesięcznie.",
       },
       {
         type: "p",

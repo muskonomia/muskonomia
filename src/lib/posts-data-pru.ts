@@ -12,6 +12,7 @@ export const postsPru: Post[] = [
     isoDate: "2026-10-20",
     img: "/img/boring-prufrock-liner-kontener-20-stop.jpg",
     credit: "Ciężarówka Prufrock Liner z sześciometrowym kontenerem morskim. Fot. The Boring Company",
+    xPostId: "2112455054967898522",
     body: [
       {
         type: "p",

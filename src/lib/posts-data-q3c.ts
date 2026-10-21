@@ -14,10 +14,11 @@ export const postsQ3c: Post[] = [
     img: "/img/starship-starbase-noc-przed-ift5-jurvetson.jpg",
     credit:
       "Starship na stanowisku startowym w Starbase przed piątym lotem testowym, 12 października 2024 r. Fot. [Steve Jurvetson](https://commons.wikimedia.org/wiki/File:SpaceX_Starship_before_IFT-5.jpg), [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)",
+    xPostId: "2112835391296258243",
     body: [
       {
         type: "p",
-        text: "Segment superinteligencji (SI), czyli wynajem mocy obliczeniowej, własne modele i aplikacje, dał w trzecim kwartale około 52 proc. przychodów SpaceX, wynika z naszego wyliczenia na podstawie [raportu złożonego w SEC](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm). Podczas konferencji wynikowej zarząd mówił głównie o tym, jak długo ten popyt się utrzyma i ile firma na nim zarobi.",
+        text: "Segment superinteligencji (SI), czyli wynajem mocy obliczeniowej, własne modele i aplikacje, dał w trzecim kwartale około 52 proc. przychodów SpaceX, wynika z naszego wyliczenia na podstawie [raportu złożonego w SEC](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm). Podczas konferencji z wyników kwartalnych zarząd mówił głównie o tym, jak długo ten popyt się utrzyma i ile firma na nim zarobi.",
       },
       {
         type: "p",
