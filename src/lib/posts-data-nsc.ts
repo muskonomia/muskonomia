@@ -13,6 +13,7 @@ export const postsNsc: Post[] = [
     isoDate: "2026-10-21",
     img: "/img/nscale-loughton-wizualizacja-centrum-danych.jpg",
     credit: "Planowane centrum danych Nscale w Loughton w hrabstwie Essex. Wizualizacja: Nscale",
+    xPostId: "2112838473023435022",
     body: [
       {
         type: "p",
