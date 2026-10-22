@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { FsdCounterView } from "@/components/fsd-counter";
 import { getFsdCounter } from "@/lib/fsd-counter.functions";
 import { getRobotaxiFleet, type RobotaxiCityBar, type TexasRegistry } from "@/lib/robotaxi-fleet.functions";
-import { formatMiles } from "@/lib/fsd-counter";
+import { formatMiles, milesToKm } from "@/lib/fsd-counter";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fsd-tracker")({
@@ -59,6 +59,7 @@ function FsdTrackerPage() {
         <div className="mt-8">
           <UnsupervisedCard count={fleet.ok ? fleet.teslaUnsupervised : null} />
         </div>
+        <RobotaxiMiles />
         {fleet.ok ? (
           <div className="mt-14 grid gap-12 lg:grid-cols-2">
             <CityBars
@@ -82,6 +83,14 @@ function FsdTrackerPage() {
           ani darmowych okresów próbnych.
         </p>
         <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <a
+            href="https://www.tesla.com/robotaxi/safety"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-fg underline decoration-accent underline-offset-4"
+          >
+            Źródło mil Robotaxi: tesla.com/robotaxi/safety
+          </a>
           <a
             href="https://www.tesla.com/fsd/safety"
             target="_blank"
@@ -221,4 +230,102 @@ function barColor(provider: string) {
   if (provider === "Tesla") return "bg-accent";
   if (provider === "Waymo") return "bg-sky-400";
   return "bg-white";
+}
+
+const ROBOTAXI_MILES = {
+  from: "22 stycznia 2026",
+  asOf: "18 października 2026",
+  cities: [
+    { city: "Austin", region: "Teksas", miles: 2_118_015 },
+    { city: "Dallas", region: "Teksas", miles: 608_130 },
+    { city: "Houston", region: "Teksas", miles: 225_964 },
+    { city: "Miami", region: "Floryda", miles: 46_262 },
+    { city: "Orlando", region: "Floryda", miles: 61_053 },
+    { city: "Tampa", region: "Floryda", miles: 53_117 },
+  ],
+  dark: 862_000,
+  rain: 113_000,
+  rush: 575_000,
+  next: ["Las Vegas", "Phoenix", "Jacksonville", "San Antonio"],
+} as const;
+
+const CITY_BANDS = ["#6e5a34", "#8d7344", "#b08d52", "#c9aa72", "#ddc79a", "#f0e2c4"];
+
+function RobotaxiMiles() {
+  const total = ROBOTAXI_MILES.cities.reduce((sum, row) => sum + row.miles, 0);
+  const texas = ROBOTAXI_MILES.cities.filter((row) => row.region === "Teksas").reduce((sum, row) => sum + row.miles, 0);
+
+  return (
+    <section className="mt-14 rounded-2xl border border-border bg-bg/75 px-6 py-6 backdrop-blur-sm">
+      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Robotaxi bez nadzoru</p>
+      <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight">Mile po miastach</h2>
+      <p className="mt-2 max-w-2xl text-sm text-muted">
+        Stan z raportu Tesli, od {ROBOTAXI_MILES.from} do {ROBOTAXI_MILES.asOf}. Licznik na stronie Tesli idzie dalej.
+        Tu jest odczyt z tabeli, nie z żywej liczby.
+      </p>
+      <p className="mt-6 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
+        {formatMiles(total)}
+      </p>
+      <p className="mt-2 text-muted">mil · {formatMiles(milesToKm(total))} km</p>
+
+      <div className="mt-6 flex h-4 overflow-hidden rounded-full" aria-hidden>
+        {ROBOTAXI_MILES.cities.map((row, i) => (
+          <div key={row.city} style={{ width: `${(row.miles / total) * 100}%`, background: CITY_BANDS[i] }} />
+        ))}
+      </div>
+      <p className="mt-3 max-w-2xl text-sm text-muted">
+        Pasma na wykresie Tesli to te miasta, ułożone narastająco od Q1 do Q4. Krzywa jest płaska do lata i ostro
+        rośnie w czwartym kwartale. Tesla nie podała liczb na koniec kwartałów, więc krzywej nie odrysowujemy.
+        Austin to {share(ROBOTAXI_MILES.cities[0].miles, total)} całości, Teksas {share(texas, total)}.
+      </p>
+
+      <div className="mt-8 grid gap-10 lg:grid-cols-2">
+        <div>
+          <h3 className="font-display text-2xl font-semibold tracking-tight">Lokalizacje</h3>
+          <ul className="mt-4">
+            {ROBOTAXI_MILES.cities.map((row) => (
+              <li key={row.city} className="flex items-baseline justify-between gap-4 border-t border-border/70 py-2.5 text-sm">
+                <span>
+                  {row.city} <span className="text-muted">{row.region}</span>
+                </span>
+                <span className="tabular-nums">
+                  {formatMiles(row.miles)} mil
+                  <span className="ml-2 text-muted">{share(row.miles, total)}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-display text-2xl font-semibold tracking-tight">W tych samych milach</h3>
+          <ul className="mt-4 space-y-3 text-sm">
+            <Condition label="Ranni" value="0" note="Tesla liczy kontakt z winy Robotaxi" />
+            <Condition label="Odpalone poduszki" value="0" note="także zero" />
+            <Condition label="Piesi i rowerzyści" value="0" note="żadnego potrącenia z winy Robotaxi" />
+            <Condition label="Po zmroku" value={`${formatMiles(ROBOTAXI_MILES.dark)} mil`} note={share(ROBOTAXI_MILES.dark, total)} />
+            <Condition label="W deszczu" value={`${formatMiles(ROBOTAXI_MILES.rain)} mil`} note={`${share(ROBOTAXI_MILES.rain, total)}, dolne oszacowanie`} />
+            <Condition label="W szczycie" value={`${formatMiles(ROBOTAXI_MILES.rush)} mil`} note={share(ROBOTAXI_MILES.rush, total)} />
+          </ul>
+          <p className="mt-5 text-sm text-muted">
+            Następne miasta, bez daty: {ROBOTAXI_MILES.next.join(", ")}.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function share(part: number, total: number) {
+  return `${new Intl.NumberFormat("pl-PL", { maximumFractionDigits: 1 }).format((part / total) * 100)}%`;
+}
+
+function Condition({ label, value, note }: { label: string; value: string; note: string }) {
+  return (
+    <li className="flex items-baseline justify-between gap-4 border-t border-border/70 pt-2.5">
+      <span>
+        {label} <span className="text-muted">{note}</span>
+      </span>
+      <span className="shrink-0 tabular-nums">{value}</span>
+    </li>
+  );
 }
