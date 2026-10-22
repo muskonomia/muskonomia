@@ -11,8 +11,8 @@ export const postsTq3: Post[] = [
       "Portfel zamówień na samochody osobowe Tesli jest największy od czterech lat, a moce produkcyjne Megapacków na 2027 r. są prawie wyprzedane. Firma miała w III kwartale 28,05 mld dolarów przychodu, a Musk liczy na zgodę na FSD w całej Unii najpóźniej w I kwartale 2027 r.",
     date: "22 października 2026",
     isoDate: "2026-10-22",
-    img: "/img/1-q3-kluczowe-liczby.png",
-    credit: "Wyniki Tesli w III kwartale 2026 r. Opracowanie: muskonomia.pl na podstawie raportu Tesli",
+    img: "/img/cover-cybercab-austin.jpg",
+    credit: "Cybercaby w Austin. fot. Tesla",
     body: [
       {
         type: "p",
@@ -33,6 +33,12 @@ export const postsTq3: Post[] = [
         src: "/img/1-q3-kluczowe-liczby.png",
         alt: "Wyniki Tesli w III kwartale 2026 r.",
         caption: "Wyniki Tesli w III kwartale 2026 r. Opracowanie: muskonomia.pl na podstawie raportu Tesli",
+      },
+      {
+        type: "img",
+        src: "/img/foto-roadster.jpg",
+        alt: "Nowy Roadster Tesli podczas pokazu",
+        caption: "Prezentacja Roadstera nowej generacji. fot. Tesla",
       },
       { type: "h2", text: "FSD w Europie" },
       {
@@ -79,6 +85,12 @@ export const postsTq3: Post[] = [
         type: "p",
         text: "Semi weszło do produkcji wolumenowej. Najmocniejsza wersja przejeżdża według Tesli 805 km przy masie całkowitej zestawu ok. 37 t i zużywa 1,06 kWh na kilometr, czyli około jednej trzeciej energii porównywalnej ciężarówki z dieslem. Tesla zainstalowała w kwartale 13,7 GWh magazynów energii, o 10 proc. więcej niż przed rokiem, i miała rekordowe zamówienia. Ruszyła Megafactory w Teksasie, a pierwsze Megapacki powstały w całości na własnych ogniwach LFP. Według relacji Merritta moce produkcyjne Megapacków na 2027 r. są prawie wyprzedane, a marża brutto w energii, dziś 33 proc., ma dalej rosnąć.",
       },
+      {
+        type: "img",
+        src: "/img/foto-semi-gama-aut.jpg",
+        alt: "Tesla Semi i samochody Tesli na scenie",
+        caption: "Tesla Semi wśród samochodów Tesli. fot. Tesla",
+      },
       { type: "h2", text: "Optimus i chipy" },
       {
         type: "p",
@@ -87,6 +99,12 @@ export const postsTq3: Post[] = [
       {
         type: "p",
         text: "Do końca roku Tesla chce mieć 400 MW mocy obliczeniowej do trenowania SI. Instalacja sprzętu w budowanej fabryce chipów w Austin ma ruszyć w 2027 r.",
+      },
+      {
+        type: "img",
+        src: "/img/foto-austin-fab.jpg",
+        alt: "Budowa fabryki półprzewodników Tesli w Austin",
+        caption: "Budowa fabryki chipów Tesli w Austin. fot. Tesla",
       },
     ],
   },
