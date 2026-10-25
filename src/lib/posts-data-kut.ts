@@ -10,7 +10,7 @@ export const postsKut: Post[] = [
       "Elon Musk oświadczył, że SpaceX zamknęło lukę pozwalającą ukraińskiemu wojsku używać cywilnego Starlinka do ataków dronów, a na X rozeszła się teoria @tvguidemsk o wlutowywanych płytkach fałszujących GPS. Analitycy @BrennpunktUA, Andrej Fiskovec (@andrewofpolesia) i inżynier Oleg Kutkov wyjaśniają, jak działają białe listy terminali, dlaczego szybkie bezzałogowce latają na opłacanej przez Niemcy usłudze Starshield i po co w antenach przerabia się moduły GPS.",
     date: "25 października 2026",
     isoDate: "2026-10-25",
-    img: "/img/starlink-terminal-uchwyt-magnetyczny-kutkov-okladka.jpg",
+    img: "/img/starlink-terminal-uchwyt-magnetyczny-kutkov-okladka-v2.jpg",
     credit: "Terminal Starlink na uchwycie magnetycznym. Fot. Oleg Kutkov",
     body: [
       {
