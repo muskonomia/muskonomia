@@ -7,7 +7,7 @@ export const postsKut: Post[] = [
     topic: "spacex",
     title: "Analitycy i inżynierowie odpowiadają Muskowi w sprawie Starlinka na ukraińskich dronach",
     excerpt:
-      "Elon Musk oświadczył, że SpaceX zamknęło lukę pozwalającą ukraińskiemu wojsku używać cywilnego Starlinka do ataków dronów, a na X rozeszła się teoria @tvguidemsk o wlutowywanych płytkach fałszujących GPS. Analitycy @BrennpunktUA i inżynier Oleg Kutkov wyjaśniają, dlaczego szybkie bezzałogowce z przyczyn technicznych latają na rządowej usłudze Starshield i po co w terminalach przerabia się anteny GPS.",
+      "Elon Musk oświadczył, że SpaceX zamknęło lukę pozwalającą ukraińskiemu wojsku używać cywilnego Starlinka do ataków dronów, a na X rozeszła się teoria @tvguidemsk o wlutowywanych płytkach fałszujących GPS. Analitycy @BrennpunktUA, Andrej Fiskovec (@andrewofpolesia) i inżynier Oleg Kutkov wyjaśniają, jak działają białe listy terminali, dlaczego szybkie bezzałogowce latają na opłacanej przez Niemcy usłudze Starshield i po co w antenach przerabia się moduły GPS.",
     date: "25 października 2026",
     isoDate: "2026-10-25",
     img: "/img/starlink-terminal-uchwyt-magnetyczny-kutkov-okladka.jpg",
@@ -15,7 +15,7 @@ export const postsKut: Post[] = [
     body: [
       {
         type: "p",
-        text: "W sobotę 24 października ukraińskie Ministerstwo Obrony [poinformowało](https://www.ukrinform.net/rubric-ato/4177752-khmara-starlink-and-starshield-speeds-above-400-kmh-have-resumed-says-dm.html), że łączność satelitarna Starlink i Starshield znów działa stabilnie przy prędkościach powyżej 400 km/h, po trwającym od 13 października ograniczeniu do ok. 160 km/h. Tego samego dnia wieczorem Elon Musk oświadczył na X, że ukraińskie wojsko wbrew regulaminowi używało cywilnego Starlinka do ofensywnych ataków dronów i że SpaceX w poprzednim tygodniu zamknęło tę lukę, natomiast za rządowy system Starshield odpowiada wyłącznie Waszyngton. Profil analityczny @BrennpunktUA oraz kijowski inżynier Oleg Kutkov pokazują jednak, dlaczego szybkie bezzałogowce z przyczyn technicznych nie mogą latać na cywilnym abonamencie i do czego w rzeczywistości służą przeróbki GPS wewnątrz anten.",
+        text: "W sobotę 24 października ukraińskie Ministerstwo Obrony [poinformowało](https://www.ukrinform.net/rubric-ato/4177752-khmara-starlink-and-starshield-speeds-above-400-kmh-have-resumed-says-dm.html), że łączność satelitarna Starlink i Starshield znów działa stabilnie przy prędkościach powyżej 400 km/h, po trwającym od 13 października ograniczeniu do ok. 160 km/h. Tego samego dnia wieczorem Elon Musk oświadczył na X, że ukraińskie wojsko wbrew regulaminowi używało cywilnego Starlinka do ofensywnych ataków dronów i że SpaceX w poprzednim tygodniu zamknęło tę lukę, natomiast za rządowy system Starshield odpowiada wyłącznie Waszyngton. Profil analityczny @BrennpunktUA, białorusko-czeski analityk Andrej Fiskovec (@andrewofpolesia) oraz kijowski inżynier Oleg Kutkov pokazują jednak, jak od lutego 2026 r. działa rejestracja terminali w Ukrainie, kto opłaca usługę Starshield dla szybkich dronów i do czego w rzeczywistości służą przeróbki GPS wewnątrz anten.",
       },
       { type: "x", id: "2114063986744275011", handle: "elonmusk" },
       {
@@ -32,12 +32,17 @@ export const postsKut: Post[] = [
         src: "/img/starlink-dron-terminal-tvguidemsk.jpg",
         alt: "Dron z zamontowanym terminalem Starlink",
         caption:
-          "Dron z zamontowanym terminalem Starlink. Fot. @tvguidemsk / X ([wpis](https://x.com/tvguidemsk/status/2113375807653703779))",
+          "Dron z zamontowanym terminalem Starlink. Fot. @tvguidemsk / X",
       },
       { type: "x", id: "2114093742261215247", handle: "BrennpunktUA" },
       {
         type: "p",
         text: "Bezpośrednio pod wpisem Muska [odpowiedział niemiecko-ukraiński profil analityczny @BrennpunktUA](https://x.com/BrennpunktUA/status/2114093742261215247), oceniając, że w sprawie działania sieci w Ukrainie krąży wiele spekulacji i „najwyraźniej nawet sam Elon Musk nie jest dobrze poinformowany”. Autorzy wpisu podkreślają, że z technicznego punktu widzenia wykorzystanie szybkich dronów uderzeniowych nie jest możliwe bez rejestracji i autoryzacji terminala w wojskowym systemie Starshield. W [kolejnym komentarzu](https://x.com/BrennpunktUA/status/2114109014195806537) przywołali dane ukraińskiego dostawcy dronów Serhija Sternenki ([@sternenko](https://x.com/sternenko/status/2114084945723543780)), według którego bezzałogowce latają z prędkością 120 km/h lub większą, tymczasem cywilny Starlink w Ukrainie wyłącza się już przy 60–70 km/h. Zarzut Muska, że ukraińska armia złamała umowę na cywilną usługę przy atakach dronów, nie może więc być prawdziwy niezależnie od tego, czy uznać te loty za ofensywne, czy obronne. Jak wyjaśnia @BrennpunktUA, w debacie pomieszano dwie rzeczy: ukraińskie wojsko rzeczywiście korzysta z cywilnego Starlinka bez rejestracji w Starshieldzie, ale wyłącznie do łączności na froncie. Szybkie drony uderzeniowe wymagają natomiast usługi Starshield, działającej na podstawie umów między Pentagonem a ukraińskim resortem obrony. Skoro sam Musk przyznaje, że o autoryzacji i dławieniu prędkości w Starshieldzie decyduje wyłącznie Departament Obrony USA lub Biały Dom, to według @BrennpunktUA dyskusja o rzekomym łamaniu regulaminu cywilnego Starlinka odwraca uwagę od polityków odpowiedzialnych za październikową blokadę: sekretarza obrony Pete'a Hegsetha i Donalda Trumpa.",
+      },
+      { type: "x", id: "2114094016354807843", handle: "andrewofpolesia" },
+      {
+        type: "p",
+        text: "Mechanizm kontroli terminali i finansowania usługi opisał też białorusko-czeski analityk Andrej Fiskovec ([@andrewofpolesia](https://x.com/andrewofpolesia/status/2114094016354807843)). Przypomniał on, że gdy Rosjanie zaczęli masowo sprowadzać na front terminale kupowane na czarnym rynku, ówczesny minister obrony Mychajło Fedorow wypracował ze SpaceX system „białych list”, [uruchomiony oficjalnie 5 lutego 2026 r.](https://mod.gov.ua/en/news/how-to-complete-starlink-verification-the-ministry-of-defence-answers-the-most-frequently-asked-questions) Od tego czasu nad Ukrainą, zarówno na terenach kontrolowanych przez Kijów, jak i okupowanych, działają wyłącznie zweryfikowane urządzenia: żołnierze rejestrują je przez wojskowe systemy DELTA lub Armija+, firmy i urzędnicy przez portal Dija, a cywile w centrach obsługi CNAP. Takie cywilne terminale działają tylko stacjonarnie lub przy małej prędkości, natomiast szybkie drony uderzeniowe i przechwytujące korzystają ze Starshielda. Fiskovec zwraca uwagę, że za obecny kontrakt Starshield dla Ukrainy nie płaci budżet USA, lecz rząd Niemiec poprzez amerykański program sprzedaży uzbrojenia Foreign Military Sales (FMS), a usługa jest opłacona do połowy maja 2027 r. Potwierdza to [notyfikacja w amerykańskim Federal Register](https://www.federalregister.gov/documents/full_text/text/2026/01/27/2026-01480.txt) na kwotę 150 mln dolarów (ok. 583 mln zł) z niemieckiego funduszu JUMPSTART oraz [wypowiedzi szefa niemieckiego MSZ Johanna Wadephula](https://newsukraine.rbc.ua/news/germany-warns-ukraine-s-air-defense-support-1792326827.html), który domagał się zniesienia październikowych ograniczeń, wskazując, że za sprzęt zapłacił Berlin. Według Fiskovca nagłe przycięcie opłaconej w procedurze FMS usługi, w której kupujący nie ma prawa do sądu ani arbitrażu, wywołało w Europie pytania o amerykański wyłącznik awaryjny i nasiliło spory o rezerwowanie pasm częstotliwości dla europejskich operatorów satelitarnych.",
       },
       { type: "x", id: "2113986509481144709", handle: "olegkutkov" },
       {
@@ -53,7 +58,7 @@ export const postsKut: Post[] = [
         src: "/img/starlink-odbiorniki-gnss-sta8089-kutkov.jpg",
         alt: "Odbiorniki GNSS na płytkach terminali Starlink",
         caption:
-          "Odbiorniki GNSS na płytkach terminali Starlink. Fot. Oleg Kutkov ([blog](https://olegkutkov.me/2023/11/07/connecting-external-gps-antenna-to-the-starlink-terminal/))",
+          "Odbiorniki GNSS na płytkach terminali Starlink. Fot. Oleg Kutkov",
       },
       {
         type: "p",
@@ -68,7 +73,7 @@ export const postsKut: Post[] = [
         src: "/img/starlink-modyfikacja-zewnetrzna-antena-gps-kutkov.jpg",
         alt: "Wnętrze terminala Starlink przystosowanego do zewnętrznej anteny GPS",
         caption:
-          "Wnętrze terminala Starlink przystosowanego do zewnętrznej anteny GPS. Fot. Oleg Kutkov ([blog](https://olegkutkov.me/2023/11/07/connecting-external-gps-antenna-to-the-starlink-terminal/))",
+          "Wnętrze terminala Starlink przystosowanego do zewnętrznej anteny GPS. Fot. Oleg Kutkov",
       },
       {
         type: "p",
@@ -83,7 +88,7 @@ export const postsKut: Post[] = [
         src: "/img/starlink-plytka-pcb-antena-fazowana-kutkov.jpg",
         alt: "Płytka główna terminala Starlink",
         caption:
-          "Płytka główna terminala Starlink. Fot. Oleg Kutkov ([blog](https://olegkutkov.me/2024/02/12/starlink-terminal-revision-4-overview-and-tests/))",
+          "Płytka główna terminala Starlink. Fot. Oleg Kutkov",
       },
       {
         type: "p",
