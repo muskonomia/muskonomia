@@ -3,13 +3,14 @@ import { Link } from "@tanstack/react-router";
 import type { Post } from "@/lib/posts";
 import { PostMeta } from "@/components/post-meta";
 
-export function PostCard({ post }: { post: Post }) {
+export function PostCard({ post, priority = false }: { post: Post; priority?: boolean }) {
   return (
     <article className="group relative min-h-72 overflow-hidden rounded-xl">
       <img
         src={post.img}
         alt=""
         className={`absolute inset-0 h-full w-full ${post.contain ? "bg-fg object-contain" : "object-cover"} transition duration-500 group-hover:scale-105`}
+        {...(priority ? {} : { fetchPriority: "low" as const })}
       />
       <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/45 to-overlay/10" />
       <Link
@@ -34,9 +35,11 @@ export function PostCard({ post }: { post: Post }) {
 export function PostGrid({
   posts,
   limit = 12,
+  priorityFirst = false,
 }: {
   posts: Post[];
   limit?: number | false;
+  priorityFirst?: boolean;
 }) {
   const cap = limit === false ? posts.length : limit;
   const [open, setOpen] = useState(false);
@@ -46,8 +49,8 @@ export function PostGrid({
   return (
     <div>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((post) => (
-          <PostCard key={post.slug} post={post} />
+        {visible.map((post, i) => (
+          <PostCard key={post.slug} post={post} priority={priorityFirst && i === 0} />
         ))}
       </div>
       {hidden > 0 && !open ? (

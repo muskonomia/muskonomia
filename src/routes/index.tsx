@@ -34,6 +34,7 @@ function Home() {
           src="/img/cybertruck-hero.jpg"
           alt="Tesla Cybertruck"
           className="absolute inset-0 h-full w-full object-cover object-center"
+          fetchPriority="low"
         />
         <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/55 to-overlay/20" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32">
@@ -83,6 +84,7 @@ function Home() {
           src="/img/interior.jpg"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
+          fetchPriority="low"
         />
         <div className="absolute inset-0 bg-overlay/55" />
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-6xl items-center px-5 py-24">
@@ -112,6 +114,7 @@ function Home() {
           src="/img/terafab-render-night.jpg"
           alt=""
           className="absolute inset-0 h-full w-full object-cover object-center"
+          fetchPriority="low"
         />
         <div className="absolute inset-0 bg-overlay/70" />
         <div className="relative z-10 mx-auto max-w-6xl px-5 py-28 text-center">
@@ -138,7 +141,7 @@ function Home() {
           params={{ slug: "tesla-model-y-dla-rodziny" }}
           className="overflow-hidden rounded-xl border border-border bg-surface"
         >
-          <img src="/img/interior.jpg" alt="Szklany dach Model Y" className="h-56 w-full object-cover" />
+          <img src="/img/interior.jpg" alt="Szklany dach Model Y" className="h-56 w-full object-cover" fetchPriority="low" />
           <div className="p-6">
             <p className="text-xs uppercase tracking-widest text-accent">Tesla</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Model Y: auto, które ogarnia rodzinę</h3>
@@ -157,6 +160,7 @@ function Home() {
             src="/img/grok-chart.jpg"
             alt="Ranking Grok w indeksie medycznym"
             className="h-56 w-full bg-fg object-contain object-center p-3"
+            fetchPriority="low"
           />
           <div className="p-6">
             <p className="text-xs uppercase tracking-widest text-accent">xAI</p>
@@ -223,7 +227,7 @@ function HomeBlog() {
         </div>
       </div>
       <div className="mx-auto max-w-6xl px-5 py-12">
-        <PostGrid posts={posts} />
+        <PostGrid posts={posts} priorityFirst />
       </div>
     </section>
   );
@@ -252,6 +256,7 @@ function TopicCard({
         src={img}
         alt=""
         className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+        fetchPriority="low"
       />
       <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/40 to-overlay/10" />
       <div className="relative z-10 flex h-full min-h-72 flex-col justify-end p-6">

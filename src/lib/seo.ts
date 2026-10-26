@@ -5,7 +5,6 @@ import {
   SITE_NAME,
   SITE_OG,
   SITE_URL,
-  SITE_X_HANDLE,
   absoluteUrl,
 } from "./site";
 
@@ -92,8 +91,8 @@ export function pageHead(opts: {
           ]
         : []),
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: SITE_X_HANDLE },
-      { name: "twitter:creator", content: SITE_X_HANDLE },
+      { name: "twitter:site", content: "@Muskonomia" },
+      { name: "twitter:creator", content: "@Muskonomia" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: image },

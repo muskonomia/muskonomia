@@ -8,6 +8,7 @@ import { PostMeta } from "@/components/post-meta";
 import { LinkedText } from "@/components/rich-text";
 import { getPost, postJsonLd, relatedPosts } from "@/lib/posts";
 import { postHead } from "@/lib/seo";
+import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -63,6 +64,7 @@ function BlogPost() {
                         ? "max-h-[28rem] w-full bg-fg object-contain"
                         : "aspect-video w-full object-cover"
                     }
+                    fetchPriority="low"
                   />
                 );
                 return (
@@ -222,6 +224,10 @@ function BlogPost() {
           </div>
         </article>
 
+        <div className="mx-auto max-w-3xl px-5 pb-4 pt-2">
+          <AskOnX title={post.title} slug={post.slug} />
+        </div>
+
         <div className="px-5 pb-4">
           <Comments slug={post.slug} />
         </div>
@@ -250,5 +256,36 @@ function BlogPost() {
       </main>
       <SiteFooter />
     </div>
+  );
+}
+
+function AskOnX({ title, slug }: { title: string; slug: string }) {
+  const url = absoluteUrl(`/blog/${slug}`);
+  const share = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}&via=Muskonomia`;
+
+  return (
+    <aside className="rounded-xl border border-border bg-surface px-5 py-7 sm:px-8">
+      <p className="font-display text-2xl font-semibold leading-tight tracking-tight sm:text-3xl">
+        Masz własne zdanie lub pytanie do tego tekstu?
+      </p>
+      <div className="mt-5 flex flex-wrap gap-3">
+        <a
+          href="https://x.com/Muskonomia"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-12 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-fg hover:bg-accent-hover"
+        >
+          Podyskutuj z nami na X (@Muskonomia) →
+        </a>
+        <a
+          href={share}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-12 items-center justify-center rounded-md border border-border px-5 text-sm font-semibold text-fg hover:border-fg"
+        >
+          Udostępnij i skomentuj na X →
+        </a>
+      </div>
+    </aside>
   );
 }
