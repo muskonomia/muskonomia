@@ -35,6 +35,29 @@ export const postsSxsi: Post[] = [
           "Mapa satelitarna kampusu SpaceXSI (Colossus II) z polską legendą. Źródło: Vantor / Measured AI / @SERobinsonJr, opracowanie: Muskonomia.pl",
       },
       {
+        type: "img",
+        src: "/img/spacexsi-mapa-kampusu-pelna-hd-pl.jpg",
+        alt: "Pełna pionowa mapa kampusu SpaceXSI z polskimi opisami",
+        caption:
+          "Pełna mapa kampusu SpaceXSI z polskimi opisami. Źródło: Vantor / Measured AI, opracowanie: Muskonomia.pl",
+        contain: true,
+        href: "/img/spacexsi-mapa-kampusu-pelna-hd-pl.jpg",
+      },
+      {
+        type: "img",
+        src: "/img/spacexsi-mapa-kampusu-polnoc-memphis-hd.jpg",
+        alt: "Północ i centrum kampusu SpaceXSI: Memphis i granica z Southaven",
+        caption:
+          "Północ i centrum kampusu: Memphis i granica z Southaven. Opracowanie: Muskonomia.pl",
+      },
+      {
+        type: "img",
+        src: "/img/spacexsi-mapa-kampusu-poludnie-southaven-hd.jpg",
+        alt: "Południe kampusu SpaceXSI w Southaven: elektrownia i nowe hale",
+        caption:
+          "Południe kampusu w Southaven: elektrownia 1,24 GW i nowe hale. Opracowanie: Muskonomia.pl",
+      },
+      {
         type: "p",
         text: "Granica stanowa dzieli kompleks na część północną w Memphis (stan Tennessee) oraz południową w Southaven (stan Mississippi). Zamiast polegać wyłącznie na powolnej rozbudowie publicznej sieci przesyłowej, SpaceX połączyło w jednym miejscu adaptację gotowych magazynów logistycznych z budową nowych hal od podstaw oraz własną generacją gazu wspieraną przez wielkie pola baterii.",
       },

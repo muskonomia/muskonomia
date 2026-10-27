@@ -55,27 +55,25 @@ function BlogPost() {
           <div className="mx-auto max-w-3xl space-y-5 px-5 py-16 text-base leading-relaxed text-fg/90 sm:text-lg">
             {post.body.map((block, i) => {
               if (block.type === "img") {
-                const img = (
-                  <img
-                    src={block.src}
-                    alt={block.alt}
-                    className={
-                      block.contain
-                        ? "max-h-[28rem] w-full bg-fg object-contain"
-                        : "aspect-video w-full object-cover"
-                    }
-                    fetchPriority="low"
-                  />
-                );
                 return (
                   <figure key={i} className="-mx-5 overflow-hidden sm:mx-0 sm:rounded-xl">
-                    {block.href ? (
-                      <a href={block.href} target="_blank" rel="noopener noreferrer" className="block">
-                        {img}
-                      </a>
-                    ) : (
-                      img
-                    )}
+                    <a
+                      href={block.href ?? block.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <img
+                        src={block.src}
+                        alt={block.alt}
+                        className={
+                          block.contain
+                            ? "h-auto w-full bg-fg object-contain"
+                            : "aspect-video w-full object-cover"
+                        }
+                        fetchPriority="low"
+                      />
+                    </a>
                     {block.caption ? (
                       <figcaption className="px-5 pt-2 text-sm text-muted sm:px-0">
                         <LinkedText text={block.caption} />
