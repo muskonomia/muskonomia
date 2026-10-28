@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { FsdCounterView } from "@/components/fsd-counter";
 import { getFsdCounter } from "@/lib/fsd-counter.functions";
 import { getRobotaxiFleet, type RobotaxiCityBar, type TexasRegistry } from "@/lib/robotaxi-fleet.functions";
+import { TexasFleetChart } from "@/components/texas-fleet-chart";
 import { formatMiles, milesToKm } from "@/lib/fsd-counter";
 import { pageHead } from "@/lib/seo";
 
@@ -16,7 +17,7 @@ export const Route = createFileRoute("/fsd-tracker")({
     pageHead({
       title: "FSD Tracker",
       description:
-        "Kilometry i mile przejechane przez wszystkie auta Tesli na FSD (Supervised) oraz flota Robotaxi bez kierowcy.",
+        "Rejestr robotaxi Tesli w Teksasie: Cybercab i Model Y z TxDMV, oraz kilometry przejechane na FSD.",
       path: "/fsd-tracker",
       image: "/img/fsd-tracker-cybercab.jpg",
       imageWidth: 1468,
@@ -44,13 +45,21 @@ function FsdTrackerPage() {
       <SiteHeader />
       <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
-        <div className="mt-1.5 grid items-start gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.7fr)]">
+        <div className="mt-1.5">
+          <h1 className="font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>
+          <p className="mt-3 max-w-2xl text-muted">
+            Rejestr robotaxi w Teksasie. Liczby biorą się z publicznego spisu TxDMV i odświeżają się same.
+          </p>
+        </div>
+        <TexasFleetChart fleet={fleet.teslaTexas} />
+        <RegistryTable registry={fleet.registry} />
+        <div className="mt-16 grid items-start gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(16rem,0.7fr)]">
           <div>
-            <h1 className="font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>
+            <h2 className="font-display text-3xl font-semibold tracking-tight">Mile na FSD</h2>
             <p className="mt-3 max-w-2xl text-muted">
-              Kilometry/mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
+              Kilometry i mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
             </p>
-            <div className="mt-10">
+            <div className="mt-8">
               <FsdCounterView counter={counter} part="totals" />
             </div>
           </div>
@@ -76,7 +85,6 @@ function FsdTrackerPage() {
         ) : (
           <p className="mt-14 text-sm text-muted">Wykresy miast chwilowo niedostępne.</p>
         )}
-        <RegistryTable registry={fleet.registry} />
         <p className="mt-8 max-w-2xl text-sm text-muted">
           Licznik nie czyta każdego auta w tej sekundzie. Tesla bierze stan floty z jednego momentu i dokłada mile w
           stałym tempie. Sama pisze, że przyrost to średnie tempo floty i że liczba może nie obejmować wzrostu floty
@@ -100,6 +108,14 @@ function FsdTrackerPage() {
             Źródło mil: tesla.com/fsd/safety
           </a>
           <a
+            href="https://txmccs.txdmv.gov/truckstop/search"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-fg underline decoration-accent underline-offset-4"
+          >
+            Źródło rejestru: TxDMV
+          </a>
+          <a
             href="https://robotaxitracker.com/"
             target="_blank"
             rel="noopener noreferrer"
@@ -121,7 +137,7 @@ function RegistryTable({ registry }: { registry: TexasRegistry | null }) {
   }
   const total = registry.rows.reduce((sum, row) => sum + row.count, 0);
   return (
-    <section className="mt-14 overflow-hidden rounded-2xl border border-border bg-bg/75 backdrop-blur-sm">
+    <section className="mt-8 overflow-hidden rounded-2xl border border-border bg-bg/75 backdrop-blur-sm">
       <div className="px-6 pt-5">
         <h2 className="font-display text-3xl font-semibold tracking-tight">Rejestr Teksasu</h2>
         <p className="mt-2 max-w-2xl text-sm text-muted">

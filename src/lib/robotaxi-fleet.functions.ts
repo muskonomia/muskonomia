@@ -18,23 +18,42 @@ export type TexasRegistry = {
   rows: TexasRegistryRow[];
 };
 
+export type TexasTeslaPoint = {
+  date: string;
+  cybercab: number;
+  modelY: number;
+};
+
+export type TexasTeslaFleet = {
+  asOf: string;
+  cybercab: number;
+  modelY: number;
+  total: number;
+  latestBatch: number;
+  latestBatchDate: string;
+  last7: number;
+  leadDate: string | null;
+  points: TexasTeslaPoint[];
+};
+
 export type RobotaxiFleet = {
   ok: boolean;
   asOfMs: number;
   teslaUnsupervised: number;
   cities: RobotaxiCityBar[];
   registry: TexasRegistry | null;
+  teslaTexas: TexasTeslaFleet | null;
 };
 
 let cache: { at: number; value: RobotaxiFleet } | null = null;
 
 function empty(asOfMs: number): RobotaxiFleet {
-  return { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null };
+  return { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null, teslaTexas: null };
 }
 
 export const getRobotaxiFleet = createServerFn({ method: "GET" }).handler(async (): Promise<RobotaxiFleet> => {
   const asOfMs = Date.now();
-  if (cache && asOfMs - cache.at < 6 * 60 * 60 * 1000) return { ...cache.value, asOfMs };
+  if (cache && asOfMs - cache.at < 60 * 60 * 1000) return { ...cache.value, asOfMs };
   try {
     const { loadRobotaxiFleet } = await import("@/lib/robotaxi-fleet.server");
     const value = await loadRobotaxiFleet(asOfMs);

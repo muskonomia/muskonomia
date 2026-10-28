@@ -1,5 +1,5 @@
 import https from "node:https";
-import type { RobotaxiCityBar, RobotaxiFleet, TexasRegistry, TexasRegistryRow } from "@/lib/robotaxi-fleet.functions";
+import type { RobotaxiCityBar, RobotaxiFleet, TexasRegistry, TexasRegistryRow, TexasTeslaFleet, TexasTeslaPoint } from "@/lib/robotaxi-fleet.functions";
 
 const HOST = "robotaxitracker.com";
 const DAY30 = 720 * 60 * 60 * 1000;
@@ -25,7 +25,7 @@ type Vehicle = {
 
 type Dmv = {
   generated_at?: string;
-  vins?: Record<string, { provider?: string; last_seen?: string }>;
+  vins?: Record<string, { provider?: string; first_seen?: string; last_seen?: string }>;
 };
 
 function request(path: string, cookie = ""): Promise<{ status: number; setCookie: string; body: string }> {
@@ -124,14 +124,89 @@ function parseRegistry(body: string): TexasRegistry | null {
   return { generatedAt, rows };
 }
 
+function chicagoDay(iso: string) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date(iso));
+}
+
+function shiftDay(day: string, days: number) {
+  const date = new Date(`${day}T12:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + days);
+  return date.toISOString().slice(0, 10);
+}
+
+function buildTeslaTexas(modelsBody: string, dmvBody: string): TexasTeslaFleet | null {
+  const models = JSON.parse(modelsBody) as {
+    generated_at?: string;
+    providers?: { tesla?: { vehicles?: { vin?: string; model?: string }[] } };
+  };
+  const dmv = JSON.parse(dmvBody) as Dmv;
+  const list = models.providers?.tesla?.vehicles;
+  if (!list?.length || !dmv.vins) return null;
+  const added = new Map<string, { cybercab: number; modelY: number }>();
+  for (const row of list) {
+    const model = row.model?.toLowerCase();
+    const key = model === "cybercab" ? "cybercab" : model === "model y" ? "modelY" : "";
+    const seen = row.vin ? dmv.vins[row.vin]?.first_seen : undefined;
+    if (!key || !seen) continue;
+    const day = chicagoDay(seen);
+    const bucket = added.get(day) ?? { cybercab: 0, modelY: 0 };
+    bucket[key] += 1;
+    added.set(day, bucket);
+  }
+  const points: TexasTeslaPoint[] = [];
+  let cybercab = 0;
+  let modelY = 0;
+  for (const date of [...added.keys()].sort()) {
+    const bucket = added.get(date);
+    if (!bucket) continue;
+    cybercab += bucket.cybercab;
+    modelY += bucket.modelY;
+    points.push({ date, cybercab, modelY });
+  }
+  const last = points.at(-1);
+  if (!last) return null;
+  let latestBatch = last.cybercab;
+  let latestBatchDate = last.date;
+  for (let i = points.length - 1; i >= 0; i -= 1) {
+    const prev = i > 0 ? points[i - 1].cybercab : 0;
+    const batch = points[i].cybercab - prev;
+    if (batch > 0) {
+      latestBatch = batch;
+      latestBatchDate = points[i].date;
+      break;
+    }
+  }
+  const asOf = models.generated_at || dmv.generated_at || "";
+  const cutoff = asOf ? shiftDay(chicagoDay(asOf), -7) : shiftDay(last.date, -7);
+  let weekBase = 0;
+  for (const point of points) if (point.date <= cutoff) weekBase = point.cybercab;
+  return {
+    asOf,
+    cybercab: last.cybercab,
+    modelY: last.modelY,
+    total: last.cybercab + last.modelY,
+    latestBatch,
+    latestBatchDate,
+    last7: last.cybercab - weekBase,
+    leadDate: points.find((point) => point.cybercab > point.modelY)?.date ?? null,
+    points,
+  };
+}
+
 export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> {
-  const empty: RobotaxiFleet = { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null };
+  const empty: RobotaxiFleet = { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null, teslaTexas: null };
   const home = await request("/");
   if (home.status !== 200 || !home.setCookie) return empty;
-  const [vehiclesRes, dmvRes, registryRes] = await Promise.all([
+  const [vehiclesRes, dmvRes, registryRes, modelsRes] = await Promise.all([
     request("/v1/api/compat/vehicles?limit=5000", home.setCookie),
     request("/v1/api/texas-dmv/vins", home.setCookie),
     request("/v1/api/texas-dmv", home.setCookie),
+    request("/v1/api/texas-dmv/vehicles", home.setCookie),
   ]);
   let registry: TexasRegistry | null = null;
   if (registryRes.status === 200) {
@@ -141,10 +216,18 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
       registry = null;
     }
   }
-  if (vehiclesRes.status !== 200 || dmvRes.status !== 200) return { ...empty, registry };
+  let teslaTexas: TexasTeslaFleet | null = null;
+  if (modelsRes.status === 200 && dmvRes.status === 200) {
+    try {
+      teslaTexas = buildTeslaTexas(modelsRes.body, dmvRes.body);
+    } catch {
+      teslaTexas = null;
+    }
+  }
+  if (vehiclesRes.status !== 200 || dmvRes.status !== 200) return { ...empty, registry, teslaTexas };
   const vehicles = JSON.parse(vehiclesRes.body) as Vehicle[];
   const dmv = JSON.parse(dmvRes.body) as Dmv;
-  if (!Array.isArray(vehicles)) return { ...empty, registry };
+  if (!Array.isArray(vehicles)) return { ...empty, registry, teslaTexas };
 
   const buckets = new Map<string, RobotaxiCityBar>();
   let teslaUnsupervised = 0;
@@ -164,5 +247,5 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
   }
 
   const cities = [...buckets.values()].sort((a, b) => b.inService - a.inService || a.city.localeCompare(b.city, "pl"));
-  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, cities, registry };
+  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, cities, registry, teslaTexas };
 }
