@@ -4,6 +4,12 @@ import { ensureDbReady } from "@/lib/db";
 
 async function handle(request: Request) {
   await ensureDbReady();
+  const url = new URL(request.url);
+  const legacy = "/api/auth/oauth2/callback/";
+  if (url.pathname.startsWith(legacy)) {
+    url.pathname = `/api/auth/callback/${url.pathname.slice(legacy.length)}`;
+    request = new Request(url, request);
+  }
   return auth.handler(request);
 }
 

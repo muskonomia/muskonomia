@@ -81,18 +81,21 @@ const database = databaseUrl
 export const SESSION_TOKEN_COOKIE = "__Host-grok-auth.session_token";
 
 const grokOAuthPlugin = authConfigured
-  ? genericOAuth({
-      config: GROK_PROVIDERS.map(({ providerId, idp }) => ({
-        providerId,
-        clientId: grokClientId as string,
-        clientSecret: grokClientSecret as string,
-        authorizationUrl: grokAuthorizationUrl,
-        tokenUrl: grokTokenUrl,
-        userInfoUrl: grokUserInfoUrl,
-        scopes: ["openid", "profile", "email"],
-        authorizationUrlParams: { idp, prompt: "login" },
-      })),
-    })
+  ? withLegacyOAuthCallback(
+      genericOAuth({
+        config: GROK_PROVIDERS.map(({ providerId, idp }) => ({
+          providerId,
+          clientId: grokClientId as string,
+          clientSecret: grokClientSecret as string,
+          authorizationUrl: grokAuthorizationUrl,
+          tokenUrl: grokTokenUrl,
+          userInfoUrl: grokUserInfoUrl,
+          scopes: ["openid", "profile", "email"],
+          pkce: false,
+          authorizationUrlParams: { idp, prompt: "login" },
+        })),
+      }),
+    )
   : null;
 
 export const auth = betterAuth({
@@ -132,3 +135,20 @@ export function readSessionToken(): string | null {
 }
 
 export { GROK_PROVIDERS } from "./providers";
+
+function withLegacyOAuthCallback<T extends { init?: (ctx: never) => Promise<{ context: { socialProviders: { id: string; callbackPath?: string }[] } }> }>(
+  plugin: T,
+): T {
+  const init = plugin.init;
+  if (!init) return plugin;
+  return {
+    ...plugin,
+    init: async (ctx: never) => {
+      const result = await init.call(plugin, ctx);
+      for (const provider of result.context.socialProviders) {
+        provider.callbackPath = `/oauth2/callback/${provider.id}`;
+      }
+      return result;
+    },
+  };
+}

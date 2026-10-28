@@ -21,11 +21,12 @@ export const Route = createFileRoute("/api/login/$provider")({
         }
         try {
           await ensureDbReady();
-          const apiRes = await auth.api.signInWithOAuth2({
+          const apiRes = await auth.api.signInSocial({
             body: {
-              providerId,
+              provider: providerId,
               callbackURL: "/",
               errorCallbackURL: "/login",
+              disableRedirect: true,
             },
             headers: request.headers,
             asResponse: true,
