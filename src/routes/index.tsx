@@ -31,10 +31,10 @@ function Home() {
       <main>
       <section className="relative isolate flex min-h-[36rem] items-end overflow-hidden" aria-labelledby="home-h1">
         <img
-          src="/img/cybertruck-hero.jpg"
-          alt="Tesla Cybertruck"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          fetchPriority="low"
+          src="/img/dragon-tesla-hero.jpg"
+          alt="Dragon z napisami SpaceX i Tesla przy stacji, nad Ziemią"
+          className="absolute inset-0 h-full w-full object-cover object-[left_center] sm:object-[center_30%]"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/55 to-overlay/20" />
         <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-12 pt-32">
