@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { XLogo } from "@/components/x-logo";
 import { absoluteUrl } from "@/lib/site";
 
-const X_HANDLE = "MuskonomiaPL";
+const X_HANDLE = "Muskonomia";
 
 export function XPostEmbed({ id, handle }: { id: string; handle: string }) {
   const ref = useRef<HTMLDivElement>(null);

@@ -12,6 +12,7 @@ export const postsCs: Post[] = [
     isoDate: "2026-10-23",
     img: "/img/tesla-megapack-farma-sloneczna-okladka.jpg",
     credit: "Megapacki przy farmie słonecznej. Fot. Tesla",
+    xPostId: "2113536754296709450",
     body: [
       {
         type: "p",

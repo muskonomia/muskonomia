@@ -13,6 +13,7 @@ export const postsRen: Post[] = [
     img: "/img/okladka-felieton-renta-deflacja-1600x900.jpg",
     credit:
       "Linia montażowa Cybercaba, roboty Optimus, rakiety Starship i rozbudowa superkomputera w Starbase. Fot. Tesla / SpaceX / Munro Live / RGV Aerial Photography, kolaż: Muskonomia.pl",
+    xPostId: "2115456580724437433",
     body: [
       {
         type: "p",

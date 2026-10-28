@@ -3,8 +3,8 @@ export const SITE_URL = "https://muskonomia.pl";
 export const SITE_DESCRIPTION =
   "Aktualności o Tesli, SpaceX, xAI i Elonie Musku po polsku: Robotaxi, Starlink, Grok, Cybercab i Optimus.";
 export const SITE_OG = "/og.jpg";
-export const SITE_X_HANDLE = "@MuskonomiaPL";
-export const SITE_X_URL = "https://x.com/MuskonomiaPL";
+export const SITE_X_HANDLE = "@Muskonomia";
+export const SITE_X_URL = "https://x.com/Muskonomia";
 
 export const SITE_AUTHOR = "SEBIX";
 export const SITE_CONTACT_EMAIL = "sebanrgcrypto@gmail.com";

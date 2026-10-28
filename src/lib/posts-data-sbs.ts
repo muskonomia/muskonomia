@@ -13,6 +13,7 @@ export const postsSbs: Post[] = [
     img: "/img/okladka-starbase-supercomputer-1600x900.jpg",
     credit:
       "Budowa kompleksu „Starbase supercomputer” koło Portu Brownsville. Fot. RGV Aerial Photography / opracowanie: Muskonomia.pl",
+    xPostId: "2115408298824331491",
     body: [
       {
         type: "p",

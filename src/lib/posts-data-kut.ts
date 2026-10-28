@@ -12,6 +12,7 @@ export const postsKut: Post[] = [
     isoDate: "2026-10-25",
     img: "/img/starlink-terminal-uchwyt-magnetyczny-kutkov-okladka-v2.jpg",
     credit: "Terminal Starlink na uchwycie magnetycznym. Fot. Oleg Kutkov",
+    xPostId: "2114265609647120734",
     body: [
       {
         type: "p",

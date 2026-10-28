@@ -12,6 +12,7 @@ export const postsCcab: Post[] = [
     isoDate: "2026-10-27",
     img: "/img/cybercab-munro-lars-moravy-giga-texas.jpg",
     credit: "Lars Moravy i zespół Tesli prezentują przedni moduł Cybercaba w Giga Texas. Fot. Munro Live / Tesla",
+    xPostId: "2114918463638564969",
     body: [
       {
         type: "p",

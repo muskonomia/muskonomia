@@ -13,6 +13,7 @@ export const postsTq3: Post[] = [
     isoDate: "2026-10-22",
     img: "/img/cover-cybercab-austin.jpg",
     credit: "Cybercaby w Austin. fot. Tesla",
+    xPostId: "2113191573986890144",
     body: [
       {
         type: "p",

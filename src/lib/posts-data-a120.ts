@@ -12,6 +12,7 @@ export const postsA120: Post[] = [
     isoDate: "2026-10-26",
     img: "/img/anthropic-s1-nvidia-dgx-b200-klaster.jpg",
     credit: "Serwery Nvidia DGX w szafie centrum danych. Fot. Javils00, CC0",
+    xPostId: "2114753421836247290",
     body: [
       {
         type: "p",

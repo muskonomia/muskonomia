@@ -12,6 +12,7 @@ export const postsDl: Post[] = [
     isoDate: "2026-10-24",
     img: "/img/tesla-cybercab-austin-raport-q3-okladka.jpg",
     credit: "Cybercaby w Austin. Fot. Tesla",
+    xPostId: "2113935240599118071",
     body: [
       {
         type: "p",

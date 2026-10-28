@@ -12,6 +12,7 @@ export const postsW9: Post[] = [
     isoDate: "2026-10-23",
     img: "/img/tesla-model-y-wrzesien-2026-okladka.jpg",
     credit: "Tesla Model Y. Fot. Tesla",
+    xPostId: "2113496509505245460",
     body: [
       {
         type: "p",

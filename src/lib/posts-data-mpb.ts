@@ -13,6 +13,7 @@ export const postsMpb: Post[] = [
     img: "/img/tesla-megapack-belgia-langerlo-okladka.jpg",
     credit:
       "Budowa parku bateryjnego w Langerlo. Fot. [Storm](https://www.storm.be/en/news/106-megabatterijen-komen-aan-op-werf-van-storm-in-langerlo)",
+    xPostId: "2114618505710465029",
     body: [
       {
         type: "p",

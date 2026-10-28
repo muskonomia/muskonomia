@@ -12,6 +12,7 @@ export const postsSxsi: Post[] = [
     isoDate: "2026-10-27",
     img: "/img/spacexsi-kampus-memphis-southaven-okladka.jpg",
     credit: "Północna część kampusu SpaceXSI (Colossus II) w Memphis z lotu satelity. Fot. Vantor / Measured AI",
+    xPostId: "2115010620038803847",
     body: [
       {
         type: "p",

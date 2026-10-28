@@ -13,6 +13,7 @@ export const postsTel: Post[] = [
     img: "/img/grok-bot-telefon-okladka.jpg",
     credit:
       "Grok Bot prosi o dostęp do aplikacji w telefonie. Grafika: [x.com/@bot](https://x.com/bot/status/2113393684209176718)",
+    xPostId: "2114267387184763326",
     body: [
       {
         type: "p",

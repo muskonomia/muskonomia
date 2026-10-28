@@ -13,6 +13,7 @@ export const postsShf: Post[] = [
     img: "/img/starship-lot-15-super-heavy-test-statyczny-okladka.jpg",
     credit:
       "Static Fire pierwszego stopnia Super Heavy w Starbase. Kadr z [wideo SpaceX](https://x.com/SpaceX/status/2114444137067844004)",
+    xPostId: "2114618375561265651",
     body: [
       {
         type: "p",

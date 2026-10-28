@@ -13,6 +13,7 @@ export const postsGpu: Post[] = [
     img: "/img/nvidia-hgx-b200-okladka.jpg",
     credit:
       "Moduł serwerowy Nvidia HGX B200. Fot. [Pokiiri](https://commons.wikimedia.org/wiki/File:Nvidia_DGX-B200-HGX.jpg), CC BY-SA 4.0",
+    xPostId: "2114271229171335569",
     body: [
       {
         type: "p",
