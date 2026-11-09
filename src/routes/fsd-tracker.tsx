@@ -100,6 +100,14 @@ function FsdTrackerPage() {
             Źródło mil Robotaxi: tesla.com/robotaxi/safety
           </a>
           <a
+            href="https://www.tesla.com/robotaxi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-fg underline decoration-accent underline-offset-4"
+          >
+            Miasta Robotaxi: tesla.com/robotaxi
+          </a>
+          <a
             href="https://www.tesla.com/fsd/safety"
             target="_blank"
             rel="noopener noreferrer"
@@ -248,6 +256,11 @@ function barColor(provider: string) {
   return "bg-white";
 }
 
+const ROBOTAXI_LIVE = {
+  miles: 4_808_737,
+  asOf: "9 listopada 2026",
+} as const;
+
 const ROBOTAXI_MILES = {
   from: "22 stycznia 2026",
   asOf: "18 października 2026",
@@ -262,7 +275,7 @@ const ROBOTAXI_MILES = {
   dark: 862_000,
   rain: 113_000,
   rush: 575_000,
-  next: ["Las Vegas", "Phoenix", "Jacksonville", "San Antonio"],
+  next: ["Las Vegas", "Jacksonville", "Phoenix", "San Antonio"],
 } as const;
 
 const CITY_BANDS = ["#6e5a34", "#8d7344", "#b08d52", "#c9aa72", "#ddc79a", "#f0e2c4"];
@@ -274,10 +287,22 @@ function RobotaxiMiles() {
   return (
     <section className="mt-14 rounded-2xl border border-border bg-bg/75 px-6 py-6 backdrop-blur-sm">
       <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Robotaxi bez nadzoru</p>
-      <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight">Mile po miastach</h2>
+      <h2 className="mt-2 font-display text-3xl font-semibold tracking-tight">
+        Mile przejechane autonomicznie
+      </h2>
       <p className="mt-2 max-w-2xl text-sm text-muted">
-        Stan z raportu Tesli, od {ROBOTAXI_MILES.from} do {ROBOTAXI_MILES.asOf}. Licznik na stronie Tesli idzie dalej.
-        Tu jest odczyt z tabeli, nie z żywej liczby.
+        Żywy licznik Tesli. Szacunek w tempie floty, jak w stopce strony Tesli. Stan na {ROBOTAXI_LIVE.asOf}.
+      </p>
+      <p className="mt-6 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
+        {formatMiles(ROBOTAXI_LIVE.miles)}
+      </p>
+      <p className="mt-2 text-muted">mil · {formatMiles(milesToKm(ROBOTAXI_LIVE.miles))} km</p>
+
+      <div className="mt-10 border-t border-border/70 pt-8">
+      <h2 className="font-display text-3xl font-semibold tracking-tight">Mile po miastach</h2>
+      <p className="mt-2 max-w-2xl text-sm text-muted">
+        Stan z raportu Tesli, od {ROBOTAXI_MILES.from} do {ROBOTAXI_MILES.asOf}. To odczyt z tabeli miast, nie z żywej
+        liczby powyżej.
       </p>
       <p className="mt-6 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
         {formatMiles(total)}
@@ -311,6 +336,10 @@ function RobotaxiMiles() {
               </li>
             ))}
           </ul>
+          <p className="mt-4 text-sm text-muted">
+            Fort Worth jest na liście miast z jazdami; Tesla nie podaje osobnego przebiegu w tabeli mil (stan na
+            18.10.2026).
+          </p>
         </div>
         <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight">W tych samych milach</h3>
@@ -322,10 +351,9 @@ function RobotaxiMiles() {
             <Condition label="W deszczu" value={`${formatMiles(ROBOTAXI_MILES.rain)} mil`} note={`${share(ROBOTAXI_MILES.rain, total)}, dolne oszacowanie`} />
             <Condition label="W szczycie" value={`${formatMiles(ROBOTAXI_MILES.rush)} mil`} note={share(ROBOTAXI_MILES.rush, total)} />
           </ul>
-          <p className="mt-5 text-sm text-muted">
-            Następne miasta, bez daty: {ROBOTAXI_MILES.next.join(", ")}.
-          </p>
+          <p className="mt-5 text-sm text-muted">Wkrótce, bez daty: {ROBOTAXI_MILES.next.join(", ")}.</p>
         </div>
+      </div>
       </div>
     </section>
   );
