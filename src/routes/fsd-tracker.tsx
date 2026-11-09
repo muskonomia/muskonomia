@@ -275,7 +275,7 @@ const ROBOTAXI_MILES = {
   dark: 862_000,
   rain: 113_000,
   rush: 575_000,
-  next: ["Las Vegas", "Jacksonville", "Phoenix", "San Antonio"],
+  next: ["Las Vegas", "Jacksonville", "Phoenix"],
 } as const;
 
 const CITY_BANDS = ["#6e5a34", "#8d7344", "#b08d52", "#c9aa72", "#ddc79a", "#f0e2c4"];
@@ -337,8 +337,17 @@ function RobotaxiMiles() {
             ))}
           </ul>
           <p className="mt-4 text-sm text-muted">
-            Fort Worth jest na liście miast z jazdami; Tesla nie podaje osobnego przebiegu w tabeli mil (stan na
-            18.10.2026).
+            Fort Worth i San Antonio są na liście miast z jazdami. Tesla nie podaje ich osobnego przebiegu w tabeli
+            mil (stan na 18.10.2026). San Antonio od 9 listopada 2026, od 5:00 czasu lokalnego, według{" "}
+            <a
+              href="https://x.com/robotaxi/status/2119678179963187564"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-fg underline decoration-accent underline-offset-4"
+            >
+              oficjalnego wpisu @robotaxi
+            </a>
+            .
           </p>
         </div>
         <div>
