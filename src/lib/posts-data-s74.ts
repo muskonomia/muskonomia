@@ -47,7 +47,15 @@ export const postsS74: Post[] = [
       },
       {
         type: "p",
+        text: "Magazyn 24 GWh SpaceX nazywa największym w Stanach Zjednoczonych. [Sawyer Merritt](https://x.com/SawyerMerritt/status/2120923180869017997) szacuje, że oznaczałoby to zakup Megapacków od Tesli za ponad 5 mld USD. SpaceX nie podaje jednak w swoich materiałach, kto dostarczy baterie.",
+      },
+      {
+        type: "p",
         text: "Według [AZBEX](https://azbex.com/planning-development/spacex-cochise-county-data-center-campus/) kampus ma zająć około 302 ha, budowa ma iść w czterech fazach, a wnioskodawcą jest Tombstone Resources LLC. Serwis podaje też gazowe generatory awaryjne o mocy 90 MW.",
+      },
+      {
+        type: "p",
+        text: "[Strona kampusu](https://www.spacex.com/sites/cochise-county) podaje więcej szczegółów. Każdy z dziewięciu jednokondygnacyjnych budynków obliczeniowych ma mieć około 45 800 m². Na miejscu nie stanie elektrownia ani turbiny gazowe. Budynki dostaną tylko awaryjne generatory gazowe o mocy około 10 MW każdy, zasilane z istniejącego gazociągu i uruchamiane wyłącznie przy awariach sieci i testach. Według SpaceX wszyscy członkowie spółdzielni Sulphur Springs Valley Electric Cooperative mają płacić za prąd od 10 do 40 procent mniej przez cały okres działania kampusu. Po pełnej rozbudowie firma ma przekazywać do 260 mln USD rocznie tej spółdzielni i do 200 mln USD rocznie Arizona Electric Power Cooperative. Obieg chłodzenia jest zamknięty, napełniany raz, a woda ma w nim krążyć do 10 lat. Łączne zużycie wody po pełnej rozbudowie ma wynieść do około 12 300 m³ rocznie, mniej więcej tyle, ile zużywa 20–30 domów w Arizonie. Hrabstwo może liczyć na jednorazowo do 250 mln USD z podatku od sprzedaży oraz od 34 do 103 mln USD rocznie z podatku od nieruchomości.",
       },
       {
         type: "p",
