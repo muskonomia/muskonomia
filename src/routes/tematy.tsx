@@ -44,7 +44,15 @@ function Tematy() {
           return (
             <section key={topic.id} id={topic.id} className="scroll-mt-20" aria-labelledby={`h-${topic.id}`}>
               <div className="relative isolate min-h-56 overflow-hidden">
-                <img src={topic.cover} alt="" className="absolute inset-0 h-full w-full object-cover" />
+                <img
+                  src={topic.cover}
+                  alt=""
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
                 <div className="absolute inset-0 bg-overlay/70" />
                 <div className="relative z-10 mx-auto flex min-h-56 max-w-6xl items-end px-5 py-10">
                   <div>

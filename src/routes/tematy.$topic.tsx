@@ -33,7 +33,13 @@ function Temat() {
       <SiteHeader />
       <main className="pt-16">
         <div className="relative isolate min-h-56 overflow-hidden">
-          <img src={meta.cover} alt="" className="absolute inset-0 h-full w-full object-cover" />
+          <img
+            src={meta.cover}
+            alt=""
+            width={1600}
+            height={900}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-overlay/70" />
           <div className="relative z-10 mx-auto flex min-h-56 max-w-6xl items-end px-5 py-10">
             <div>

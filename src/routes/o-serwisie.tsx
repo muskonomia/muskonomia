@@ -178,6 +178,8 @@ function OSerwisie() {
           <img
             src="/img/terafab-render-night.jpg"
             alt=""
+            width={1568}
+            height={882}
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/75 to-overlay/45" />
@@ -238,6 +240,8 @@ function OSerwisie() {
                       <img
                         src={item.src}
                         alt={item.alt}
+                        width={1600}
+                        height={900}
                         loading="lazy"
                         decoding="async"
                         className="h-full w-full object-cover transition duration-500 group-hover:scale-105"

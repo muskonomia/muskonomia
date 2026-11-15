@@ -33,6 +33,10 @@ function BlogPost() {
             <img
               src={post.img}
               alt={post.title}
+              width={1600}
+              height={900}
+              fetchPriority="high"
+              loading="eager"
               className={`absolute inset-0 h-full w-full ${post.contain ? "bg-fg object-contain" : post.object ?? "object-cover"}`}
             />
             <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/50 to-overlay/20" />
@@ -52,7 +56,7 @@ function BlogPost() {
             </p>
           ) : null}
 
-          <div className="mx-auto max-w-3xl space-y-5 px-5 py-16 text-base leading-relaxed text-fg/90 sm:text-lg">
+          <div className="article-body mx-auto max-w-3xl space-y-5 px-5 py-16 text-base leading-relaxed text-fg/90 sm:text-lg">
             {post.body.map((block, i) => {
               if (block.type === "img") {
                 return (
@@ -66,6 +70,10 @@ function BlogPost() {
                       <img
                         src={block.src}
                         alt={block.alt}
+                        width={1600}
+                        height={900}
+                        loading="lazy"
+                        decoding="async"
                         className={
                           block.contain
                             ? "h-auto w-full bg-fg object-contain"

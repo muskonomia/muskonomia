@@ -33,6 +33,10 @@ function Huby() {
               <img
                 src={hub.cover}
                 alt=""
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/40 to-overlay/10" />

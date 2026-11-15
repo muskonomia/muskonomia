@@ -9,8 +9,12 @@ export function PostCard({ post, priority = false }: { post: Post; priority?: bo
       <img
         src={post.img}
         alt=""
+        width={1600}
+        height={900}
+        loading="lazy"
+        decoding="async"
         className={`absolute inset-0 h-full w-full ${post.contain ? "bg-fg object-contain" : "object-cover"} transition duration-500 group-hover:scale-105`}
-        {...(priority ? {} : { fetchPriority: "low" as const })}
+        fetchPriority={priority ? "high" : "low"}
       />
       <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/45 to-overlay/10" />
       <Link

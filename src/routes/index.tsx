@@ -33,6 +33,9 @@ function Home() {
         <img
           src="/img/dragon-tesla-hero.jpg"
           alt="Dragon z napisami SpaceX i Tesla przy stacji, nad Ziemią"
+          width={1792}
+          height={1008}
+          loading="eager"
           className="absolute inset-0 h-full w-full object-cover object-[left_center] sm:object-[center_30%]"
           fetchPriority="high"
         />
@@ -83,6 +86,10 @@ function Home() {
         <img
           src="/img/interior.jpg"
           alt=""
+          width={900}
+          height={509}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover"
           fetchPriority="low"
         />
@@ -113,6 +120,10 @@ function Home() {
         <img
           src="/img/terafab-render-night.jpg"
           alt=""
+          width={1568}
+          height={882}
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover object-center"
           fetchPriority="low"
         />
@@ -141,7 +152,16 @@ function Home() {
           params={{ slug: "tesla-model-y-dla-rodziny" }}
           className="overflow-hidden rounded-xl border border-border bg-surface"
         >
-          <img src="/img/interior.jpg" alt="Szklany dach Model Y" className="h-56 w-full object-cover" fetchPriority="low" />
+          <img
+            src="/img/interior.jpg"
+            alt="Szklany dach Model Y"
+            width={900}
+            height={509}
+            loading="lazy"
+            decoding="async"
+            className="h-56 w-full object-cover"
+            fetchPriority="low"
+          />
           <div className="p-6">
             <p className="text-xs uppercase tracking-widest text-accent">Tesla</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Model Y: auto, które ogarnia rodzinę</h3>
@@ -159,6 +179,10 @@ function Home() {
           <img
             src="/img/grok-chart.jpg"
             alt="Ranking Grok w indeksie medycznym"
+            width={900}
+            height={506}
+            loading="lazy"
+            decoding="async"
             className="h-56 w-full bg-fg object-contain object-center p-3"
             fetchPriority="low"
           />
@@ -255,6 +279,10 @@ function TopicCard({
       <img
         src={img}
         alt=""
+        width={1600}
+        height={900}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
         fetchPriority="low"
       />

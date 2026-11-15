@@ -9,6 +9,8 @@ export function SiteHeader() {
           <img
             src="/img/logo.png"
             alt="muskonomia.pl"
+            width={1036}
+            height={443}
             className="h-10 w-auto max-w-[220px] object-contain object-left sm:h-11 sm:max-w-[260px]"
           />
         </Link>
