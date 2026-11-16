@@ -259,8 +259,8 @@ function barColor(provider: string) {
 }
 
 const ROBOTAXI_LIVE = {
-  miles: 4_808_737,
-  asOf: "9 listopada 2026",
+  miles: 5_355_935,
+  asOf: "16 listopada 2026",
 } as const;
 
 const ROBOTAXI_MILES = {
@@ -278,6 +278,10 @@ const ROBOTAXI_MILES = {
   rain: 113_000,
   rush: 575_000,
   next: ["Las Vegas", "Jacksonville", "Phoenix"],
+  openWithoutMiles: [
+    { city: "Fort Worth", region: "Teksas" },
+    { city: "San Antonio", region: "Teksas" },
+  ],
 } as const;
 
 const CITY_BANDS = ["#6e5a34", "#8d7344", "#b08d52", "#c9aa72", "#ddc79a", "#f0e2c4"];
@@ -335,6 +339,14 @@ function RobotaxiMiles() {
                   {formatMiles(row.miles)} mil
                   <span className="ml-2 text-muted">{share(row.miles, total)}</span>
                 </span>
+              </li>
+            ))}
+            {ROBOTAXI_MILES.openWithoutMiles.map((row) => (
+              <li key={row.city} className="flex items-baseline justify-between gap-4 border-t border-border/70 py-2.5 text-sm">
+                <span>
+                  {row.city} <span className="text-muted">{row.region}</span>
+                </span>
+                <span className="text-muted">bez osobnego przebiegu</span>
               </li>
             ))}
           </ul>
