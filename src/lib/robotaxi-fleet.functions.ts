@@ -5,6 +5,7 @@ export type RobotaxiCityBar = {
   provider: string;
   mode: "unsupervised" | "supervised";
   inService: number;
+  cybercab?: number;
 };
 
 export type TexasRegistryRow = {
@@ -40,6 +41,7 @@ export type RobotaxiFleet = {
   ok: boolean;
   asOfMs: number;
   teslaUnsupervised: number;
+  teslaCybercabUnsupervised: number;
   cities: RobotaxiCityBar[];
   registry: TexasRegistry | null;
   teslaTexas: TexasTeslaFleet | null;
@@ -48,7 +50,7 @@ export type RobotaxiFleet = {
 let cache: { at: number; value: RobotaxiFleet } | null = null;
 
 function empty(asOfMs: number): RobotaxiFleet {
-  return { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null, teslaTexas: null };
+  return { ok: false, asOfMs, teslaUnsupervised: 0, teslaCybercabUnsupervised: 0, cities: [], registry: null, teslaTexas: null };
 }
 
 export const getRobotaxiFleet = createServerFn({ method: "GET" }).handler(async (): Promise<RobotaxiFleet> => {

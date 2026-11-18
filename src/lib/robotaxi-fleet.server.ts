@@ -17,6 +17,7 @@ const TEXAS = new Set([
 
 type Vehicle = {
   provider?: string;
+  vehicleModel?: string;
   vin?: string;
   isTestVehicle?: boolean;
   lastSpotted?: number;
@@ -199,7 +200,15 @@ function buildTeslaTexas(modelsBody: string, dmvBody: string): TexasTeslaFleet |
 }
 
 export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> {
-  const empty: RobotaxiFleet = { ok: false, asOfMs, teslaUnsupervised: 0, cities: [], registry: null, teslaTexas: null };
+  const empty: RobotaxiFleet = {
+    ok: false,
+    asOfMs,
+    teslaUnsupervised: 0,
+    teslaCybercabUnsupervised: 0,
+    cities: [],
+    registry: null,
+    teslaTexas: null,
+  };
   const home = await request("/");
   if (home.status !== 200 || !home.setCookie) return empty;
   const [vehiclesRes, dmvRes, registryRes, modelsRes] = await Promise.all([
@@ -231,6 +240,7 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
 
   const buckets = new Map<string, RobotaxiCityBar>();
   let teslaUnsupervised = 0;
+  let teslaCybercabUnsupervised = 0;
   for (const vehicle of vehicles) {
     if (vehicle.isTestVehicle) continue;
     const provider =
@@ -239,13 +249,17 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
     const slug = vehicle.serviceArea?.slug ?? "";
     const mode: RobotaxiCityBar["mode"] = provider === "Tesla" && slug === "bay_area" ? "supervised" : "unsupervised";
     const city = vehicle.serviceArea?.name || "Bez miasta";
-    if (provider === "Tesla" && mode === "unsupervised") teslaUnsupervised += 1;
+    if (provider === "Tesla" && mode === "unsupervised") {
+      teslaUnsupervised += 1;
+      if (vehicle.vehicleModel === "cybercab") teslaCybercabUnsupervised += 1;
+    }
     const key = `${mode}|${provider}|${city}`;
     const row = buckets.get(key) ?? { city, provider, mode, inService: 0 };
     row.inService += 1;
+    if (vehicle.vehicleModel === "cybercab") row.cybercab = (row.cybercab ?? 0) + 1;
     buckets.set(key, row);
   }
 
   const cities = [...buckets.values()].sort((a, b) => b.inService - a.inService || a.city.localeCompare(b.city, "pl"));
-  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, cities, registry, teslaTexas };
+  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, teslaCybercabUnsupervised, cities, registry, teslaTexas };
 }

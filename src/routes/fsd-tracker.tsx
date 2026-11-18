@@ -68,7 +68,10 @@ function FsdTrackerPage() {
           <FsdCounterView counter={counter} part="stats" />
         </div>
         <div className="mt-8">
-          <UnsupervisedCard count={fleet.ok ? fleet.teslaUnsupervised : null} />
+          <UnsupervisedCard
+            count={fleet.ok ? fleet.teslaUnsupervised : null}
+            cybercab={fleet.ok ? fleet.teslaCybercabUnsupervised : null}
+          />
         </div>
         <RobotaxiMiles />
         {fleet.ok ? (
@@ -196,7 +199,7 @@ function registryWhen(iso: string) {
   }).format(date);
 }
 
-function UnsupervisedCard({ count }: { count: number | null }) {
+function UnsupervisedCard({ count, cybercab }: { count: number | null; cybercab: number | null }) {
   return (
     <aside className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3 rounded-2xl border border-border bg-bg/75 px-6 py-5 backdrop-blur-sm">
       <div>
@@ -204,8 +207,19 @@ function UnsupervisedCard({ count }: { count: number | null }) {
         <p className="mt-2 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
           {count === null ? "—" : formatMiles(count)}
         </p>
-        <p className="mt-2 text-muted">aut bez kierowcy · Unsupervised</p>
+        <p className="mt-2 text-muted">aut widzianych bez kierowcy</p>
+        <p className="mt-1 max-w-md text-sm text-muted">
+          To nie jest rejestr TxDMV. Liczba z robotaxitracker.com: auta Tesli widziane w miastach unsupervised.
+        </p>
       </div>
+      {cybercab !== null && cybercab > 0 ? (
+        <div className="text-right">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">w tym Cybercab</p>
+          <p className="mt-2 font-display text-3xl font-semibold leading-none tracking-tight tabular-nums">
+            {formatMiles(cybercab)}
+          </p>
+        </div>
+      ) : null}
     </aside>
   );
 }
@@ -233,6 +247,9 @@ function CityBars({
               <div className="flex items-baseline justify-between gap-3 text-sm">
                 <span>
                   {row.city} <span className="text-muted">{row.provider}</span>
+                  {row.cybercab ? (
+                    <span className="text-muted"> · {formatMiles(row.cybercab)} Cybercab</span>
+                  ) : null}
                 </span>
                 <span className="tabular-nums">{formatMiles(row.inService)}</span>
               </div>
@@ -259,8 +276,8 @@ function barColor(provider: string) {
 }
 
 const ROBOTAXI_LIVE = {
-  miles: 5_355_935,
-  asOf: "16 listopada 2026",
+  miles: 5_522_442,
+  asOf: "18 listopada 2026",
 } as const;
 
 const ROBOTAXI_MILES = {
