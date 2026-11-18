@@ -59,7 +59,11 @@ function FsdTrackerPage() {
           <div>
             <h2 className="font-display text-3xl font-semibold tracking-tight">Mile na FSD</h2>
             <p className="mt-3 max-w-2xl text-muted">
-              Kilometry i mile przejechane przez wszystkie auta z włączonym FSD (Supervised).
+              Kilometry i mile przejechane przez wszystkie auta z włączonym FSD (Supervised). Ziarno licznika Tesli:{" "}
+              {warsawStamp(counter.seedEpochMs)}.
+              {counter.sourceGeneratedAtMs
+                ? ` Plik źródłowy: ${warsawStamp(counter.sourceGeneratedAtMs)}.`
+                : ""}
             </p>
             <div className="mt-8">
               <FsdCounterView counter={counter} part="totals" />
@@ -71,6 +75,7 @@ function FsdTrackerPage() {
           <UnsupervisedCard
             count={fleet.ok ? fleet.teslaUnsupervised : null}
             cybercab={fleet.ok ? fleet.teslaCybercabUnsupervised : null}
+            asOfMs={fleet.asOfMs}
           />
         </div>
         <RobotaxiMiles />
@@ -78,12 +83,12 @@ function FsdTrackerPage() {
           <div className="mt-14 grid gap-12 lg:grid-cols-2">
             <CityBars
               title="Bez kierowcy"
-              note="Miasta, w których robotaxi jeździ unsupervised."
+              note={`Miasta, w których robotaxi jeździ unsupervised. Odczyt robotaxitracker.com: ${warsawStamp(fleet.asOfMs)}.`}
               rows={unsupervised}
             />
             <CityBars
               title="Z kierowcą"
-              note="Miasta, w których robotaxi jedzie supervised, z człowiekiem na pokładzie."
+              note={`Miasta, w których robotaxi jedzie supervised, z człowiekiem na pokładzie. Odczyt robotaxitracker.com: ${warsawStamp(fleet.asOfMs)}.`}
               rows={supervised}
             />
           </div>
@@ -186,9 +191,7 @@ function RegistryTable({ registry }: { registry: TexasRegistry | null }) {
   );
 }
 
-function registryWhen(iso: string) {
-  const date = new Date(iso);
-  if (Number.isNaN(date.getTime())) return "brak daty";
+function warsawStamp(ms: number) {
   return new Intl.DateTimeFormat("pl-PL", {
     day: "numeric",
     month: "long",
@@ -196,10 +199,24 @@ function registryWhen(iso: string) {
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "Europe/Warsaw",
-  }).format(date);
+  }).format(new Date(ms));
 }
 
-function UnsupervisedCard({ count, cybercab }: { count: number | null; cybercab: number | null }) {
+function registryWhen(iso: string) {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "brak daty";
+  return warsawStamp(date.getTime());
+}
+
+function UnsupervisedCard({
+  count,
+  cybercab,
+  asOfMs,
+}: {
+  count: number | null;
+  cybercab: number | null;
+  asOfMs: number;
+}) {
   return (
     <aside className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3 rounded-2xl border border-border bg-bg/75 px-6 py-5 backdrop-blur-sm">
       <div>
@@ -209,7 +226,8 @@ function UnsupervisedCard({ count, cybercab }: { count: number | null; cybercab:
         </p>
         <p className="mt-2 text-muted">aut widzianych bez kierowcy</p>
         <p className="mt-1 max-w-md text-sm text-muted">
-          To nie jest rejestr TxDMV. Liczba z robotaxitracker.com: auta Tesli widziane w miastach unsupervised.
+          To nie jest rejestr TxDMV. Liczba z robotaxitracker.com: auta Tesli widziane w miastach unsupervised. Odczyt{" "}
+          {warsawStamp(asOfMs)}.
         </p>
       </div>
       {cybercab !== null && cybercab > 0 ? (
@@ -369,20 +387,39 @@ function RobotaxiMiles() {
           </ul>
           <p className="mt-4 text-sm text-muted">
             Fort Worth i San Antonio są na liście miast z jazdami. Tesla nie podaje ich osobnego przebiegu w tabeli
-            mil (stan na 18.10.2026). San Antonio od 9 listopada 2026, od 5:00 czasu lokalnego, według{" "}
+            mil (stan na 18.10.2026). Fort Worth od 3 listopada 2026, od 6:00 czasu lokalnego (
+            <a
+              href="https://x.com/robotaxi/status/2117128711761985656"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-fg underline decoration-accent underline-offset-4"
+            >
+              wpis @robotaxi
+            </a>
+            ). San Antonio od 9 listopada, od 5:00 (
             <a
               href="https://x.com/robotaxi/status/2119678179963187564"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-fg underline decoration-accent underline-offset-4"
             >
-              oficjalnego wpisu @robotaxi
+              wpis @robotaxi
             </a>
-            .
+            ). Od 12 listopada usługa jeździ całą dobę w każdym mieście, w którym działa (
+            <a
+              href="https://x.com/robotaxi/status/2120736143566344324"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-fg underline decoration-accent underline-offset-4"
+            >
+              wpis @robotaxi
+            </a>
+            ).
           </p>
         </div>
         <div>
           <h3 className="font-display text-2xl font-semibold tracking-tight">W tych samych milach</h3>
+          <p className="mt-2 text-sm text-muted">Stan z raportu Tesli, 18 października 2026. Nowszego raportu nie ma.</p>
           <ul className="mt-4 space-y-3 text-sm">
             <Condition label="Ranni" value="0" note="Tesla liczy kontakt z winy Robotaxi" />
             <Condition label="Odpalone poduszki" value="0" note="także zero" />
@@ -391,7 +428,19 @@ function RobotaxiMiles() {
             <Condition label="W deszczu" value={`${formatMiles(ROBOTAXI_MILES.rain)} mil`} note={`${share(ROBOTAXI_MILES.rain, total)}, dolne oszacowanie`} />
             <Condition label="W szczycie" value={`${formatMiles(ROBOTAXI_MILES.rush)} mil`} note={share(ROBOTAXI_MILES.rush, total)} />
           </ul>
-          <p className="mt-5 text-sm text-muted">Wkrótce, bez daty: {ROBOTAXI_MILES.next.join(", ")}.</p>
+          <p className="mt-5 text-sm text-muted">
+            Wkrótce, bez daty startu: {ROBOTAXI_MILES.next.join(", ")}. Ostatnia lista z nazwami to{" "}
+            <a
+              href="https://x.com/robotaxi/status/2112988567500902438"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-fg underline decoration-accent underline-offset-4"
+            >
+              wpis @robotaxi z 21 października 2026
+            </a>
+            . San Antonio z tej listy już jeździ. Na tesla.com/robotaxi 18 listopada jest osiem miast i zdanie o
+            kolejnych, bez nowych nazw.
+          </p>
         </div>
       </div>
       </div>

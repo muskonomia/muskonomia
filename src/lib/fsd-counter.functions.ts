@@ -26,7 +26,16 @@ function fromPayload(data: unknown, asOfMs: number): FsdCounter | null {
   ) {
     return null;
   }
-  return { seedEpochMs, totalMilesStart, cityMilesStart, totalMilesPerMs, cityMilesPerMs, asOfMs };
+  const generated = Date.parse(String((data as { generatedAtUtc?: unknown }).generatedAtUtc ?? ""));
+  return {
+    seedEpochMs,
+    totalMilesStart,
+    cityMilesStart,
+    totalMilesPerMs,
+    cityMilesPerMs,
+    sourceGeneratedAtMs: Number.isFinite(generated) ? generated : null,
+    asOfMs,
+  };
 }
 
 export const getFsdCounter = createServerFn({ method: "GET" }).handler(async (): Promise<FsdCounter> => {
