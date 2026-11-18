@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { FsdCounterView } from "@/components/fsd-counter";
 import { getFsdCounter } from "@/lib/fsd-counter.functions";
-import { getRobotaxiFleet, type RobotaxiCityBar, type TexasRegistry } from "@/lib/robotaxi-fleet.functions";
+import { getRobotaxiFleet, type RobotaxiCityBar, type TexasRegistry, type TexasTeslaFleet } from "@/lib/robotaxi-fleet.functions";
 import { TexasFleetChart } from "@/components/texas-fleet-chart";
 import { formatMiles, milesToKm } from "@/lib/fsd-counter";
 import { pageHead } from "@/lib/seo";
@@ -74,7 +74,9 @@ function FsdTrackerPage() {
         <div className="mt-8">
           <UnsupervisedCard
             count={fleet.ok ? fleet.teslaUnsupervised : null}
+            modelY={fleet.ok ? fleet.teslaModelYUnsupervised : null}
             cybercab={fleet.ok ? fleet.teslaCybercabUnsupervised : null}
+            registry={fleet.teslaTexas}
             asOfMs={fleet.asOfMs}
           />
         </div>
@@ -199,7 +201,7 @@ function warsawStamp(ms: number) {
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "Europe/Warsaw",
-  }).format(new Date(ms));
+  }).format(new Date(ms)) + " czasu polskiego";
 }
 
 function registryWhen(iso: string) {
@@ -210,34 +212,34 @@ function registryWhen(iso: string) {
 
 function UnsupervisedCard({
   count,
+  modelY,
   cybercab,
+  registry,
   asOfMs,
 }: {
   count: number | null;
+  modelY: number | null;
   cybercab: number | null;
+  registry: TexasTeslaFleet | null;
   asOfMs: number;
 }) {
+  const split =
+    count !== null && modelY !== null && cybercab !== null
+      ? `${formatMiles(count)} aut widzianych bez kierowcy: ${formatMiles(modelY)} Model Y i ${formatMiles(cybercab)} Cybercab`
+      : "aut widzianych bez kierowcy";
   return (
-    <aside className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3 rounded-2xl border border-border bg-bg/75 px-6 py-5 backdrop-blur-sm">
-      <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla Robotaxi</p>
-        <p className="mt-2 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
-          {count === null ? "—" : formatMiles(count)}
-        </p>
-        <p className="mt-2 text-muted">aut widzianych bez kierowcy</p>
-        <p className="mt-1 max-w-md text-sm text-muted">
-          To nie jest rejestr TxDMV. Liczba z robotaxitracker.com: auta Tesli widziane w miastach unsupervised. Odczyt{" "}
-          {warsawStamp(asOfMs)}.
-        </p>
-      </div>
-      {cybercab !== null && cybercab > 0 ? (
-        <div className="text-right">
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">w tym Cybercab</p>
-          <p className="mt-2 font-display text-3xl font-semibold leading-none tracking-tight tabular-nums">
-            {formatMiles(cybercab)}
-          </p>
-        </div>
-      ) : null}
+    <aside className="rounded-2xl border border-border bg-bg/75 px-6 py-5 text-left backdrop-blur-sm">
+      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla Robotaxi</p>
+      <p className="mt-2 font-display text-4xl font-semibold leading-none tracking-tight tabular-nums sm:text-5xl">
+        {count === null ? "—" : formatMiles(count)}
+      </p>
+      <p className="mt-2 text-muted">{split}</p>
+      <p className="mt-1 max-w-md text-sm text-muted">
+        {registry
+          ? `W rejestrze TxDMV jest ${formatMiles(registry.total)} aut (${formatMiles(registry.cybercab)} Cybercab, ${formatMiles(registry.modelY)} Model Y). W tym kafelku są auta widziane w ruchu bez kierowcy. `
+          : "To nie jest rejestr TxDMV. W tym kafelku są auta widziane w ruchu bez kierowcy. "}
+        Odczyt {warsawStamp(asOfMs)}.
+      </p>
     </aside>
   );
 }

@@ -204,6 +204,7 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
     ok: false,
     asOfMs,
     teslaUnsupervised: 0,
+    teslaModelYUnsupervised: 0,
     teslaCybercabUnsupervised: 0,
     cities: [],
     registry: null,
@@ -240,6 +241,7 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
 
   const buckets = new Map<string, RobotaxiCityBar>();
   let teslaUnsupervised = 0;
+  let teslaModelYUnsupervised = 0;
   let teslaCybercabUnsupervised = 0;
   for (const vehicle of vehicles) {
     if (vehicle.isTestVehicle) continue;
@@ -252,6 +254,7 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
     if (provider === "Tesla" && mode === "unsupervised") {
       teslaUnsupervised += 1;
       if (vehicle.vehicleModel === "cybercab") teslaCybercabUnsupervised += 1;
+      if (vehicle.vehicleModel === "model_y") teslaModelYUnsupervised += 1;
     }
     const key = `${mode}|${provider}|${city}`;
     const row = buckets.get(key) ?? { city, provider, mode, inService: 0 };
@@ -261,5 +264,5 @@ export async function loadRobotaxiFleet(asOfMs: number): Promise<RobotaxiFleet> 
   }
 
   const cities = [...buckets.values()].sort((a, b) => b.inService - a.inService || a.city.localeCompare(b.city, "pl"));
-  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, teslaCybercabUnsupervised, cities, registry, teslaTexas };
+  return { ok: cities.length > 0, asOfMs, teslaUnsupervised, teslaModelYUnsupervised, teslaCybercabUnsupervised, cities, registry, teslaTexas };
 }

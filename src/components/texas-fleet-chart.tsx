@@ -147,5 +147,5 @@ function registryStamp(iso: string) {
     hour: "2-digit",
     minute: "2-digit",
     timeZone: "Europe/Warsaw",
-  }).format(date);
+  }).format(date) + " czasu polskiego";
 }
