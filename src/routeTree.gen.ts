@@ -10,25 +10,33 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FsdTrackerRouteImport } from './routes/fsd-tracker'
 import { Route as LoginRouteImport } from './routes/login'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as OSerwisieRouteImport } from './routes/o-serwisie'
+import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
-import { Route as TematyIndexRouteImport } from './routes/tematy.index'
-import { Route as TematyTopicRouteImport } from './routes/tematy.$topic'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SzukajRouteImport } from './routes/szukaj'
+import { Route as TematyRouteImport } from './routes/tematy'
+import { Route as ArchiwumIndexRouteImport } from './routes/archiwum.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as HubyIndexRouteImport } from './routes/huby.index'
 import { Route as HubySlugRouteImport } from './routes/huby.$slug'
-import { Route as SzukajRouteImport } from './routes/szukaj'
-import { Route as ArchiwumIndexRouteImport } from './routes/archiwum.index'
-import { Route as ArchiwumYearMonthRouteImport } from './routes/archiwum.$year.$month'
-import { Route as OSerwisieRouteImport } from './routes/o-serwisie'
-import { Route as FsdTrackerRouteImport } from './routes/fsd-tracker'
+import { Route as TematyIndexRouteImport } from './routes/tematy.index'
+import { Route as TematyTopicRouteImport } from './routes/tematy.$topic'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
+import { Route as ApiLoginProviderRouteImport } from './routes/api/login/$provider'
+import { Route as ArchiwumYearMonthRouteImport } from './routes/archiwum.$year.$month'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FsdTrackerRoute = FsdTrackerRouteImport.update({
+  id: '/fsd-tracker',
+  path: '/fsd-tracker',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LoginRoute = LoginRouteImport.update({
@@ -36,9 +44,14 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const OSerwisieRoute = OSerwisieRouteImport.update({
+  id: '/o-serwisie',
+  path: '/o-serwisie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
+  id: '/polityka-prywatnosci',
+  path: '/polityka-prywatnosci',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RssDotxmlRoute = RssDotxmlRouteImport.update({
@@ -46,14 +59,24 @@ const RssDotxmlRoute = RssDotxmlRouteImport.update({
   path: '/rss.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TematyIndexRoute = TematyIndexRouteImport.update({
-  id: '/tematy/',
-  path: '/tematy/',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TematyTopicRoute = TematyTopicRouteImport.update({
-  id: '/tematy/$topic',
-  path: '/tematy/$topic',
+const SzukajRoute = SzukajRouteImport.update({
+  id: '/szukaj',
+  path: '/szukaj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TematyRoute = TematyRouteImport.update({
+  id: '/tematy',
+  path: '/tematy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchiwumIndexRoute = ArchiwumIndexRouteImport.update({
+  id: '/archiwum/',
+  path: '/archiwum/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -76,14 +99,24 @@ const HubySlugRoute = HubySlugRouteImport.update({
   path: '/huby/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SzukajRoute = SzukajRouteImport.update({
-  id: '/szukaj',
-  path: '/szukaj',
+const TematyIndexRoute = TematyIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => TematyRoute,
+} as any)
+const TematyTopicRoute = TematyTopicRouteImport.update({
+  id: '/$topic',
+  path: '/$topic',
+  getParentRoute: () => TematyRoute,
+} as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ArchiwumIndexRoute = ArchiwumIndexRouteImport.update({
-  id: '/archiwum/',
-  path: '/archiwum/',
+const ApiLoginProviderRoute = ApiLoginProviderRouteImport.update({
+  id: '/api/login/$provider',
+  path: '/api/login/$provider',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArchiwumYearMonthRoute = ArchiwumYearMonthRouteImport.update({
@@ -91,151 +124,153 @@ const ArchiwumYearMonthRoute = ArchiwumYearMonthRouteImport.update({
   path: '/archiwum/$year/$month',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OSerwisieRoute = OSerwisieRouteImport.update({
-  id: '/o-serwisie',
-  path: '/o-serwisie',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FsdTrackerRoute = FsdTrackerRouteImport.update({
-  id: '/fsd-tracker',
-  path: '/fsd-tracker',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: '/api/auth/$',
-  path: '/api/auth/$',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/login': typeof LoginRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/o-serwisie': typeof OSerwisieRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/rss.xml': typeof RssDotxmlRoute
-  '/tematy/': typeof TematyIndexRoute
-  '/tematy/$topic': typeof TematyTopicRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/szukaj': typeof SzukajRoute
+  '/tematy': typeof TematyRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/huby/$slug': typeof HubySlugRoute
+  '/tematy/$topic': typeof TematyTopicRoute
+  '/archiwum/': typeof ArchiwumIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/huby/': typeof HubyIndexRoute
-  '/huby/$slug': typeof HubySlugRoute
-  '/szukaj': typeof SzukajRoute
-  '/archiwum/': typeof ArchiwumIndexRoute
-  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
-  '/o-serwisie': typeof OSerwisieRoute
-  '/fsd-tracker': typeof FsdTrackerRoute
+  '/tematy/': typeof TematyIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/login/$provider': typeof ApiLoginProviderRoute
+  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/login': typeof LoginRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/o-serwisie': typeof OSerwisieRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/rss.xml': typeof RssDotxmlRoute
-  '/tematy': typeof TematyIndexRoute
-  '/tematy/$topic': typeof TematyTopicRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/szukaj': typeof SzukajRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/huby/$slug': typeof HubySlugRoute
+  '/tematy/$topic': typeof TematyTopicRoute
+  '/archiwum': typeof ArchiwumIndexRoute
   '/blog': typeof BlogIndexRoute
   '/huby': typeof HubyIndexRoute
-  '/huby/$slug': typeof HubySlugRoute
-  '/szukaj': typeof SzukajRoute
-  '/archiwum': typeof ArchiwumIndexRoute
-  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
-  '/o-serwisie': typeof OSerwisieRoute
-  '/fsd-tracker': typeof FsdTrackerRoute
+  '/tematy': typeof TematyIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/login/$provider': typeof ApiLoginProviderRoute
+  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/fsd-tracker': typeof FsdTrackerRoute
   '/login': typeof LoginRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/o-serwisie': typeof OSerwisieRoute
+  '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
   '/rss.xml': typeof RssDotxmlRoute
-  '/tematy/': typeof TematyIndexRoute
-  '/tematy/$topic': typeof TematyTopicRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/szukaj': typeof SzukajRoute
+  '/tematy': typeof TematyRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/huby/$slug': typeof HubySlugRoute
+  '/tematy/$topic': typeof TematyTopicRoute
+  '/archiwum/': typeof ArchiwumIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/huby/': typeof HubyIndexRoute
-  '/huby/$slug': typeof HubySlugRoute
-  '/szukaj': typeof SzukajRoute
-  '/archiwum/': typeof ArchiwumIndexRoute
-  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
-  '/o-serwisie': typeof OSerwisieRoute
-  '/fsd-tracker': typeof FsdTrackerRoute
+  '/tematy/': typeof TematyIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
+  '/api/login/$provider': typeof ApiLoginProviderRoute
+  '/archiwum/$year/$month': typeof ArchiwumYearMonthRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/fsd-tracker'
     | '/login'
-    | '/sitemap.xml'
+    | '/o-serwisie'
+    | '/polityka-prywatnosci'
     | '/rss.xml'
-    | '/tematy/'
-    | '/tematy/$topic'
+    | '/sitemap.xml'
+    | '/szukaj'
+    | '/tematy'
     | '/blog/$slug'
+    | '/huby/$slug'
+    | '/tematy/$topic'
+    | '/archiwum/'
     | '/blog/'
     | '/huby/'
-    | '/huby/$slug'
-    | '/szukaj'
-    | '/archiwum/'
-    | '/archiwum/$year/$month'
-    | '/o-serwisie'
-    | '/fsd-tracker'
+    | '/tematy/'
     | '/api/auth/$'
+    | '/api/login/$provider'
+    | '/archiwum/$year/$month'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/fsd-tracker'
     | '/login'
-    | '/sitemap.xml'
+    | '/o-serwisie'
+    | '/polityka-prywatnosci'
     | '/rss.xml'
-    | '/tematy'
-    | '/tematy/$topic'
+    | '/sitemap.xml'
+    | '/szukaj'
     | '/blog/$slug'
+    | '/huby/$slug'
+    | '/tematy/$topic'
+    | '/archiwum'
     | '/blog'
     | '/huby'
-    | '/huby/$slug'
-    | '/szukaj'
-    | '/archiwum'
-    | '/archiwum/$year/$month'
-    | '/o-serwisie'
-    | '/fsd-tracker'
+    | '/tematy'
     | '/api/auth/$'
+    | '/api/login/$provider'
+    | '/archiwum/$year/$month'
   id:
     | '__root__'
     | '/'
+    | '/fsd-tracker'
     | '/login'
-    | '/sitemap.xml'
+    | '/o-serwisie'
+    | '/polityka-prywatnosci'
     | '/rss.xml'
-    | '/tematy/'
-    | '/tematy/$topic'
+    | '/sitemap.xml'
+    | '/szukaj'
+    | '/tematy'
     | '/blog/$slug'
+    | '/huby/$slug'
+    | '/tematy/$topic'
+    | '/archiwum/'
     | '/blog/'
     | '/huby/'
-    | '/huby/$slug'
-    | '/szukaj'
-    | '/archiwum/'
-    | '/archiwum/$year/$month'
-    | '/o-serwisie'
-    | '/fsd-tracker'
+    | '/tematy/'
     | '/api/auth/$'
+    | '/api/login/$provider'
+    | '/archiwum/$year/$month'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FsdTrackerRoute: typeof FsdTrackerRoute
   LoginRoute: typeof LoginRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  OSerwisieRoute: typeof OSerwisieRoute
+  PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
-  TematyIndexRoute: typeof TematyIndexRoute
-  TematyTopicRoute: typeof TematyTopicRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SzukajRoute: typeof SzukajRoute
+  TematyRoute: typeof TematyRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
+  HubySlugRoute: typeof HubySlugRoute
+  ArchiwumIndexRoute: typeof ArchiwumIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
   HubyIndexRoute: typeof HubyIndexRoute
-  HubySlugRoute: typeof HubySlugRoute
-  SzukajRoute: typeof SzukajRoute
-  ArchiwumIndexRoute: typeof ArchiwumIndexRoute
-  ArchiwumYearMonthRoute: typeof ArchiwumYearMonthRoute
-  OSerwisieRoute: typeof OSerwisieRoute
-  FsdTrackerRoute: typeof FsdTrackerRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
+  ApiLoginProviderRoute: typeof ApiLoginProviderRoute
+  ArchiwumYearMonthRoute: typeof ArchiwumYearMonthRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -247,6 +282,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fsd-tracker': {
+      id: '/fsd-tracker'
+      path: '/fsd-tracker'
+      fullPath: '/fsd-tracker'
+      preLoaderRoute: typeof FsdTrackerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -254,11 +296,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/o-serwisie': {
+      id: '/o-serwisie'
+      path: '/o-serwisie'
+      fullPath: '/o-serwisie'
+      preLoaderRoute: typeof OSerwisieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/polityka-prywatnosci': {
+      id: '/polityka-prywatnosci'
+      path: '/polityka-prywatnosci'
+      fullPath: '/polityka-prywatnosci'
+      preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rss.xml': {
@@ -268,18 +317,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RssDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tematy/': {
-      id: '/tematy/'
-      path: '/tematy'
-      fullPath: '/tematy/'
-      preLoaderRoute: typeof TematyIndexRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/tematy/$topic': {
-      id: '/tematy/$topic'
-      path: '/tematy/$topic'
-      fullPath: '/tematy/$topic'
-      preLoaderRoute: typeof TematyTopicRouteImport
+    '/szukaj': {
+      id: '/szukaj'
+      path: '/szukaj'
+      fullPath: '/szukaj'
+      preLoaderRoute: typeof SzukajRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tematy': {
+      id: '/tematy'
+      path: '/tematy'
+      fullPath: '/tematy'
+      preLoaderRoute: typeof TematyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archiwum/': {
+      id: '/archiwum/'
+      path: '/archiwum'
+      fullPath: '/archiwum/'
+      preLoaderRoute: typeof ArchiwumIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -310,18 +373,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HubySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/szukaj': {
-      id: '/szukaj'
-      path: '/szukaj'
-      fullPath: '/szukaj'
-      preLoaderRoute: typeof SzukajRouteImport
+    '/tematy/': {
+      id: '/tematy/'
+      path: '/'
+      fullPath: '/tematy/'
+      preLoaderRoute: typeof TematyIndexRouteImport
+      parentRoute: typeof TematyRoute
+    }
+    '/tematy/$topic': {
+      id: '/tematy/$topic'
+      path: '/$topic'
+      fullPath: '/tematy/$topic'
+      preLoaderRoute: typeof TematyTopicRouteImport
+      parentRoute: typeof TematyRoute
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/archiwum/': {
-      id: '/archiwum/'
-      path: '/archiwum'
-      fullPath: '/archiwum/'
-      preLoaderRoute: typeof ArchiwumIndexRouteImport
+    '/api/login/$provider': {
+      id: '/api/login/$provider'
+      path: '/api/login/$provider'
+      fullPath: '/api/login/$provider'
+      preLoaderRoute: typeof ApiLoginProviderRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/archiwum/$year/$month': {
@@ -331,47 +408,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArchiwumYearMonthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/o-serwisie': {
-      id: '/o-serwisie'
-      path: '/o-serwisie'
-      fullPath: '/o-serwisie'
-      preLoaderRoute: typeof OSerwisieRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fsd-tracker': {
-      id: '/fsd-tracker'
-      path: '/fsd-tracker'
-      fullPath: '/fsd-tracker'
-      preLoaderRoute: typeof FsdTrackerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/auth/$': {
-      id: '/api/auth/$'
-      path: '/api/auth/$'
-      fullPath: '/api/auth/$'
-      preLoaderRoute: typeof ApiAuthSplatRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
+interface TematyRouteChildren {
+  TematyTopicRoute: typeof TematyTopicRoute
+  TematyIndexRoute: typeof TematyIndexRoute
+}
+
+const TematyRouteChildren: TematyRouteChildren = {
+  TematyTopicRoute: TematyTopicRoute,
+  TematyIndexRoute: TematyIndexRoute,
+}
+
+const TematyRouteWithChildren =
+  TematyRoute._addFileChildren(TematyRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FsdTrackerRoute: FsdTrackerRoute,
   LoginRoute: LoginRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  OSerwisieRoute: OSerwisieRoute,
+  PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
   RssDotxmlRoute: RssDotxmlRoute,
-  TematyIndexRoute: TematyIndexRoute,
-  TematyTopicRoute: TematyTopicRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SzukajRoute: SzukajRoute,
+  TematyRoute: TematyRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
+  HubySlugRoute: HubySlugRoute,
+  ArchiwumIndexRoute: ArchiwumIndexRoute,
   BlogIndexRoute: BlogIndexRoute,
   HubyIndexRoute: HubyIndexRoute,
-  HubySlugRoute: HubySlugRoute,
-  SzukajRoute: SzukajRoute,
-  ArchiwumIndexRoute: ArchiwumIndexRoute,
-  ArchiwumYearMonthRoute: ArchiwumYearMonthRoute,
-  OSerwisieRoute: OSerwisieRoute,
-  FsdTrackerRoute: FsdTrackerRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
+  ApiLoginProviderRoute: ApiLoginProviderRoute,
+  ArchiwumYearMonthRoute: ArchiwumYearMonthRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

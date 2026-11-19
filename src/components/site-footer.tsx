@@ -15,6 +15,9 @@ export function SiteFooter() {
           <button type="button" onClick={openCookieSettings} className="text-inherit hover:text-fg">
             Ustawienia cookies
           </button>
+          <Link to="/polityka-prywatnosci" className="hover:text-fg">
+            Polityka prywatności
+          </Link>
           <Link to="/huby" className="hover:text-fg">
             Huby
           </Link>
@@ -38,9 +41,7 @@ export function SiteFooter() {
           </a>
         </div>
       </div>
-      <p className="mx-auto mt-6 max-w-6xl px-5 text-center text-sm text-muted">
-        {SITE_AUTHOR}
-      </p>
+      <p className="mx-auto mt-6 max-w-6xl px-5 text-center text-sm text-muted">{SITE_AUTHOR}</p>
     </footer>
   );
 }

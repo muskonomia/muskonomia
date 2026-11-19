@@ -11,12 +11,7 @@ export function xmlEscape(value: string) {
     .replaceAll("'", "&apos;");
 }
 
-function urlTag(opts: {
-  path: string;
-  lastmod: string;
-  changefreq: string;
-  priority: string;
-}) {
+function urlTag(opts: { path: string; lastmod: string; changefreq: string; priority: string }) {
   return `  <url><loc>${SITE_URL}${opts.path}</loc><lastmod>${opts.lastmod}</lastmod><changefreq>${opts.changefreq}</changefreq><priority>${opts.priority}</priority></url>`;
 }
 
@@ -31,6 +26,7 @@ export function sitemapXml() {
     { path: "/tematy", changefreq: "weekly", priority: "0.8", lastmod: latestPost },
     { path: "/huby", changefreq: "weekly", priority: "0.7", lastmod: latestPost },
     { path: "/o-serwisie", changefreq: "monthly", priority: "0.5", lastmod: today },
+    { path: "/polityka-prywatnosci", changefreq: "yearly", priority: "0.3", lastmod: "2026-11-19" },
     { path: "/fsd-tracker", changefreq: "daily", priority: "0.6", lastmod: today },
     { path: "/szukaj", changefreq: "weekly", priority: "0.4", lastmod: today },
     { path: "/archiwum", changefreq: "weekly", priority: "0.5", lastmod: latestPost },
@@ -57,7 +53,9 @@ export function sitemapXml() {
   const monthUrls = archiveMonths().map((m) =>
     urlTag({
       path: `/archiwum/${m.year}/${m.month}`,
-      lastmod: posts.find((p) => p.isoDate.startsWith(`${m.year}-${m.month}`))?.isoDate ?? `${m.year}-${m.month}-01`,
+      lastmod:
+        posts.find((p) => p.isoDate.startsWith(`${m.year}-${m.month}`))?.isoDate ??
+        `${m.year}-${m.month}-01`,
       changefreq: "monthly",
       priority: "0.4",
     }),
