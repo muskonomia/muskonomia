@@ -5,7 +5,9 @@
   "type": "module",
   "overrides": {
     "minimatch": "11.0.3",
-    "nf3": "0.3.17"
+    "nf3": "0.3.17",
+    "seroval": "^1.8.2",
+    "seroval-plugins": "^1.8.0"
   },
   "scripts": {
     "dev": "vite dev --host 0.0.0.0 --port 8080",
