@@ -1,6 +1,8 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
+import { CookieConsent } from "@/components/cookie-consent";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { GA_BOOT_SCRIPT, GA_CONFIG_SCRIPT, GA_MEASUREMENT_ID } from "@/lib/analytics";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "muskonomia.pl";
@@ -38,6 +40,10 @@ export const Route = createRootRoute({
     <html lang="pl" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: GA_BOOT_SCRIPT }} />
+        {/* defer, not async: React 19 hoists async scripts above this inline consent snippet. */}
+        <script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script dangerouslySetInnerHTML={{ __html: GA_CONFIG_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: X_PIXEL }} />
       </head>
       <body>
@@ -45,6 +51,7 @@ export const Route = createRootRoute({
         <AuthProvider>
           <Outlet />
         </AuthProvider>
+        <CookieConsent />
         <Scripts />
       </body>
     </html>

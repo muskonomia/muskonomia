@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { XLogo } from "@/components/x-logo";
+import { openCookieSettings } from "@/lib/analytics";
 import { SITE_AUTHOR } from "@/lib/site";
 
 export function SiteFooter() {
@@ -11,6 +12,9 @@ export function SiteFooter() {
           <Link to="/o-serwisie" className="hover:text-fg">
             O serwisie
           </Link>
+          <button type="button" onClick={openCookieSettings} className="text-inherit hover:text-fg">
+            Ustawienia cookies
+          </button>
           <Link to="/huby" className="hover:text-fg">
             Huby
           </Link>
