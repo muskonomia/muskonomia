@@ -12,6 +12,7 @@ export const postsC2q: Post[] = [
     isoDate: "2026-11-01",
     img: "/img/okladka-colossus2-spacex-przychod-1600x900.png",
     credit: "Colossus 2 i scenariusz przychodów SpaceX. Opracowanie: Muskonomia.pl",
+    xPostId: "2116867595550765456",
     body: [
       {
         type: "p",

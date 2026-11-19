@@ -12,6 +12,7 @@ export const postsBw30: Post[] = [
     isoDate: "2026-11-18",
     img: "/img/teksas-okladka-1600x900.jpg",
     credit: "Źródło: SpaceX, spacex.com/updates",
+    xPostId: "2123049109921714245",
     body: [
       {
         type: "p",

@@ -12,6 +12,7 @@ export const postsV4l: Post[] = [
     isoDate: "2026-11-06",
     img: "/img/starlink-v4-lasery-okladka-1600x900.jpg",
     credit: "Antena Starlink pod nocnym niebem. Fot. Starlink",
+    xPostId: "2118978598241542215",
     body: [
       {
         type: "p",

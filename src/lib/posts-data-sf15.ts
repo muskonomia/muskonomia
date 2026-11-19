@@ -12,6 +12,7 @@ export const postsSf15: Post[] = [
     isoDate: "2026-11-15",
     img: "/img/starship-flight-15-zlapanie-ship-42-1600x900.jpg",
     credit: "Złapanie Ship 42 w Starbase. Kadr z wideo SpaceX",
+    xPostId: "2121841660220801317",
     body: [
       {
         type: "p",

@@ -12,6 +12,7 @@ export const postsCtgt: Post[] = [
     isoDate: "2026-11-06",
     img: "/img/cybertruck-giga-texas-okladka-1600x900.jpg",
     credit: "Cybertruck. Fot. Tesla",
+    xPostId: "2118774409662202165",
     body: [
       {
         type: "p",

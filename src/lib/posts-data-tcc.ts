@@ -12,6 +12,7 @@ export const postsTcc: Post[] = [
     isoDate: "2026-11-14",
     img: "/img/tesla-cybercab-zamowienie-prywatne-1600x900.jpg",
     credit: "Ekran zamówienia Cybercaba. Źródło: @robotaxi",
+    xPostId: "2121511934277079055",
     body: [
       {
         type: "p",

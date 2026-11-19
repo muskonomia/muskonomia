@@ -12,6 +12,7 @@ export const postsNsh: Post[] = [
     isoDate: "2026-11-18",
     img: "/img/nashville-okladka-1600x900.jpg",
     credit: "Źródło: The Boring Company (@boringcompany)",
+    xPostId: "2123006253982982471",
     body: [
       {
         type: "p",

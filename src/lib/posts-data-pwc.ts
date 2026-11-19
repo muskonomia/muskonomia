@@ -12,6 +12,7 @@ export const postsPwc: Post[] = [
     isoDate: "2026-11-17",
     img: "/img/powercore-okladka-1600x900.jpg",
     credit: "Tesla Powercore, pierwszy transformator Tesli. Źródło: Tesla (@Tesla_Megapack)",
+    xPostId: "2122744673865543918",
     body: [
       {
         type: "p",

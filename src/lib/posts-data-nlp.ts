@@ -12,6 +12,7 @@ export const postsNlp: Post[] = [
     isoDate: "2026-11-18",
     img: "/img/neuralink-okladka-1600x900.jpg",
     credit: "Źródło: USPTO, US 12,797,514 B2. Kompozycja ze wpisu @SERobinsonJr. Opracowanie: muskonomia.pl",
+    xPostId: "2123138789724037423",
     body: [
       {
         type: "p",

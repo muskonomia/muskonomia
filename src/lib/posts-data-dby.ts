@@ -12,6 +12,7 @@ export const postsDby: Post[] = [
     isoDate: "2026-11-19",
     img: "/img/okladka-musk-dealbook-1600x900.jpg",
     credit: "Grafika z wpisu @marsrepublica, 19.11.2026. Opracowanie: muskonomia.pl",
+    xPostId: "2123362654278361384",
     body: [
       {
         type: "p",

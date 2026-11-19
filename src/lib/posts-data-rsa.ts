@@ -12,6 +12,7 @@ export const postsRsa: Post[] = [
     isoDate: "2026-11-09",
     img: "/img/robotaxi-teksas-mapa-radar-1600x900-pelna.jpg",
     credit: "Mapa stref Robotaxi w Teksasie. Źródło: @RobotaxiRadar",
+    xPostId: "2119898794284228982",
     body: [
       {
         type: "p",

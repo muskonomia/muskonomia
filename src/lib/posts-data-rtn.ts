@@ -12,6 +12,7 @@ export const postsRtn: Post[] = [
     isoDate: "2026-10-31",
     img: "/img/robotaxi-niedowiarkowie-okladka-1600x900.jpg",
     credit: "Ilustracja poglądowa. Opracowanie: Muskonomia.pl",
+    xPostId: "2116466684449980544",
     body: [
       { type: "p", text: "Tesla wozi pasażerów w Teksasie i na Florydzie autami, w których nie siedzi żaden jej pracownik, a Cybercab nie ma nawet kierownicy ani pedałów. Wielu ludzi w USA, a jeszcze więcej w Polsce, uważa mimo to, że gdzieś za ekranem siedzi człowiek i prowadzi te auta zdalnie. Sprawdziliśmy, co piszą sceptycy, co oficjalnie przyznają Tesla i Waymo i co pokazują dostępne dane." },
       { type: "h2", text: "Artykuł w Forbesie i jego odbiór na X" },

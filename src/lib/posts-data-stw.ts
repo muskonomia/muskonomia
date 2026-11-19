@@ -13,6 +13,7 @@ export const postsStw: Post[] = [
     img: "/img/strefy-tesla-waymo-17-11-pl-1600x900.png",
     credit:
       "Obszary: Robotaxi Tracker (CC BY 4.0), @robotaxi; oprac. muskonomia.pl; mapa © OpenStreetMap",
+    xPostId: "2122629378433564790",
     body: [
       {
         type: "p",

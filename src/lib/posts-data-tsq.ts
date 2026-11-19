@@ -12,6 +12,7 @@ export const postsTsq: Post[] = [
     isoDate: "2026-11-15",
     img: "/img/fsd-times-square-billboard-sawyer-1600x900.jpg",
     credit: "Źródło: @SawyerMerritt",
+    xPostId: "2122071867372531870",
     body: [
       {
         type: "p",

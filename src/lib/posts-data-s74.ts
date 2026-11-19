@@ -12,6 +12,7 @@ export const postsS74: Post[] = [
     isoDate: "2026-11-12",
     img: "/img/spacex-starbase-superkomputer-budowa-1600x900.jpg",
     credit: "Budowa przy Starbase w Teksasie. Źródło: SpaceX",
+    xPostId: "2120983251754111285",
     body: [
       {
         type: "p",

@@ -12,6 +12,7 @@ export const postsSmq: Post[] = [
     isoDate: "2026-11-04",
     img: "/img/starlink-mobile-qualcomm-okladka-1600x900.jpg",
     credit: "Qualcomm i Starlink. Fot. Qualcomm",
+    xPostId: "2118052921866932644",
     body: [
       {
         type: "p",

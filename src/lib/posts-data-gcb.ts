@@ -12,6 +12,7 @@ export const postsGcb: Post[] = [
     isoDate: "2026-11-16",
     img: "/img/giga-berlin-cybercab-hala-efieber-1600x900.jpg",
     credit: "Źródło: @EFIEBER_ANDRE",
+    xPostId: "2122361036166529210",
     body: [
       {
         type: "p",

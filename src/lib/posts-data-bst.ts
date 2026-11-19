@@ -12,6 +12,7 @@ export const postsBst: Post[] = [
     isoDate: "2026-10-29",
     img: "/img/okladka-boring-bastrop-wilson-1600x900.jpg",
     credit: "Tunel The Boring Company. Kadr z materiału WKRN News 2",
+    xPostId: "2115753946736112055",
     body: [
       {
         type: "p",

@@ -12,6 +12,7 @@ export const postsS42: Post[] = [
     isoDate: "2026-11-07",
     img: "/img/ship42-static-fire-miniatura-spacex-1600x900.jpg",
     credit: "Ship 42 przed Flight 15. Miniatura filmu ze Static Fire. Źródło: SpaceX",
+    xPostId: "2119007649953931678",
     body: [
       {
         type: "p",
