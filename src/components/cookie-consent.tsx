@@ -4,6 +4,7 @@ import {
   onOpenCookieSettings,
   readConsent,
   trackPageView,
+  trackPageViewAfterConsent,
   updateAnalyticsConsent,
   writeConsent,
 } from "@/lib/analytics";
@@ -27,8 +28,10 @@ export function CookieConsent() {
   }, []);
 
   function accept() {
+    const alreadyGranted = readConsent() === "granted";
     writeConsent("granted");
     updateAnalyticsConsent("granted");
+    if (!alreadyGranted) trackPageViewAfterConsent(path);
     setVisible(false);
   }
 

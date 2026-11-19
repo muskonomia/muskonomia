@@ -63,7 +63,11 @@ try {
 } catch (e) {}
 `.trim();
 
-/** Automatic page_view is off. The router sends one hit per location. */
+/**
+ * The config command does not send page_view. History-based page views
+ * (gtm.historyChange-v2) ignore send_page_view; gtag.js for this stream
+ * hardcodes them on, and no config parameter turns them off.
+ */
 export const GA_CONFIG_SCRIPT = `
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
@@ -123,4 +127,16 @@ export function trackPageView(path: string) {
     page_location: `${window.location.origin}${path}`,
     page_title: document.title,
   });
+}
+
+/**
+ * The path was already sent while analytics_storage was denied.
+ * Queuing the new page_view in the same turn as the consent update still
+ * sends it as denied, so clear the dedupe and send once on the next turn.
+ */
+export function trackPageViewAfterConsent(path: string) {
+  window.setTimeout(() => {
+    lastTrackedPath = null;
+    trackPageView(path);
+  }, 0);
 }
