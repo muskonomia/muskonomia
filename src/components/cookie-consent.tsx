@@ -49,7 +49,7 @@ export function CookieConsent() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 pt-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm leading-relaxed text-muted">
           Używamy plików cookie Google Analytics, żeby wiedzieć, które artykuły czytacie
-          najchętniej. Możesz się zgodzić albo odmówić. Szczegóły:{" "}
+          najchętniej. Zgoda obejmuje też pomiar X. Możesz się zgodzić albo odmówić. Szczegóły:{" "}
           <Link
             to="/polityka-prywatnosci"
             className="text-fg underline underline-offset-2 hover:text-accent"

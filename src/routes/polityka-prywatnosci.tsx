@@ -119,9 +119,9 @@ function PolitykaPrywatnosci() {
               .
             </p>
             <p>
-              Na każdej stronie ładuje się też piksel X ze skryptu static.ads-twitter.com,
-              identyfikator rfr6q. Ten piksel nie czeka na zgodę z banera cookies. Działa według
-              polityki X.
+              Piksel X ze skryptu static.ads-twitter.com, identyfikator rfr6q, ładuje się tylko po
+              zgodzie w banerze cookies. Zapisana zgoda włącza go od razu przy kolejnej wizycie. Po
+              odmowie skrypt się nie pobiera. Działa według polityki X.
             </p>
             <p>
               Część artykułów osadza film z YouTube przez youtube-nocookie.com. Odtwarzacz podlega

@@ -2,15 +2,10 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { CookieConsent } from "@/components/cookie-consent";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { GA_BOOT_SCRIPT, GA_CONFIG_SCRIPT, GA_MEASUREMENT_ID } from "@/lib/analytics";
+import { GA_BOOT_SCRIPT, GA_CONFIG_SCRIPT, GA_MEASUREMENT_ID, X_PIXEL_BOOT_SCRIPT } from "@/lib/analytics";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "muskonomia.pl";
-
-const X_PIXEL = `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
-},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
-a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
-twq('config','rfr6q');`;
 
 export const Route = createRootRoute({
   head: () => ({
@@ -44,7 +39,7 @@ export const Route = createRootRoute({
         {/* defer, not async: React 19 hoists async scripts above this inline consent snippet. */}
         <script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
         <script dangerouslySetInnerHTML={{ __html: GA_CONFIG_SCRIPT }} />
-        <script dangerouslySetInnerHTML={{ __html: X_PIXEL }} />
+        <script dangerouslySetInnerHTML={{ __html: X_PIXEL_BOOT_SCRIPT }} />
       </head>
       <body>
         <PreviewHostBridge />

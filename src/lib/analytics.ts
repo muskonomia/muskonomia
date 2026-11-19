@@ -6,10 +6,39 @@ const OPEN_COOKIE_SETTINGS = "muskonomia:open-cookie-settings";
 
 export type ConsentChoice = "granted" | "denied";
 
+export const X_PIXEL_ID = "rfr6q";
+
+/**
+ * Official X pixel loader. The snippet both queues `twq` and inserts
+ * static.ads-twitter.com/uwt.js. It must run only after consent.
+ */
+const X_PIXEL_SNIPPET = `!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','${X_PIXEL_ID}');`;
+
+/**
+ * Runs in the document head. A stored "granted" choice loads the pixel in the
+ * same turn, before React hydrates. Any other value, including no choice, does
+ * not request ads-twitter.com.
+ */
+export const X_PIXEL_BOOT_SCRIPT = `
+try {
+  if (localStorage.getItem('${CONSENT_STORAGE_KEY}') === 'granted') {
+    ${X_PIXEL_SNIPPET}
+  }
+} catch (e) {}
+`.trim();
+
 declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    twq?: ((...args: unknown[]) => void) & {
+      exe?: (...args: unknown[]) => void;
+      queue?: unknown[][];
+      version?: string;
+    };
   }
 }
 
@@ -59,8 +88,17 @@ export function writeConsent(choice: ConsentChoice) {
   }
 }
 
+/** Inserts uwt.js once. A second call is a no-op, including after the boot script. */
+export function loadXPixel() {
+  if (typeof window === "undefined" || window.twq) return;
+  const script = document.createElement("script");
+  script.text = X_PIXEL_SNIPPET;
+  document.head.appendChild(script);
+}
+
 export function updateAnalyticsConsent(choice: ConsentChoice) {
   window.gtag?.("consent", "update", { analytics_storage: choice });
+  if (choice === "granted") loadXPixel();
 }
 
 export function openCookieSettings() {
