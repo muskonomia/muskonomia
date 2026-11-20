@@ -136,7 +136,11 @@ export function Comments({ slug }: { slug: string }) {
           />
           <span>Zapamiętaj moje dane w tej przeglądarce podczas pisania kolejnych komentarzy.</span>
         </label>
-        {error ? <p className="text-sm text-link">{error}</p> : null}
+        {error ? (
+          <p role="alert" className="text-sm text-link">
+            {error}
+          </p>
+        ) : null}
       </form>
 
       <div className="mt-8">

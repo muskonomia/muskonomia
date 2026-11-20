@@ -39,6 +39,7 @@ function FsdTrackerPage() {
           alt=""
           width={1468}
           height={1258}
+          fetchPriority="high"
           className="h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-b from-bg/65 via-bg/40 to-bg/80" />

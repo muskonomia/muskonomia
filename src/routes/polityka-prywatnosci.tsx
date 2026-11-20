@@ -41,6 +41,7 @@ function PolitykaPrywatnosci() {
             alt=""
             width={1568}
             height={882}
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/75 to-overlay/45" />
