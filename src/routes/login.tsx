@@ -1,8 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/login")({ component: Login });
+export const Route = createFileRoute("/login")({
+  head: () =>
+    pageHead({
+      title: "Komentarze bez konta",
+      description: "Komentarze na muskonomia.pl nie wymagają konta.",
+      path: "/login",
+      robots: "noindex,follow",
+    }),
+  component: Login,
+});
 
 function Login() {
   return (
