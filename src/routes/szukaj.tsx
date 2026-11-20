@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
 import { PostGrid } from "@/components/post-card";
 import { SearchForm } from "@/components/search-form";
 import { TopicChips } from "@/components/topic-chips";
-import { searchPosts } from "@/lib/posts";
+import { searchPostList } from "@/lib/posts.functions";
 import { pageHead } from "@/lib/seo";
 
 type SzukajSearch = { q?: string };
@@ -12,11 +12,14 @@ export const Route = createFileRoute("/szukaj")({
   validateSearch: (raw: Record<string, unknown>): SzukajSearch => ({
     q: typeof raw.q === "string" ? raw.q : undefined,
   }),
+  loaderDeps: ({ search }) => ({ q: (search.q ?? "").trim() }),
+  loader: ({ deps }) => (deps.q ? searchPostList({ data: { q: deps.q } }) : []),
   head: () =>
     pageHead({
       title: "Szukaj",
       description: "Szukaj wpisów na muskonomia.pl po tytule, leadzie i treści.",
       path: "/szukaj",
+      robots: "noindex,follow",
     }),
   component: Szukaj,
 });
@@ -24,7 +27,7 @@ export const Route = createFileRoute("/szukaj")({
 function Szukaj() {
   const { q = "" } = Route.useSearch();
   const needle = q.trim();
-  const results = needle ? searchPosts(needle) : [];
+  const results = Route.useLoaderData();
 
   return (
     <ListingShell
@@ -33,7 +36,7 @@ function Szukaj() {
       description="Po tytule, leadzie, kickerze i treści. Wielkość liter nie ma znaczenia."
       toolbar={
         <div className="flex flex-col gap-4">
-          <SearchForm defaultValue={q} />
+          <SearchForm key={q} defaultValue={q} />
           <TopicChips />
         </div>
       }
@@ -43,13 +46,13 @@ function Szukaj() {
       ) : results.length === 0 ? (
         <p className="text-muted">
           Nic nie znaleziono dla «{needle}». Spróbuj innego słowa albo wróć do{" "}
-          <a href="/blog" className="text-link hover:text-link-hover">
+          <Link to="/blog" className="text-link hover:text-link-hover">
             wszystkich wpisów
-          </a>
+          </Link>
           .
         </p>
       ) : (
-        <PostGrid posts={results} limit={false} />
+        <PostGrid posts={results} limit={false} heading="h2" />
       )}
     </ListingShell>
   );

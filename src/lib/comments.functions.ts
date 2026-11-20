@@ -1,5 +1,4 @@
 import { createServerFn } from "@tanstack/react-start";
-import { getPost } from "@/lib/posts";
 
 const MAX_LEN = 1000;
 
@@ -21,10 +20,13 @@ export type PublicComment = {
 
 function cleanSlug(value: unknown): string {
   const slug = typeof value === "string" ? value.trim() : "";
-  if (!/^[a-z0-9-]{1,80}$/.test(slug) || !getPost(slug)) {
-    throw new Error("Nie ma takiego wpisu.");
-  }
+  if (!/^[a-z0-9-]{1,120}$/.test(slug)) throw new Error("Nie ma takiego wpisu.");
   return slug;
+}
+
+async function assertPostExists(slug: string) {
+  const { getPost } = await import("@/lib/posts.server");
+  if (getPost(slug)?.slug !== slug) throw new Error("Nie ma takiego wpisu.");
 }
 
 function cleanBody(value: unknown): string {
@@ -92,9 +94,16 @@ async function notifyOwner(name: string, slug: string, body: string) {
   }
 }
 
+const RATE_WINDOW_MS = 10 * 60 * 1000;
+
 function allowPost(token: string) {
   const now = Date.now();
-  const stamps = (recent.get(token) ?? []).filter((t) => now - t < 10 * 60 * 1000);
+  if (recent.size > 5000) {
+    for (const [key, times] of recent) {
+      if (times.every((t) => now - t >= RATE_WINDOW_MS)) recent.delete(key);
+    }
+  }
+  const stamps = (recent.get(token) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
   if (stamps.length >= 6) throw new Error("Za dużo komentarzy naraz. Spróbuj za chwilę.");
   stamps.push(now);
   recent.set(token, stamps);
@@ -106,6 +115,7 @@ export const listComments = createServerFn({ method: "GET" })
     token: typeof data?.token === "string" && /^[0-9a-f-]{36}$/i.test(data.token) ? data.token : "",
   }))
   .handler(async ({ data }) => {
+    await assertPostExists(data.slug);
     const sql = await db();
     const rows = await sql<CommentRow>`
       select id, user_id, author_name, body, created_at
@@ -124,6 +134,7 @@ export const addComment = createServerFn({ method: "POST" })
     token: cleanToken(data?.token),
   }))
   .handler(async ({ data }) => {
+    await assertPostExists(data.slug);
     allowPost(data.token);
     const sql = await db();
     const id = crypto.randomUUID();
@@ -132,7 +143,7 @@ export const addComment = createServerFn({ method: "POST" })
       values (${id}, ${data.slug}, ${data.token}, ${data.name}, ${data.body})
       returning id, user_id, author_name, body, created_at
     `;
-    await notifyOwner(data.name, data.slug, data.body);
+    void notifyOwner(data.name, data.slug, data.body);
     return toPublic(rows[0], data.token);
   });
 

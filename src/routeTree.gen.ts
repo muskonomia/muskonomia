@@ -14,10 +14,7 @@ import { Route as FsdTrackerRouteImport } from './routes/fsd-tracker'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as OSerwisieRouteImport } from './routes/o-serwisie'
 import { Route as PolitykaPrywatnosciRouteImport } from './routes/polityka-prywatnosci'
-import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SzukajRouteImport } from './routes/szukaj'
-import { Route as TematyRouteImport } from './routes/tematy'
 import { Route as ArchiwumIndexRouteImport } from './routes/archiwum.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -54,24 +51,9 @@ const PolitykaPrywatnosciRoute = PolitykaPrywatnosciRouteImport.update({
   path: '/polityka-prywatnosci',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RssDotxmlRoute = RssDotxmlRouteImport.update({
-  id: '/rss.xml',
-  path: '/rss.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SzukajRoute = SzukajRouteImport.update({
   id: '/szukaj',
   path: '/szukaj',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TematyRoute = TematyRouteImport.update({
-  id: '/tematy',
-  path: '/tematy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ArchiwumIndexRoute = ArchiwumIndexRouteImport.update({
@@ -100,14 +82,14 @@ const HubySlugRoute = HubySlugRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const TematyIndexRoute = TematyIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => TematyRoute,
+  id: '/tematy/',
+  path: '/tematy/',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const TematyTopicRoute = TematyTopicRouteImport.update({
-  id: '/$topic',
-  path: '/$topic',
-  getParentRoute: () => TematyRoute,
+  id: '/tematy/$topic',
+  path: '/tematy/$topic',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
@@ -131,10 +113,7 @@ export interface FileRoutesByFullPath {
   '/login': typeof LoginRoute
   '/o-serwisie': typeof OSerwisieRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
-  '/rss.xml': typeof RssDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/szukaj': typeof SzukajRoute
-  '/tematy': typeof TematyRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/huby/$slug': typeof HubySlugRoute
   '/tematy/$topic': typeof TematyTopicRoute
@@ -152,8 +131,6 @@ export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/o-serwisie': typeof OSerwisieRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
-  '/rss.xml': typeof RssDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/szukaj': typeof SzukajRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/huby/$slug': typeof HubySlugRoute
@@ -173,10 +150,7 @@ export interface FileRoutesById {
   '/login': typeof LoginRoute
   '/o-serwisie': typeof OSerwisieRoute
   '/polityka-prywatnosci': typeof PolitykaPrywatnosciRoute
-  '/rss.xml': typeof RssDotxmlRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/szukaj': typeof SzukajRoute
-  '/tematy': typeof TematyRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/huby/$slug': typeof HubySlugRoute
   '/tematy/$topic': typeof TematyTopicRoute
@@ -196,10 +170,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/o-serwisie'
     | '/polityka-prywatnosci'
-    | '/rss.xml'
-    | '/sitemap.xml'
     | '/szukaj'
-    | '/tematy'
     | '/blog/$slug'
     | '/huby/$slug'
     | '/tematy/$topic'
@@ -217,8 +188,6 @@ export interface FileRouteTypes {
     | '/login'
     | '/o-serwisie'
     | '/polityka-prywatnosci'
-    | '/rss.xml'
-    | '/sitemap.xml'
     | '/szukaj'
     | '/blog/$slug'
     | '/huby/$slug'
@@ -237,10 +206,7 @@ export interface FileRouteTypes {
     | '/login'
     | '/o-serwisie'
     | '/polityka-prywatnosci'
-    | '/rss.xml'
-    | '/sitemap.xml'
     | '/szukaj'
-    | '/tematy'
     | '/blog/$slug'
     | '/huby/$slug'
     | '/tematy/$topic'
@@ -259,15 +225,14 @@ export interface RootRouteChildren {
   LoginRoute: typeof LoginRoute
   OSerwisieRoute: typeof OSerwisieRoute
   PolitykaPrywatnosciRoute: typeof PolitykaPrywatnosciRoute
-  RssDotxmlRoute: typeof RssDotxmlRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SzukajRoute: typeof SzukajRoute
-  TematyRoute: typeof TematyRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
   HubySlugRoute: typeof HubySlugRoute
+  TematyTopicRoute: typeof TematyTopicRoute
   ArchiwumIndexRoute: typeof ArchiwumIndexRoute
   BlogIndexRoute: typeof BlogIndexRoute
   HubyIndexRoute: typeof HubyIndexRoute
+  TematyIndexRoute: typeof TematyIndexRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiLoginProviderRoute: typeof ApiLoginProviderRoute
   ArchiwumYearMonthRoute: typeof ArchiwumYearMonthRoute
@@ -310,32 +275,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolitykaPrywatnosciRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rss.xml': {
-      id: '/rss.xml'
-      path: '/rss.xml'
-      fullPath: '/rss.xml'
-      preLoaderRoute: typeof RssDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/szukaj': {
       id: '/szukaj'
       path: '/szukaj'
       fullPath: '/szukaj'
       preLoaderRoute: typeof SzukajRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/tematy': {
-      id: '/tematy'
-      path: '/tematy'
-      fullPath: '/tematy'
-      preLoaderRoute: typeof TematyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/archiwum/': {
@@ -375,17 +319,17 @@ declare module '@tanstack/react-router' {
     }
     '/tematy/': {
       id: '/tematy/'
-      path: '/'
+      path: '/tematy'
       fullPath: '/tematy/'
       preLoaderRoute: typeof TematyIndexRouteImport
-      parentRoute: typeof TematyRoute
+      parentRoute: typeof rootRouteImport
     }
     '/tematy/$topic': {
       id: '/tematy/$topic'
-      path: '/$topic'
+      path: '/tematy/$topic'
       fullPath: '/tematy/$topic'
       preLoaderRoute: typeof TematyTopicRouteImport
-      parentRoute: typeof TematyRoute
+      parentRoute: typeof rootRouteImport
     }
     '/api/auth/$': {
       id: '/api/auth/$'
@@ -411,34 +355,20 @@ declare module '@tanstack/react-router' {
   }
 }
 
-interface TematyRouteChildren {
-  TematyTopicRoute: typeof TematyTopicRoute
-  TematyIndexRoute: typeof TematyIndexRoute
-}
-
-const TematyRouteChildren: TematyRouteChildren = {
-  TematyTopicRoute: TematyTopicRoute,
-  TematyIndexRoute: TematyIndexRoute,
-}
-
-const TematyRouteWithChildren =
-  TematyRoute._addFileChildren(TematyRouteChildren)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FsdTrackerRoute: FsdTrackerRoute,
   LoginRoute: LoginRoute,
   OSerwisieRoute: OSerwisieRoute,
   PolitykaPrywatnosciRoute: PolitykaPrywatnosciRoute,
-  RssDotxmlRoute: RssDotxmlRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SzukajRoute: SzukajRoute,
-  TematyRoute: TematyRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
   HubySlugRoute: HubySlugRoute,
+  TematyTopicRoute: TematyTopicRoute,
   ArchiwumIndexRoute: ArchiwumIndexRoute,
   BlogIndexRoute: BlogIndexRoute,
   HubyIndexRoute: HubyIndexRoute,
+  TematyIndexRoute: TematyIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiLoginProviderRoute: ApiLoginProviderRoute,
   ArchiwumYearMonthRoute: ArchiwumYearMonthRoute,

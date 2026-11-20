@@ -1,14 +1,17 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
 import { PostGrid } from "@/components/post-card";
-import { isYearMonth, monthTitle, postsInMonth } from "@/lib/posts";
+import { isYearMonth, monthTitle } from "@/lib/posts";
+import { getArchiveMonth } from "@/lib/posts.functions";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/archiwum/$year/$month")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const { year, month } = params;
     if (!isYearMonth(year, month)) throw notFound();
-    return { year, month, list: postsInMonth(year, month), title: monthTitle(year, month) };
+    const list = await getArchiveMonth({ data: { year, month } });
+    if (!list) throw notFound();
+    return { year, month, list, title: monthTitle(year, month) };
   },
   head: ({ loaderData }) =>
     loaderData
@@ -39,7 +42,7 @@ function ArchiwumMiesiac() {
       }
     >
       {list.length ? (
-        <PostGrid posts={list} limit={false} />
+        <PostGrid posts={list} limit={false} heading="h2" />
       ) : (
         <p className="text-muted">Brak wpisów w tym miesiącu.</p>
       )}

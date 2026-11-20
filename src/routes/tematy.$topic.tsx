@@ -4,14 +4,17 @@ import { SiteFooter } from "@/components/site-footer";
 import { PostGrid } from "@/components/post-card";
 import { TopicChips } from "@/components/topic-chips";
 import { pageHead } from "@/lib/seo";
-import { isTopicId, postsByTopic, topicMeta, wpisow } from "@/lib/posts";
+import { isTopicId, topicMeta, wpisow } from "@/lib/posts";
+import { getTopicPosts } from "@/lib/posts.functions";
 
 export const Route = createFileRoute("/tematy/$topic")({
-  loader: ({ params }) => {
-    if (!isTopicId(params.topic)) throw notFound();
-    const meta = topicMeta(params.topic);
+  loader: async ({ params }) => {
+    const { topic } = params;
+    const meta = isTopicId(topic) ? topicMeta(topic) : undefined;
     if (!meta) throw notFound();
-    return { topic: params.topic, meta, list: postsByTopic(params.topic) };
+    const list = await getTopicPosts({ data: { topic } });
+    if (!list) throw notFound();
+    return { topic: meta.id, meta, list };
   },
   head: ({ loaderData }) =>
     loaderData
@@ -38,6 +41,7 @@ function Temat() {
             alt=""
             width={1600}
             height={900}
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-overlay/70" />
@@ -56,7 +60,7 @@ function Temat() {
             <TopicChips current={topic} />
           </div>
           {list.length ? (
-            <PostGrid posts={list} />
+            <PostGrid posts={list} heading="h2" />
           ) : (
             <p className="text-muted">Brak wpisów w tym dziale. Pojawią się, gdy wyjdą na blogu.</p>
           )}

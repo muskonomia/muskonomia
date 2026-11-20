@@ -1,4 +1,3 @@
-import { z } from "zod";
 import { resolveParentEmbedderOrigin } from "./preview-embedder-origin";
 
 export {
@@ -10,21 +9,19 @@ export {
 export const PREVIEW_BRIDGE_CHANNEL = "grok-preview-bridge" as const;
 export const PREVIEW_BRIDGE_VERSION = 1 as const;
 
-const EnvelopeSchema = z.object({
-  channel: z.literal(PREVIEW_BRIDGE_CHANNEL),
-  version: z.number().int().positive(),
-  type: z.string().min(1),
-});
+type Envelope = { channel: typeof PREVIEW_BRIDGE_CHANNEL; version: number; type: string } & Record<
+  string,
+  unknown
+>;
 
-const HelloSchema = EnvelopeSchema.extend({ type: z.literal("hello") });
-const NavigateSchema = EnvelopeSchema.extend({
-  type: z.literal("navigate"),
-  path: z.string().min(1),
-});
-const HistorySchema = EnvelopeSchema.extend({
-  type: z.literal("history"),
-  delta: z.union([z.literal(-1), z.literal(1)]),
-});
+function parseEnvelope(data: unknown): Envelope | null {
+  if (!data || typeof data !== "object") return null;
+  const msg = data as Record<string, unknown>;
+  if (msg.channel !== PREVIEW_BRIDGE_CHANNEL) return null;
+  if (typeof msg.version !== "number" || !Number.isInteger(msg.version) || msg.version <= 0) return null;
+  if (typeof msg.type !== "string" || msg.type.length === 0) return null;
+  return msg as Envelope;
+}
 
 export type PreviewHostBridgeOptions = {
   navigate?: (path: string) => void;
@@ -126,25 +123,23 @@ export function installPreviewHostBridge(options: PreviewHostBridgeOptions = {})
   const onMessage = (event: MessageEvent) => {
     if (event.source !== window.parent) return;
     if (event.origin !== parentOrigin) return;
-    const envelope = EnvelopeSchema.safeParse(event.data);
-    if (!envelope.success || envelope.data.version !== PREVIEW_BRIDGE_VERSION) return;
-    if (envelope.data.type === "hello") {
-      if (!HelloSchema.safeParse(event.data).success) return;
+    const envelope = parseEnvelope(event.data);
+    if (!envelope || envelope.version !== PREVIEW_BRIDGE_VERSION) return;
+    if (envelope.type === "hello") {
       announce();
       return;
     }
-    if (envelope.data.type === "navigate") {
-      const parsed = NavigateSchema.safeParse(event.data);
-      if (!parsed.success) return;
-      navigate(parsed.data.path);
+    if (envelope.type === "navigate") {
+      if (typeof envelope.path !== "string" || envelope.path.length === 0) return;
+      navigate(envelope.path);
       queueMicrotask(reportLocation);
       return;
     }
-    if (envelope.data.type === "history") {
-      const parsed = HistorySchema.safeParse(event.data);
-      if (!parsed.success) return;
-      if (parsed.data.delta === -1 && isAtHistoryRoot()) return;
-      window.history.go(parsed.data.delta);
+    if (envelope.type === "history") {
+      const delta = envelope.delta;
+      if (delta !== -1 && delta !== 1) return;
+      if (delta === -1 && isAtHistoryRoot()) return;
+      window.history.go(delta);
     }
   };
   window.history.pushState = (data, unused, url) => {

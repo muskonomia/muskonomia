@@ -6,12 +6,16 @@ import { TopicChips } from "@/components/topic-chips";
 import { FsdCounterView } from "@/components/fsd-counter";
 import { pageHead } from "@/lib/seo";
 import { SITE_DESCRIPTION } from "@/lib/site";
-import { posts, TOPICS, type TopicId } from "@/lib/posts";
+import { TOPICS, type PostSummary, type TopicId } from "@/lib/posts";
 import { XLogo } from "@/components/x-logo";
 import { getFsdCounter } from "@/lib/fsd-counter.functions";
+import { getLatestPosts, getPostList } from "@/lib/posts.functions";
 
 export const Route = createFileRoute("/")({
-  loader: () => getFsdCounter(),
+  loader: async () => {
+    const [counter, latest] = await Promise.all([getFsdCounter(), getLatestPosts({ data: { limit: 12 } })]);
+    return { counter, latest };
+  },
   head: () =>
     pageHead({
       title: "Tesla, SpaceX, Elon Musk i xAI",
@@ -22,7 +26,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const counter = Route.useLoaderData();
+  const { counter, latest } = Route.useLoaderData();
 
   return (
     <div className="min-h-screen bg-bg text-fg">
@@ -57,7 +61,7 @@ function Home() {
         </div>
       </section>
 
-      <HomeBlog />
+      <HomeBlog posts={latest.posts} total={latest.total} />
 
       <section id="tematy" className="mx-auto max-w-6xl px-5 py-20" aria-labelledby="sec-tematy">
         <h2 id="sec-tematy" className="font-display text-4xl font-semibold tracking-tight">
@@ -216,7 +220,7 @@ function Home() {
           >
             <XLogo className="h-10 w-10" />
             <h2 className="mt-5 font-display text-4xl font-semibold">Śledź na X</h2>
-            <p className="mt-2 text-muted">@MuskonomiaPL — starty, wycieki i newsy, zanim wejdą na bloga.</p>
+            <p className="mt-2 text-muted">@Muskonomia — starty, wycieki i newsy, zanim wejdą na bloga.</p>
           </a>
           <a
             href="mailto:sebanrgcrypto@gmail.com"
@@ -238,7 +242,7 @@ function Home() {
   );
 }
 
-function HomeBlog() {
+function HomeBlog({ posts, total }: { posts: PostSummary[]; total: number }) {
   return (
     <section id="blog" className="bg-bg" aria-labelledby="sec-blog">
       <div className="mx-auto max-w-6xl px-5 pt-20">
@@ -251,7 +255,7 @@ function HomeBlog() {
         </div>
       </div>
       <div className="mx-auto max-w-6xl px-5 py-12">
-        <PostGrid posts={posts} priorityFirst />
+        <PostGrid posts={posts} total={total} loadAll={() => getPostList()} />
       </div>
     </section>
   );

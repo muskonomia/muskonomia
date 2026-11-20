@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
-import { archiveMonths, monthTitle, wpisow } from "@/lib/posts";
+import { monthTitle, wpisow } from "@/lib/posts";
+import { getArchiveMonths } from "@/lib/posts.functions";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/archiwum/")({
+  loader: () => getArchiveMonths(),
   head: () =>
     pageHead({
       title: "Archiwum",
@@ -14,7 +16,7 @@ export const Route = createFileRoute("/archiwum/")({
 });
 
 function Archiwum() {
-  const months = archiveMonths();
+  const months = Route.useLoaderData();
   return (
     <ListingShell
       title="Archiwum"
