@@ -6,11 +6,11 @@ import { TopicChips } from "@/components/topic-chips";
 import { searchPosts } from "@/lib/posts";
 import { pageHead } from "@/lib/seo";
 
-type SzukajSearch = { q: string };
+type SzukajSearch = { q?: string };
 
 export const Route = createFileRoute("/szukaj")({
   validateSearch: (raw: Record<string, unknown>): SzukajSearch => ({
-    q: typeof raw.q === "string" ? raw.q : "",
+    q: typeof raw.q === "string" ? raw.q : undefined,
   }),
   head: () =>
     pageHead({
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/szukaj")({
 });
 
 function Szukaj() {
-  const { q } = Route.useSearch();
+  const { q = "" } = Route.useSearch();
   const needle = q.trim();
   const results = needle ? searchPosts(needle) : [];
 
@@ -43,7 +43,7 @@ function Szukaj() {
       ) : results.length === 0 ? (
         <p className="text-muted">
           Nic nie znaleziono dla «{needle}». Spróbuj innego słowa albo wróć do{" "}
-          <a href="/blog" className="text-accent hover:text-accent-hover">
+          <a href="/blog" className="text-link hover:text-link-hover">
             wszystkich wpisów
           </a>
           .
