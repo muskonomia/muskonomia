@@ -29,7 +29,7 @@ function peelUrl(raw: string): { href: string; trail: string } {
   return { href, trail };
 }
 
-export function phraseForUrl(url: string): string {
+function phraseForUrl(url: string): string {
   for (const [re, phrase] of URL_PHRASES) {
     if (re.test(url)) return phrase;
   }
@@ -50,7 +50,7 @@ function SourceLink({ href, children }: { href: string; children: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-accent hover:text-accent-hover"
+      className="text-link hover:text-link-hover"
     >
       {children}
     </a>

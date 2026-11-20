@@ -1,4 +1,5 @@
-import { posts, type Post } from "./posts";
+import type { Post } from "./posts";
+import { posts } from "./posts.server";
 
 export type Hub = {
   id: string;
@@ -70,4 +71,10 @@ export function getHub(id: string) {
 
 export function hubPosts(hub: Hub) {
   return posts.filter(hub.match);
+}
+
+export type HubInfo = Pick<Hub, "id" | "title" | "copy" | "cover">;
+
+export function hubInfo(hub: Hub): HubInfo {
+  return { id: hub.id, title: hub.title, copy: hub.copy, cover: hub.cover };
 }

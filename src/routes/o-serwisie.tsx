@@ -173,13 +173,14 @@ function OSerwisie() {
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <div className="relative isolate min-h-64 overflow-hidden sm:min-h-72">
           <img
             src="/img/terafab-render-night.jpg"
             alt=""
             width={1568}
             height={882}
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-linear-to-t from-overlay via-overlay/75 to-overlay/45" />
@@ -208,7 +209,7 @@ function OSerwisie() {
             <p>Redakcja: {SITE_AUTHOR}.</p>
             <p>
               Kontakt serwisu:{" "}
-              <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="text-accent hover:text-accent-hover">
+              <a href={`mailto:${SITE_CONTACT_EMAIL}`} className="text-link hover:text-link-hover">
                 {SITE_CONTACT_EMAIL}
               </a>
               . Na X:{" "}
@@ -216,7 +217,7 @@ function OSerwisie() {
                 href={SITE_X_URL}
                 target="_blank"
                 rel="me noopener noreferrer"
-                className="text-accent hover:text-accent-hover"
+                className="text-link hover:text-link-hover"
               >
                 {SITE_X_HANDLE}
               </a>

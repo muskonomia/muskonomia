@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
-import { HUBS, hubPosts } from "@/lib/hubs";
 import { pageHead } from "@/lib/seo";
 import { wpisow } from "@/lib/posts";
+import { getHubList } from "@/lib/posts.functions";
 
 export const Route = createFileRoute("/huby/")({
+  loader: () => getHubList(),
   head: () =>
     pageHead({
       title: "Huby",
@@ -15,14 +16,14 @@ export const Route = createFileRoute("/huby/")({
 });
 
 function Huby() {
+  const hubs = Route.useLoaderData();
   return (
     <ListingShell
       title="Huby"
       description="Żywe zbiory z istniejących wpisów. Bez osobnego CMS — to, co już jest na blogu."
     >
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {HUBS.map((hub) => {
-          const n = hubPosts(hub).length;
+        {hubs.map((hub) => {
           return (
             <Link
               key={hub.id}
@@ -43,7 +44,7 @@ function Huby() {
               <div className="relative z-10 flex h-full min-h-72 flex-col justify-end p-6">
                 <h2 className="font-display text-3xl font-semibold leading-none">{hub.title}</h2>
                 <p className="mt-2 text-sm text-fg/80">
-                  {hub.copy} · {wpisow(n)}
+                  {hub.copy} · {wpisow(hub.count)}
                 </p>
               </div>
             </Link>

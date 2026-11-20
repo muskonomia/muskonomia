@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { DiscussOnX, XPostEmbed } from "@/components/discuss-on-x";
@@ -6,28 +6,30 @@ import { Comments } from "@/components/comments";
 import { PostCard } from "@/components/post-card";
 import { PostMeta } from "@/components/post-meta";
 import { LinkedText } from "@/components/rich-text";
-import { getPost, postJsonLd, relatedPosts } from "@/lib/posts";
+import { getPostPage } from "@/lib/posts.functions";
 import { postHead } from "@/lib/seo";
 import { absoluteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/$slug")({
-  loader: ({ params }) => {
-    const post = getPost(params.slug);
-    if (!post) throw notFound();
-    return post;
+  loader: async ({ params }) => {
+    const page = await getPostPage({ data: { slug: params.slug } });
+    if (!page) throw notFound();
+    if (page.post.slug !== params.slug) {
+      throw redirect({ to: "/blog/$slug", params: { slug: page.post.slug }, statusCode: 301 });
+    }
+    return page;
   },
-  head: ({ loaderData }) => (loaderData ? postHead(loaderData) : {}),
+  head: ({ loaderData }) => (loaderData ? postHead(loaderData.post) : {}),
   component: BlogPost,
 });
 
 function BlogPost() {
-  const post = Route.useLoaderData();
-  const others = relatedPosts(post, 3);
+  const { post, related: others } = Route.useLoaderData();
 
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <article>
           <header className="relative isolate min-h-[80vh] overflow-hidden">
             <img
@@ -79,7 +81,6 @@ function BlogPost() {
                             ? "h-auto w-full bg-fg object-contain"
                             : "aspect-video w-full object-cover"
                         }
-                        fetchPriority="low"
                       />
                     </a>
                     {block.caption ? (
@@ -120,7 +121,8 @@ function BlogPost() {
                       <iframe
                         className="h-full w-full"
                         src={`https://www.youtube-nocookie.com/embed/${block.id}`}
-                        title="YouTube"
+                        title="Film z YouTube"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
                       />
@@ -223,7 +225,7 @@ function BlogPost() {
             })}
             <Link
               to="/blog"
-              className="inline-block pt-4 text-sm font-medium text-accent hover:text-accent-hover"
+              className="inline-block pt-4 text-sm font-medium text-link hover:text-link-hover"
             >
               ← Wszystkie wpisy
             </Link>
@@ -241,11 +243,6 @@ function BlogPost() {
         <div className="px-5 pb-16">
           <DiscussOnX title={post.title} slug={post.slug} xPostId={post.xPostId} />
         </div>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(postJsonLd(post)) }}
-        />
 
         {others.length > 0 ? (
           <section className="mx-auto max-w-6xl px-5 pb-20" aria-labelledby="post-more">
@@ -279,7 +276,7 @@ function AskOnX({ title, slug }: { title: string; slug: string }) {
           href="https://x.com/Muskonomia"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-12 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-fg hover:bg-accent-hover"
+          className="inline-flex min-h-12 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-white hover:bg-accent-dark"
         >
           Podyskutuj z nami na X (@Muskonomia) →
         </a>

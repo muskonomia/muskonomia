@@ -1,5 +1,6 @@
-import { HUBS, hubPosts } from "./hubs";
-import { archiveMonths, posts, postsByTopic, TOPICS } from "./posts";
+import { HUBS, hubPosts } from "./hubs.server";
+import { TOPICS } from "./posts";
+import { archiveMonths, posts, postsByTopic } from "./posts.server";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "./site";
 
 export function xmlEscape(value: string) {
@@ -28,7 +29,6 @@ export function sitemapXml() {
     { path: "/o-serwisie", changefreq: "monthly", priority: "0.5", lastmod: today },
     { path: "/polityka-prywatnosci", changefreq: "yearly", priority: "0.3", lastmod: "2026-11-19" },
     { path: "/fsd-tracker", changefreq: "daily", priority: "0.6", lastmod: today },
-    { path: "/szukaj", changefreq: "weekly", priority: "0.4", lastmod: today },
     { path: "/archiwum", changefreq: "weekly", priority: "0.5", lastmod: latestPost },
   ];
 
@@ -100,13 +100,17 @@ export function rssXml() {
     })
     .join("\n");
 
+  const lastBuild = posts[0] ? new Date(`${posts[0].isoDate}T12:00:00Z`).toUTCString() : "";
+
   return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${xmlEscape(SITE_NAME)}</title>
     <link>${SITE_URL}</link>
+    <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
     <description>${xmlEscape(SITE_DESCRIPTION)}</description>
     <language>pl-PL</language>
+    <lastBuildDate>${lastBuild}</lastBuildDate>
 ${items}
   </channel>
 </rss>`;

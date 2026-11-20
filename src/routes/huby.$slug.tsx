@@ -2,18 +2,15 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PostGrid } from "@/components/post-card";
-import { getHub, hubPosts } from "@/lib/hubs";
 import { pageHead } from "@/lib/seo";
 import { wpisow } from "@/lib/posts";
+import { getHubPage } from "@/lib/posts.functions";
 
 export const Route = createFileRoute("/huby/$slug")({
-  loader: ({ params }) => {
-    const hub = getHub(params.slug);
-    if (!hub) throw notFound();
-    return {
-      hub: { id: hub.id, title: hub.title, copy: hub.copy, cover: hub.cover },
-      list: hubPosts(hub),
-    };
+  loader: async ({ params }) => {
+    const page = await getHubPage({ data: { slug: params.slug } });
+    if (!page) throw notFound();
+    return page;
   },
   head: ({ loaderData }) =>
     loaderData
@@ -33,13 +30,14 @@ function HubPage() {
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <div className="relative isolate min-h-56 overflow-hidden">
           <img
             src={hub.cover}
             alt=""
             width={1600}
             height={900}
+            fetchPriority="high"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-overlay/70" />
@@ -55,7 +53,7 @@ function HubPage() {
         </div>
         <div className="mx-auto max-w-6xl px-5 py-10">
           {list.length ? (
-            <PostGrid posts={list} />
+            <PostGrid posts={list} heading="h2" />
           ) : (
             <p className="text-muted">Brak pasujących wpisów. Hub pokazuje tylko to, co już jest na blogu.</p>
           )}

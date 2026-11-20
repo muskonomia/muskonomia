@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ListingShell } from "@/components/listing-shell";
 import { pageHead } from "@/lib/seo";
-import { postsByTopic, TOPICS, wpisow, type TopicId } from "@/lib/posts";
+import { TOPICS, wpisow } from "@/lib/posts";
+import { getTopicCounts } from "@/lib/posts.functions";
 
 export const Route = createFileRoute("/tematy/")({
+  loader: () => getTopicCounts(),
   head: () =>
     pageHead({
       title: "Tematy: Tesla, SpaceX, xAI, Neuralink, Boring",
@@ -15,24 +17,23 @@ export const Route = createFileRoute("/tematy/")({
 });
 
 function Tematy() {
+  const counts = Route.useLoaderData();
   return (
     <ListingShell title="Tesla, SpaceX, xAI, Neuralink, Boring">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {TOPICS.map((topic) => (
-          <TopicOverviewCard key={topic.id} id={topic.id} />
+          <TopicOverviewCard key={topic.id} topic={topic} count={counts[topic.id] ?? 0} />
         ))}
       </div>
     </ListingShell>
   );
 }
 
-function TopicOverviewCard({ id }: { id: TopicId }) {
-  const topic = TOPICS.find((t) => t.id === id)!;
-  const n = postsByTopic(id).length;
+function TopicOverviewCard({ topic, count }: { topic: (typeof TOPICS)[number]; count: number }) {
   return (
     <Link
       to="/tematy/$topic"
-      params={{ topic: id }}
+      params={{ topic: topic.id }}
       className="group relative block min-h-72 overflow-hidden rounded-xl"
     >
       <img
@@ -49,7 +50,7 @@ function TopicOverviewCard({ id }: { id: TopicId }) {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-fg/75">{topic.label}</p>
         <h2 className="mt-1 font-display text-3xl font-semibold leading-none">{topic.label}</h2>
         <p className="mt-2 text-sm text-fg/80">
-          {topic.copy} · {wpisow(n)}
+          {topic.copy} · {wpisow(count)}
         </p>
       </div>
     </Link>

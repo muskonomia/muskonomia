@@ -1,19 +1,18 @@
 import { Link } from "@tanstack/react-router";
-import { archiveParams, postTopic, topicLabel, type Post } from "@/lib/posts";
+import { archiveParams, topicLabel, type PostSummary } from "@/lib/posts";
 
 export function PostMeta({
   post,
   className = "text-xs font-semibold uppercase tracking-[0.2em] text-fg/75",
 }: {
-  post: Post;
+  post: Pick<PostSummary, "topic" | "isoDate" | "date">;
   className?: string;
 }) {
-  const topic = postTopic(post);
   const { year, month } = archiveParams(post.isoDate);
   return (
     <p className={className}>
-      <Link to="/tematy/$topic" params={{ topic }} className="hover:text-fg">
-        {topicLabel(topic)}
+      <Link to="/tematy/$topic" params={{ topic: post.topic }} className="hover:text-fg">
+        {topicLabel(post.topic)}
       </Link>
       {" · "}
       <Link to="/archiwum/$year/$month" params={{ year, month }} className="hover:text-fg">

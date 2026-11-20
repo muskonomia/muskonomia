@@ -18,7 +18,7 @@ export function ListingShell({
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <header className="mx-auto max-w-6xl px-5 py-8">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">{kicker}</p>
           <h1 className="mt-1 font-display text-5xl font-semibold tracking-tight">{title}</h1>

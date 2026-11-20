@@ -55,7 +55,7 @@ export function CookieConsent() {
           najchętniej. Zgoda obejmuje też pomiar X. Możesz się zgodzić albo odmówić. Szczegóły:{" "}
           <Link
             to="/polityka-prywatnosci"
-            className="text-fg underline underline-offset-2 hover:text-accent"
+            className="text-fg underline underline-offset-2 hover:text-link-hover"
           >
             Polityka prywatności
           </Link>

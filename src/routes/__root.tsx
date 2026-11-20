@@ -4,6 +4,8 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { GA_BOOT_SCRIPT, GA_CONFIG_SCRIPT, GA_MEASUREMENT_ID, X_PIXEL_BOOT_SCRIPT } from "@/lib/analytics";
 import appCss from "../styles.css?url";
+import bodyFont from "@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2?url";
+import displayFont from "@fontsource/barlow-condensed/files/barlow-condensed-latin-600-normal.woff2?url";
 
 const APP_NAME = "muskonomia.pl";
 
@@ -21,14 +23,10 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "preload", href: bodyFont, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
+      { rel: "preload", href: displayFont, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: appCss },
       { rel: "alternate", type: "application/rss+xml", title: "muskonomia.pl", href: "/rss.xml" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
-      },
     ],
   }),
   component: () => (

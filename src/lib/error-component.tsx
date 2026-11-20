@@ -1,21 +1,42 @@
-import type { ErrorComponentProps } from "@tanstack/react-router";
-import { TriangleAlert } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
-export function AppErrorComponent({ error }: ErrorComponentProps) {
+function ErrorShell({ title, copy }: { title: string; copy: string }) {
   return (
-    <main
-      className={
-        "flex min-h-screen flex-col items-center justify-center gap-3 px-6 text-center " +
-        "bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50"
-      }
-    >
-      <span className="text-red-500" aria-hidden="true">
-        <TriangleAlert className="size-10" strokeWidth={2} />
-      </span>
-      <h1 className="text-lg font-semibold">Something went wrong</h1>
-      <p className="max-w-md text-sm break-words text-zinc-500 dark:text-zinc-400">
-        {error.message || "An unexpected error occurred. Try reloading the page."}
-      </p>
-    </main>
+    <div className="min-h-screen bg-bg text-fg">
+      <SiteHeader />
+      <main id="tresc" className="mx-auto flex min-h-[70vh] max-w-3xl flex-col justify-center px-5 pb-20 pt-32">
+        <h1 className="font-display text-5xl font-semibold tracking-tight">{title}</h1>
+        <p className="mt-4 max-w-xl text-muted">{copy}</p>
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+          <Link to="/" className="text-link hover:text-link-hover">
+            ← Strona główna
+          </Link>
+          <Link to="/blog" className="text-link hover:text-link-hover">
+            Wszystkie wpisy
+          </Link>
+        </div>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}
+
+export function AppErrorComponent() {
+  return (
+    <ErrorShell
+      title="Coś poszło nie tak"
+      copy="Nie udało się wczytać tej strony. Odśwież ją za chwilę albo wróć na stronę główną."
+    />
+  );
+}
+
+export function AppNotFound() {
+  return (
+    <ErrorShell
+      title="Nie ma takiej strony"
+      copy="Adres jest błędny albo wpis zmienił miejsce. Zajrzyj na listę wpisów albo użyj wyszukiwarki."
+    />
   );
 }

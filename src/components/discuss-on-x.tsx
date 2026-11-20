@@ -65,7 +65,7 @@ export function DiscussOnX({
         <XLogo className="h-6 w-6 shrink-0 text-fg" />
         <h2 id="discuss-x" className="font-display text-3xl font-semibold leading-none tracking-tight">
           {tweetUrl ? (
-            <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+            <a href={tweetUrl} target="_blank" rel="noopener noreferrer" className="hover:text-link-hover">
               Dyskusja na X
             </a>
           ) : (
@@ -81,7 +81,7 @@ export function DiscussOnX({
             href={`https://x.com/${X_HANDLE}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-fg hover:text-accent"
+            className="text-fg hover:text-link-hover"
           >
             @{X_HANDLE}
           </a>
@@ -94,7 +94,7 @@ export function DiscussOnX({
           href={reply}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-accent px-5 text-sm font-semibold text-fg hover:bg-accent-hover"
+          className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-accent px-5 text-sm font-semibold text-white hover:bg-accent-dark"
         >
           <XLogo className="h-4 w-4" />
           {xPostId ? "Odpowiedz na X" : "Dyskutuj na X"}

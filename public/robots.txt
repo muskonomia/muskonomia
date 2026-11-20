@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_serverFn/
 
 Sitemap: https://muskonomia.pl/sitemap.xml

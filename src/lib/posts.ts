@@ -1,6 +1,4 @@
-import { SITE_URL } from "./site";
-import { postsData } from "./posts-data";
-import { HUBS } from "./hubs";
+import { SITE_NAME, SITE_URL, absoluteUrl } from "./site";
 
 export type Block =
   | { type: "p"; text: string }
@@ -34,22 +32,13 @@ export type Post = {
   body: Block[];
 };
 
-function byNewest(a: Post, b: Post) {
-  const d = b.isoDate.localeCompare(a.isoDate);
-  if (d !== 0) return d;
-  return a.slug.localeCompare(b.slug);
-}
+/** A post with its topic resolved, as sent to the browser for the article page. */
+export type ResolvedPost = Post & { topic: TopicId };
 
-function uniqueBySlug(list: Post[]) {
-  const seen = new Set<string>();
-  return list.filter((p) => {
-    if (seen.has(p.slug)) return false;
-    seen.add(p.slug);
-    return true;
-  });
-}
-
-export const posts: Post[] = uniqueBySlug(postsData).sort(byNewest);
+/** What a post card needs. Listing pages ship only this, never the article body. */
+export type PostSummary = Pick<Post, "slug" | "title" | "excerpt" | "date" | "isoDate" | "img" | "contain"> & {
+  topic: TopicId;
+};
 
 export const TOPICS: {
   id: TopicId;
@@ -77,7 +66,7 @@ export function topicMeta(id: TopicId) {
   return TOPICS.find((t) => t.id === id);
 }
 
-export function postTopic(post: Post): TopicId {
+export function postTopic(post: Pick<Post, "topic" | "kicker" | "slug" | "title">): TopicId {
   if (post.topic) return post.topic;
   const hay = `${post.kicker} ${post.slug} ${post.title}`.toLowerCase();
   if (/\bneuralink\b/.test(hay)) return "neuralink";
@@ -89,45 +78,17 @@ export function postTopic(post: Post): TopicId {
   return "inne";
 }
 
-export function postsByTopic(id: TopicId) {
-  return posts.filter((p) => postTopic(p) === id);
-}
-
-const SLUG_ALIASES: Record<string, string> = {
-  "nowa-tesla-zamowienia-otwarte-bez-polski": "tesla-otworzyla-rezerwacje-roadstera",
-};
-
-export function getPost(slug: string) {
-  const canonical = SLUG_ALIASES[slug] ?? slug;
-  return posts.find((p) => p.slug === canonical);
-}
-
-export function relatedPosts(post: Post, limit = 3) {
-  const seen = new Set<string>([post.slug]);
-  const out: Post[] = [];
-
-  const take = (candidates: Post[]) => {
-    for (const p of candidates) {
-      if (out.length >= limit) return;
-      if (seen.has(p.slug)) continue;
-      seen.add(p.slug);
-      out.push(p);
-    }
+export function toSummary(post: Post): PostSummary {
+  return {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    date: post.date,
+    isoDate: post.isoDate,
+    img: post.img,
+    contain: post.contain,
+    topic: postTopic(post),
   };
-
-  take(postsByTopic(postTopic(post)));
-
-  if (out.length < limit) {
-    for (const hub of HUBS) {
-      if (!hub.match(post)) continue;
-      take(posts.filter((p) => hub.match(p)));
-      if (out.length >= limit) break;
-    }
-  }
-
-  if (out.length < limit) take(posts);
-
-  return out;
 }
 
 export function postPlainText(post: Post) {
@@ -141,18 +102,10 @@ export function postPlainText(post: Post) {
       if (b.type === "video") return b.caption ?? "";
       if (b.type === "x") return `Wpis @${b.handle} na X`;
       if (b.type === "p" || b.type === "h2" || b.type === "h3") return b.text;
+      if (b.type === "quote") return b.paragraphs.join(" ");
       return "";
     })
     .join(" ");
-}
-
-export function searchPosts(q: string) {
-  const needle = q.trim().toLowerCase();
-  if (!needle) return [];
-  return posts.filter((p) => {
-    const hay = `${p.title} ${p.excerpt} ${p.kicker} ${postPlainText(p)}`.toLowerCase();
-    return hay.includes(needle);
-  });
 }
 
 export function archiveParams(isoDate: string) {
@@ -162,24 +115,6 @@ export function archiveParams(isoDate: string) {
 
 export function isYearMonth(year: string, month: string) {
   return /^\d{4}$/.test(year) && /^(0[1-9]|1[0-2])$/.test(month);
-}
-
-export function postsInMonth(year: string, month: string) {
-  const prefix = `${year}-${month}`;
-  return posts.filter((p) => p.isoDate.startsWith(prefix));
-}
-
-export function archiveMonths() {
-  const map = new Map<string, { year: string; month: string; count: number }>();
-  for (const p of posts) {
-    const { year, month } = archiveParams(p.isoDate);
-    if (!year || !month) continue;
-    const key = `${year}-${month}`;
-    const cur = map.get(key);
-    if (cur) cur.count += 1;
-    else map.set(key, { year, month, count: 1 });
-  }
-  return [...map.values()].sort((a, b) => `${b.year}-${b.month}`.localeCompare(`${a.year}-${a.month}`));
 }
 
 export const MONTHS_PL = [
@@ -212,23 +147,34 @@ export function wpisow(n: number) {
   return `${n} wpisów`;
 }
 
+export function postUrl(slug: string) {
+  return `${SITE_URL}/blog/${slug}`;
+}
+
 export function postJsonLd(post: Post) {
+  const url = postUrl(post.slug);
+  const publisher = {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#org`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo.png` },
+  };
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${url}#article`,
     headline: post.title,
     description: post.excerpt,
-    image: `${SITE_URL}${post.img}`,
+    image: [...new Set([post.card, post.img].filter(Boolean).map((src) => absoluteUrl(src as string)))],
     datePublished: post.isoDate,
     dateModified: post.isoDate,
     inLanguage: "pl-PL",
-    author: { "@type": "Organization", name: "muskonomia.pl" },
-    publisher: {
-      "@type": "Organization",
-      name: "muskonomia.pl",
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/img/logo.png` },
-    },
-    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    publisher,
+    isAccessibleForFree: true,
     articleSection: topicLabel(postTopic(post)),
     articleBody: postPlainText(post),
   };
