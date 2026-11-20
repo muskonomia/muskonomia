@@ -28,7 +28,7 @@ export function SearchForm({
       {compact ? null : (
         <button
           type="submit"
-          className="min-h-12 rounded-md bg-accent px-6 text-sm font-semibold text-fg hover:bg-accent-hover"
+          className="min-h-12 rounded-md bg-accent px-6 text-sm font-semibold text-white hover:bg-accent-dark"
         >
           Szukaj
         </button>

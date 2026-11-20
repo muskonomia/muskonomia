@@ -123,7 +123,7 @@ export function Comments({ slug }: { slug: string }) {
         <button
           type="submit"
           disabled={sending || !body.trim() || !name.trim()}
-          className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-50"
+          className="rounded-md bg-accent px-5 py-3 text-sm font-semibold text-white hover:bg-accent-dark disabled:opacity-50"
         >
           {sending ? "Wysyłam…" : "Dodaj komentarz"}
         </button>
@@ -136,7 +136,7 @@ export function Comments({ slug }: { slug: string }) {
           />
           <span>Zapamiętaj moje dane w tej przeglądarce podczas pisania kolejnych komentarzy.</span>
         </label>
-        {error ? <p className="text-sm text-accent">{error}</p> : null}
+        {error ? <p className="text-sm text-link">{error}</p> : null}
       </form>
 
       <div className="mt-8">
@@ -158,7 +158,7 @@ export function Comments({ slug }: { slug: string }) {
                 <button
                   type="button"
                   onClick={() => onDelete(item.id)}
-                  className="mt-2 text-xs font-medium text-muted hover:text-accent"
+                  className="mt-2 text-xs font-medium text-muted hover:text-link-hover"
                 >
                   Usuń
                 </button>

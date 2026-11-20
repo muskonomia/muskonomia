@@ -31,7 +31,7 @@ function Temat() {
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <div className="relative isolate min-h-56 overflow-hidden">
           <img
             src={meta.cover}

@@ -8,7 +8,7 @@ function Login() {
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="grid min-h-screen place-items-center px-5 pt-16">
+      <main id="tresc" className="grid min-h-screen place-items-center px-5 pt-16">
         <div className="relative z-10 w-full max-w-sm space-y-5 rounded-xl border border-border bg-surface p-8">
           <h1 className="font-display text-3xl font-semibold tracking-wide">Komentarze</h1>
           <p className="text-sm text-muted">

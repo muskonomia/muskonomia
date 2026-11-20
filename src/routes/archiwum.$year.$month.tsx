@@ -33,7 +33,7 @@ function ArchiwumMiesiac() {
           : "W tym miesiącu nie ma wpisów. Wybierz inny z indeksu archiwum."
       }
       toolbar={
-        <Link to="/archiwum" className="text-sm text-accent hover:text-accent-hover">
+        <Link to="/archiwum" className="text-sm text-link hover:text-link-hover">
           ← Wszystkie miesiące
         </Link>
       }

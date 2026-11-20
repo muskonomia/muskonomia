@@ -45,7 +45,7 @@ function FsdTrackerPage() {
       </div>
       <div className="relative z-10">
       <SiteHeader />
-      <main className="mx-auto max-w-6xl px-5 pb-24 pt-28">
+      <main id="tresc" className="mx-auto max-w-6xl px-5 pb-24 pt-28">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Tesla</p>
         <div className="mt-1.5">
           <h1 className="font-display text-[2.4rem] font-semibold tracking-tight sm:text-[3rem]">FSD Tracker</h1>

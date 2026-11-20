@@ -28,7 +28,7 @@ function Home() {
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
 
-      <main>
+      <main id="tresc">
       <section className="relative isolate flex min-h-[36rem] items-end overflow-hidden" aria-labelledby="home-h1">
         <img
           src="/img/dragon-tesla-hero.jpg"
@@ -163,7 +163,7 @@ function Home() {
             fetchPriority="low"
           />
           <div className="p-6">
-            <p className="text-xs uppercase tracking-widest text-accent">Tesla</p>
+            <p className="text-xs uppercase tracking-widest text-link">Tesla</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Model Y: auto, które ogarnia rodzinę</h3>
             <p className="mt-2 text-sm text-muted">
               Miejsce, cisza, foteliki, bagażnik i sieć Superchargerów. Krótko: dlaczego Y jest codziennym autem Tesli, nie
@@ -187,7 +187,7 @@ function Home() {
             fetchPriority="low"
           />
           <div className="p-6">
-            <p className="text-xs uppercase tracking-widest text-accent">xAI</p>
+            <p className="text-xs uppercase tracking-widest text-link">xAI</p>
             <h3 className="mt-2 font-display text-2xl font-semibold">Grok w medycynie</h3>
             <p className="mt-2 text-sm text-muted">
               Indeks Artificial Analysis — Grok wśród liderów w zadaniach healthcare.

@@ -27,7 +27,7 @@ function BlogPost() {
   return (
     <div className="min-h-screen bg-bg text-fg">
       <SiteHeader />
-      <main className="pt-16">
+      <main id="tresc" className="pt-16">
         <article>
           <header className="relative isolate min-h-[80vh] overflow-hidden">
             <img
@@ -223,7 +223,7 @@ function BlogPost() {
             })}
             <Link
               to="/blog"
-              className="inline-block pt-4 text-sm font-medium text-accent hover:text-accent-hover"
+              className="inline-block pt-4 text-sm font-medium text-link hover:text-link-hover"
             >
               ← Wszystkie wpisy
             </Link>
@@ -279,7 +279,7 @@ function AskOnX({ title, slug }: { title: string; slug: string }) {
           href="https://x.com/Muskonomia"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-12 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-fg hover:bg-accent-hover"
+          className="inline-flex min-h-12 items-center justify-center rounded-md bg-accent px-5 text-sm font-semibold text-white hover:bg-accent-dark"
         >
           Podyskutuj z nami na X (@Muskonomia) →
         </a>

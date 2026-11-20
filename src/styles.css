@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @theme {
   --color-bg: #0a0a0b;
@@ -7,7 +6,10 @@
   --color-fg: #f3f1ec;
   --color-muted: #9a9790;
   --color-accent: #e10600;
-  --color-accent-hover: #ff2a22;
+  --color-accent-dark: #c40500;
+  /* Red text on bg/surface; accent itself is below 4.5:1 there (WCAG AA). */
+  --color-link: #ff3b33;
+  --color-link-hover: #ff6b63;
   --color-border: #2a2a2c;
   --color-overlay: #070708;
   --radius: 0.75rem;
@@ -42,6 +44,10 @@
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
   }
 }
 
