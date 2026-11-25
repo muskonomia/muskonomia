@@ -14,6 +14,7 @@ export const postsTue: Post[] = [
     img: "/img/tesla-ue-pazdziernik-okladka.jpg",
     credit:
       "Wykres rejestracji Tesli w październiku i od stycznia do października 2026 r., w Unii Europejskiej oraz w UE, EFTA i Wielkiej Brytanii. Dane: ACEA, 24 listopada 2026 r. Opracowanie: muskonomia.pl",
+    xPostId: "2125494328118198608",
     body: [
       {
         type: "p",
