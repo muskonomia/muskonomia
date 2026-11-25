@@ -13,6 +13,7 @@ export const postsSlmp: Post[] = [
     img: "/img/starlink-na-ladzie-morzu-i-w-powietrzu-okladka.jpg",
     credit:
       "Kontenerowiec z łącznością Starlink. Źródło: [Starlink](https://starlink.com/business/maritime/merchant-vessels)",
+    xPostId: "2125301210676854817",
     body: [
       {
         type: "p",
