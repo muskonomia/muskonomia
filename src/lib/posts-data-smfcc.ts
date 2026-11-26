@@ -13,6 +13,7 @@ export const postsSmfcc: Post[] = [
     img: "/img/starmind-fcc-rendering.jpg",
     credit:
       "Rendering pierwszych satelitów Starmind, z wpisu Sawyera Merritta z 25 listopada 2026 r.",
+    xPostId: "2125989740067356818",
     body: [
       {
         type: "p",
