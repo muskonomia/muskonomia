@@ -13,6 +13,7 @@ export const postsCc1107: Post[] = [
     img: "/img/cybercab-1107-rejestr-teksas.jpg",
     credit:
       "Cybercaby w publicznym rejestrze TxDMV, od pierwszych 45 sztuk 31 sierpnia do 1107 dnia 26 listopada 2026 r. Źródło danych: Texas AV Tracker.",
+    xPostId: "2126383546579525939",
     body: [
       {
         type: "p",
